@@ -125,7 +125,8 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);-w
 
 .leaflet-tooltip.optip{padding:0;background:var(--panel);color:var(--ink);border:1px solid var(--line2);border-radius:10px;box-shadow:0 6px 24px rgba(0,0,0,.22)}
 .leaflet-tooltip.optip:before{display:none}
-.leaflet-tooltip.optip,.leaflet-popup-content .opcard{white-space:normal;overflow-wrap:anywhere}
+.leaflet-tooltip.optip,.leaflet-popup-content .opcard{white-space:normal;overflow-wrap:break-word}
+.leaflet-tooltip.optip .opcard{min-width:200px;box-sizing:border-box}
 .leaflet-popup-content-wrapper{background:var(--panel);color:var(--ink);border:1px solid var(--line2);border-radius:10px;box-shadow:0 8px 28px rgba(0,0,0,.25)}
 .leaflet-popup-tip{background:var(--panel);border:1px solid var(--line2)}
 .leaflet-popup-content{margin:0}
@@ -1109,11 +1110,11 @@ function drawMarket(){
   let n=0;
   if(mktOn.elec){const col=css('--m-elec');MKT.elec_towns.forEach(([t,la,lo,c,cty])=>{
     const m=L.circleMarker([la,lo],{pane:'market',renderer:RENDER.market,radius:3+Math.sqrt(c)*1.6,color:col,weight:1.2,opacity:.9,fillColor:col,fillOpacity:.12});
-    m.options.bubblingMouseEvents=false;m.bindTooltip('<div class="opcard" style="width:auto;padding:8px 10px"><b>'+esc(t)+'</b> · '+c+' electrical contractor'+(c>1?'s':'')+'<br><span style="color:var(--ink-faint)">'+esc(cty)+' County</span></div>',{direction:'top',className:'optip'});mktLayer.addLayer(m);});}
+    m.options.bubblingMouseEvents=false;m.bindTooltip('<div class="opcard" style="width:auto;padding:8px 10px"><b>'+esc(t)+'</b> · '+c+' electrical contractor'+(c>1?'s':'')+'<br><span style="color:var(--ink-faint)">'+esc(cty)+' County</span></div>',{direction:'auto',className:'optip'});mktLayer.addLayer(m);});}
   MKT.shops.forEach(s=>{if(!shopVisible(s)||s.target==='callks')return;n++;
     const col=shopColor(s);
     const m=L.circleMarker([s.lat,s.lon],{pane:'market',renderer:RENDER.market,bubblingMouseEvents:false,radius:s.all3?6:5,color:s.all3?css('--panel'):col,weight:s.all3?1.5:1,fillColor:col,fillOpacity:s.owner||s.target?.45:.95});
-    m.bindTooltip(()=>'<div class="opcard" style="width:auto;max-width:240px;padding:8px 10px"><div class="opnm" style="font-size:13px">'+esc(s.n)+'</div><div class="oploc">'+esc(s.town)+' · '+esc(shopStatus(s))+' · click for details</div></div>',{direction:'top',className:'optip',offset:[0,-4],opacity:1});
+    m.bindTooltip(()=>'<div class="opcard" style="width:auto;max-width:240px;padding:8px 10px"><div class="opnm" style="font-size:13px">'+esc(s.n)+'</div><div class="oploc">'+esc(s.town)+' · '+esc(shopStatus(s))+' · click for details</div></div>',{direction:'auto',className:'optip',offset:[0,0],opacity:1});
     if(s.target&&opMarkers[s.target])m.on('click',()=>opMarkers[s.target].openPopup());
     else if(s.lead){m.bindPopup(()=>profileHTML(byId(s.lead),true),{maxWidth:300,autoPanPadding:[24,24]});m.on('popupopen',()=>m.closeTooltip());shopMarkers[s.lead]=m;}
     mktLayer.addLayer(m);});
