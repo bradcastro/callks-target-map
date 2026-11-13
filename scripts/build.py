@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Assemble index.html from src/template.html, data/targets.json, data/profiles.json and data/geo.json.
+"""Assemble index.html from src/template.html, data/targets.json, data/profiles.json, data/market.json and data/geo.json.
 
 Run from the repository root:  python3 scripts/build.py
 
@@ -74,10 +74,14 @@ def main():
     css = (ROOT / "vendor" / "leaflet-1.9.4.css").read_text()
     geo = (ROOT / "data" / "geo.json").read_text().strip()
     targets = json.dumps(load_targets(), separators=(",", ":"))
-    for token in ("__LEAFLETCSS__", "__GEO__", "__TARGETS__"):
+    market_file = ROOT / "data" / "market.json"
+    if not market_file.exists():
+        raise SystemExit("data/market.json is missing; run python3 scripts/build_market.py first")
+    market = market_file.read_text().strip()
+    for token in ("__LEAFLETCSS__", "__GEO__", "__TARGETS__", "__MARKET__"):
         if token not in template:
             raise SystemExit(f"template is missing {token}")
-    page = template.replace("__LEAFLETCSS__", css).replace("__GEO__", geo).replace("__TARGETS__", targets)
+    page = template.replace("__LEAFLETCSS__", css).replace("__GEO__", geo).replace("__TARGETS__", targets).replace("__MARKET__", market)
     (ROOT / "index.html").write_text(page)
     print(f"index.html written ({len(page) / 1e6:.2f} MB, {len(json.loads(targets))} companies)")
 

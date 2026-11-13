@@ -15,6 +15,7 @@ __LEAFLETCSS__</style>
   --tierA:#0e8197; --tierB:#6a5bd0; --tierC:#7d8b99; --taken:#c2412b; --home:#1c2632; --prio:#c8901d;
   --water:#cfdde8; --land:#f7f8fa; --land-al:#ffffff; --state-line:#97a6b6; --county:#d8dee6;
   --road-i:#e07b22; --road-us:#d6cbb9; --road-st:#e6e0d6; --river:#8fb2cc; --ring:#56626f;
+  --m-hvac:#2563eb; --m-plumb:#2e8b57; --m-all3:#c03a8c; --m-elec:#8a7a2e; --sat:#b37a16;
   --f-display:'Fraunces',Georgia,'Times New Roman',serif;
   --f-body:'IBM Plex Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
   --f-mono:'IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,monospace;
@@ -27,6 +28,7 @@ __LEAFLETCSS__</style>
   --tierA:#36c6dc; --tierB:#9b8cff; --tierC:#8794a4; --taken:#ef6a4f; --home:#f4f6f9; --prio:#f4c150;
   --water:#0c1a27; --land:#151a22; --land-al:#1a212c; --state-line:#465468; --county:#232c39;
   --road-i:#e3913c; --road-us:#4a4438; --road-st:#2c2f33; --river:#2b4a63; --ring:#8b97a8;
+  --m-hvac:#6ea2ff; --m-plumb:#4cc58a; --m-all3:#f06bbf; --m-elec:#d8c45a; --sat:#e8b04b;
   color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#0b0e13; --panel:#11151c; --panel2:#0e1218; --card:#0c1016;
@@ -36,6 +38,7 @@ __LEAFLETCSS__</style>
   --tierA:#36c6dc; --tierB:#9b8cff; --tierC:#8794a4; --taken:#ef6a4f; --home:#f4f6f9; --prio:#f4c150;
   --water:#0c1a27; --land:#151a22; --land-al:#1a212c; --state-line:#465468; --county:#232c39;
   --road-i:#e3913c; --road-us:#4a4438; --road-st:#2c2f33; --river:#2b4a63; --ring:#8b97a8;
+  --m-hvac:#6ea2ff; --m-plumb:#4cc58a; --m-all3:#f06bbf; --m-elec:#d8c45a; --sat:#e8b04b;
   color-scheme:dark}
 
 *{box-sizing:border-box}
@@ -300,6 +303,23 @@ table.ops tr.taken td{opacity:.62}
   .lg{grid-template-columns:1fr}
 }
 @media (prefers-reduced-motion: reduce){.sw::after{transition:none}}
+.row .dot{width:10px;height:10px;border-radius:50%;flex:none;margin-left:-4px}
+.mktnote{font-size:11px;color:var(--ink-dim);line-height:1.5;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:8px 10px;margin:8px 0 0}
+.mktnote b{color:var(--ink)}
+.satlg{display:flex;align-items:center;gap:6px;font-family:var(--f-mono);font-size:10px;color:var(--ink-faint);margin-top:6px}
+.satlg .bar{flex:1;height:8px;border-radius:4px;background:linear-gradient(90deg,color-mix(in srgb,var(--sat) 6%,transparent),var(--sat))}
+.trade{display:inline-block;font-family:var(--f-mono);font-size:9.5px;font-weight:600;padding:2px 6px;border-radius:4px;color:#fff;margin:0 3px 2px 0}
+.trade.hvac{background:var(--m-hvac)}.trade.plumb{background:var(--m-plumb)}.trade.elec{background:var(--m-elec)}.trade.all3{background:var(--m-all3)}
+.mv{height:100%;display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:10px}
+.mv .side{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:auto;padding:14px 16px}
+.mv .side h2{font-family:var(--f-display);font-size:17px;margin:0 0 4px}
+.mv .side table{width:100%;border-collapse:collapse;font-size:12px}
+.mv .side th{font-family:var(--f-mono);font-size:9.5px;text-transform:uppercase;letter-spacing:.04em;color:var(--ink-faint);text-align:right;padding:6px 4px;border-bottom:1px solid var(--line2);position:sticky;top:-14px;background:var(--panel)}
+.mv .side th:first-child,.mv .side td:first-child{text-align:left}
+.mv .side td{padding:5px 4px;border-bottom:1px solid var(--line);text-align:right;color:var(--ink-dim);font-variant-numeric:tabular-nums}
+.mv .side tr{cursor:pointer}.mv .side tr:hover td{background:var(--panel2)}
+.lead{font-family:var(--f-mono);font-size:10px;font-weight:600;color:var(--accent)}
+@media (max-width:900px){.mv{grid-template-columns:1fr}.mv .side{max-height:60vh}}
 </style>
 
 <div class="shell">
@@ -309,6 +329,7 @@ table.ops tr.taken td{opacity:.62}
     <button class="tab" role="tab" id="tab-profiles" aria-controls="view-profiles" aria-selected="false">◉ Profiles</button>
     <button class="tab" role="tab" id="tab-locations" aria-controls="view-locations" aria-selected="false">⌖ Locations</button>
     <button class="tab" role="tab" id="tab-registry" aria-controls="view-registry" aria-selected="false">§ Registry</button>
+    <button class="tab" role="tab" id="tab-market" aria-controls="view-market" aria-selected="false">▦ Market</button>
     <span class="tabmeta" id="tabmeta"></span>
     <button class="themebtn" id="themebtn" type="button" title="Switch light / dark" aria-label="Switch light or dark theme">◑</button>
   </div>
@@ -363,6 +384,20 @@ table.ops tr.taken td{opacity:.62}
           <button type="button" class="row" data-layer="counties" aria-pressed="true"><span class="sw"></span><span class="lab">County lines <small>67</small></span></button>
           <button type="button" class="row" data-layer="water" aria-pressed="true"><span class="sw"></span><span class="lab">Rivers and lakes</span></button>
           <p class="cap">Rings are straight-line miles from Call KS, not drive time. Add roughly 20 to 30 percent for road miles.</p>
+        </div>
+
+        <div class="sec">
+          <h3>Statewide market <span class="ct" id="mkt-shown"></span></h3>
+          <button type="button" class="row" data-mkt="hvac" aria-pressed="false"><span class="sw"></span><i class="dot" style="background:var(--m-hvac)"></i><span class="lab">HVAC shops <small id="mc-hvac"></small></span></button>
+          <button type="button" class="row" data-mkt="plumb" aria-pressed="false"><span class="sw"></span><i class="dot" style="background:var(--m-plumb)"></i><span class="lab">Plumbing shops <small id="mc-plumb"></small></span></button>
+          <button type="button" class="row" data-mkt="all3" aria-pressed="false"><span class="sw"></span><i class="dot" style="background:var(--m-all3);box-shadow:0 0 0 2px var(--panel),0 0 0 3.5px var(--m-all3)"></i><span class="lab">All three trades <small id="mc-all3"></small></span></button>
+          <button type="button" class="row" data-mkt="elec" aria-pressed="false"><span class="sw"></span><i class="dot" style="background:transparent;border:1.5px solid var(--m-elec)"></i><span class="lab">Electrical contractors <small id="mc-elec"></small></span></button>
+          <div class="fld">
+            <label for="m_sat">Shade counties by</label>
+            <select id="m_sat"><option value="">No shading</option><option value="elec">Electrical contractors</option><option value="hvac">HVAC shops</option><option value="plumb">Plumbing shops</option><option value="all3">All-three shops</option></select>
+          </div>
+          <div class="satlg" id="satlg" hidden><span>0</span><span class="bar"></span><span id="satmax"></span></div>
+          <p class="mktnote" id="mktnote"></p>
         </div>
 
         <div class="sec">
@@ -441,6 +476,31 @@ table.ops tr.taken td{opacity:.62}
       <div class="tscroll"><table class="ops"><thead><tr><th scope="col">Company</th><th scope="col">Legal name</th><th scope="col">Entity ID</th><th scope="col">Type</th><th scope="col">Status</th><th scope="col">Formed</th><th scope="col" class="num">Years</th><th scope="col">County</th><th scope="col">Registered agent</th><th scope="col">People on file</th><th scope="col">Nature of business</th></tr></thead><tbody id="rbody"></tbody></table></div>
     </div>
   </div>
+
+  <div class="view" id="view-market" role="tabpanel" aria-labelledby="tab-market" hidden>
+    <div class="mv">
+      <div class="tv">
+        <div class="fbar">
+          <div class="fg"><label for="k_trade">Trade</label>
+            <select id="k_trade"><option value="">HVAC or plumbing</option><option value="hvac">HVAC</option><option value="plumb">Plumbing</option><option value="all3">All three trades</option></select></div>
+          <div class="fg"><label for="k_lead">Show</label>
+            <select id="k_lead"><option value="new">New leads (not on the target list)</option><option value="">Everyone</option><option value="known">Already tracked</option></select></div>
+          <div class="fg"><label for="k_county">County</label><select id="k_county"></select></div>
+          <div class="fg"><label for="k_search">Search</label><input type="text" id="k_search" placeholder="Company, town…" autocomplete="off"></div>
+          <button type="button" class="fbtn" id="k_copy">Copy list as CSV</button>
+          <span class="copynote" id="k_copynote" aria-live="polite"></span>
+          <span class="fcount" id="k_count"></span>
+        </div>
+        <div class="tscroll"><table class="ops"><thead><tr><th scope="col">Company</th><th scope="col">Trades</th><th scope="col">Town</th><th scope="col">County</th><th scope="col" class="num">Miles</th><th scope="col" class="num">Licensed since</th><th scope="col" class="num">Licenses</th><th scope="col">On our list?</th><th scope="col"></th></tr></thead><tbody id="kbody"></tbody></table></div>
+      </div>
+      <aside class="side" aria-label="County saturation">
+        <h2>Saturation by county</h2>
+        <p class="cap" style="margin:0 0 10px">Click a county to filter the list. Sort by clicking a column.</p>
+        <table><thead><tr><th scope="col"><button type="button" class="ksort" data-k="name" style="all:unset;cursor:pointer">County</button></th><th scope="col"><button type="button" class="ksort" data-k="elec" style="all:unset;cursor:pointer">Elec.</button></th><th scope="col"><button type="button" class="ksort" data-k="hvac" style="all:unset;cursor:pointer">HVAC</button></th><th scope="col"><button type="button" class="ksort" data-k="plumb" style="all:unset;cursor:pointer">Plumb.</button></th><th scope="col"><button type="button" class="ksort" data-k="all3" style="all:unset;cursor:pointer">All 3</button></th></tr></thead><tbody id="ksat"></tbody></table>
+        <p class="cap" id="ksrc"></p>
+      </aside>
+    </div>
+  </div>
 </div>
 
 <div class="report-wrap" id="report" hidden role="dialog" aria-modal="true" aria-label="Target report">
@@ -459,6 +519,7 @@ table.ops tr.taken td{opacity:.62}
 <script>
 const GEO=__GEO__;
 const OPS=__TARGETS__;
+const MKT=__MARKET__;
 const HOME=OPS.find(o=>o.status==='Home');
 const MARKETS=[...new Set(OPS.filter(o=>o.status!=='Home').map(o=>o.market))].sort();
 
@@ -499,8 +560,8 @@ const AL_BOUNDS=L.latLngBounds([30.15,-88.55],[35.05,-84.85]);
 const map=L.map('map',{preferCanvas:true,attributionControl:true,zoomSnap:0.25,minZoom:6,maxZoom:18,maxBounds:L.latLngBounds([28.4,-91.8],[37.2,-81.6]),maxBoundsViscosity:0.8});
 map.fitBounds(AL_BOUNDS,{padding:[10,10]});
 map.attributionControl.setPrefix(false);
-const panes=['land','county','water','roads','rings','labels'];
-panes.forEach((p,i)=>{map.createPane(p);map.getPane(p).style.zIndex=300+i*10;map.getPane(p).style.pointerEvents='none';});
+const panes=['land','sat','county','water','roads','rings','market','labels'];
+panes.forEach((p,i)=>{map.createPane(p);map.getPane(p).style.zIndex=300+i*10;map.getPane(p).style.pointerEvents=p==='market'?'auto':'none';});
 const RENDER={};panes.forEach(p=>{RENDER[p]=L.canvas({pane:p,padding:0.5});});
 
 let landLayer,countyLayer,waterLayer,roadLayer,ringLayer;
@@ -934,8 +995,90 @@ document.getElementById('rep_email').addEventListener('click',()=>{if(!reportFor
   const a=document.createElement('a');a.href=url;a.rel='noopener';document.body.appendChild(a);a.click();a.remove();
   document.getElementById('rep_status').textContent='Opening your email app. If nothing happens, use Copy text.';});
 
+
+/* ---------- statewide market: every HVAC / plumbing / multi-trade shop we can place ---------- */
+const mktOn={hvac:false,plumb:false,all3:false,elec:false};let satKey='';
+const mktLayer=L.layerGroup(),satLayer=L.layerGroup();
+const TRADE_LAB={hvac:'HVAC',plumb:'Plumbing',elec:'Electrical',all3:'HVAC + plumbing + electrical'};
+function shopTrades(s){return s.all3?['all3']:['hvac','plumb','elec'].filter(k=>s[k]);}
+function tradeTags(s){return shopTrades(s).map(k=>'<span class="trade '+k+'">'+TRADE_LAB[k]+'</span>').join('');}
+function shopStatus(s){if(s.target){const o=OPS.find(x=>x.id===s.target);if(o)return o.status==='Home'?'Call KS':o.status==='Taken'?'Owned · '+(s.owner||o.ownership):(o.status==='Watch'?'Watch list':'Target')+' · Tier '+o.tier;}
+  return s.owner?'Owned · '+s.owner:'New lead';}
+function shopColor(s){return s.all3?css('--m-all3'):s.hvac&&(mktOn.hvac||!mktOn.plumb)?css('--m-hvac'):css('--m-plumb');}
+function shopVisible(s){return (mktOn.all3&&s.all3)||(mktOn.hvac&&s.hvac)||(mktOn.plumb&&s.plumb);}
+function shopCard(s){
+  return '<div class="opcard" style="width:250px"><div class="opnm" style="font-size:14px">'+esc(s.n)+'</div><div class="oploc">'+esc(s.town)+' · '+esc(s.county)+' County · '+s.mi+' mi</div>'
+   +'<div class="badges">'+tradeTags(s)+'</div>'
+   +'<div class="oprow"><b>Status</b>'+esc(shopStatus(s))+'</div>'
+   +'<div class="oprow"><b>Licensed</b>'+(s.since?'since '+esc(s.since)+' · ':'')+s.lic+' active electrical license'+(s.lic>1?'s':'')+'</div>'
+   +'<div class="oprow"><b>Placed at</b>town center, not the street address</div>'
+   +'<div class="oprow"><b>Source</b>'+esc(s.src.map(k=>MKT.sources[k].name).join('; '))+'</div></div>';}
+function drawMarket(){
+  mktLayer.clearLayers();satLayer.clearLayers();
+  let n=0;
+  if(mktOn.elec){const col=css('--m-elec');MKT.elec_towns.forEach(([t,la,lo,c,cty])=>{
+    const m=L.circleMarker([la,lo],{pane:'market',renderer:RENDER.market,radius:3+Math.sqrt(c)*1.6,color:col,weight:1.2,opacity:.9,fillColor:col,fillOpacity:.12});
+    m.bindTooltip('<b>'+esc(t)+'</b> · '+c+' electrical contractor'+(c>1?'s':'')+'<br><span style="color:var(--ink-faint)">'+esc(cty)+' County</span>',{direction:'top',className:'optip'});mktLayer.addLayer(m);});}
+  MKT.shops.forEach(s=>{if(!shopVisible(s)||s.target==='callks')return;n++;
+    const col=shopColor(s);
+    const m=L.circleMarker([s.lat,s.lon],{pane:'market',renderer:RENDER.market,radius:s.all3?5.5:4.2,color:s.all3?css('--panel'):col,weight:s.all3?1.5:1,fillColor:col,fillOpacity:s.owner||s.target?.45:.95});
+    m.bindTooltip(()=>shopCard(s),{direction:'top',className:'optip',offset:[0,-4],opacity:1});
+    m.on('click',()=>{if(s.target&&opMarkers[s.target]){opMarkers[s.target].openPopup();}else{selectTab('market');document.getElementById('k_search').value=s.n;renderMarket();}});
+    mktLayer.addLayer(m);});
+  document.getElementById('mkt-shown').textContent=(mktOn.hvac||mktOn.plumb||mktOn.all3)?n+' shops':'';
+  if(satKey){const vals=Object.values(MKT.counties).map(c=>c[satKey]),mx=Math.max(1,...vals),col=css('--sat');
+    satLayer.addLayer(L.geoJSON(GEO.counties,{pane:'sat',renderer:RENDER.sat,interactive:false,style:ft=>{const v=(MKT.counties[ft.properties.n]||{})[satKey]||0;
+      return {stroke:false,fillColor:col,fillOpacity:v?0.06+0.5*Math.sqrt(v/mx):0};}}));
+    document.getElementById('satlg').hidden=false;document.getElementById('satmax').textContent=mx+' per county';}
+  else document.getElementById('satlg').hidden=true;}
+function mktCounts(){const c={hvac:0,plumb:0,all3:0};MKT.shops.forEach(s=>{if(s.target==='callks')return;['hvac','plumb','all3'].forEach(k=>{if(s[k])c[k]++;});});
+  c.elec=MKT.elec_towns.reduce((a,t)=>a+t[3],0);
+  Object.entries(c).forEach(([k,v])=>{document.getElementById('mc-'+k).textContent=k==='elec'?v.toLocaleString()+' by town':v+' on file';});}
+function mktNote(){const S=MKT.sources,pend=['HACR','PGFB'].filter(k=>!S[k].read);
+  document.getElementById('mktnote').innerHTML='<b>What’s here:</b> shops licensed by the state electrical board on '+esc(fmtDate(S.AECB.read))+' whose names say HVAC or plumbing work, so each also does electrical. '
+   +(pend.length?'<b>Not loaded yet:</b> the '+pend.map(k=>k==='HACR'?'HVAC':'plumbing').join(' and ')+' board roster'+(pend.length>1?'s, which sit':', which sits')+' behind a CAPTCHA and need a public records request. HVAC-only and plumbing-only shops appear once '+(pend.length>1?'they’re':'it’s')+' added. ':'')
+   +'Dots sit at the town center.';}
+document.querySelectorAll('.row[data-mkt]').forEach(r=>r.addEventListener('click',()=>{const k=r.dataset.mkt,on=r.getAttribute('aria-pressed')!=='true';
+  r.setAttribute('aria-pressed',on?'true':'false');mktOn[k]=on;drawMarket();}));
+document.getElementById('m_sat').addEventListener('change',e=>{satKey=e.target.value;drawMarket();});
+
+/* market tab */
+let kSort={k:'elec',d:-1};
+function marketRows(){
+  const tr=document.getElementById('k_trade').value,ld=document.getElementById('k_lead').value,cty=document.getElementById('k_county').value,q=(document.getElementById('k_search').value||'').toLowerCase();
+  return MKT.shops.filter(s=>{if(s.target==='callks')return false;
+    if(tr&&!s[tr])return false;
+    const known=!!(s.target||s.owner);if(ld==='new'&&known)return false;if(ld==='known'&&!known)return false;
+    if(cty&&s.county!==cty)return false;
+    if(q&&!(s.n+' '+s.town+' '+s.county).toLowerCase().includes(q))return false;return true;}).sort((a,b)=>a.mi-b.mi);}
+function renderMarket(){
+  const rows=marketRows(),tb=document.getElementById('kbody');tb.replaceChildren();
+  rows.forEach(s=>{const st=shopStatus(s);
+    const r=el('tr',null,el('td',{style:'color:var(--ink);font-weight:600'},s.n),el('td'),el('td',{text:s.town}),el('td',{text:s.county}),el('td',{class:'num',text:String(s.mi)}),el('td',{class:'num',text:s.since||'—'}),el('td',{class:'num',text:String(s.lic)}),el('td'),el('td'));
+    r.children[1].innerHTML=tradeTags(s);
+    r.children[7].innerHTML=st==='New lead'?'<span class="lead">New lead</span>':esc(st);
+    const b=el('button',{type:'button',class:'fbtn',style:'padding:4px 8px'},'Map');r.children[8].appendChild(b);
+    r.addEventListener('click',()=>{selectTab('map');if(!shopVisible(s)){const k=s.all3?'all3':s.hvac?'hvac':'plumb';mktOn[k]=true;document.querySelector('.row[data-mkt="'+k+'"]').setAttribute('aria-pressed','true');drawMarket();}
+      setTimeout(()=>{map.flyTo([s.lat,s.lon],12,{duration:.6});},60);});
+    tb.appendChild(r);});
+  document.getElementById('k_count').textContent=rows.length+' shop'+(rows.length===1?'':'s');
+  const sb=document.getElementById('ksat');sb.replaceChildren();
+  const cs=Object.entries(MKT.counties).map(([name,v])=>({name,...v})).sort((a,b)=>kSort.k==='name'?a.name.localeCompare(b.name)*kSort.d:((a[kSort.k]-b[kSort.k])*kSort.d||a.name.localeCompare(b.name)));
+  const cur=document.getElementById('k_county').value;
+  cs.forEach(c=>{const r=el('tr',null,el('td',{text:c.name,style:c.name===cur?'color:var(--accent);font-weight:600':'color:var(--ink)'}),...['elec','hvac','plumb','all3'].map(k=>el('td',{text:c[k]?String(c[k]):'·'})));
+    r.addEventListener('click',()=>{const s=document.getElementById('k_county');s.value=s.value===c.name?'':c.name;renderMarket();});sb.appendChild(r);});
+  const S=MKT.sources;document.getElementById('ksrc').innerHTML='Electrical: '+esc(S.AECB.name)+', read '+esc(fmtDate(S.AECB.read))+'. Town names shared with bigger places out of state (Houston, Jackson, Jacksonville and others) are left out, since the board lists no state. HVAC: '+esc(S.HACR.read?'loaded '+fmtDate(S.HACR.read):'board roster not loaded yet (CAPTCHA; needs a records request)')+'. Plumbing: '+esc(S.PGFB.read?'loaded '+fmtDate(S.PGFB.read):'board roster not loaded yet (CAPTCHA; needs a records request)')+'.';}
+(function(){const s=document.getElementById('k_county');s.replaceChildren(new Option('All counties',''),...Object.keys(MKT.counties).sort().map(c=>new Option(c,c)));})();
+['k_trade','k_lead','k_county'].forEach(id=>document.getElementById(id).addEventListener('change',renderMarket));
+document.getElementById('k_search').addEventListener('input',renderMarket);
+document.querySelectorAll('.ksort').forEach(b=>b.addEventListener('click',e=>{e.stopPropagation();const k=b.dataset.k;kSort=kSort.k===k?{k,d:-kSort.d}:{k,d:k==='name'?1:-1};renderMarket();}));
+document.getElementById('k_copy').addEventListener('click',()=>{const rows=marketRows(),q=v=>'"'+String(v==null?'':v).replace(/"/g,'""')+'"';
+  const txt=['Company,Trades,Town,County,Miles from Call KS,Licensed since,Active electrical licenses,On our list'].concat(rows.map(s=>[s.n,shopTrades(s).map(k=>TRADE_LAB[k]).join(' + '),s.town,s.county,s.mi,s.since,s.lic,shopStatus(s)].map(q).join(','))).join('\n');
+  const n=document.getElementById('k_copynote');try{navigator.clipboard.writeText(txt).then(()=>{n.textContent=rows.length+' rows copied';},()=>{n.textContent='Copy was blocked';});}catch(e){n.textContent='Copy was blocked';}});
+mktCounts();mktNote();
+
 /* tabs */
-const TABS=['map','targets','profiles','locations','registry'];
+const TABS=['map','targets','profiles','locations','registry','market'];
 function selectTab(t){
   if(!TABS.includes(t))t='map';
   TABS.forEach(k=>{document.getElementById('tab-'+k).setAttribute('aria-selected',k===t?'true':'false');document.getElementById('view-'+k).hidden=k!==t;});
@@ -943,19 +1086,20 @@ function selectTab(t){
   if(t==='profiles')renderProfiles();
   if(t==='locations')renderLocations();
   if(t==='registry')renderRegistry();
+  if(t==='market')renderMarket();
   try{history.replaceState(null,'','#'+t);}catch(e){}}
 TABS.forEach(k=>document.getElementById('tab-'+k).addEventListener('click',()=>selectTab(k)));
 window.addEventListener('hashchange',()=>selectTab((location.hash||'#map').slice(1)));
 
 /* theme */
 function effectiveDark(){const t=document.documentElement.getAttribute('data-theme');if(t)return t==='dark';return matchMedia('(prefers-color-scheme: dark)').matches;}
-function retheme(){if(streetMode)makeTiles().addTo(map);buildBase();scheduleLayout();}
+function retheme(){if(streetMode)makeTiles().addTo(map);buildBase();drawMarket();scheduleLayout();}
 document.getElementById('themebtn').addEventListener('click',()=>{document.documentElement.setAttribute('data-theme',effectiveDark()?'light':'dark');});
 try{matchMedia('(prefers-color-scheme: dark)').addEventListener('change',retheme);}catch(e){}
 new MutationObserver(retheme).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
 
 /* boot */
-applyBasemap();cityDotLayer.addTo(map);labelLayer.addTo(map);officeLayer.addTo(map);opLayer.addTo(map);
+satLayer.addTo(map);mktLayer.addTo(map);applyBasemap();cityDotLayer.addTo(map);labelLayer.addTo(map);officeLayer.addTo(map);opLayer.addTo(map);
 map.on('zoomend',scheduleLayout);map.on('resize',scheduleLayout);
 buildHead();syncChips();syncInputs();applyOps();
 if(document.fonts&&document.fonts.ready)document.fonts.ready.then(scheduleLayout);
