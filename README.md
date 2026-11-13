@@ -2,7 +2,7 @@
 
 An interactive map of Alabama HVAC and mechanical contractors for the Call KS Services acquisition program: independent targets by tier, a watch list, and shops consolidators already own, shown on highways, counties, cities and rivers with distance rings from Call KS in Pelham.
 
-Open `index.html` in any browser. It is a single file with no server needed.
+Open the [live site](https://bradcastro.github.io/callks-target-map/), or open `index.html` in any browser. It is a single file with no server needed.
 
 ## What's on it
 
@@ -69,9 +69,11 @@ The build stops with a message if an id repeats, a required field is missing, a 
 
 ## Sharing
 
-The repository is private. To give someone access, add them as a collaborator under **Settings → Collaborators**.
+**Live site:** https://bradcastro.github.io/callks-target-map/
 
-To share a link instead, turn on GitHub Pages (**Settings → Pages → Deploy from branch → `main` / root**). Pages for a private repository needs a paid GitHub plan, and the published site is public to anyone with the URL even when the repository is private, so the target list would be visible to anyone who finds it.
+The repository and the site are public: anyone with the link can see the map, the target list and the people on file. GitHub Pages republishes the site a minute or two after each push to `main`. To take the site down, turn Pages off under **Settings → Pages**; to hide the code too, make the repository private under **Settings → General → Danger Zone**.
+
+On the live site, the report's **Print or save as PDF** and **Email** buttons work, since the page isn't running inside Claude.
 
 ## Data sources
 
