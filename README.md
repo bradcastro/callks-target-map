@@ -48,7 +48,8 @@ Priority stars are saved in each viewer's own browser, so they are not shared be
      "founded": "Not found",
      "employees": "50-100",
      "est_revenue_m": null,
-     "revenue_basis": "Not found",
+     "revenue_date": null,
+     "revenue_basis": "Not publicly reported",
      "why": "Pure service model in the 2029 Montgomery market",
      "source": "https://..."
    }
@@ -56,7 +57,7 @@ Priority stars are saved in each viewer's own browser, so they are not shared be
 
    - `status` is `Target`, `Watch`, `Taken` (owned by a consolidator) or `Home` (Call KS; exactly one).
    - `tier` is `A`, `B` or `C` for targets and watch-list rows, and empty for the others.
-   - `est_revenue_m` is in millions of dollars, or `null` when unknown. Say where the figure came from in `revenue_basis`.
+   - `est_revenue_m` is in millions of dollars. Fill it in only when a source reported the figure within the last two years; otherwise leave it `null` (the page shows "Not public"). When it's filled in, `revenue_date` is the month the figure was reported (`YYYY-MM`) and `revenue_basis` names the source. The build refuses revenue without a date or older than two years.
    - Coordinates are decimal degrees. Right-click the address in Google Maps to copy them.
    - Distance from Call KS is computed by the build, so leave `miles` out.
 
@@ -64,7 +65,7 @@ Priority stars are saved in each viewer's own browser, so they are not shared be
 3. Rebuild: `python3 scripts/build.py`
 4. Commit `data/targets.json`, `data/profiles.json` and `index.html`.
 
-The build stops with a message if an id repeats, a required field is missing, a status is misspelled, or a target has no tier.
+The build stops with a message if an id repeats, a required field is missing, a status is misspelled, a target has no tier, or a revenue figure is undated or more than two years old.
 
 ## Sharing
 
@@ -75,7 +76,7 @@ To share a link instead, turn on GitHub Pages (**Settings → Pages → Deploy f
 ## Data sources
 
 - **Registry records:** Alabama Secretary of State Business Entity Records, read Nov 13, 2026. Registry details for SAM Service and Bob Woodall Commercial Air Systems did not load; the Lower Alabama Heating match is uncertain.
-- **Companies:** web research on Nov 12-13, 2026 (contractor directories, chamber listings, permit records, job postings, PE deal trackers). Revenue figures are third-party estimates where shown. A company not marked as owned may still have sold quietly; confirm ownership on first contact. Tiers are a judgment of fit, not verified financials.
+- **Companies:** web research on Nov 12-13, 2026 (contractor directories, chamber listings, permit records, job postings, PE deal trackers). Revenue is shown only when publicly reported within the last two years, with the date it was reported; no target currently meets that bar. Employee counts are third-party estimates. A company not marked as owned may still have sold quietly; confirm ownership on first contact. Tiers are a judgment of fit, not verified financials.
 - **Roads, rivers, lakes:** [Natural Earth](https://www.naturalearthdata.com/) 10m, public domain.
 - **States and counties:** [US Atlas](https://github.com/topojson/us-atlas) 3.0.1, from Census cartographic boundary files.
 - **Cities:** [GeoNames](https://www.geonames.org/), CC BY 4.0.

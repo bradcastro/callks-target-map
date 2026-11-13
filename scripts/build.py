@@ -6,8 +6,10 @@ Run from the repository root:  python3 scripts/build.py
 The output is one self-contained page. Leaflet's script loads from cdnjs; its
 stylesheet, the map geography and the target list are inlined.
 """
+import datetime
 import json
 import math
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -19,6 +21,22 @@ def miles_between(a, b):
     la1, lo1, la2, lo2 = map(math.radians, (a[0], a[1], b[0], b[1]))
     h = math.sin((la2 - la1) / 2) ** 2 + math.cos(la1) * math.cos(la2) * math.sin((lo2 - lo1) / 2) ** 2
     return 2 * r * math.asin(math.sqrt(h))
+
+
+def check_revenue(t):
+    """Revenue is shown only when a source reported it within the last two years, with the date."""
+    if t.get("est_revenue_m") is None:
+        return
+    date = str(t.get("revenue_date") or "")
+    if not re.fullmatch(r"\d{4}-\d{2}", date):
+        raise SystemExit(f"{t['company']}: revenue needs revenue_date as YYYY-MM (when the figure was reported)")
+    year, month = map(int, date.split("-"))
+    today = datetime.date.today()
+    age_months = (today.year - year) * 12 + (today.month - month)
+    if age_months > 24:
+        raise SystemExit(f"{t['company']}: revenue reported {date} is more than two years old; set est_revenue_m to null")
+    if not t.get("revenue_basis"):
+        raise SystemExit(f"{t['company']}: revenue needs revenue_basis naming the source")
 
 
 def load_targets():
@@ -36,6 +54,7 @@ def load_targets():
             raise SystemExit(f"{t['company']}: status must be Home, Target, Watch or Taken")
         if t["status"] in {"Target", "Watch"} and t.get("tier") not in {"A", "B", "C"}:
             raise SystemExit(f"{t['company']}: Target and Watch rows need tier A, B or C")
+        check_revenue(t)
     profiles = json.loads((ROOT / "data" / "profiles.json").read_text())
     for t in targets:
         t["profile"] = profiles.get(t["id"], {})

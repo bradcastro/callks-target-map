@@ -372,7 +372,7 @@ table.ops tr.taken td{opacity:.62}
           </div>
         </div>
 
-        <div class="foot"><b>Data:</b> 38 companies from web research on Nov 12, 2026 (directories, chambers, permits, deal trackers). Revenue appears only where a third-party estimate exists. <b>Base map:</b> Natural Earth roads, rivers and lakes; U.S. Census county and state lines; GeoNames cities.</div>
+        <div class="foot"><b>Data:</b> 38 companies from web research on Nov 12, 2026 (directories, chambers, permits, deal trackers). Revenue is shown only when a source posted it within the last two years, with its date. <b>Base map:</b> Natural Earth roads, rivers and lakes; U.S. Census county and state lines; GeoNames cities.</div>
       </aside>
       <div class="mapwrap"><div id="map" role="region" aria-label="Map of Alabama HVAC acquisition targets"></div></div>
     </div>
@@ -475,7 +475,9 @@ function matches(o,{useStatusSet}){
   if(f.prioOnly&&!priority.has(o.id))return false;
   if(f.search){const q=f.search.toLowerCase();if(!(o.company+' '+o.city+' '+o.market+' '+o.focus+' '+o.ownership+' '+o.why).toLowerCase().includes(q))return false;}
   return true;}
-function revText(o){return o.est_revenue_m==null?'—':'$'+o.est_revenue_m.toFixed(1)+'M';}
+const MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+function revDate(o){if(!o.revenue_date)return '';const [y,m]=String(o.revenue_date).split('-');return (m?MON[Number(m)-1]+' ':'')+y;}
+function revText(o){return o.est_revenue_m==null?'Not public':'$'+o.est_revenue_m.toFixed(1)+'M'+(o.revenue_date?' ('+revDate(o)+')':'');}
 
 /* ---------- stats ---------- */
 document.getElementById('st-targets').textContent=OPS.filter(o=>o.status==='Target').length;
@@ -580,12 +582,12 @@ function profileHTML(o,full){
   else if(o.status==='Taken')h+='<span class="bdg taken">Owned by consolidator</span>';
   else h+='<span class="bdg tier t'+esc(o.tier)+'">Tier '+esc(o.tier)+'</span><span class="bdg">'+(o.status==='Watch'?'Watch list':'Target')+'</span>';
   h+='</div>';
-  h+='<div class="opstats"><span><b>'+(o.status==='Home'?'—':o.miles+' mi')+'</b> from Call KS</span><span><b>'+esc(o.employees&&o.employees!=='Not found'?o.employees:'—')+'</b> employees</span><span><b>'+revText(o)+'</b> rev.</span></div>';
+  h+='<div class="opstats"><span><b>'+(o.status==='Home'?'—':o.miles+' mi')+'</b> from Call KS</span><span><b>'+esc(o.employees&&o.employees!=='Not found'?o.employees:'—')+'</b> employees</span><span><b>'+revText(o)+'</b> revenue</span></div>';
   h+='<div class="oprow"><b>Focus</b>'+esc(o.focus)+'</div>';
   h+='<div class="oprow"><b>Ownership</b>'+esc(o.ownership)+'</div>';
   if(full){
     h+='<div class="oprow"><b>Why it fits</b>'+esc(o.why)+'</div>';
-    if(o.est_revenue_m!=null)h+='<div class="oprow"><b>Revenue basis</b>'+esc(o.revenue_basis)+'</div>';
+    if(o.est_revenue_m!=null)h+='<div class="oprow"><b>Revenue source</b>'+esc(o.revenue_basis)+(o.revenue_date?', '+esc(revDate(o)):'')+'</div>';
     if(o.source)h+='<a class="opweb" target="_blank" rel="noopener noreferrer" href="'+esc(o.source)+'">Source ↗</a>';
     h+='<div class="popbtns">'+(o.status!=='Home'?'<button class="priobtn" type="button" data-prio="'+esc(o.id)+'">'+(p?'★ Priority':'☆ Priority')+'</button>':'')+'<button class="priobtn" type="button" data-prof="'+esc(o.id)+'">Profile</button><button class="priobtn" type="button" data-rep="'+esc(o.id)+'">Report</button></div>';
   }else h+='<div class="opmore">Click for full profile →</div>';
@@ -616,7 +618,7 @@ function togglePrio(id){
 function updateMeta(){document.getElementById('tabmeta').innerHTML=priority.size?'<b>★ '+priority.size+'</b> priority':'';}
 
 /* ---------- table ---------- */
-const COLS=[['','prio'],['Company','company'],['Tier','tier'],['Status','status'],['Market','market'],['City','city'],['Miles','miles',1],['Est. rev','est_revenue_m',1],['Employees','employees'],['Focus','focus'],['Ownership','ownership'],['Why it fits','why'],['Source','source'],['','actions']];
+const COLS=[['','prio'],['Company','company'],['Tier','tier'],['Status','status'],['Market','market'],['City','city'],['Miles','miles',1],['Revenue (as of)','est_revenue_m',1],['Employees','employees'],['Focus','focus'],['Ownership','ownership'],['Why it fits','why'],['Source','source'],['','actions']];
 let sortKey='miles',sortDir=1;
 function buildHead(){
   const tr=document.getElementById('thead');tr.replaceChildren();
@@ -667,9 +669,9 @@ function showOnMap(id){
 
 /* ---------- CSV copy ---------- */
 function csv(){
-  const hdr=['Company','Tier','Status','Market','City','Miles from Call KS','Est revenue $M','Revenue basis','Employees','Founded','Focus','Ownership','Why it fits','Priority','Source'];
+  const hdr=['Company','Tier','Status','Market','City','Miles from Call KS','Revenue $M','Revenue as of','Revenue source','Employees','Founded','Focus','Ownership','Why it fits','Priority','Source'];
   const q=s=>'"'+String(s==null?'':s).replace(/"/g,'""')+'"';
-  const rows=tableList().map(o=>[o.company,o.tier,o.status==='Taken'?'Owned':o.status,o.market,o.city,o.miles,o.est_revenue_m,o.revenue_basis,o.employees,o.founded,o.focus,o.ownership,o.why,priority.has(o.id)?'Yes':'',o.source].map(q).join(','));
+  const rows=tableList().map(o=>[o.company,o.tier,o.status==='Taken'?'Owned':o.status,o.market,o.city,o.miles,o.est_revenue_m,o.revenue_date||'',o.est_revenue_m!=null?o.revenue_basis:'',o.employees,o.founded,o.focus,o.ownership,o.why,priority.has(o.id)?'Yes':'',o.source].map(q).join(','));
   return hdr.map(q).join(',')+'\n'+rows.join('\n');}
 document.getElementById('t_copy').addEventListener('click',()=>{
   const text=csv(),note=document.getElementById('copynote'),fb=document.getElementById('copyfallback');
@@ -758,7 +760,7 @@ function renderDossier(o){
   acts.append(bRep,bMap);
   if(o.status!=='Home'){const bP=el('button',{type:'button',class:'btn',text:priority.has(o.id)?'★ Remove priority':'☆ Mark priority'});bP.addEventListener('click',()=>{togglePrio(o.id);renderProfiles();});acts.appendChild(bP);}
   d.appendChild(el('div',{class:'dhead'},el('div',null,el('h2',{class:'dname',text:o.company}),el('div',{class:'dlegal',text:(P.legal||'')+(S.id?' · AL entity '+S.id:'')}),tags),acts));
-  const facts=[['Market',o.market],['Distance from Call KS',o.status==='Home'?'—':o.miles+' miles'],['In business since',fy?String(fy)+' ('+(new Date().getFullYear()-fy)+' yrs)':'—'],['Employees',employeesText(o)],['Est. revenue',revText(o)],['Offices',String((P.offices||[]).length||1)]];
+  const facts=[['Market',o.market],['Distance from Call KS',o.status==='Home'?'—':o.miles+' miles'],['In business since',fy?String(fy)+' ('+(new Date().getFullYear()-fy)+' yrs)':'—'],['Employees',employeesText(o)],['Revenue',revText(o)],['Offices',String((P.offices||[]).length||1)]];
   d.appendChild(el('div',{class:'facts'},facts.map(([k,v])=>el('div',{class:'fact'},el('span',{text:k}),el('b',{text:v})))));
   if(o.why)d.appendChild(el('div',{class:'dsec'},el('div',{class:'note',text:o.why})));
   const left=el('div'),right=el('div');
@@ -835,11 +837,11 @@ function miniMapSVG(o){
 function valuationLines(o){
   if(o.est_revenue_m==null)return null;
   const r=o.est_revenue_m,lo=r*0.08*4,hi=r*0.12*5.5;
-  return 'At $'+r.toFixed(1)+'M revenue, an 8-12% EBITDA margin and the 4-5.5x range for shops this size implies roughly $'+lo.toFixed(1)+'M to $'+hi.toFixed(1)+'M of enterprise value. Illustrative only; replace with real financials.';}
+  return 'At $'+r.toFixed(1)+'M revenue ('+o.revenue_basis+', '+revDate(o)+'), an 8-12% EBITDA margin and the 4-5.5x range for shops this size implies roughly $'+lo.toFixed(1)+'M to $'+hi.toFixed(1)+'M of enterprise value. Illustrative only; replace with real financials.';}
 function reportModel(o){
   const P=PROF(o),S=P.sos||{},fy=foundedYear(o);
   return {o,P,S,fy,
-    facts:[['Status',o.status==='Taken'?'Owned by consolidator':o.status==='Home'?'Home base':(o.status==='Watch'?'Watch list':'Target')+(o.tier?' · Tier '+o.tier:'')],['Market',o.market],['Distance',o.status==='Home'?'—':o.miles+' mi from Call KS'],['In business',fy?String(fy)+' ('+(new Date().getFullYear()-fy)+' yrs)':'—'],['Employees',employeesText(o)],['Est. revenue',revText(o)]],
+    facts:[['Status',o.status==='Taken'?'Owned by consolidator':o.status==='Home'?'Home base':(o.status==='Watch'?'Watch list':'Target')+(o.tier?' · Tier '+o.tier:'')],['Market',o.market],['Distance',o.status==='Home'?'—':o.miles+' mi from Call KS'],['In business',fy?String(fy)+' ('+(new Date().getFullYear()-fy)+' yrs)':'—'],['Employees',employeesText(o)],['Revenue',revText(o)]],
     contact:[['Address',mainOffice(o).address],['Phone',P.phone],['Email',P.email],['Website',P.website],['Ownership',o.ownership]].filter(x=>x[1]),
     registry:S.id?[['Legal name',P.legal],['Entity ID',S.id],['Type',S.type],['Status',S.status],['Formed',fmtDate(S.formed)+(S.county?', '+S.county:'')],['Registered agent',S.agent],['Nature of business',S.nature]].filter(x=>x[1]):[],
     sources:[...(P.sources||[]),o.source].filter((v,i,a)=>v&&a.indexOf(v)===i)};}
@@ -859,9 +861,9 @@ function openReport(id){
   h+='<section class="two"><div><h2>Services</h2>'+(P.services&&P.services.length?ul(P.services):'<p>'+esc(o.focus||'—')+'</p>')+'</div><div><h2>Markets</h2><table>'+[['Customers',P.markets||o.focus],['Service area',P.service_area],['Maintenance',P.maintenance]].filter(x=>x[1]).map(([k,v])=>'<tr><td>'+esc(k)+'</td><td>'+esc(v)+'</td></tr>').join('')+'</table>'+(P.licenses&&P.licenses.length?'<h2>Licenses and affiliations</h2>'+ul(P.licenses):'')+'</div></section>';
   h+='<section class="two"><div><h2>Alabama registry</h2>'+(m.registry.length?rows(m.registry):'<p>Record not retrieved.</p>')+'</div><div><h2>People on file</h2>'+(P.people&&P.people.length?ul(P.people):'<p>None found.</p>')+(P.notes&&P.notes.length?'<h2>Observations</h2>'+ul(P.notes):'')+'</div></section>';
   const val=valuationLines(o);
-  if(o.status!=='Home'&&o.status!=='Taken')h+='<section><h2>Valuation context</h2><p>'+(val?esc(val):'No revenue figure is public. Shops with $1-6M revenue typically sell for 4-5.5x adjusted EBITDA; service-heavy commercial shops sit at the top of that range.')+'</p></section><section><h2>Next steps</h2><ul class="checks">'+NEXT_STEPS.map(s=>'<li>'+esc(s)+'</li>').join('')+'</ul></section>';
+  if(o.status!=='Home'&&o.status!=='Taken')h+='<section><h2>Valuation context</h2><p>'+(val?esc(val):'No revenue has been publicly reported in the last two years. Shops with $1-6M revenue typically sell for 4-5.5x adjusted EBITDA; service-heavy commercial shops sit at the top of that range. Request financials to value it.')+'</p></section><section><h2>Next steps</h2><ul class="checks">'+NEXT_STEPS.map(s=>'<li>'+esc(s)+'</li>').join('')+'</ul></section>';
   if(m.sources.length)h+='<section><h2>Sources</h2><ul>'+m.sources.map(u=>'<li class="src">'+esc(u)+'</li>').join('')+'</ul></section>';
-  h+='<p class="fine" style="margin-top:12px">Compiled from public sources and the Alabama Secretary of State on Nov 12-13, 2026. Revenue and employee figures are third-party estimates. Tiers are a judgment of fit, not verified financials. Confidential: prepared for Call KS Services ownership.</p>';
+  h+='<p class="fine" style="margin-top:12px">Compiled from public sources and the Alabama Secretary of State on Nov 12-13, 2026. Revenue appears only when publicly reported within the last two years, with its date. Employee counts are third-party estimates. Tiers are a judgment of fit, not verified financials. Confidential: prepared for Call KS Services ownership.</p>';
   h+='<div class="foot"><span>Call KS Services · Acquisition program</span><span>'+esc(o.company)+'</span></div>';
   document.getElementById('sheet').innerHTML=h;
   document.getElementById('rep_status').textContent='';
@@ -885,7 +887,7 @@ function reportText(o){
   const val=valuationLines(o);if(val&&o.status!=='Taken'){L.push('');L.push('VALUATION CONTEXT');L.push(val);}
   if(o.status!=='Home'&&o.status!=='Taken'){L.push('');L.push('NEXT STEPS');NEXT_STEPS.forEach(s=>L.push('[ ] '+s));}
   if(m.sources.length){L.push('');L.push('SOURCES');m.sources.forEach(u=>L.push(u));}
-  L.push('');L.push('Compiled from public sources and the Alabama Secretary of State, Nov 2026. Estimates are third-party; tiers are a judgment of fit. Confidential.');
+  L.push('');L.push('Compiled from public sources and the Alabama Secretary of State, Nov 2026. Revenue appears only when reported within two years; employee counts are third-party estimates; tiers are a judgment of fit. Confidential.');
   return L.join('\n');}
 document.getElementById('rep_close').addEventListener('click',closeReport);
 document.getElementById('report').addEventListener('click',e=>{if(e.target.id==='report')closeReport();});

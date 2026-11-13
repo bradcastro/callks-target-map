@@ -13,10 +13,11 @@
   "founded": "2011",
   "employees": "11-50",
   "est_revenue_m": 3.5,
-  "revenue_basis": "Owners' figure",
+  "revenue_basis": "Stated by the owners",
   "why": "Platform the acquisitions bolt onto",
   "source": "https://www.zoominfo.com/c/ks-services-llc/443642880",
-  "miles": 0
+  "miles": 0,
+  "revenue_date": "2026-11"
  },
  {
   "id": "hutchens",
@@ -32,10 +33,11 @@
   "founded": "1886",
   "employees": "50-100",
   "est_revenue_m": null,
-  "revenue_basis": "Not found",
+  "revenue_basis": "Not publicly reported",
   "why": "Family-owned 140 years with commercial service and plumbing; natural anchor for the Huntsville hub",
   "source": "https://www.hutchenscompany.com/industrial/hvac-plumbing.html",
-  "miles": 102
+  "miles": 102,
+  "revenue_date": null
  },
  {
   "id": "esc",
@@ -51,10 +53,11 @@
   "founded": "1976",
   "employees": "Not found",
   "est_revenue_m": null,
-  "revenue_basis": "Not found",
+  "revenue_basis": "Not publicly reported",
   "why": "In-house engineering plus service; NASA and DoD work on record",
   "source": "https://cm.hsvchamber.org/list/member/environmental-systems-corporation-of-huntsville-618",
-  "miles": 98
+  "miles": 98,
+  "revenue_date": null
  },
  {
   "id": "proair",
@@ -69,11 +72,12 @@
   "ownership": "Veteran-owned",
   "founded": "1995",
   "employees": "40 (2008)",
-  "est_revenue_m": 5.4,
-  "revenue_basis": "2008 sales per ACHR News; likely higher now",
+  "est_revenue_m": null,
+  "revenue_basis": "Not publicly reported",
   "why": "Service-heavy, mostly industrial accounts, offices in Decatur and Huntsville",
   "source": "https://www.achrnews.com/articles/109963-measuring-commitment-in-service",
-  "miles": 91
+  "miles": 91,
+  "revenue_date": null
  },
  {
   "id": "smithsvc",
@@ -89,10 +93,11 @@
   "founded": "1971",
   "employees": "Not found",
   "est_revenue_m": null,
-  "revenue_basis": "Not found",
+  "revenue_basis": "Not publicly reported",
   "why": "Service-first commercial shop serving schools, churches and industry",
   "source": "https://www.crunchbase.com/organization/smith-service-corp",
-  "miles": 92
+  "miles": 92,
+  "revenue_date": null
  },
  {
   "id": "ws",
@@ -107,11 +112,12 @@
   "ownership": "Family-owned",
   "founded": "1975",
   "employees": "About 50",
-  "est_revenue_m": 12.8,
-  "revenue_basis": "ZoomInfo estimate",
+  "est_revenue_m": null,
+  "revenue_basis": "Not publicly reported",
   "why": "Adds the electrical trade; larger than a tuck-in",
   "source": "https://www.zoominfo.com/c/ws-electrical--air-conditioning-inc/410478971",
-  "miles": 92
+  "miles": 92,
+  "revenue_date": null
  },
  {
   "id": "acc",
@@ -127,10 +133,11 @@
   "founded": "1977",
   "employees": "Not found",
   "est_revenue_m": null,
-  "revenue_basis": "Not found",
+  "revenue_basis": "Not publicly reported",
   "why": "Two North Alabama offices; commercial kitchen niche",
   "source": "https://alabamaclimatecontrol.com/commercial-services/",
-  "miles": 103
+  "miles": 103,
+  "revenue_date": null
  },
  {
   "id": "early",
@@ -145,11 +152,12 @@
   "ownership": "Family-owned, third generation",
   "founded": "1954",
   "employees": "Not found",
-  "est_revenue_m": 4.5,
-  "revenue_basis": "Midpoint of Blue Book's $3-6M annual volume",
+  "est_revenue_m": null,
+  "revenue_basis": "Not publicly reported",
   "why": "Third-generation family business; succession candidate",
   "source": "https://thebluebook.com/iProView/4815/early-services-inc/subcontractors",
-  "miles": 89
+  "miles": 89,
+  "revenue_date": null
  },
  {
   "id": "md",
@@ -165,10 +173,11 @@
   "founded": "1900s",
   "employees": "Not found",
   "est_revenue_m": null,
-  "revenue_basis": "Not found",
+  "revenue_basis": "Not publicly reported",
   "why": "Construction-heavy and likely too large for a tuck-in",
   "source": "https://mdmechanical.com/about-us/news",
-  "miles": 100
+  "miles": 100,
+  "revenue_date": null
  },
  {
   "id": "sereef",
@@ -184,10 +193,11 @@
   "founded": "1962",
   "employees": "Not found",
   "est_revenue_m": null,
-  "revenue_basis": "Not found",
+  "revenue_basis": "Not publicly reported",
   "why": "Adds refrigeration capability in the home market",
   "source": "https://downtobid.com/contractors/hvac/birmingham",
-  "miles": 18
+  "miles": 18,
+  "revenue_date": null
  },
  {
   "id": "hardy",
@@ -203,10 +213,11 @@
   "founded": "1943",
   "employees": "Not found",
   "est_revenue_m": null,
-  "revenue_basis": "Not found",
+  "revenue_basis": "Not publicly reported",
   "why": "Employee ownership means a trustee-led sale process",
   "source": "https://hardyserv.com/?p=37",
-  "miles": 17
+  "miles": 17,
+  "revenue_date": null
  },
  {
   "id": "rjm",
@@ -222,10 +233,11 @@
   "founded": "1998",
   "employees": "About 200",
   "est_revenue_m": null,
-  "revenue_basis": "Not found",
+  "revenue_basis": "Not publicly reported",
   "why": "Project-heavy subcontractor",
   "source": "https://downtobid.com/contractors/hvac/montgomery/4",
-  "miles": 13
+  "miles": 13,
+  "revenue_date": null
  },
  {
   "id": "apex",
@@ -241,10 +253,11 @@
   "founded": "2005",
   "employees": "About 25",
   "est_revenue_m": null,
-  "revenue_basis": "Not found",
+  "revenue_basis": "Not publicly reported",
   "why": "Little public detail; worth a call",
   "source": "https://downtobid.com/contractors/hvac/birmingham",
-  "miles": 29
+  "miles": 29,
+  "revenue_date": null
  },
  {
   "id": "alair",
@@ -260,10 +273,11 @@
   "founded": "1984",
   "employees": "Not found",
   "est_revenue_m": null,
-  "revenue_basis": "Not found",
+  "revenue_basis": "Not publicly reported",
   "why": "Small shop; 15 permitted projects in 2025",
   "source": "https://www.buildzoom.com/contractor/alabama-air-systems-inc",
-  "miles": 16
+  "miles": 16,
+  "revenue_date": null
  },
  {
   "id": "patriot",
@@ -279,10 +293,11 @@
   "founded": "2016",
   "employees": "50-100",
   "est_revenue_m": null,
-  "revenue_basis": "Not found",
+  "revenue_basis": "Not publicly reported",
   "why": "Pure service model in the 2029 Montgomery market",
   "source": "https://downtobid.com/contractors/hvac/montgomery/3",
-  "miles": 69
+  "miles": 69,
+  "revenue_date": null
  },
  {
   "id": "dixie",
@@ -298,10 +313,11 @@
   "founded": "1908",
   "employees": "About 160",
   "est_revenue_m": null,
-  "revenue_basis": "Not found",
+  "revenue_basis": "Not publicly reported",
   "why": "Multi-trade, 160 people across Montgomery and Auburn-Opelika; a merger or platform partner, not a tuck-in",
   "source": "https://apprenticeships.dejobs.org/montgomery-al/commercial-hvac-apprentice/16A95C1BC452481A94584701DF775127/job/",
-  "miles": 73
+  "miles": 73,
+  "revenue_date": null
  },
  {
   "id": "amco",
@@ -316,11 +332,12 @@
   "ownership": "Independent",
   "founded": "1956",
   "employees": "About 120",
-  "est_revenue_m": 38.0,
-  "revenue_basis": "Estimate from PPP loan data",
+  "est_revenue_m": null,
+  "revenue_basis": "Not publicly reported",
   "why": "Platform-scale; a merger or recap partner rather than a tuck-in",
   "source": "https://newbizbot.ai/ppp-loans/alabama/industry/23?page=4",
-  "miles": 70
+  "miles": 70,
+  "revenue_date": null
  },
  {
   "id": "bradley",
@@ -336,10 +353,11 @@
   "founded": "1963",
   "employees": "Not found",
   "est_revenue_m": null,
-  "revenue_basis": "Not found",
+  "revenue_basis": "Not publicly reported",
   "why": "Plumbing add-on option",
   "source": "https://levelset.com/subcontractors/alabama/hvac",
-  "miles": 69
+  "miles": 69,
+  "revenue_date": null
  },
  {
   "id": "woodall",
@@ -355,10 +373,11 @@
   "founded": "1967",
   "employees": "About 52",
   "est_revenue_m": null,
-  "revenue_basis": "Not found",
+  "revenue_basis": "Not publicly reported",
   "why": "Dominant Dothan brand with a separate commercial company; close to Enterprise",
   "source": "https://naicslist.com/company-profile/bob-woodall-air-care-systems-inc-dothan-al-36303",
-  "miles": 164
+  "miles": 164,
+  "revenue_date": null
  },
  {
   "id": "samsvc",
@@ -374,10 +393,11 @@
   "founded": "Not found",
   "employees": "Not found",
   "est_revenue_m": null,
-  "revenue_basis": "Not found",
+  "revenue_basis": "Not publicly reported",
   "why": "Restaurant and hospitality service niche",
   "source": "https://downtobid.com/contractors/hvac/dothan/4",
-  "miles": 163
+  "miles": 163,
+  "revenue_date": null
  },
  {
   "id": "aca",
@@ -393,10 +413,11 @@
   "founded": "1975",
   "employees": "Not found",
   "est_revenue_m": null,
-  "revenue_basis": "Not found",
+  "revenue_basis": "Not publicly reported",
   "why": "Local Dothan dealer",
   "source": "https://levelset.com/subcontractors/alabama/hvac",
-  "miles": 166
+  "miles": 166,
+  "revenue_date": null
  },
  {
   "id": "secool",
@@ -412,10 +433,11 @@
   "founded": "2017",
   "employees": "Not found",
   "est_revenue_m": null,
-  "revenue_basis": "Not found",
+  "revenue_basis": "Not publicly reported",
   "why": "Local Dothan contractor",
   "source": "https://www.levelset.com/subcontractors/alabama/hvac/?page=3",
-  "miles": 166
+  "miles": 166,
+  "revenue_date": null
  },
  {
   "id": "hagler",
@@ -431,10 +453,11 @@
   "founded": "2007",
   "employees": "About 21",
   "est_revenue_m": null,
-  "revenue_basis": "Not found",
+  "revenue_basis": "Not publicly reported",
   "why": "Near Fort Novosel and Enterprise",
   "source": "https://downtobid.com/contractors/hvac/dothan",
-  "miles": 144
+  "miles": 144,
+  "revenue_date": null
  },
  {
   "id": "baycc",
@@ -450,10 +473,11 @@
   "founded": "2016",
   "employees": "10-50",
   "est_revenue_m": null,
-  "revenue_basis": "Not found",
+  "revenue_basis": "Not publicly reported",
   "why": "Commercial-only shop; Procore projects average about $1.6M",
   "source": "https://network.procore.com/p/bay-climate-control-and-refrigeration-llc-mobile",
-  "miles": 193
+  "miles": 193,
+  "revenue_date": null
  },
  {
   "id": "alston",
@@ -469,10 +493,11 @@
   "founded": "1978",
   "employees": "Not found",
   "est_revenue_m": null,
-  "revenue_basis": "Not found",
+  "revenue_basis": "Not publicly reported",
   "why": "Refrigeration plus commercial HVAC change-outs",
   "source": "https://www.alstonrefrigeration.com/hvac",
-  "miles": 197
+  "miles": 197,
+  "revenue_date": null
  },
  {
   "id": "lowerAL",
@@ -488,10 +513,11 @@
   "founded": "Not found",
   "employees": "Not found",
   "est_revenue_m": null,
-  "revenue_basis": "Not found",
+  "revenue_basis": "Not publicly reported",
   "why": "Small Mobile-area shop",
   "source": "https://bbb.org/us/al/mobile/category/commercial-refrigeration",
-  "miles": 191
+  "miles": 191,
+  "revenue_date": null
  },
  {
   "id": "conrad",
@@ -507,10 +533,11 @@
   "founded": "1973",
   "employees": "Not found",
   "est_revenue_m": null,
-  "revenue_basis": "Not found",
+  "revenue_basis": "Not publicly reported",
   "why": "Rural southwest Alabama coverage",
   "source": "https://levelset.com/subcontractors/alabama/hvac",
-  "miles": 125
+  "miles": 125,
+  "revenue_date": null
  },
  {
   "id": "csusa",
@@ -526,10 +553,11 @@
   "founded": "",
   "employees": "",
   "est_revenue_m": null,
-  "revenue_basis": "",
+  "revenue_basis": "Not publicly reported",
   "why": "Largest consolidator in the state",
   "source": "https://resumegeni.com/jobs/hvac-commercial-start-up-technician-at-comfort-systems-usa-birmingham-al-csusa-mid-south-hq",
-  "miles": 15
+  "miles": 15,
+  "revenue_date": null
  },
  {
   "id": "capref",
@@ -545,10 +573,11 @@
   "founded": "1946",
   "employees": "",
   "est_revenue_m": null,
-  "revenue_basis": "",
+  "revenue_basis": "Not publicly reported",
   "why": "Now part of Comfort Systems USA",
   "source": "https://startpage.mapquest.com/us/alabama/comfort-systems-usa-4949277",
-  "miles": 69
+  "miles": 69,
+  "revenue_date": null
  },
  {
   "id": "vulcan",
@@ -563,11 +592,12 @@
   "ownership": "Best in Class Technology Services (2020)",
   "founded": "",
   "employees": "21-50",
-  "est_revenue_m": 10.5,
-  "revenue_basis": "Prospeo estimate",
+  "est_revenue_m": null,
+  "revenue_basis": "Not publicly reported",
   "why": "Already owned by a PE-backed service platform",
   "source": "https://mergr.com/company/vulcan-mechanical-services/ownership",
-  "miles": 8
+  "miles": 8,
+  "revenue_date": null
  },
  {
   "id": "ecs",
@@ -583,10 +613,11 @@
   "founded": "",
   "employees": "200+ (all offices)",
   "est_revenue_m": null,
-  "revenue_basis": "",
+  "revenue_basis": "Not publicly reported",
   "why": "Part of the Service Logic platform",
   "source": "https://enableamerica.dejobs.org/montgomery-al/lead-hvac-project-installer/2EAD4FBCD2B94539BC077132244948AF/job/",
-  "miles": 195
+  "miles": 195,
+  "revenue_date": null
  },
  {
   "id": "childress",
@@ -602,10 +633,11 @@
   "founded": "",
   "employees": "",
   "est_revenue_m": null,
-  "revenue_basis": "",
+  "revenue_basis": "Not publicly reported",
   "why": "PE add-on, July 2025",
   "source": "https://www.privsource.com/acquisitions/private-equity-backed-acquisitions/state/alabama",
-  "miles": 68
+  "miles": 68,
+  "revenue_date": null
  },
  {
   "id": "dunns",
@@ -621,10 +653,11 @@
   "founded": "",
   "employees": "",
   "est_revenue_m": null,
-  "revenue_basis": "",
+  "revenue_basis": "Not publicly reported",
   "why": "PE add-on, February 2026",
   "source": "https://www.privsource.com/acquisitions/industrial-services/state/alabama",
-  "miles": 62
+  "miles": 62,
+  "revenue_date": null
  },
  {
   "id": "alcontrols",
@@ -640,10 +673,11 @@
   "founded": "",
   "employees": "",
   "est_revenue_m": null,
-  "revenue_basis": "",
+  "revenue_basis": "Not publicly reported",
   "why": "PE add-on",
   "source": "https://www.privsource.com/acquisitions/hvac-mechanical/state/alabama",
-  "miles": 2
+  "miles": 2,
+  "revenue_date": null
  },
  {
   "id": "valley",
@@ -659,10 +693,11 @@
   "founded": "",
   "employees": "",
   "est_revenue_m": null,
-  "revenue_basis": "",
+  "revenue_basis": "Not publicly reported",
   "why": "PE add-on",
   "source": "https://www.privsource.com/acquisitions/hvac-mechanical/state/alabama",
-  "miles": 94
+  "miles": 94,
+  "revenue_date": null
  },
  {
   "id": "airnow",
@@ -678,10 +713,11 @@
   "founded": "",
   "employees": "",
   "est_revenue_m": null,
-  "revenue_basis": "",
+  "revenue_basis": "Not publicly reported",
   "why": "PE add-on",
   "source": "https://www.privsource.com/acquisitions/hvac-mechanical/state/alabama",
-  "miles": 67
+  "miles": 67,
+  "revenue_date": null
  },
  {
   "id": "sae",
@@ -697,10 +733,11 @@
   "founded": "",
   "employees": "",
   "est_revenue_m": null,
-  "revenue_basis": "",
+  "revenue_basis": "Not publicly reported",
   "why": "PE add-on",
   "source": "https://www.privsource.com/acquisitions/hvac-mechanical/state/alabama",
-  "miles": 197
+  "miles": 197,
+  "revenue_date": null
  },
  {
   "id": "hansen",
@@ -716,9 +753,10 @@
   "founded": "",
   "employees": "",
   "est_revenue_m": null,
-  "revenue_basis": "",
+  "revenue_basis": "Not publicly reported",
   "why": "Acquired by Air Pros USA",
   "source": "https://www.privsource.com/acquisitions/hvac-mechanical/state/alabama",
-  "miles": 198
+  "miles": 198,
+  "revenue_date": null
  }
 ]
