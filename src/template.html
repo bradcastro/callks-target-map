@@ -127,6 +127,9 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);-w
 .leaflet-popup-content{margin:0}
 .leaflet-container a.leaflet-popup-close-button{color:var(--ink-faint)}
 .row[aria-disabled="true"]{opacity:.45;cursor:default}
+.osm-tiles{filter:saturate(.45) brightness(1.04) contrast(.92)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .osm-tiles{filter:invert(1) hue-rotate(180deg) brightness(.9) contrast(.85) saturate(.4)}}
+:root[data-theme="dark"] .osm-tiles{filter:invert(1) hue-rotate(180deg) brightness(.9) contrast(.85) saturate(.4)}
 .leaflet-control-attribution{background:color-mix(in srgb,var(--panel) 85%,transparent)!important;color:var(--ink-faint)!important;font:10px var(--f-body)!important}
 .leaflet-control-attribution a{color:var(--ink-dim)!important}
 .leaflet-control-zoom a{background:var(--panel)!important;color:var(--ink)!important;border-color:var(--line2)!important}
@@ -503,10 +506,10 @@ const RENDER={};panes.forEach(p=>{RENDER[p]=L.canvas({pane:p,padding:0.5});});
 let landLayer,countyLayer,waterLayer,roadLayer,ringLayer;
 const opLayer=L.layerGroup(), labelLayer=L.layerGroup(), cityDotLayer=L.layerGroup(), officeLayer=L.layerGroup();
 
-/* street basemap (CARTO / OpenStreetMap). Loads on the hosted site; inside a sandboxed preview the
+/* street basemap (OpenStreetMap standard tiles; no key needed for light use with attribution). Loads on the hosted site; inside a sandboxed preview the
    tiles are blocked, so the map falls back to the built-in roads and towns. */
 let streetMode=true,streetOK=false,streetFailed=false,tileLayer=null,tileErrors=0;
-const TILE_ATTR='&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions" target="_blank" rel="noopener">CARTO</a>';
+const TILE_ATTR='&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors';
 function streetFallback(){
   if(streetOK||streetFailed)return;
   streetFailed=true;streetMode=false;applyBasemap();
@@ -514,8 +517,7 @@ function streetFallback(){
   const r=document.querySelector('.row[data-layer="street"]');r.setAttribute('aria-pressed','false');r.setAttribute('aria-disabled','true');}
 function makeTiles(){
   if(tileLayer)map.removeLayer(tileLayer);
-  const url=effectiveDark()?'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png':'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png';
-  tileLayer=L.tileLayer(url,{subdomains:'abcd',maxZoom:19,attribution:TILE_ATTR});
+  tileLayer=L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:TILE_ATTR,className:'osm-tiles'});
   tileLayer.on('tileload',()=>{streetOK=true;});
   tileLayer.on('tileerror',()=>{tileErrors++;if(!streetOK&&tileErrors>=6)streetFallback();});
   return tileLayer;}
