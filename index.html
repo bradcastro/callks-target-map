@@ -787,6 +787,9 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);-w
 .leaflet-popup-tip{background:var(--panel);border:1px solid var(--line2)}
 .leaflet-popup-content{margin:0}
 .leaflet-container a.leaflet-popup-close-button{color:var(--ink-faint)}
+.row[aria-disabled="true"]{opacity:.45;cursor:default}
+.leaflet-control-attribution{background:color-mix(in srgb,var(--panel) 85%,transparent)!important;color:var(--ink-faint)!important;font:10px var(--f-body)!important}
+.leaflet-control-attribution a{color:var(--ink-dim)!important}
 .leaflet-control-zoom a{background:var(--panel)!important;color:var(--ink)!important;border-color:var(--line2)!important}
 .leaflet-bar{border:1px solid var(--line2)!important;box-shadow:none!important}
 .opcard{font-family:var(--f-body);width:280px;max-width:72vw;padding:12px 14px}
@@ -1007,6 +1010,8 @@ table.ops tr.taken td{opacity:.62}
 
         <div class="sec">
           <h3>Map layers</h3>
+          <button type="button" class="row" data-layer="street" aria-pressed="true"><span class="sw"></span><span class="lab">Street map <small>roads, towns, street names</small></span></button>
+          <p class="cap" id="street-note" style="margin:0 0 6px" hidden></p>
           <button type="button" class="row" data-layer="names" aria-pressed="true"><span class="sw"></span><span class="lab">Target names <small>Tier A, zoom in for all</small></span></button>
           <button type="button" class="row" data-layer="offices" aria-pressed="true"><span class="sw"></span><span class="lab">Branch offices <small>second locations</small></span></button>
           <button type="button" class="row" data-layer="rings" aria-pressed="true"><span class="sw"></span><span class="lab">Distance rings <small>50 · 100 · 150 mi</small></span></button>
@@ -1149,8 +1154,9 @@ document.getElementById('st-taken').textContent=OPS.filter(o=>o.status==='Taken'
 
 /* ---------- map ---------- */
 const AL_BOUNDS=L.latLngBounds([30.15,-88.55],[35.05,-84.85]);
-const map=L.map('map',{preferCanvas:true,attributionControl:false,zoomSnap:0.25,minZoom:6,maxZoom:13,maxBounds:L.latLngBounds([28.4,-91.8],[37.2,-81.6]),maxBoundsViscosity:0.8});
+const map=L.map('map',{preferCanvas:true,attributionControl:true,zoomSnap:0.25,minZoom:6,maxZoom:18,maxBounds:L.latLngBounds([28.4,-91.8],[37.2,-81.6]),maxBoundsViscosity:0.8});
 map.fitBounds(AL_BOUNDS,{padding:[10,10]});
+map.attributionControl.setPrefix(false);
 const panes=['land','county','water','roads','rings','labels'];
 panes.forEach((p,i)=>{map.createPane(p);map.getPane(p).style.zIndex=300+i*10;map.getPane(p).style.pointerEvents='none';});
 const RENDER={};panes.forEach(p=>{RENDER[p]=L.canvas({pane:p,padding:0.5});});
@@ -1158,9 +1164,33 @@ const RENDER={};panes.forEach(p=>{RENDER[p]=L.canvas({pane:p,padding:0.5});});
 let landLayer,countyLayer,waterLayer,roadLayer,ringLayer;
 const opLayer=L.layerGroup(), labelLayer=L.layerGroup(), cityDotLayer=L.layerGroup(), officeLayer=L.layerGroup();
 
+/* street basemap (CARTO / OpenStreetMap). Loads on the hosted site; inside a sandboxed preview the
+   tiles are blocked, so the map falls back to the built-in roads and towns. */
+let streetMode=true,streetOK=false,streetFailed=false,tileLayer=null,tileErrors=0;
+const TILE_ATTR='&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions" target="_blank" rel="noopener">CARTO</a>';
+function streetFallback(){
+  if(streetOK||streetFailed)return;
+  streetFailed=true;streetMode=false;applyBasemap();
+  const n=document.getElementById('street-note');n.hidden=false;n.textContent='Street tiles can\'t load here, so the built-in highways and towns are shown. They load on the hosted site.';
+  const r=document.querySelector('.row[data-layer="street"]');r.setAttribute('aria-pressed','false');r.setAttribute('aria-disabled','true');}
+function makeTiles(){
+  if(tileLayer)map.removeLayer(tileLayer);
+  const url=effectiveDark()?'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png':'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png';
+  tileLayer=L.tileLayer(url,{subdomains:'abcd',maxZoom:19,attribution:TILE_ATTR});
+  tileLayer.on('tileload',()=>{streetOK=true;});
+  tileLayer.on('tileerror',()=>{tileErrors++;if(!streetOK&&tileErrors>=6)streetFallback();});
+  return tileLayer;}
+function applyBasemap(){
+  if(streetMode){makeTiles().addTo(map);map.setMaxZoom(18);if(!streetOK)setTimeout(()=>{if(!streetOK)streetFallback();},6000);}
+  else{if(tileLayer){map.removeLayer(tileLayer);tileLayer=null;}map.setMaxZoom(13);if(map.getZoom()>13)map.setZoom(13);}
+  ['roads','hwlabels','cities','water'].forEach(k=>{const r=document.querySelector('.row[data-layer="'+k+'"]');if(r)r.setAttribute('aria-disabled',streetMode?'true':'false');});
+  buildBase();scheduleLayout();}
+
 function buildBase(){
   [landLayer,countyLayer,waterLayer,roadLayer,ringLayer].forEach(l=>{if(l)map.removeLayer(l);});
-  landLayer=L.geoJSON(GEO.states,{pane:'land',renderer:RENDER.land,interactive:false,style:ft=>({fillColor:ft.properties.al?css('--land-al'):css('--land'),fillOpacity:1,color:css('--state-line'),weight:ft.properties.al?1.8:0.9,opacity:1})}).addTo(map);
+  landLayer=L.geoJSON(GEO.states,{pane:'land',renderer:RENDER.land,interactive:false,style:ft=>streetMode
+    ?{fill:false,color:css('--accent'),weight:ft.properties.al?2:0,opacity:ft.properties.al?0.55:0}
+    :{fillColor:ft.properties.al?css('--land-al'):css('--land'),fillOpacity:1,color:css('--state-line'),weight:ft.properties.al?1.8:0.9,opacity:1}}).addTo(map);
   countyLayer=L.geoJSON(GEO.counties,{pane:'county',renderer:RENDER.county,interactive:false,style:()=>({fill:false,color:css('--county'),weight:0.8,opacity:1})});
   const wl=L.geoJSON(GEO.lakes,{pane:'water',renderer:RENDER.water,interactive:false,style:()=>({fillColor:css('--water'),fillOpacity:1,color:css('--river'),weight:0.6})});
   const wr=L.geoJSON(GEO.rivers,{pane:'water',renderer:RENDER.water,interactive:false,style:()=>({color:css('--river'),weight:1.1,opacity:0.9})});
@@ -1171,8 +1201,8 @@ function buildBase(){
     return c==='i'?{color:css('--road-i'),weight:3,opacity:0.95,lineCap:'round'}:c==='us'?{color:css('--road-us'),weight:1.3,opacity:1}:{color:css('--road-st'),weight:0.9,opacity:1};}});
   ringLayer=L.layerGroup([50,100,150].map(mi=>L.circle([HOME.lat,HOME.lon],{pane:'rings',renderer:RENDER.rings,interactive:false,radius:mi*1609.34,fill:false,color:css('--ring'),weight:1,opacity:0.5,dashArray:'4 6'})));
   if(layersOn.counties)countyLayer.addTo(map);
-  if(layersOn.water)waterLayer.addTo(map);
-  if(layersOn.roads)roadLayer.addTo(map);
+  if(layersOn.water&&!streetMode)waterLayer.addTo(map);
+  if(layersOn.roads&&!streetMode)roadLayer.addTo(map);
   if(layersOn.rings)ringLayer.addTo(map);
 }
 
@@ -1200,7 +1230,7 @@ function layoutLabels(){
     for(const [l,t] of c){const b={l,t,r:l+w,b:t+h};if(!hit(b,ignoreDots)){put(ll,pt,b,html);return true;}}return false;};
   const tryCenter=(ll,w,h,html)=>{const pt=P(ll),b={l:pt.x-w/2,t:pt.y-h/2,r:pt.x+w/2,b:pt.y+h/2};if(!hit(b)){put(ll,pt,b,html);return true;}return false;};
   // cities list first so big ones can claim space early
-  const cities=layersOn.cities?GEO.cities.map(([n,la,lo,pop,st])=>{const oos=st!=='AL',big=!oos&&pop>=60000;
+  const cities=layersOn.cities&&!streetMode?GEO.cities.map(([n,la,lo,pop,st])=>{const oos=st!=='AL',big=!oos&&pop>=60000;
     return {n,ll:[la,lo],big,oos,min:oos?(pop>=150000?6:8.5):(big?0:pop>=15000?7.75:9),pop};}).filter(c=>z>=c.min).sort((a,b)=>b.pop-a.pop):[];
   const placeCity=c=>{const font=c.big?FONTS.cityBig:FONTS.city,w=textW(c.n,font,c.big?0.7:0)+2,h=13;
     if(tryAround(c.ll,w,h,5,'<div class="city'+(c.big?' big':'')+(c.oos?' oos':'')+'">'+esc(c.n)+'</div>',c.big)){
@@ -1213,13 +1243,13 @@ function layoutLabels(){
   if(layersOn.names){
     const rank=o=>priority.has(o.id)?1:o.status==='Taken'?5:o.tier==='A'?2:o.tier==='B'?3:4;
     vis.filter(o=>o.status!=='Home').filter(o=>{const r=rank(o);return r<=2||(r<=4&&z>=9)||(r===5&&z>=10);}).sort((a,b)=>rank(a)-rank(b)).forEach(placeName);}
-  const shields=layersOn.hwlabels&&layersOn.roads?GEO.hwlabels:[];
+  const shields=layersOn.hwlabels&&layersOn.roads&&!streetMode?GEO.hwlabels:[];
   shields.filter(s=>s[3]==='i').forEach(([la,lo,lab,cls])=>tryCenter([la,lo],textW(lab,FONTS.hw)+10,15,'<div class="hw i">'+esc(lab)+'</div>'));
   cities.filter(c=>!c.big).forEach(placeCity);
   if(z>=8)shields.filter(s=>s[3]==='us').forEach(([la,lo,lab,cls])=>tryCenter([la,lo],textW(lab,FONTS.hw)+10,15,'<div class="hw us">'+esc(lab)+'</div>'));
   // 6. ring labels east of Call KS, 7. neighbor state names
   if(layersOn.rings)[50,100,150].forEach(mi=>{const ll=[HOME.lat,HOME.lon+mi/(69*Math.cos(HOME.lat*Math.PI/180))];const t=mi+' mi';tryCenter(ll,textW(t,FONTS.ring)+6,13,'<div class="ringlab">'+t+'</div>');});
-  STATE_LABELS.forEach(([n,la,lo])=>tryCenter([la,lo],textW(n,FONTS.st,3.3)+4,14,'<div class="stlab">'+n+'</div>'));
+  if(!streetMode)STATE_LABELS.forEach(([n,la,lo])=>tryCenter([la,lo],textW(n,FONTS.st,3.3)+4,14,'<div class="stlab">'+n+'</div>'));
 }
 let layoutTimer=null;
 function scheduleLayout(){clearTimeout(layoutTimer);layoutTimer=setTimeout(layoutLabels,30);}
@@ -1354,9 +1384,11 @@ document.getElementById('t_status').addEventListener('change',e=>{f.tStatus=e.ta
 document.getElementById('t_prio').addEventListener('change',e=>{f.prioOnly=e.target.checked;applyOps();});
 document.getElementById('t_clear').addEventListener('click',()=>{f.tier='';f.market='';f.search='';f.prioOnly=false;f.tStatus='';f.statuses=new Set(['Target','Watch','Taken']);syncChips();syncInputs();applyOps();});
 document.querySelectorAll('.row[data-layer]').forEach(r=>r.addEventListener('click',()=>{
+  if(r.getAttribute('aria-disabled')==='true')return;
+  if(r.dataset.layer==='street'){streetMode=r.getAttribute('aria-pressed')!=='true';r.setAttribute('aria-pressed',streetMode?'true':'false');applyBasemap();return;}
   const k=r.dataset.layer,on=r.getAttribute('aria-pressed')!=='true';r.setAttribute('aria-pressed',on?'true':'false');layersOn[k]=on;
   const lay={rings:ringLayer,roads:roadLayer,counties:countyLayer,water:waterLayer,offices:officeLayer}[k];
-  if(lay){on?lay.addTo(map):map.removeLayer(lay);}
+  if(lay&&!(streetMode&&(k==='roads'||k==='water'))){on?lay.addTo(map):map.removeLayer(lay);}
   scheduleLayout();}));
 
 /* ---------- profiles, locations, registry, reports ---------- */
@@ -1576,13 +1608,13 @@ window.addEventListener('hashchange',()=>selectTab((location.hash||'#map').slice
 
 /* theme */
 function effectiveDark(){const t=document.documentElement.getAttribute('data-theme');if(t)return t==='dark';return matchMedia('(prefers-color-scheme: dark)').matches;}
-function retheme(){buildBase();scheduleLayout();}
+function retheme(){if(streetMode)makeTiles().addTo(map);buildBase();scheduleLayout();}
 document.getElementById('themebtn').addEventListener('click',()=>{document.documentElement.setAttribute('data-theme',effectiveDark()?'light':'dark');});
 try{matchMedia('(prefers-color-scheme: dark)').addEventListener('change',retheme);}catch(e){}
 new MutationObserver(retheme).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
 
 /* boot */
-buildBase();cityDotLayer.addTo(map);labelLayer.addTo(map);officeLayer.addTo(map);opLayer.addTo(map);
+applyBasemap();cityDotLayer.addTo(map);labelLayer.addTo(map);officeLayer.addTo(map);opLayer.addTo(map);
 map.on('zoomend',scheduleLayout);map.on('resize',scheduleLayout);
 buildHead();syncChips();syncInputs();applyOps();
 if(document.fonts&&document.fonts.ready)document.fonts.ready.then(scheduleLayout);

@@ -12,6 +12,7 @@ Open the [live site](https://bradcastro.github.io/callks-target-map/), or open `
 - **Locations tab:** every office for every company, including second locations, with distance from Call KS. Branch offices also appear on the map as small diamonds.
 - **Registry tab:** Alabama Secretary of State records side by side: legal name, entity ID, formation date and age, county, registered agent and the people on file.
 - **Target report:** from a profile, a map popup or the Targets table. **Print or save as PDF** uses the browser's print dialog; **Email** opens your mail app with the report text; **Copy text** puts it on the clipboard. Print and Email need the page opened from GitHub or a downloaded copy; inside Claude only Copy works.
+- **Street map:** on the live site the base map is CARTO's street map (OpenStreetMap data), so you can zoom to street level with every road, town and street name. Where tiles can't load, such as the preview inside Claude, the map falls back to the built-in highways, towns, counties and rivers below.
 - **Layers:** interstates and US highways, highway shields, cities and towns (more appear as you zoom), county lines, rivers and lakes, and 50 / 100 / 150 mile straight-line rings.
 - Light and dark themes follow the system setting; the ◑ button switches them.
 
@@ -82,4 +83,5 @@ On the live site, the report's **Print or save as PDF** and **Email** buttons wo
 - **Roads, rivers, lakes:** [Natural Earth](https://www.naturalearthdata.com/) 10m, public domain.
 - **States and counties:** [US Atlas](https://github.com/topojson/us-atlas) 3.0.1, from Census cartographic boundary files.
 - **Cities:** [GeoNames](https://www.geonames.org/), CC BY 4.0.
+- **Street map tiles:** [CARTO](https://carto.com/attributions) basemaps, map data © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors. Free for light use; heavy commercial traffic needs a CARTO plan.
 - **Map library:** [Leaflet](https://leafletjs.com/) 1.9.4, BSD 2-Clause.
