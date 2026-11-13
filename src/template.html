@@ -15,7 +15,7 @@ __LEAFLETCSS__</style>
   --tierA:#0e8197; --tierB:#6a5bd0; --tierC:#7d8b99; --taken:#c2412b; --home:#1c2632; --prio:#c8901d;
   --water:#cfdde8; --land:#f7f8fa; --land-al:#ffffff; --state-line:#97a6b6; --county:#d8dee6;
   --road-i:#e07b22; --road-us:#d6cbb9; --road-st:#e6e0d6; --river:#8fb2cc; --ring:#56626f;
-  --m-hvac:#2563eb; --m-plumb:#2e8b57; --m-all3:#c03a8c; --m-elec:#8a7a2e; --sat:#b37a16;
+  --m-hvac:#2563eb; --m-plumb:#2e8b57; --m-all3:#c03a8c; --m-elec:#8a7a2e; --sat:#b37a16; --grow:#1f8a4c; --decline:#c2412b; --nodata:#8996a6;
   --f-display:'Fraunces',Georgia,'Times New Roman',serif;
   --f-body:'IBM Plex Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
   --f-mono:'IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,monospace;
@@ -28,7 +28,7 @@ __LEAFLETCSS__</style>
   --tierA:#36c6dc; --tierB:#9b8cff; --tierC:#8794a4; --taken:#ef6a4f; --home:#f4f6f9; --prio:#f4c150;
   --water:#0c1a27; --land:#151a22; --land-al:#1a212c; --state-line:#465468; --county:#232c39;
   --road-i:#e3913c; --road-us:#4a4438; --road-st:#2c2f33; --river:#2b4a63; --ring:#8b97a8;
-  --m-hvac:#6ea2ff; --m-plumb:#4cc58a; --m-all3:#f06bbf; --m-elec:#d8c45a; --sat:#e8b04b;
+  --m-hvac:#6ea2ff; --m-plumb:#4cc58a; --m-all3:#f06bbf; --m-elec:#d8c45a; --sat:#e8b04b; --grow:#3fcf7f; --decline:#ef6a4f; --nodata:#5d6879;
   color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#0b0e13; --panel:#11151c; --panel2:#0e1218; --card:#0c1016;
@@ -38,7 +38,7 @@ __LEAFLETCSS__</style>
   --tierA:#36c6dc; --tierB:#9b8cff; --tierC:#8794a4; --taken:#ef6a4f; --home:#f4f6f9; --prio:#f4c150;
   --water:#0c1a27; --land:#151a22; --land-al:#1a212c; --state-line:#465468; --county:#232c39;
   --road-i:#e3913c; --road-us:#4a4438; --road-st:#2c2f33; --river:#2b4a63; --ring:#8b97a8;
-  --m-hvac:#6ea2ff; --m-plumb:#4cc58a; --m-all3:#f06bbf; --m-elec:#d8c45a; --sat:#e8b04b;
+  --m-hvac:#6ea2ff; --m-plumb:#4cc58a; --m-all3:#f06bbf; --m-elec:#d8c45a; --sat:#e8b04b; --grow:#3fcf7f; --decline:#ef6a4f; --nodata:#5d6879;
   color-scheme:dark}
 
 *{box-sizing:border-box}
@@ -125,6 +125,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);-w
 
 .leaflet-tooltip.optip{padding:0;background:var(--panel);color:var(--ink);border:1px solid var(--line2);border-radius:10px;box-shadow:0 6px 24px rgba(0,0,0,.22)}
 .leaflet-tooltip.optip:before{display:none}
+.leaflet-tooltip.optip,.leaflet-popup-content .opcard{white-space:normal;overflow-wrap:anywhere}
 .leaflet-popup-content-wrapper{background:var(--panel);color:var(--ink);border:1px solid var(--line2);border-radius:10px;box-shadow:0 8px 28px rgba(0,0,0,.25)}
 .leaflet-popup-tip{background:var(--panel);border:1px solid var(--line2)}
 .leaflet-popup-content{margin:0}
@@ -307,7 +308,31 @@ table.ops tr.taken td{opacity:.62}
 .mktnote{font-size:11px;color:var(--ink-dim);line-height:1.5;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:8px 10px;margin:8px 0 0}
 .mktnote b{color:var(--ink)}
 .satlg{display:flex;align-items:center;gap:6px;font-family:var(--f-mono);font-size:10px;color:var(--ink-faint);margin-top:6px}
-.satlg .bar{flex:1;height:8px;border-radius:4px;background:linear-gradient(90deg,color-mix(in srgb,var(--sat) 6%,transparent),var(--sat))}
+.satlg .bar{flex:1;height:8px;border-radius:4px}
+.bdg.lead{color:var(--accent);border-color:var(--accent)}
+.cinfo{background:var(--panel);color:var(--ink);border:1px solid var(--line2);border-radius:10px;box-shadow:0 6px 24px rgba(0,0,0,.18);padding:11px 13px;width:300px;max-width:70vw;font-family:var(--f-body);font-size:11.5px;line-height:1.35}
+.cinfo[hidden]{display:none}
+.cinfo .ci-h{display:flex;align-items:baseline;justify-content:space-between;gap:8px}
+.cinfo .ci-h b{font-family:var(--f-display);font-size:16px}
+.cinfo .ci-x{all:unset;cursor:pointer;color:var(--ink-faint);font-size:16px;line-height:1;padding:0 2px}
+.cinfo .ci-x:hover{color:var(--accent)}
+.cinfo .ci-m{margin:6px 0 8px;padding:7px 9px;background:var(--card);border-radius:7px;display:flex;justify-content:space-between;gap:8px;align-items:baseline}
+.cinfo .ci-m b{font-size:15px}.cinfo .ci-m span{font-family:var(--f-mono);font-size:10px;color:var(--ink-faint);text-align:right}
+.cinfo .ci-pop{display:flex;align-items:center;gap:10px;margin-bottom:6px;color:var(--ink-dim)}
+.cinfo svg{flex:none}
+.cinfo table{width:100%;border-collapse:collapse}
+.cinfo td{padding:3px 0;border-top:1px solid var(--line);vertical-align:top;color:var(--ink-dim);font-size:11px}
+.cinfo td:first-child{padding-right:8px}
+.cinfo td:last-child{text-align:right;color:var(--ink);font-variant-numeric:tabular-nums}
+.cinfo .ci-b{display:flex;gap:6px;margin-top:9px}
+.cinfo .ci-b button{flex:1}
+.cinfo .ci-hint{color:var(--ink-faint);font-size:11px}
+.up{color:var(--grow)}.down{color:var(--decline)}
+table.ops.cty{min-width:1300px}
+table.ops.cty td.num,table.ops.cty th.num{text-align:right;font-variant-numeric:tabular-nums}
+table.ops.cty td.co{color:var(--ink);font-weight:600}
+.statebar{font-size:12px;color:var(--ink-dim);align-self:center}
+.statebar b{color:var(--ink)}
 .trade{display:inline-block;font-family:var(--f-mono);font-size:9.5px;font-weight:600;padding:2px 6px;border-radius:4px;color:#fff;margin:0 3px 2px 0}
 .trade.hvac{background:var(--m-hvac)}.trade.plumb{background:var(--m-plumb)}.trade.elec{background:var(--m-elec)}.trade.all3{background:var(--m-all3)}
 .mv{height:100%;display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:10px}
@@ -330,6 +355,7 @@ table.ops tr.taken td{opacity:.62}
     <button class="tab" role="tab" id="tab-locations" aria-controls="view-locations" aria-selected="false">⌖ Locations</button>
     <button class="tab" role="tab" id="tab-registry" aria-controls="view-registry" aria-selected="false">§ Registry</button>
     <button class="tab" role="tab" id="tab-market" aria-controls="view-market" aria-selected="false">▦ Market</button>
+    <button class="tab" role="tab" id="tab-counties" aria-controls="view-counties" aria-selected="false">◫ Counties</button>
     <span class="tabmeta" id="tabmeta"></span>
     <button class="themebtn" id="themebtn" type="button" title="Switch light / dark" aria-label="Switch light or dark theme">◑</button>
   </div>
@@ -387,16 +413,48 @@ table.ops tr.taken td{opacity:.62}
         </div>
 
         <div class="sec">
+          <h3>County heatmap</h3>
+          <div class="fld" style="margin-top:0">
+            <label for="m_heat">Shade counties by</label>
+            <select id="m_heat">
+              <option value="">No shading</option>
+              <optgroup label="Population">
+                <option value="pop">Population</option>
+                <option value="density">People per square mile</option>
+                <option value="pop_chg">Population change since 2020</option>
+                <option value="pop_chg_1y">Population change, last year</option>
+                <option value="mig">Net migration, last year</option>
+              </optgroup>
+              <optgroup label="Commercial growth">
+                <option value="biz_chg">Private businesses, change since 2020</option>
+                <option value="jobs_chg">Private jobs, change since 2020</option>
+                <option value="con_jobs_chg">Construction jobs, change since 2020</option>
+                <option value="pay">Average private-sector pay</option>
+              </optgroup>
+              <optgroup label="Service companies">
+                <option value="per_hvac">People per HVAC/plumbing contractor</option>
+                <option value="hvac_per10k">HVAC/plumbing contractors per 10,000 people</option>
+                <option value="hvac_chg">HVAC/plumbing contractors, change 2019-23</option>
+                <option value="lic_elec">Electrical licenses on file</option>
+                <option value="lic_hvac">HVAC shops on file</option>
+                <option value="lic_plumb">Plumbing shops on file</option>
+                <option value="lic_all3">All-three shops on file</option>
+              </optgroup>
+              <optgroup label="Combined">
+                <option value="opp">Opportunity score</option>
+              </optgroup>
+            </select>
+          </div>
+          <div class="satlg" id="satlg" hidden><span id="satmin"></span><span class="bar" id="satbar"></span><span id="satmax"></span></div>
+          <p class="cap" id="heatnote">Pick a measure to shade the 67 counties. Hover a county for all its numbers; click to pin them.</p>
+        </div>
+
+        <div class="sec">
           <h3>Statewide market <span class="ct" id="mkt-shown"></span></h3>
           <button type="button" class="row" data-mkt="hvac" aria-pressed="false"><span class="sw"></span><i class="dot" style="background:var(--m-hvac)"></i><span class="lab">HVAC shops <small id="mc-hvac"></small></span></button>
           <button type="button" class="row" data-mkt="plumb" aria-pressed="false"><span class="sw"></span><i class="dot" style="background:var(--m-plumb)"></i><span class="lab">Plumbing shops <small id="mc-plumb"></small></span></button>
           <button type="button" class="row" data-mkt="all3" aria-pressed="false"><span class="sw"></span><i class="dot" style="background:var(--m-all3);box-shadow:0 0 0 2px var(--panel),0 0 0 3.5px var(--m-all3)"></i><span class="lab">All three trades <small id="mc-all3"></small></span></button>
           <button type="button" class="row" data-mkt="elec" aria-pressed="false"><span class="sw"></span><i class="dot" style="background:transparent;border:1.5px solid var(--m-elec)"></i><span class="lab">Electrical contractors <small id="mc-elec"></small></span></button>
-          <div class="fld">
-            <label for="m_sat">Shade counties by</label>
-            <select id="m_sat"><option value="">No shading</option><option value="elec">Electrical contractors</option><option value="hvac">HVAC shops</option><option value="plumb">Plumbing shops</option><option value="all3">All-three shops</option></select>
-          </div>
-          <div class="satlg" id="satlg" hidden><span>0</span><span class="bar"></span><span id="satmax"></span></div>
           <p class="mktnote" id="mktnote"></p>
         </div>
 
@@ -446,7 +504,7 @@ table.ops tr.taken td{opacity:.62}
         <div class="fbar">
           <div class="fg" style="width:100%"><label for="p_search">Find a company</label><input type="text" id="p_search" placeholder="Name, city, person…" autocomplete="off"></div>
           <div class="fg" style="width:100%"><label for="p_status">Show</label>
-            <select id="p_status"><option value="open">Targets and watch list</option><option value="A">Tier A only</option><option value="Taken">Owned by consolidators</option><option value="">Everyone</option></select></div>
+            <select id="p_status"><option value="open">Targets and watch list</option><option value="A">Tier A only</option><option value="Taken">Owned by consolidators</option><option value="leads">New leads (state license list)</option><option value="">Everyone</option></select></div>
         </div>
         <div class="pitems" id="pitems"></div>
       </aside>
@@ -501,6 +559,22 @@ table.ops tr.taken td{opacity:.62}
       </aside>
     </div>
   </div>
+
+  <div class="view" id="view-counties" role="tabpanel" aria-labelledby="tab-counties" hidden>
+    <div class="tv">
+      <div class="fbar">
+        <div class="fg"><label for="c_search">Search</label><input type="text" id="c_search" placeholder="County…" autocomplete="off"></div>
+        <div class="fg"><label for="c_filter">Show</label>
+          <select id="c_filter"><option value="">All 67 counties</option><option value="grow">Growing since 2020</option><option value="decline">Shrinking since 2020</option><option value="near">Within 100 mi of Call KS</option></select></div>
+        <button type="button" class="fbtn" id="c_copy">Copy table as CSV</button>
+        <span class="copynote" id="c_copynote" aria-live="polite"></span>
+        <span class="statebar" id="c_state"></span>
+        <span class="fcount" id="c_count"></span>
+      </div>
+      <div class="tscroll"><table class="ops cty"><thead><tr id="c_head"></tr></thead><tbody id="c_body"></tbody></table></div>
+      <p class="cap" id="c_src" style="margin:0;padding:10px 14px;border-top:1px solid var(--line)"></p>
+    </div>
+  </div>
 </div>
 
 <div class="report-wrap" id="report" hidden role="dialog" aria-modal="true" aria-label="Target report">
@@ -520,6 +594,7 @@ table.ops tr.taken td{opacity:.62}
 const GEO=__GEO__;
 const OPS=__TARGETS__;
 const MKT=__MARKET__;
+const CTY=__COUNTIES__;
 const HOME=OPS.find(o=>o.status==='Home');
 const MARKETS=[...new Set(OPS.filter(o=>o.status!=='Home').map(o=>o.market))].sort();
 
@@ -669,10 +744,11 @@ function iconFor(o){
 function profileHTML(o,full){
   const p=priority.has(o.id);
   let h='<div class="opcard"><div class="opnm">'+esc(o.company)+(p?' <span class="star">★</span>':'')+'</div>';
-  h+='<div class="oploc">'+esc(o.city)+' · '+esc(o.market)+(o.founded&&o.founded!=='Not found'?' · est. '+esc(o.founded):'')+'</div>';
+  h+='<div class="oploc">'+esc(o.city)+' · '+esc(o.market)+(o.status==='Lead'?(o.shop.since?' · licensed '+esc(o.shop.since):''):(o.founded&&o.founded!=='Not found'?' · est. '+esc(o.founded):''))+'</div>';
   h+='<div class="badges">';
   if(o.status==='Home')h+='<span class="bdg">Home base</span>';
   else if(o.status==='Taken')h+='<span class="bdg taken">Owned by consolidator</span>';
+  else if(o.status==='Lead')h+='<span class="bdg lead">New lead</span>'+tradeTags(o.shop);
   else h+='<span class="bdg tier t'+esc(o.tier)+'">Tier '+esc(o.tier)+'</span><span class="bdg">'+(o.status==='Watch'?'Watch list':'Target')+'</span>';
   h+='</div>';
   h+='<div class="opstats"><span><b>'+(o.status==='Home'?'—':o.miles+' mi')+'</b> from Call KS</span><span><b>'+esc(o.employees&&o.employees!=='Not found'?o.employees:'—')+'</b> employees</span><span><b>'+revText(o)+'</b> revenue</span></div>';
@@ -705,8 +781,9 @@ function applyOps(){
 function restyleOps(){OPS.forEach(o=>opMarkers[o.id].setIcon(iconFor(o)));}
 function togglePrio(id){
   if(priority.has(id))priority.delete(id);else priority.add(id);savePrio();
-  const m=opMarkers[id];m.setIcon(iconFor(m._op));
-  if(m.isPopupOpen()){m.setPopupContent(profileHTML(m._op,true));wirePopup(m.getPopup().getElement());}
+  const m=opMarkers[id];
+  if(m){m.setIcon(iconFor(m._op));if(m.isPopupOpen()){m.setPopupContent(profileHTML(m._op,true));wirePopup(m.getPopup().getElement());}}
+  const sm=shopMarkers[id];if(sm&&sm.isPopupOpen()){sm.setPopupContent(profileHTML(byId(id),true));wirePopup(sm.getPopup().getElement());}
   applyOps();}
 function updateMeta(){document.getElementById('tabmeta').innerHTML=priority.size?'<b>★ '+priority.size+'</b> priority':'';}
 
@@ -754,6 +831,8 @@ document.getElementById('tbody').addEventListener('click',e=>{
   const s=e.target.closest('[data-star]');if(s){togglePrio(s.dataset.star);return;}
   const tr=e.target.closest('tr[data-id]');if(!tr)return;showOnMap(tr.dataset.id);});
 function showOnMap(id){
+  const lead=typeof LEADS!=='undefined'&&LEADS.find(x=>x.id===id);
+  if(lead){showLeadOnMap(lead);return;}
   const o=OPS.find(x=>x.id===id);if(!o)return;
   if(!f.statuses.has(o.status)){f.statuses.add(o.status);syncChips();}
   f.market='';f.tier='';f.search='';f.prioOnly=false;syncInputs();applyOps();
@@ -795,8 +874,10 @@ document.querySelectorAll('.row[data-layer]').forEach(r=>r.addEventListener('cli
 
 /* ---------- profiles, locations, registry, reports ---------- */
 const PROF=o=>o.profile||{};
-const STATUS_RANK={Target:0,Watch:1,Home:2,Taken:3},TIER_RANK={A:0,B:1,C:2,'':3};
-function tierColor(o){return o.status==='Taken'?'var(--taken)':o.status==='Home'?'var(--home)':o.tier==='A'?'var(--tierA)':o.tier==='B'?'var(--tierB)':'var(--tierC)';}
+function byId(id){return OPS.find(x=>x.id===id)||(typeof LEADS!=='undefined'?LEADS.find(x=>x.id===id):null);}
+function statusText(o){return o.status==='Taken'?'Owned by consolidator':o.status==='Home'?'Home base':o.status==='Lead'?'New lead':o.status==='Watch'?'Watch list':'Target';}
+const STATUS_RANK={Target:0,Watch:1,Lead:2,Home:3,Taken:4},TIER_RANK={A:0,B:1,C:2,'':3};
+function tierColor(o){if(o.status==='Lead')return o.shop&&o.shop.all3?'var(--m-all3)':o.shop&&o.shop.hvac?'var(--m-hvac)':'var(--m-plumb)';return o.status==='Taken'?'var(--taken)':o.status==='Home'?'var(--home)':o.tier==='A'?'var(--tierA)':o.tier==='B'?'var(--tierB)':'var(--tierC)';}
 function yearsSince(d){if(!d)return null;const y=Number(String(d).slice(0,4));return y?new Date().getFullYear()-y:null;}
 function fmtDate(d){if(!d)return '—';const [y,m,dd]=d.split('-');return ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][Number(m)-1]+' '+Number(dd)+', '+y;}
 function foundedYear(o){const f=String(o.founded||'');const m=f.match(/(18|19|20)\d\d/);return m?Number(m[0]):(PROF(o).sos&&PROF(o).sos.formed?Number(PROF(o).sos.formed.slice(0,4)):null);}
@@ -819,12 +900,13 @@ function drawOffices(){
 let currentProfile=null;
 function profileList(){
   const q=(document.getElementById('p_search').value||'').toLowerCase(),s=document.getElementById('p_status').value;
-  return OPS.filter(o=>{
+  const pool=s==='leads'?LEADS:s===''?OPS.concat(LEADS):OPS;
+  return pool.filter(o=>{
     if(s==='open'&&!(o.status==='Target'||o.status==='Watch'||o.status==='Home'))return false;
     if(s==='A'&&!(o.tier==='A'))return false;
     if(s==='Taken'&&o.status!=='Taken')return false;
     if(q){const P=PROF(o);const hay=[o.company,o.city,o.market,P.legal,(P.people||[]).join(' '),(P.offices||[]).map(f=>f.address).join(' ')].join(' ').toLowerCase();if(!hay.includes(q))return false;}
-    return true;}).sort((a,b)=>(STATUS_RANK[a.status]-STATUS_RANK[b.status])||(TIER_RANK[a.tier||'']-TIER_RANK[b.tier||''])||a.company.localeCompare(b.company));}
+    return true;}).sort((a,b)=>(STATUS_RANK[a.status]-STATUS_RANK[b.status])||(TIER_RANK[a.tier||'']-TIER_RANK[b.tier||''])||(a.status==='Lead'&&b.status==='Lead'?a.miles-b.miles:0)||a.company.localeCompare(b.company));}
 function renderProfiles(){
   const box=document.getElementById('pitems');box.replaceChildren();
   const list=profileList();
@@ -832,11 +914,11 @@ function renderProfiles(){
   list.forEach(o=>{
     const b=el('button',{type:'button',class:'pitem','data-id':o.id,'aria-current':o.id===currentProfile?'true':'false'},
       el('span',{class:'dot',style:'background:'+tierColor(o)}),
-      el('span',null,el('span',{class:'pn',text:o.company}),el('span',{class:'pm',text:(o.status==='Home'?'Home base':o.status==='Taken'?'Owned':(o.status==='Watch'?'Watch · Tier ':'Tier ')+o.tier)+' · '+o.city+(o.status==='Home'?'':' · '+o.miles+' mi')})));
+      el('span',null,el('span',{class:'pn',text:o.company}),el('span',{class:'pm',text:(o.status==='Home'?'Home base':o.status==='Taken'?'Owned':o.status==='Lead'?'New lead · '+shopTrades(o.shop).map(k=>TRADE_LAB[k]).join(' + '):(o.status==='Watch'?'Watch · Tier ':'Tier ')+o.tier)+' · '+o.city+(o.status==='Home'?'':' · '+o.miles+' mi')})));
     b.addEventListener('click',()=>{currentProfile=o.id;renderProfiles();});
     box.appendChild(b);});
-  renderDossier(OPS.find(o=>o.id===currentProfile));}
-function openProfile(id){currentProfile=id;map.closePopup();const s=document.getElementById('p_status');const o=OPS.find(x=>x.id===id);if(o&&o.status==='Taken')s.value='Taken';else if(s.value==='Taken'||(s.value==='A'&&o&&o.tier!=='A'))s.value='open';document.getElementById('p_search').value='';selectTab('profiles');
+  renderDossier(byId(currentProfile));}
+function openProfile(id){currentProfile=id;map.closePopup();closeReport();const s=document.getElementById('p_status');const o=byId(id);if(o&&o.status==='Lead'){if(s.value!=='')s.value='leads';}else if(o&&o.status==='Taken')s.value='Taken';else if(s.value==='Taken'||s.value==='leads'||(s.value==='A'&&o&&o.tier!=='A'))s.value='open';document.getElementById('p_search').value='';selectTab('profiles');
   const it=document.querySelector('.pitem[data-id="'+CSS.escape(id)+'"]');if(it)it.scrollIntoView({block:'nearest'});}
 function section(title,...kids){return el('section',{class:'dsec'},el('h3',{text:title}),...kids);}
 function list(items){return el('ul',null,items.map(x=>el('li',{text:x})));}
@@ -847,6 +929,7 @@ function renderDossier(o){
   const tags=el('div',{class:'badges'});
   if(o.status==='Home')tags.appendChild(el('span',{class:'bdg',text:'Home base'}));
   else if(o.status==='Taken')tags.appendChild(el('span',{class:'bdg taken',text:'Owned by consolidator'}));
+  else if(o.status==='Lead'){tags.appendChild(el('span',{class:'bdg lead',text:'New lead'}));const tt=el('span');tt.innerHTML=tradeTags(o.shop);tags.appendChild(tt);}
   else{tags.appendChild(el('span',{class:'bdg tier t'+o.tier,text:'Tier '+o.tier}));tags.appendChild(el('span',{class:'bdg',text:o.status==='Watch'?'Watch list':'Target'}));}
   if(priority.has(o.id))tags.appendChild(el('span',{class:'bdg',style:'color:var(--prio);border-color:var(--prio)',text:'★ Priority'}));
   const acts=el('div',{class:'dactions'});
@@ -855,7 +938,7 @@ function renderDossier(o){
   acts.append(bRep,bMap);
   if(o.status!=='Home'){const bP=el('button',{type:'button',class:'btn',text:priority.has(o.id)?'★ Remove priority':'☆ Mark priority'});bP.addEventListener('click',()=>{togglePrio(o.id);renderProfiles();});acts.appendChild(bP);}
   d.appendChild(el('div',{class:'dhead'},el('div',null,el('h2',{class:'dname',text:o.company}),el('div',{class:'dlegal',text:(P.legal||'')+(S.id?' · AL entity '+S.id:'')}),tags),acts));
-  const facts=[['Market',o.market],['Distance from Call KS',o.status==='Home'?'—':o.miles+' miles'],['In business since',fy?String(fy)+' ('+(new Date().getFullYear()-fy)+' yrs)':'—'],['Employees',employeesText(o)],['Revenue',revText(o)],['Offices',String((P.offices||[]).length||1)]];
+  const facts=[[o.status==='Lead'?'County':'Market',o.market],['Distance from Call KS',o.status==='Home'?'—':o.miles+' miles'],[o.status==='Lead'&&!(PROF(o).sos||{}).id?'Licensed since':'In business since',fy?String(fy)+' ('+(new Date().getFullYear()-fy)+' yrs)':'—'],['Employees',employeesText(o)],['Revenue',revText(o)],['Offices',String((P.offices||[]).length||1)]];
   d.appendChild(el('div',{class:'facts'},facts.map(([k,v])=>el('div',{class:'fact'},el('span',{text:k}),el('b',{text:v})))));
   if(o.why)d.appendChild(el('div',{class:'dsec'},el('div',{class:'note',text:o.why})));
   const left=el('div'),right=el('div');
@@ -872,6 +955,8 @@ function renderDossier(o){
   if(S.id){const r=el('dl',{class:'kv'});[['Legal name',P.legal],['Entity ID',S.id],['Type',S.type],['Status',S.status],['Formed',fmtDate(S.formed)+(S.county?' · '+S.county:'')],['Registered agent',S.agent],['Nature of business',S.nature]].forEach(([k,v])=>{if(v){r.appendChild(el('dt',{text:k}));r.appendChild(el('dd',{text:v}));}});right.appendChild(section('Alabama registry',r));}
   if(P.people&&P.people.length)right.appendChild(section('People on file',list(P.people)));
   if(P.notes&&P.notes.length)right.appendChild(section('Observations',list(P.notes)));
+  const cb=countyRows(o);if(cb){const r=el('dl',{class:'kv'});cb.forEach(([k,v])=>{r.appendChild(el('dt',{text:k}));r.appendChild(el('dd',{text:v}));});const sec=section('County market',r);const b=el('button',{type:'button',class:'fbtn',style:'margin-top:8px'},'Show county on the heatmap');b.addEventListener('click',()=>focusCounty(countyOf(o),'opp'));sec.appendChild(b);right.appendChild(sec);}
+  if(P.lookups&&P.lookups.length)left.appendChild(section('Research links',el('ul',null,P.lookups.map(([t,u])=>el('li',null,el('a',{href:u,target:'_blank',rel:'noopener noreferrer',text:t}))))));
   d.appendChild(el('div',{class:'dgrid'},left,right));
   const srcs=[...(P.sources||[]),o.source].filter((v,i,a)=>v&&a.indexOf(v)===i);
   if(srcs.length)d.appendChild(section('Sources',el('ul',null,srcs.map(u=>el('li',null,el('a',{href:u,target:'_blank',rel:'noopener noreferrer',text:u}))))));
@@ -928,7 +1013,7 @@ function miniMapSVG(o){
   return '<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Location of '+esc(o.company)+' in Alabama"><defs><clipPath id="alclip"><path d="'+path+'"/></clipPath></defs><path d="'+path+'" fill="#f4f6f9" stroke="#97a6b6" stroke-width="1.2"/><path d="'+roads+'" fill="none" stroke="#e8b27a" stroke-width="1.1" clip-path="url(#alclip)"/>'+
     (same?'':'<line x1="'+hx.toFixed(1)+'" y1="'+hy.toFixed(1)+'" x2="'+tx.toFixed(1)+'" y2="'+ty.toFixed(1)+'" stroke="#1b2430" stroke-width="1" stroke-dasharray="3 3"/>')+offs+
     '<path d="'+star+'" transform="translate('+hx.toFixed(1)+' '+hy.toFixed(1)+')" fill="#1b2430"/>'+
-    (same?'':'<circle cx="'+tx.toFixed(1)+'" cy="'+ty.toFixed(1)+'" r="6" fill="'+(o.status==='Taken'?'#c2412b':o.tier==='A'?'#0e8197':o.tier==='B'?'#6a5bd0':'#7d8b99')+'" stroke="#fff" stroke-width="1.5"/>')+'</svg>';}
+    (same?'':'<circle cx="'+tx.toFixed(1)+'" cy="'+ty.toFixed(1)+'" r="6" fill="'+(o.status==='Lead'?'#2563eb':o.status==='Taken'?'#c2412b':o.tier==='A'?'#0e8197':o.tier==='B'?'#6a5bd0':'#7d8b99')+'" stroke="#fff" stroke-width="1.5"/>')+'</svg>';}
 function valuationLines(o){
   if(o.est_revenue_m==null)return null;
   const r=o.est_revenue_m,lo=r*0.08*4,hi=r*0.12*5.5;
@@ -936,27 +1021,31 @@ function valuationLines(o){
 function reportModel(o){
   const P=PROF(o),S=P.sos||{},fy=foundedYear(o);
   return {o,P,S,fy,
-    facts:[['Status',o.status==='Taken'?'Owned by consolidator':o.status==='Home'?'Home base':(o.status==='Watch'?'Watch list':'Target')+(o.tier?' · Tier '+o.tier:'')],['Market',o.market],['Distance',o.status==='Home'?'—':o.miles+' mi from Call KS'],['In business',fy?String(fy)+' ('+(new Date().getFullYear()-fy)+' yrs)':'—'],['Employees',employeesText(o)],['Revenue',revText(o)]],
+    facts:[['Status',statusText(o)+(o.tier?' · Tier '+o.tier:'')],[o.status==='Lead'?'County':'Market',o.market],['Distance',o.status==='Home'?'—':o.miles+' mi from Call KS'],[o.status==='Lead'&&!(PROF(o).sos||{}).id?'Licensed since':'In business',fy?String(fy)+' ('+(new Date().getFullYear()-fy)+' yrs)':'—'],['Employees',employeesText(o)],['Revenue',revText(o)]],
     contact:[['Address',mainOffice(o).address],['Phone',P.phone],['Email',P.email],['Website',P.website],['Ownership',o.ownership]].filter(x=>x[1]),
     registry:S.id?[['Legal name',P.legal],['Entity ID',S.id],['Type',S.type],['Status',S.status],['Formed',fmtDate(S.formed)+(S.county?', '+S.county:'')],['Registered agent',S.agent],['Nature of business',S.nature]].filter(x=>x[1]):[],
     sources:[...(P.sources||[]),o.source].filter((v,i,a)=>v&&a.indexOf(v)===i)};}
+function stepsFor(o){return o.status==='Lead'?LEAD_STEPS.concat(NEXT_STEPS):NEXT_STEPS;}
+const LEAD_STEPS=['Confirm the company is active and what it does: website, Google listing, Alabama Secretary of State record','Identify the owner and the license qualifier, how long they have run it, and whether there is a successor'];
 const NEXT_STEPS=['Confirm current ownership and whether the company has been approached by a consolidator','Confirm the Alabama HVAC qualifier on the license and whether that person stays after a sale','Ask for three years of financials and the split of service, replacement and new-construction revenue','Count active maintenance agreements and the top ten customers\' share of revenue','Check fleet, real estate (owned or leased) and open warranty or job obligations'];
 function openReport(id){
-  const o=OPS.find(x=>x.id===id);if(!o)return;reportFor=o;map.closePopup();
+  const o=byId(id);if(!o)return;reportFor=o;map.closePopup();
   const m=reportModel(o),P=m.P;const today=new Date().toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'});
   const rows=a=>'<table>'+a.map(([k,v])=>'<tr><td>'+esc(k)+'</td><td>'+(k==='Website'?'<a href="'+esc(v)+'">'+esc(v.replace(/^https?:\/\//,''))+'</a>':esc(v))+'</td></tr>').join('')+'</table>';
   const ul=a=>'<ul>'+a.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul>';
   const offs=(P.offices||[]);
   let h='<div class="kick"><span>Call KS Services · Acquisition target report</span><span>'+esc(today)+'</span></div>';
-  h+='<div class="top"><div><h1>'+esc(o.company)+'</h1><div class="legal">'+esc(P.legal||'')+(m.S.id?' · AL entity '+esc(m.S.id):'')+'</div><div class="tags">'+(o.tier?'<span class="tag '+esc(o.tier)+'">Tier '+esc(o.tier)+'</span>':'')+'<span class="tag">'+esc(o.status==='Taken'?'Owned by consolidator':o.status==='Home'?'Home base':o.status==='Watch'?'Watch list':'Target')+'</span>'+(priority.has(o.id)?'<span class="tag">★ Priority</span>':'')+'</div>';
+  h+='<div class="top"><div><h1>'+esc(o.company)+'</h1><div class="legal">'+esc(P.legal||'')+(m.S.id?' · AL entity '+esc(m.S.id):'')+'</div><div class="tags">'+(o.tier?'<span class="tag '+esc(o.tier)+'">Tier '+esc(o.tier)+'</span>':'')+'<span class="tag">'+esc(statusText(o))+'</span>'+(priority.has(o.id)?'<span class="tag">★ Priority</span>':'')+'</div>';
   h+='<div class="sfacts">'+m.facts.slice(1).map(([k,v])=>'<div class="sfact"><span>'+esc(k)+'</span><b>'+esc(v)+'</b></div>').join('')+'<div class="sfact"><span>Offices</span><b>'+(offs.length||1)+'</b></div></div></div>';
   h+='<figure class="mini" style="margin:0">'+miniMapSVG(o)+'<figcaption>★ Call KS, Pelham · ● '+esc(o.city)+(o.status==='Home'?'':' · '+o.miles+' mi straight-line')+'</figcaption></figure></div>';
   if(o.why)h+='<section><h2>Why it fits</h2><div class="callout">'+esc(o.why)+'</div></section>';
   h+='<section class="two"><div><h2>Contact</h2>'+rows(m.contact)+'</div><div><h2>Locations</h2>'+(offs.length?'<table>'+offs.map(f=>'<tr><td>'+esc(f.label)+'</td><td>'+esc(f.address)+(f.miles!=null?' · '+f.miles+' mi':'')+'</td></tr>').join('')+'</table>':'<p>'+esc(o.city)+'</p>')+'</div></section>';
   h+='<section class="two"><div><h2>Services</h2>'+(P.services&&P.services.length?ul(P.services):'<p>'+esc(o.focus||'—')+'</p>')+'</div><div><h2>Markets</h2><table>'+[['Customers',P.markets||o.focus],['Service area',P.service_area],['Maintenance',P.maintenance]].filter(x=>x[1]).map(([k,v])=>'<tr><td>'+esc(k)+'</td><td>'+esc(v)+'</td></tr>').join('')+'</table>'+(P.licenses&&P.licenses.length?'<h2>Licenses and affiliations</h2>'+ul(P.licenses):'')+'</div></section>';
   h+='<section class="two"><div><h2>Alabama registry</h2>'+(m.registry.length?rows(m.registry):'<p>Record not retrieved.</p>')+'</div><div><h2>People on file</h2>'+(P.people&&P.people.length?ul(P.people):'<p>None found.</p>')+(P.notes&&P.notes.length?'<h2>Observations</h2>'+ul(P.notes):'')+'</div></section>';
+  const cr=countyRows(o);if(cr)h+='<section><h2>County market</h2>'+rows(cr)+'</section>';
+  if(P.lookups&&P.lookups.length)h+='<section><h2>Research links</h2><ul>'+P.lookups.map(([t,u])=>'<li><a href="'+esc(u)+'">'+esc(t)+'</a></li>').join('')+'</ul></section>';
   const val=valuationLines(o);
-  if(o.status!=='Home'&&o.status!=='Taken')h+='<section><h2>Valuation context</h2><p>'+(val?esc(val):'No revenue has been publicly reported in the last two years. Shops with $1-6M revenue typically sell for 4-5.5x adjusted EBITDA; service-heavy commercial shops sit at the top of that range. Request financials to value it.')+'</p></section><section><h2>Next steps</h2><ul class="checks">'+NEXT_STEPS.map(s=>'<li>'+esc(s)+'</li>').join('')+'</ul></section>';
+  if(o.status!=='Home'&&o.status!=='Taken')h+='<section><h2>Valuation context</h2><p>'+(val?esc(val):'No revenue has been publicly reported in the last two years. Shops with $1-6M revenue typically sell for 4-5.5x adjusted EBITDA; service-heavy commercial shops sit at the top of that range. Request financials to value it.')+'</p></section><section><h2>Next steps</h2><ul class="checks">'+stepsFor(o).map(s=>'<li>'+esc(s)+'</li>').join('')+'</ul></section>';
   if(m.sources.length)h+='<section><h2>Sources</h2><ul>'+m.sources.map(u=>'<li class="src">'+esc(u)+'</li>').join('')+'</ul></section>';
   h+='<p class="fine" style="margin-top:12px">Compiled from public sources and the Alabama Secretary of State on Nov 12-13, 2026. Revenue appears only when publicly reported within the last two years, with its date. Employee counts are third-party estimates. Tiers are a judgment of fit, not verified financials. Confidential: prepared for Call KS Services ownership.</p>';
   h+='<div class="foot"><span>Call KS Services · Acquisition program</span><span>'+esc(o.company)+'</span></div>';
@@ -980,7 +1069,9 @@ function reportText(o){
   if(P.people&&P.people.length){L.push('');L.push('PEOPLE ON FILE');P.people.forEach(s=>L.push('- '+s));}
   if(P.notes&&P.notes.length){L.push('');L.push('OBSERVATIONS');P.notes.forEach(s=>L.push('- '+s));}
   const val=valuationLines(o);if(val&&o.status!=='Taken'){L.push('');L.push('VALUATION CONTEXT');L.push(val);}
-  if(o.status!=='Home'&&o.status!=='Taken'){L.push('');L.push('NEXT STEPS');NEXT_STEPS.forEach(s=>L.push('[ ] '+s));}
+  const cr=countyRows(o);if(cr){L.push('');L.push('COUNTY MARKET');cr.forEach(([k,v])=>L.push(k+': '+v));}
+  if(P.lookups&&P.lookups.length){L.push('');L.push('RESEARCH LINKS');P.lookups.forEach(([t,u])=>L.push(t+': '+u));}
+  if(o.status!=='Home'&&o.status!=='Taken'){L.push('');L.push('NEXT STEPS');stepsFor(o).forEach(s=>L.push('[ ] '+s));}
   if(m.sources.length){L.push('');L.push('SOURCES');m.sources.forEach(u=>L.push(u));}
   L.push('');L.push('Compiled from public sources and the Alabama Secretary of State, Nov 2026. Revenue appears only when reported within two years; employee counts are third-party estimates; tiers are a judgment of fit. Confidential.');
   return L.join('\n');}
@@ -997,7 +1088,7 @@ document.getElementById('rep_email').addEventListener('click',()=>{if(!reportFor
 
 
 /* ---------- statewide market: every HVAC / plumbing / multi-trade shop we can place ---------- */
-const mktOn={hvac:false,plumb:false,all3:false,elec:false};let satKey='';
+const mktOn={hvac:false,plumb:false,all3:false,elec:false};const shopMarkers={};
 const mktLayer=L.layerGroup(),satLayer=L.layerGroup();
 const TRADE_LAB={hvac:'HVAC',plumb:'Plumbing',elec:'Electrical',all3:'HVAC + plumbing + electrical'};
 function shopTrades(s){return s.all3?['all3']:['hvac','plumb','elec'].filter(k=>s[k]);}
@@ -1014,23 +1105,20 @@ function shopCard(s){
    +'<div class="oprow"><b>Placed at</b>town center, not the street address</div>'
    +'<div class="oprow"><b>Source</b>'+esc(s.src.map(k=>MKT.sources[k].name).join('; '))+'</div></div>';}
 function drawMarket(){
-  mktLayer.clearLayers();satLayer.clearLayers();
+  mktLayer.clearLayers();
   let n=0;
   if(mktOn.elec){const col=css('--m-elec');MKT.elec_towns.forEach(([t,la,lo,c,cty])=>{
     const m=L.circleMarker([la,lo],{pane:'market',renderer:RENDER.market,radius:3+Math.sqrt(c)*1.6,color:col,weight:1.2,opacity:.9,fillColor:col,fillOpacity:.12});
-    m.bindTooltip('<b>'+esc(t)+'</b> · '+c+' electrical contractor'+(c>1?'s':'')+'<br><span style="color:var(--ink-faint)">'+esc(cty)+' County</span>',{direction:'top',className:'optip'});mktLayer.addLayer(m);});}
+    m.options.bubblingMouseEvents=false;m.bindTooltip('<div class="opcard" style="width:auto;padding:8px 10px"><b>'+esc(t)+'</b> · '+c+' electrical contractor'+(c>1?'s':'')+'<br><span style="color:var(--ink-faint)">'+esc(cty)+' County</span></div>',{direction:'top',className:'optip'});mktLayer.addLayer(m);});}
   MKT.shops.forEach(s=>{if(!shopVisible(s)||s.target==='callks')return;n++;
     const col=shopColor(s);
-    const m=L.circleMarker([s.lat,s.lon],{pane:'market',renderer:RENDER.market,radius:s.all3?5.5:4.2,color:s.all3?css('--panel'):col,weight:s.all3?1.5:1,fillColor:col,fillOpacity:s.owner||s.target?.45:.95});
-    m.bindTooltip(()=>shopCard(s),{direction:'top',className:'optip',offset:[0,-4],opacity:1});
-    m.on('click',()=>{if(s.target&&opMarkers[s.target]){opMarkers[s.target].openPopup();}else{selectTab('market');document.getElementById('k_search').value=s.n;renderMarket();}});
+    const m=L.circleMarker([s.lat,s.lon],{pane:'market',renderer:RENDER.market,bubblingMouseEvents:false,radius:s.all3?6:5,color:s.all3?css('--panel'):col,weight:s.all3?1.5:1,fillColor:col,fillOpacity:s.owner||s.target?.45:.95});
+    m.bindTooltip(()=>'<div class="opcard" style="width:auto;max-width:240px;padding:8px 10px"><div class="opnm" style="font-size:13px">'+esc(s.n)+'</div><div class="oploc">'+esc(s.town)+' · '+esc(shopStatus(s))+' · click for details</div></div>',{direction:'top',className:'optip',offset:[0,-4],opacity:1});
+    if(s.target&&opMarkers[s.target])m.on('click',()=>opMarkers[s.target].openPopup());
+    else if(s.lead){m.bindPopup(()=>profileHTML(byId(s.lead),true),{maxWidth:300,autoPanPadding:[24,24]});m.on('popupopen',()=>m.closeTooltip());shopMarkers[s.lead]=m;}
     mktLayer.addLayer(m);});
   document.getElementById('mkt-shown').textContent=(mktOn.hvac||mktOn.plumb||mktOn.all3)?n+' shops':'';
-  if(satKey){const vals=Object.values(MKT.counties).map(c=>c[satKey]),mx=Math.max(1,...vals),col=css('--sat');
-    satLayer.addLayer(L.geoJSON(GEO.counties,{pane:'sat',renderer:RENDER.sat,interactive:false,style:ft=>{const v=(MKT.counties[ft.properties.n]||{})[satKey]||0;
-      return {stroke:false,fillColor:col,fillOpacity:v?0.06+0.5*Math.sqrt(v/mx):0};}}));
-    document.getElementById('satlg').hidden=false;document.getElementById('satmax').textContent=mx+' per county';}
-  else document.getElementById('satlg').hidden=true;}
+}
 function mktCounts(){const c={hvac:0,plumb:0,all3:0};MKT.shops.forEach(s=>{if(s.target==='callks')return;['hvac','plumb','all3'].forEach(k=>{if(s[k])c[k]++;});});
   c.elec=MKT.elec_towns.reduce((a,t)=>a+t[3],0);
   Object.entries(c).forEach(([k,v])=>{document.getElementById('mc-'+k).textContent=k==='elec'?v.toLocaleString()+' by town':v+' on file';});}
@@ -1040,7 +1128,6 @@ function mktNote(){const S=MKT.sources,pend=['HACR','PGFB'].filter(k=>!S[k].read
    +'Dots sit at the town center.';}
 document.querySelectorAll('.row[data-mkt]').forEach(r=>r.addEventListener('click',()=>{const k=r.dataset.mkt,on=r.getAttribute('aria-pressed')!=='true';
   r.setAttribute('aria-pressed',on?'true':'false');mktOn[k]=on;drawMarket();}));
-document.getElementById('m_sat').addEventListener('change',e=>{satKey=e.target.value;drawMarket();});
 
 /* market tab */
 let kSort={k:'elec',d:-1};
@@ -1058,8 +1145,8 @@ function renderMarket(){
     r.children[1].innerHTML=tradeTags(s);
     r.children[7].innerHTML=st==='New lead'?'<span class="lead">New lead</span>':esc(st);
     const b=el('button',{type:'button',class:'fbtn',style:'padding:4px 8px'},'Map');r.children[8].appendChild(b);
-    r.addEventListener('click',()=>{selectTab('map');if(!shopVisible(s)){const k=s.all3?'all3':s.hvac?'hvac':'plumb';mktOn[k]=true;document.querySelector('.row[data-mkt="'+k+'"]').setAttribute('aria-pressed','true');drawMarket();}
-      setTimeout(()=>{map.flyTo([s.lat,s.lon],12,{duration:.6});},60);});
+    b.addEventListener('click',e=>{e.stopPropagation();if(s.lead)showLeadOnMap(byId(s.lead));else showOnMap(s.target);});
+    r.addEventListener('click',()=>openProfile(s.lead||s.target));
     tb.appendChild(r);});
   document.getElementById('k_count').textContent=rows.length+' shop'+(rows.length===1?'':'s');
   const sb=document.getElementById('ksat');sb.replaceChildren();
@@ -1077,8 +1164,161 @@ document.getElementById('k_copy').addEventListener('click',()=>{const rows=marke
   const n=document.getElementById('k_copynote');try{navigator.clipboard.writeText(txt).then(()=>{n.textContent=rows.length+' rows copied';},()=>{n.textContent='Copy was blocked';});}catch(e){n.textContent='Copy was blocked';}});
 mktCounts();mktNote();
 
+/* ---------- new leads: every market shop not already on the target list gets a profile and a report ---------- */
+const LEADS=MKT.shops.filter(s=>!s.target).map(s=>{
+  const id='lead-'+(s.n+'-'+s.town).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');s.lead=id;
+  const tr=shopTrades(s).map(k=>TRADE_LAB[k]).join(' + ');const q=encodeURIComponent(s.n+' '+s.town+' AL');
+  const so=s.sos,iso=d=>{const m=String(d||'').match(/(\d\d)\/(\d\d)\/(\d{4})/);return m?m[3]+'-'+m[1]+'-'+m[2]:null;};
+  const fyear=so&&iso(so.formed)?iso(so.formed).slice(0,4):null,cap=x=>String(x||'').toLowerCase().replace(/\b[a-z]/g,c=>c.toUpperCase());
+  const flags=[];
+  if(so){if(so.status&&so.status!=='Exists')flags.push('Secretary of State shows this entity as '+so.status.toLowerCase()+(so.last_doc?' ('+so.last_doc.replace(/ \d+ pgs?\.$/,'')+')':'')+'. It may have closed or now operate under another name.');
+    if(/Foreign/.test(so.type||'')&&so.county)flags.push('Registered as an out-of-state ('+so.county+') company. In this trade that often means outside or private-equity ownership; check before pursuing.');
+    if(so.last_report&&Number(so.last_report)<2021)flags.push('Last annual report on file is from '+so.last_report+'; the registry record may be stale.');
+    const ld=so.last_doc&&iso(so.last_doc);if(ld&&ld>='2024-11'&&/Amendment|Conversion|Merger/.test(so.last_doc))flags.push('Recent filing: '+so.last_doc.replace(/ \d+ pgs?\.$/,'')+'. Amendments and conversions can signal an ownership or structure change.');}
+  const addr=so&&[so.principal,so.agent_addr].find(a=>a&&/\d/.test(a)&&new RegExp(s.town,'i').test(a));
+  return {id,company:s.n,city:s.town,market:s.county+' County',status:s.owner?'Taken':'Lead',tier:'',lat:s.lat,lon:s.lon,miles:s.mi,
+    focus:so&&so.nature&&so.nature.length>3&&!/LAWFUL|BUSINESS OPERATIONS|FOR PROFIT/.test(so.nature)?cap(so.nature):tr+' (from the business name)',
+    ownership:s.owner||(so&&so.people&&so.people.length?so.people.map(p=>cap(p.split(': ')[1])).filter((v,i,a)=>v&&!/Not Provided|Legalzoom/i.test(v)&&a.indexOf(v)===i).slice(0,3).join(', ')||'Unknown; confirm on first contact':'Unknown; confirm on first contact'),
+    founded:fyear||(s.since?'Licensed '+s.since:null),employees:'Not found',
+    est_revenue_m:null,revenue_basis:null,revenue_date:null,source:MKT.sources.AECB.url,shop:s,
+    why:tr+' shop in '+s.town+' ('+s.county+' County), '+s.mi+' miles from Call KS.'+(fyear?' Registered with the state in '+fyear+'.':'')+' On the state electrical contractor list'+(s.since?' since '+s.since:'')+' with '+s.lic+' active license'+(s.lic>1?'s':'')+'.'+(flags.length?' See the flags under Observations.':' Not researched beyond public records yet.'),
+    profile:{
+      legal:so?so.legal:'',
+      sos:so?{id:so.id,type:so.type,status:so.status,formed:iso(so.formed),county:so.county,agent:so.agent?cap(so.agent)+(so.agent_addr?', '+so.agent_addr:''):null,nature:so.nature&&so.nature.length>3?cap(so.nature):null}:{},
+      people:so&&so.people?so.people.map(p=>{const [r,n]=p.split(': ');return cap(n)+' ('+r.toLowerCase()+')';}).filter(x=>!/Not Provided|Legalzoom/i.test(x)):[],
+      licenses:['Alabama electrical contractor: '+s.lic+' active license'+(s.lic>1?'s':'')+(s.since?', first issued '+s.since:'')+' (Alabama Electrical Contractors Board)'],
+      offices:[{label:addr?'Address on state record (map shows town center)':'Town (approximate)',address:addr||(s.town+', AL · '+s.county+' County'),lat:s.lat,lon:s.lon,level:'city',miles:s.mi}],
+      notes:flags.concat(so&&so.last_report?['Last annual report filed: '+so.last_report+'.']:[]).concat(['Placed at the center of '+s.town+'; the map does not geocode street addresses.',so&&so.nature&&so.nature.length>3?'Trades come from the business name and the nature of business filed with the state; confirm on first contact.':'Trades come from the business name. Confirm what it actually does on first contact.']).concat(so?[]:['No Secretary of State record matched by name; it may be a sole proprietorship or registered under another name.']),
+      sources:[MKT.sources.AECB.url],
+      lookups:[['Google: '+s.n,'https://www.google.com/search?q='+q],['Better Business Bureau','https://www.bbb.org/search?find_text='+encodeURIComponent(s.n)+'&find_loc='+encodeURIComponent(s.town+', AL')],['Alabama Secretary of State business search','https://www.sos.alabama.gov/government-records/business-entity-records'],['Electrical board license lookup','https://alecb-search.kalmservices.net/']]}};});
+function showLeadOnMap(o){
+  const s=o.shop;selectTab('map');
+  if(!shopVisible(s)){const k=s.all3?'all3':s.hvac?'hvac':'plumb';mktOn[k]=true;document.querySelector('.row[data-mkt="'+k+'"]').setAttribute('aria-pressed','true');drawMarket();}
+  setTimeout(()=>{map.invalidateSize();map.flyTo([s.lat,s.lon],Math.max(map.getZoom(),11),{duration:.6});setTimeout(()=>{const m=shopMarkers[o.id];if(m)m.openPopup();},700);},60);}
+
+/* ---------- counties: lookup, heatmap, hover box ---------- */
+const CPOLY=GEO.counties.features.map(f=>{const g=f.geometry,polys=g.type==='Polygon'?[g.coordinates]:g.coordinates;let b=[180,90,-180,-90];
+  polys.forEach(p=>p[0].forEach(([x,y])=>{if(x<b[0])b[0]=x;if(y<b[1])b[1]=y;if(x>b[2])b[2]=x;if(y>b[3])b[3]=y;}));return {n:f.properties.n,f,polys,b};});
+function inRing(r,x,y){let ins=false;for(let i=0,j=r.length-1;i<r.length;j=i++){const xi=r[i][0],yi=r[i][1],xj=r[j][0],yj=r[j][1];if((yi>y)!==(yj>y)&&x<(xj-xi)*(y-yi)/(yj-yi)+xi)ins=!ins;}return ins;}
+function countyAt(lat,lon){for(const c of CPOLY){if(lon<c.b[0]||lon>c.b[2]||lat<c.b[1]||lat>c.b[3])continue;for(const p of c.polys){if(inRing(p[0],lon,lat)&&!p.slice(1).some(h=>inRing(h,lon,lat)))return c.n;}}return null;}
+OPS.forEach(o=>{o.county=countyAt(o.lat,o.lon);});
+function countyOf(o){return o.county||(o.shop&&o.shop.county)||countyAt(o.lat,o.lon);}
+const fmtN=v=>v==null?'—':Number(v).toLocaleString('en-US');
+const fmtP=v=>v==null?'—':(v>0?'+':v<0?'−':'')+Math.abs(v).toFixed(1)+'%';
+const CNAMES=Object.keys(CTY.counties).sort();
+function rankOf(key,name){const H=HEAT[key];const vals=CNAMES.map(n=>[n,H.get(CTY.counties[n])]).filter(x=>x[1]!=null).sort((a,b)=>b[1]-a[1]);const i=vals.findIndex(x=>x[0]===name);return i<0?null:[i+1,vals.length];}
+const HEAT={
+  pop:{get:c=>c.pop,fmt:fmtN,log:true,note:'Census estimate for July 1, 2025.'},
+  density:{get:c=>c.density,fmt:v=>fmtN(Math.round(v)),log:true,note:'People per square mile of county area, 2025.'},
+  pop_chg:{get:c=>c.pop_chg,fmt:fmtP,div:true,note:'April 2020 census base to July 2025. Green is growing, red is shrinking.'},
+  pop_chg_1y:{get:c=>c.pop_chg_1y,fmt:fmtP,div:true,note:'July 2024 to July 2025. Green is growing, red is shrinking.'},
+  mig:{get:c=>Math.round(c.net_mig_1y/c.pop*10000)/10,fmt:v=>(v>0?'+':v<0?'−':'')+Math.abs(v).toFixed(1)+' per 1,000',div:true,note:'People moving in minus people moving out, July 2024 to July 2025, per 1,000 residents.'},
+  biz_chg:{get:c=>c.biz_chg,fmt:fmtP,div:true,note:'Private business locations, 2020 vs 2025 annual averages (BLS QCEW).'},
+  jobs_chg:{get:c=>c.jobs_chg,fmt:fmtP,div:true,note:'Private-sector jobs, 2020 vs 2025 annual averages. Grey where BLS suppresses the figure.'},
+  con_jobs_chg:{get:c=>c.con_jobs_chg,fmt:fmtP,div:true,note:'Construction jobs, 2020 vs 2025. Grey where BLS suppresses the figure, usually in small counties.'},
+  pay:{get:c=>c.pay,fmt:v=>v==null?'—':'$'+fmtN(v),note:'Average annual private-sector pay, 2025.'},
+  per_hvac:{get:c=>c.per_hvac,fmt:v=>v==null?'—':fmtN(v)+' people',log:true,note:'Residents per plumbing/HVAC contractor with employees (Census, 2023). Darker means more people per shop, so less competition. Grey means none reported.'},
+  hvac_per10k:{get:c=>c.hvac_per10k,fmt:v=>v==null?'—':v.toFixed(1),note:'Plumbing/HVAC contractors with employees per 10,000 residents (Census, 2023). Darker means more crowded.'},
+  hvac_chg:{get:c=>c.hvac_chg,fmt:fmtP,div:true,note:'Change in plumbing/HVAC contractors, 2019 to 2023. Grey where the county had fewer than 5 in 2019.'},
+  lic_elec:{get:c=>c.lic?c.lic.elec:0,fmt:fmtN,zero:true,note:'Active electrical contractor licenses on file, by business town.'},
+  lic_hvac:{get:c=>c.lic?c.lic.hvac:0,fmt:fmtN,zero:true,note:'HVAC shops on the license list (see Statewide market for what that covers).'},
+  lic_plumb:{get:c=>c.lic?c.lic.plumb:0,fmt:fmtN,zero:true,note:'Plumbing shops on the license list.'},
+  lic_all3:{get:c=>c.lic?c.lic.all3:0,fmt:fmtN,zero:true,note:'Shops doing HVAC, plumbing and electrical, on the license list.'},
+  opp:{get:c=>c.opp,fmt:v=>v+' / 100',note:'A blend: population growth 35%, private job growth 20%, business growth 20%, people per HVAC/plumbing contractor 25%. Counties under 20,000 people are marked down. A place to start looking, not a verdict.'}};
+function heatLabel(k){const o=document.querySelector('#m_heat option[value="'+k+'"]');return o?o.textContent:k;}
+let heatKey='',hoverC=null,pinnedC=null;const hlLayer=L.layerGroup();
+function heatScale(key){const H=HEAT[key],vals=CNAMES.map(n=>H.get(CTY.counties[n])).filter(v=>v!=null&&(!H.zero||v>0));
+  if(H.div){const a=vals.map(Math.abs).sort((x,y)=>x-y);const m=a[Math.floor(a.length*0.95)]||1;return {div:true,m};}
+  const lo=Math.min(...vals),hi=Math.max(...vals);return {lo,hi};}
+function heatStyle(key,sc,v){const H=HEAT[key];
+  if(v==null)return {stroke:false,fillColor:css('--nodata'),fillOpacity:.18};
+  if(H.zero&&!v)return {stroke:false,fillOpacity:0};
+  const zf=map.getZoom()>9?0.55:map.getZoom()>8?0.8:1;
+  if(sc.div){const t=Math.max(-1,Math.min(1,v/sc.m));return {stroke:false,fillColor:css(t>=0?'--grow':'--decline'),fillOpacity:(.07+.55*Math.abs(t))*zf};}
+  let t=H.log?(Math.log(v)-Math.log(sc.lo))/((Math.log(sc.hi)-Math.log(sc.lo))||1):(v-sc.lo)/((sc.hi-sc.lo)||1);
+  return {stroke:false,fillColor:css('--sat'),fillOpacity:(.05+.6*Math.max(0,Math.min(1,t)))*zf};}
+function drawHeat(){
+  satLayer.clearLayers();const lg=document.getElementById('satlg'),note=document.getElementById('heatnote');
+  if(!heatKey){lg.hidden=true;note.textContent='Pick a measure to shade the 67 counties. Hover a county for all its numbers; click to pin them.';showInfo(pinnedC);return;}
+  const H=HEAT[heatKey],sc=heatScale(heatKey);
+  satLayer.addLayer(L.geoJSON(GEO.counties,{pane:'sat',renderer:RENDER.sat,interactive:false,style:ft=>heatStyle(heatKey,sc,H.get(CTY.counties[ft.properties.n]))}));
+  lg.hidden=false;const bar=document.getElementById('satbar');
+  if(sc.div){bar.style.background='linear-gradient(90deg,'+css('--decline')+',transparent 50%,'+css('--grow')+')';document.getElementById('satmin').textContent=H.fmt(-sc.m);document.getElementById('satmax').textContent=H.fmt(sc.m);}
+  else{bar.style.background='linear-gradient(90deg,color-mix(in srgb,'+css('--sat')+' 8%,transparent),'+css('--sat')+')';document.getElementById('satmin').textContent=H.fmt(sc.lo);document.getElementById('satmax').textContent=H.fmt(sc.hi);}
+  note.textContent=H.note+' Hover a county for all its numbers; click to pin them.';
+  showInfo(pinnedC||hoverC);}
+function spark(series,w,h){const lo=Math.min(...series),hi=Math.max(...series),r=(hi-lo)||1;
+  const pts=series.map((v,i)=>[(i/(series.length-1))*(w-4)+2,h-2-((v-lo)/r)*(h-4)]);const up=series[series.length-1]>=series[0];
+  return '<svg width="'+w+'" height="'+h+'" viewBox="0 0 '+w+' '+h+'" aria-hidden="true"><polyline fill="none" stroke="'+css(up?'--grow':'--decline')+'" stroke-width="1.6" points="'+pts.map(p=>p[0].toFixed(1)+','+p[1].toFixed(1)).join(' ')+'"/><circle cx="'+pts[pts.length-1][0].toFixed(1)+'" cy="'+pts[pts.length-1][1].toFixed(1)+'" r="2" fill="'+css(up?'--grow':'--decline')+'"/></svg>';}
+const cls=v=>v==null?'':v>0?'up':v<0?'down':'';
+function countyFacts(c){
+  const shops=MKT.shops.filter(s=>s.county===c.name&&!s.target).length,tg=OPS.filter(o=>o.county===c.name&&(o.status==='Target'||o.status==='Watch')).length;
+  return [['Net migration, last year',(c.net_mig_1y>0?'+':'')+fmtN(c.net_mig_1y)+' people'],['People per sq mi',fmtN(Math.round(c.density))],
+    ['Private businesses (2025)',fmtN(c.biz)+' · <span class="'+cls(c.biz_chg)+'">'+fmtP(c.biz_chg)+'</span>'],['Private jobs (2025)',fmtN(c.jobs)+' · <span class="'+cls(c.jobs_chg)+'">'+fmtP(c.jobs_chg)+'</span>'],
+    ['Construction jobs since 2020','<span class="'+cls(c.con_jobs_chg)+'">'+fmtP(c.con_jobs_chg)+'</span>'],['Average private pay',c.pay?'$'+fmtN(c.pay):'—'],
+    ['HVAC/plumbing contractors (2023)',fmtN(c.hvac_est)+(c.per_hvac?' · 1 per '+fmtN(c.per_hvac):'')],['Electrical contractors (2023)',fmtN(c.elec_est)],
+    ['On our license list','HVAC '+(c.lic?c.lic.hvac:0)+' · plumbing '+(c.lic?c.lic.plumb:0)+' · all 3 '+(c.lic?c.lic.all3:0)],
+    ['Our targets · new leads',tg+' · '+shops],['Opportunity score',c.opp+' / 100 (#'+rankOf('opp',c.name)[0]+' of 67)']];}
+const info=L.control({position:'topright'});
+info.onAdd=()=>{const d=L.DomUtil.create('div','cinfo');d.hidden=true;L.DomEvent.disableClickPropagation(d);L.DomEvent.disableScrollPropagation(d);return d;};
+info.addTo(map);
+function showInfo(name){
+  const d=info.getContainer();hlLayer.clearLayers();
+  if(!name){if(heatKey){d.hidden=false;d.innerHTML='<div class="ci-hint">Hover a county to see its population, growth and contractor numbers. Click to pin.</div>';}else d.hidden=true;return;}
+  const c=Object.assign({name},CTY.counties[name]);d.hidden=false;
+  const cp=CPOLY.find(x=>x.n===name);if(cp)hlLayer.addLayer(L.geoJSON(cp.f,{pane:'county',renderer:RENDER.county,interactive:false,style:{fill:false,color:css('--ink'),weight:pinnedC===name?2.4:1.6,opacity:.85}}));
+  let h='<div class="ci-h"><b>'+esc(name)+' County</b>'+(pinnedC===name?'<button class="ci-x" type="button" aria-label="Unpin">×</button>':'<span class="ci-hint">click to pin</span>')+'</div>';
+  if(heatKey){const v=HEAT[heatKey].get(c),rk=rankOf(heatKey,name);h+='<div class="ci-m"><span style="text-align:left">'+esc(heatLabel(heatKey))+'</span><b>'+esc(HEAT[heatKey].fmt(v))+'</b></div>'+(rk?'<div class="ci-hint" style="margin:-4px 0 6px;text-align:right">#'+rk[0]+' of '+rk[1]+' counties</div>':'');}
+  h+='<div class="ci-pop">'+spark(c.pop_series,84,24)+'<div><b style="color:var(--ink)">'+fmtN(c.pop)+'</b> people<br><span class="'+cls(c.pop_chg)+'">'+fmtP(c.pop_chg)+'</span> since 2020 · <span class="'+cls(c.pop_chg_1y)+'">'+fmtP(c.pop_chg_1y)+'</span> last yr</div></div>';
+  h+='<table>'+countyFacts(c).map(([k,v])=>'<tr><td>'+esc(k)+'</td><td>'+v+'</td></tr>').join('')+'</table>';
+  h+='<div class="ci-b"><button type="button" class="fbtn" data-ci="leads">Leads here</button><button type="button" class="fbtn" data-ci="table">All counties</button></div>';
+  d.innerHTML=h;
+  const x=d.querySelector('.ci-x');if(x)x.addEventListener('click',()=>{pinnedC=null;showInfo(hoverC);});
+  d.querySelector('[data-ci="leads"]').addEventListener('click',()=>{document.getElementById('k_county').value=name;document.getElementById('k_lead').value='new';document.getElementById('k_search').value='';selectTab('market');renderMarket();});
+  d.querySelector('[data-ci="table"]').addEventListener('click',()=>{cSel=name;selectTab('counties');});}
+map.on('mousemove',e=>{if(!heatKey||pinnedC)return;const n=countyAt(e.latlng.lat,e.latlng.lng);if(n!==hoverC){hoverC=n;showInfo(n);}});
+map.on('mouseout',()=>{if(!pinnedC&&hoverC){hoverC=null;showInfo(null);}});
+map.on('click',e=>{if(!heatKey)return;const n=countyAt(e.latlng.lat,e.latlng.lng);pinnedC=n&&n!==pinnedC?n:null;showInfo(pinnedC||n);});
+document.getElementById('m_heat').addEventListener('change',e=>{heatKey=e.target.value;if(!heatKey){pinnedC=null;hoverC=null;}drawHeat();});
+function focusCounty(name,key){if(!name)return;selectTab('map');if(key&&!heatKey){heatKey=key;document.getElementById('m_heat').value=key;}pinnedC=name;drawHeat();
+  const cp=CPOLY.find(x=>x.n===name);if(cp)setTimeout(()=>{map.invalidateSize();map.flyToBounds([[cp.b[1],cp.b[0]],[cp.b[3],cp.b[2]]],{padding:[60,60],duration:.6,maxZoom:10});},60);}
+function countyRows(o){const n=countyOf(o);if(!n||!CTY.counties[n])return null;const c=CTY.counties[n],rk=rankOf('opp',n);
+  return [['County',n+' County'],['Population (July 2025)',fmtN(c.pop)+', '+fmtP(c.pop_chg)+' since 2020, '+fmtP(c.pop_chg_1y)+' last year'],['Net migration, last year',(c.net_mig_1y>0?'+':'')+fmtN(c.net_mig_1y)+' people'],
+    ['Private businesses',fmtN(c.biz)+' in 2025, '+fmtP(c.biz_chg)+' since 2020'],['Private jobs',fmtN(c.jobs)+' in 2025, '+fmtP(c.jobs_chg)+' since 2020'],['Construction jobs',fmtP(c.con_jobs_chg)+' since 2020'],
+    ['HVAC/plumbing contractors',fmtN(c.hvac_est)+' in 2023'+(c.per_hvac?', one per '+fmtN(c.per_hvac)+' residents':'')+' (state: one per '+fmtN(Math.round(CTY.state.pop/CNAMES.reduce((a,k)=>a+CTY.counties[k].hvac_est,0)))+')'],
+    ['Opportunity score',c.opp+' / 100, #'+rk[0]+' of 67 counties']];}
+
+/* counties tab */
+let cSort={k:'opp',d:-1},cSel=null;
+const CCOLS=[['County','name'],['Population','pop',1],['Since 2020','pop_chg',1],['Last year','pop_chg_1y',1],['Net migration','net_mig_1y',1],['People / sq mi','density',1],['Businesses Δ','biz_chg',1],['Jobs Δ','jobs_chg',1],['Construction jobs Δ','con_jobs_chg',1],['Avg pay','pay',1],['HVAC/plumb. contractors','hvac_est',1],['People per contractor','per_hvac',1],['On license list','lic',1],['Targets','tg',1],['New leads','leads',1],['Miles','mi',1],['Opportunity','opp',1]];
+function countyTable(){const q=(document.getElementById('c_search').value||'').toLowerCase(),f=document.getElementById('c_filter').value;
+  return CNAMES.map(n=>{const c=CTY.counties[n],cp=CPOLY.find(x=>x.n===n);const cx=(cp.b[1]+cp.b[3])/2,cy=(cp.b[0]+cp.b[2])/2;
+    const la1=HOME.lat*Math.PI/180,la2=cx*Math.PI/180,dl=(cy-HOME.lon)*Math.PI/180,dp=la2-la1;const hv=Math.sin(dp/2)**2+Math.cos(la1)*Math.cos(la2)*Math.sin(dl/2)**2;
+    return Object.assign({name:n,lic:c.lic?c.lic.hvac+c.lic.plumb-c.lic.all3:0,tg:OPS.filter(o=>o.county===n&&(o.status==='Target'||o.status==='Watch')).length,leads:LEADS.filter(o=>o.shop.county===n&&o.status==='Lead').length,mi:Math.round(2*3958.8*Math.asin(Math.sqrt(hv)))},c);})
+   .filter(c=>(!q||c.name.toLowerCase().includes(q))&&(!f||(f==='grow'&&c.pop_chg>0)||(f==='decline'&&c.pop_chg<0)||(f==='near'&&c.mi<=100)))
+   .sort((a,b)=>{const k=cSort.k;if(k==='name')return a.name.localeCompare(b.name)*cSort.d;const x=a[k],y=b[k];if(x==null&&y==null)return 0;if(x==null)return 1;if(y==null)return -1;return (x-y)*cSort.d||a.name.localeCompare(b.name);});}
+function renderCounties(){
+  const tr=document.getElementById('c_head');tr.replaceChildren();
+  CCOLS.forEach(([lab,k,num])=>{const th=el('th',{scope:'col',class:num?'num':''});const b=el('button',{type:'button'},lab);if(cSort.k===k){b.appendChild(el('span',{class:'ar',text:cSort.d>0?'▲':'▼'}));th.setAttribute('aria-sort',cSort.d>0?'ascending':'descending');}
+    b.addEventListener('click',()=>{cSort=cSort.k===k?{k,d:-cSort.d}:{k,d:k==='name'?1:-1};renderCounties();});th.appendChild(b);tr.appendChild(th);});
+  const rows=countyTable(),tb=document.getElementById('c_body');tb.replaceChildren();
+  rows.forEach(c=>{const r=el('tr',{style:c.name===cSel?'background:color-mix(in srgb,var(--accent) 10%,transparent)':''});
+    const td=(t,cl)=>{const e=el('td',{class:'num'+(cl?' '+cl:'')});e.textContent=t;return e;};
+    r.append(el('td',{class:'co',text:c.name}),td(fmtN(c.pop)),td(fmtP(c.pop_chg),cls(c.pop_chg)),td(fmtP(c.pop_chg_1y),cls(c.pop_chg_1y)),td((c.net_mig_1y>0?'+':'')+fmtN(c.net_mig_1y),cls(c.net_mig_1y)),td(fmtN(Math.round(c.density))),td(fmtP(c.biz_chg),cls(c.biz_chg)),td(fmtP(c.jobs_chg),cls(c.jobs_chg)),td(fmtP(c.con_jobs_chg),cls(c.con_jobs_chg)),td(c.pay?'$'+fmtN(c.pay):'—'),td(fmtN(c.hvac_est)),td(c.per_hvac?fmtN(c.per_hvac):'—'),td(String(c.lic)),td(String(c.tg)),td(String(c.leads)),td(String(c.mi)),td(String(c.opp)));
+    r.addEventListener('click',()=>{cSel=c.name;focusCounty(c.name,heatKey||'opp');});tb.appendChild(r);});
+  document.getElementById('c_count').innerHTML='<b>'+rows.length+'</b> counties';
+  document.getElementById('c_state').innerHTML='Alabama: <b>'+fmtN(CTY.state.pop)+'</b> people, <span class="'+cls(CTY.state.pop_chg)+'">'+fmtP(CTY.state.pop_chg)+'</span> since 2020';
+  document.getElementById('c_src').textContent='Sources: '+CTY.sources.pop+'. '+CTY.sources.qcew+' (Δ = change since 2020). '+CTY.sources.cbp+' (contractors with paid employees). Licenses: '+MKT.sources.AECB.name+'. Miles are straight-line from Call KS to the county center. Click a row to see the county on the map.';
+  if(cSel){const i=rows.findIndex(c=>c.name===cSel);if(i>=0)tb.children[i].scrollIntoView({block:'nearest'});}}
+document.getElementById('c_search').addEventListener('input',renderCounties);
+document.getElementById('c_filter').addEventListener('change',renderCounties);
+document.getElementById('c_copy').addEventListener('click',()=>{const rows=countyTable(),q=v=>'"'+String(v==null?'':v).replace(/"/g,'""')+'"';
+  const txt=['County,Population 2025,Change since 2020 %,Change last year %,Net migration last year,People per sq mi,Private businesses change %,Private jobs change %,Construction jobs change %,Avg private pay,HVAC/plumbing contractors 2023,People per contractor,Shops on license list,Targets,New leads,Miles from Call KS,Opportunity score']
+   .concat(rows.map(c=>[c.name,c.pop,c.pop_chg,c.pop_chg_1y,c.net_mig_1y,Math.round(c.density),c.biz_chg,c.jobs_chg,c.con_jobs_chg,c.pay,c.hvac_est,c.per_hvac,c.lic,c.tg,c.leads,c.mi,c.opp].map(q).join(','))).join('\n');
+  const n=document.getElementById('c_copynote');try{navigator.clipboard.writeText(txt).then(()=>{n.textContent=rows.length+' rows copied';},()=>{n.textContent='Copy was blocked';});}catch(e){n.textContent='Copy was blocked';}});
+
 /* tabs */
-const TABS=['map','targets','profiles','locations','registry','market'];
+const TABS=['map','targets','profiles','locations','registry','market','counties'];
 function selectTab(t){
   if(!TABS.includes(t))t='map';
   TABS.forEach(k=>{document.getElementById('tab-'+k).setAttribute('aria-selected',k===t?'true':'false');document.getElementById('view-'+k).hidden=k!==t;});
@@ -1087,20 +1327,21 @@ function selectTab(t){
   if(t==='locations')renderLocations();
   if(t==='registry')renderRegistry();
   if(t==='market')renderMarket();
+  if(t==='counties')renderCounties();
   try{history.replaceState(null,'','#'+t);}catch(e){}}
 TABS.forEach(k=>document.getElementById('tab-'+k).addEventListener('click',()=>selectTab(k)));
 window.addEventListener('hashchange',()=>selectTab((location.hash||'#map').slice(1)));
 
 /* theme */
 function effectiveDark(){const t=document.documentElement.getAttribute('data-theme');if(t)return t==='dark';return matchMedia('(prefers-color-scheme: dark)').matches;}
-function retheme(){if(streetMode)makeTiles().addTo(map);buildBase();drawMarket();scheduleLayout();}
+function retheme(){if(streetMode)makeTiles().addTo(map);buildBase();drawMarket();drawHeat();scheduleLayout();}
 document.getElementById('themebtn').addEventListener('click',()=>{document.documentElement.setAttribute('data-theme',effectiveDark()?'light':'dark');});
 try{matchMedia('(prefers-color-scheme: dark)').addEventListener('change',retheme);}catch(e){}
 new MutationObserver(retheme).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
 
 /* boot */
-satLayer.addTo(map);mktLayer.addTo(map);applyBasemap();cityDotLayer.addTo(map);labelLayer.addTo(map);officeLayer.addTo(map);opLayer.addTo(map);
-map.on('zoomend',scheduleLayout);map.on('resize',scheduleLayout);
+satLayer.addTo(map);hlLayer.addTo(map);mktLayer.addTo(map);applyBasemap();cityDotLayer.addTo(map);labelLayer.addTo(map);officeLayer.addTo(map);opLayer.addTo(map);
+map.on('zoomend',()=>{scheduleLayout();if(heatKey)drawHeat();});map.on('resize',scheduleLayout);
 buildHead();syncChips();syncInputs();applyOps();
 if(document.fonts&&document.fonts.ready)document.fonts.ready.then(scheduleLayout);
 if(location.hash&&location.hash!=='#map')selectTab(location.hash.slice(1));

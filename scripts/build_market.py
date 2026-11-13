@@ -66,6 +66,7 @@ CHECKED = {
     "Advanced A/C & Electric": False,     # Veterans Memorial Dr, Abbeville LA
     "Rigsby Plumbing": False,             # Leoma TN
     "Wheat Electric": False,              # matched "heat" inside a surname
+    "Bailey Mechanical": False,           # Secretary of State: Mississippi company, Madison MS
 }
 OWNED = {  # consolidator-owned, matched on name
     "comfort systems usa": "Comfort Systems USA",
@@ -214,6 +215,12 @@ def main():
             s["owner"] = t.get("ownership") or "Consolidator-owned"
         s["all3"] = s["hvac"] and s["plumb"] and s["elec"]
         out_shops.append(s)
+    sos_file = RAW / "sos_leads.json"
+    sos = json.loads(sos_file.read_text()) if sos_file.exists() else {}
+    for s in out_shops:
+        rec = sos.get(s["n"] + "|" + s["town"])
+        if rec:
+            s["sos"] = rec
     out_shops.sort(key=lambda s: (s["n"].lower()))
 
     elec_towns, county_tot = [], {name: {"elec": 0, "hvac": 0, "plumb": 0, "all3": 0} for name, _ in counties}
