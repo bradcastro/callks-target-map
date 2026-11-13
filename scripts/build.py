@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Assemble index.html from src/template.html, data/targets.json and data/geo.json.
+"""Assemble index.html from src/template.html, data/targets.json, data/profiles.json and data/geo.json.
 
 Run from the repository root:  python3 scripts/build.py
 
@@ -36,12 +36,17 @@ def load_targets():
             raise SystemExit(f"{t['company']}: status must be Home, Target, Watch or Taken")
         if t["status"] in {"Target", "Watch"} and t.get("tier") not in {"A", "B", "C"}:
             raise SystemExit(f"{t['company']}: Target and Watch rows need tier A, B or C")
+    profiles = json.loads((ROOT / "data" / "profiles.json").read_text())
+    for t in targets:
+        t["profile"] = profiles.get(t["id"], {})
     homes = [t for t in targets if t["status"] == "Home"]
     if len(homes) != 1:
         raise SystemExit("exactly one row must have status Home")
     home = (homes[0]["lat"], homes[0]["lon"])
     for t in targets:
         t["miles"] = 0 if t["status"] == "Home" else round(miles_between(home, (t["lat"], t["lon"])))
+        for office in t["profile"].get("offices", []):
+            office["miles"] = round(miles_between(home, (office["lat"], office["lon"])))
     return targets
 
 

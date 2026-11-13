@@ -1,0 +1,1167 @@
+{
+ "_about": "Company details keyed by the id in targets.json. scripts/build.py merges each entry into its target as `profile`. Registry fields come from the Alabama Secretary of State Business Entity Records search (arc-sos.state.al.us), read Nov 13, 2026. Office coordinates marked level 'city' are town centers, not street addresses.",
+ "callks": {
+  "legal": "KS Services, LLC",
+  "website": "https://www.callks.com",
+  "offices": [
+   {
+    "label": "Headquarters",
+    "address": "8752 Helena Rd, Pelham, AL 35124",
+    "lat": 33.286,
+    "lon": -86.81,
+    "level": "street"
+   }
+  ],
+  "services": [
+   "Commercial and residential HVAC",
+   "Plumbing"
+  ],
+  "notes": [
+   "Platform company. Owners: William J. Slappey, Chris Holcomb, Jay Douglas."
+  ],
+  "sources": [
+   "https://www.zoominfo.com/c/ks-services-llc/443642880"
+  ]
+ },
+ "hutchens": {
+  "legal": "The Hutchens Company, Incorporated",
+  "website": "https://www.hutchenscompany.com",
+  "phone": "(256) 536-1557",
+  "offices": [
+   {
+    "label": "Headquarters",
+    "address": "2508 Washington St NW, Huntsville, AL 35811",
+    "lat": 34.744,
+    "lon": -86.59,
+    "level": "street"
+   }
+  ],
+  "services": [
+   "Commercial HVAC",
+   "Industrial HVAC and plumbing",
+   "Plumbing and process piping",
+   "Medical gas",
+   "Temperature controls",
+   "Water-flow test and balance",
+   "Energy solutions",
+   "Maintenance and service plans",
+   "24/7 emergency service",
+   "Some residential HVAC"
+  ],
+  "markets": "Commercial and industrial, with some residential",
+  "service_area": "Huntsville and North Alabama, including Decatur",
+  "licenses": [
+   "NATE-certified technicians"
+  ],
+  "people": [
+   "Incorporators (1946): Vernon F. Hutchens, Elizabeth R. Hutchens, H. J. Stepp",
+   "Government bid listing contact: V. Fisher Hutchens"
+  ],
+  "sos": {
+   "id": "000-009-714",
+   "type": "Domestic Corporation",
+   "status": "Exists",
+   "formed": "1946-03-01",
+   "county": "Madison County",
+   "agent": "Not provided",
+   "nature": "General merchandise, building contractors"
+  },
+  "notes": [
+   "In business since 1886 by its own account; incorporated 1946.",
+   "Family-owned and family-run; a related company, Hutchens-McCaleb Company (electrical and plumbing, formed 1962), was later merged in.",
+   "Long family tenure makes succession a natural opening."
+  ],
+  "sources": [
+   "https://www.hutchenscompany.com/",
+   "https://governmentbidders.com/government-bidders/contractor-5423322-HUTCHENS-CO-INC-THE.htm"
+  ]
+ },
+ "esc": {
+  "legal": "Environmental Systems Corporation of Huntsville",
+  "website": "https://www.envsyscorp.com",
+  "phone": "(256) 882-1122",
+  "email": "info@envsyscorp.com",
+  "offices": [
+   {
+    "label": "Headquarters",
+    "address": "4114 Environmental Cir SW, Huntsville, AL 35805",
+    "lat": 34.7,
+    "lon": -86.615,
+    "level": "street"
+   }
+  ],
+  "services": [
+   "Mechanical engineering and design",
+   "Design-build construction",
+   "Building commissioning",
+   "Energy management and building automation",
+   "Maintenance and long-term service support",
+   "Custom HVAC component fabrication",
+   "24/7 emergency service"
+  ],
+  "markets": "Commercial, industrial and government facilities",
+  "service_area": "North Alabama and southern Tennessee",
+  "people": [
+   "Registered agent and incorporator: Russell K. Grimes",
+   "Incorporators (1976): Carol L. Grimes, William J. Knootz"
+  ],
+  "sos": {
+   "id": "000-043-958",
+   "type": "Domestic Corporation",
+   "status": "Exists",
+   "formed": "1976-11-02",
+   "county": "Madison County",
+   "agent": "Russell K. Grimes, 4114 Environmental Cir, Huntsville, AL 35805",
+   "nature": "Not stated"
+  },
+  "notes": [
+   "Founder Russell K. Grimes is still the registered agent 50 years after formation, which points to a succession question.",
+   "Federal contractor (SAM UEI CMEHMJV9BEK9) with NASA and Department of Defense awards on record.",
+   "Engineering and design capability in-house is rare at this size."
+  ],
+  "sources": [
+   "https://www.envsyscorp.com",
+   "https://cm.hsvchamber.org/list/member/environmental-systems-corporation-of-huntsville-618",
+   "https://www.sweetspot.so/markets/federal/contractors/environmental-systems-corporation-of-huntsville-cmehmjv9bek9/"
+  ]
+ },
+ "proair": {
+  "legal": "Pro-Air Services, Inc.",
+  "offices": [
+   {
+    "label": "Headquarters",
+    "address": "3444 Valley Ave SW, Decatur, AL 35603",
+    "lat": 34.59,
+    "lon": -86.995,
+    "level": "street"
+   },
+   {
+    "label": "Huntsville office",
+    "address": "Huntsville, AL",
+    "lat": 34.73,
+    "lon": -86.586,
+    "level": "city"
+   }
+  ],
+  "services": [
+   "HVAC-R installation, maintenance and repair",
+   "On-site resident technicians at customer facilities",
+   "Institutional and government service"
+  ],
+  "markets": "Industrial, commercial and institutional; 2008 mix was 65% industrial, 35% commercial",
+  "service_area": "Alabama, Mississippi, Tennessee and Georgia",
+  "licenses": [
+   "Veteran-owned business (self-certified, SAM)"
+  ],
+  "people": [
+   "President and registered agent: Marshall L. Putman (also incorporator, 1995)"
+  ],
+  "sos": {
+   "id": "000-175-455",
+   "type": "Domestic Corporation",
+   "status": "Exists",
+   "formed": "1995-11-06",
+   "county": "Morgan County",
+   "agent": "Marshall L. Putman, 3444 Valley Ave SW, Decatur, AL 35603",
+   "nature": "Selling air conditioning and heating services and equipment"
+  },
+  "notes": [
+   "Resident-technician contracts are sticky recurring revenue, the profile that earns the top of the multiple range.",
+   "Single founder-owner since 1995.",
+   "2008 figures (ACHR News): $5.4M sales, 40 employees, 31 technicians and installers."
+  ],
+  "sources": [
+   "https://www.achrnews.com/articles/109963-measuring-commitment-in-service",
+   "https://www.highergov.com/awardee/pro-air-services-inc-12989212/",
+   "https://www.mapquest.com/us/alabama/pro-air-services-354590510"
+  ]
+ },
+ "smithsvc": {
+  "legal": "Smith Service Corporation",
+  "offices": [
+   {
+    "label": "Registered office",
+    "address": "1021 Brooks St SE, Decatur, AL 35601",
+    "lat": 34.618,
+    "lon": -86.965,
+    "level": "city"
+   }
+  ],
+  "services": [
+   "Commercial HVAC service and repair, all brands",
+   "Chillers, boilers and cooling towers",
+   "Computer-room systems",
+   "Ventilation and controls",
+   "Commercial refrigeration"
+  ],
+  "markets": "Businesses, schools, churches, nonprofits and industrial facilities",
+  "service_area": "Decatur and North Alabama",
+  "people": [
+   "Registered agent: Rick M. Smith",
+   "Incorporators (1971): Billy Joe Smith, Richard C. Lee, Thomas A. Caddell"
+  ],
+  "sos": {
+   "id": "000-016-978",
+   "type": "Domestic Corporation",
+   "status": "Exists",
+   "formed": "1971-08-19",
+   "county": "Morgan County",
+   "agent": "Rick M. Smith, 1021 Brooks St SE, Decatur, AL 35601",
+   "nature": "Service air conditioning"
+  },
+  "notes": [
+   "Founded by Billy Joe Smith in 1971; Rick M. Smith is now the registered agent.",
+   "Service-first model built around commercial maintenance."
+  ],
+  "sources": [
+   "https://www.crunchbase.com/organization/smith-service-corp",
+   "https://phoenix-0af34b1.aws.mapquest.com/us/alabama/smith-service-370831530"
+  ]
+ },
+ "ws": {
+  "legal": "WS Electrical & Air Conditioning, Inc.",
+  "offices": [
+   {
+    "label": "Headquarters",
+    "address": "1302 Central Pkwy SW, Decatur, AL 35601",
+    "lat": 34.602,
+    "lon": -87.01,
+    "level": "street"
+   }
+  ],
+  "services": [
+   "Mechanical and HVAC",
+   "Electrical",
+   "Indoor air quality"
+  ],
+  "markets": "Commercial",
+  "service_area": "North Alabama",
+  "people": [
+   "Incorporators (1975): David Sims, Donald W. Perry, Dan F. Nelson"
+  ],
+  "sos": {
+   "id": "000-037-696",
+   "type": "Domestic Corporation (S corporation per NAICS listing)",
+   "status": "Exists",
+   "formed": "1975-05-21",
+   "county": "Morgan County",
+   "agent": "C T Corporation System, Montgomery",
+   "nature": "Electrical and air conditioning work"
+  },
+  "notes": [
+   "Uses a commercial registered agent (CT Corporation) rather than an owner.",
+   "Estimated $12.8M revenue (ZoomInfo) puts it above tuck-in size."
+  ],
+  "sources": [
+   "https://www.zoominfo.com/c/ws-electrical--air-conditioning-inc/410478971",
+   "https://naicslist.com/company-profile/ws-electrical-air-conditioning-inc-decatur-al-35601"
+  ]
+ },
+ "acc": {
+  "legal": "Alabama Climate Control, Inc.",
+  "website": "https://alabamaclimatecontrol.com",
+  "phone": "(256) 536-8305",
+  "offices": [
+   {
+    "label": "Headquarters",
+    "address": "104 Wholesale Ave NE, Huntsville, AL 35811",
+    "lat": 34.765,
+    "lon": -86.555,
+    "level": "street"
+   },
+   {
+    "label": "Florence office",
+    "address": "Florence, AL",
+    "lat": 34.8,
+    "lon": -87.677,
+    "level": "city"
+   }
+  ],
+  "services": [
+   "Residential HVAC repair, installation and maintenance plans",
+   "Commercial mechanical maintenance, repair and installation",
+   "Commercial electrical",
+   "Commercial kitchen equipment",
+   "Duct and dryer-vent cleaning",
+   "24/7 emergency service"
+  ],
+  "markets": "Residential and commercial",
+  "service_area": "North Alabama: Huntsville, Madison, Decatur, Florence, Athens, the Shoals",
+  "licenses": [
+   "Trane Comfort Specialist",
+   "Mitsubishi Diamond Dealer",
+   "NATE-certified technicians",
+   "BBB A+"
+  ],
+  "people": [
+   "Incorporators (1977): Charles T. Stewart, Marilyn June Stewart, Donald R. Akins, Helga H. Akins"
+  ],
+  "sos": {
+   "id": "000-046-065",
+   "type": "Domestic Corporation",
+   "status": "Exists",
+   "formed": "1977-04-18",
+   "county": "Madison County",
+   "agent": "Registered Agents Inc, Birmingham",
+   "nature": "Air conditioning service"
+  },
+  "notes": [
+   "Family-owned since 1977; staff tenure of 15+ years per the company.",
+   "Residential-weighted, which lowers the multiple versus a pure commercial shop."
+  ],
+  "sources": [
+   "https://alabamaclimatecontrol.com/llms.txt",
+   "https://alabamaclimatecontrol.com/commercial-services/"
+  ]
+ },
+ "early": {
+  "legal": "Early Services, Inc.",
+  "offices": [
+   {
+    "label": "Registered office",
+    "address": "1717 Creighton Ave SE, Decatur, AL 35601",
+    "lat": 34.575,
+    "lon": -86.955,
+    "level": "city"
+   }
+  ],
+  "services": [
+   "Plumbing",
+   "HVAC",
+   "Construction for industrial plants and homes"
+  ],
+  "markets": "Industrial, commercial and residential; non-union; member of Associated Builders and Contractors",
+  "service_area": "Morgan County and North Alabama",
+  "people": [
+   "Registered agent and incorporator: James Albert Early Jr.",
+   "Related entity agent: Jamie Early Goforth"
+  ],
+  "sos": {
+   "id": "000-112-351",
+   "type": "Domestic Corporation",
+   "status": "Exists",
+   "formed": "1986-08-27",
+   "county": "Morgan County",
+   "agent": "James Albert Early Jr., 1717 Creighton Ave SE, Decatur, AL 35601",
+   "nature": "Not stated"
+  },
+  "notes": [
+   "Third-generation family business; the Early family's first Alabama company dates to 1954 (Birmingham entity formed 1965, later merged).",
+   "Blue Book lists $3-6M annual volume."
+  ],
+  "sources": [
+   "https://thebluebook.com/iProView/4815/early-services-inc/subcontractors",
+   "https://downtobid.com/contractors/hvac/huntsville"
+  ]
+ },
+ "md": {
+  "legal": "M & D Mechanical Contractors, Inc.",
+  "website": "https://mdmechanical.com",
+  "phone": "(256) 350-6568",
+  "offices": [
+   {
+    "label": "Headquarters",
+    "address": "1810 Sherman St SE, Decatur, AL 35601",
+    "lat": 34.725,
+    "lon": -86.64,
+    "level": "street"
+   }
+  ],
+  "services": [
+   "Mechanical, plumbing and HVAC construction",
+   "Process piping",
+   "Duct and pipe prefabrication",
+   "Design-build",
+   "Medical gas",
+   "BIM and LEED"
+  ],
+  "markets": "Industrial, institutional, government and commercial",
+  "service_area": "Decatur, Huntsville, Birmingham and the Southeast",
+  "licenses": [
+   "AL contractor license #95034"
+  ],
+  "people": [
+   "Directors on file: Alan B. Schollian (registered agent), Rodney G. Ferguson, John A. Barnard, Johnny W. Horton, Michelle Cesareo"
+  ],
+  "sos": {
+   "id": "000-883-853",
+   "type": "Domestic Corporation",
+   "status": "Exists",
+   "formed": "2016-09-29",
+   "county": "Alabama",
+   "agent": "Alan B. Schollian, 1810 Sherman St SE, Decatur, AL 35601",
+   "nature": "Not stated"
+  },
+  "notes": [
+   "A holding company, M & D Mechanical Holding, Inc., was formed in 2022 at the same address, suggesting a recapitalization or ownership change.",
+   "Celebrating 110 years in business; construction-heavy and probably too large for a tuck-in."
+  ],
+  "sources": [
+   "https://mdmechanical.com/",
+   "https://mdmechanical.com/about-us/news"
+  ]
+ },
+ "sereef": {
+  "legal": "Southeastern Refrigeration, Inc.",
+  "offices": [
+   {
+    "label": "Registered office",
+    "address": "310 26th Ave W, Birmingham, AL 35204",
+    "lat": 33.545,
+    "lon": -86.78,
+    "level": "city"
+   }
+  ],
+  "services": [
+   "Commercial and industrial refrigeration design and engineering",
+   "Construction and installation",
+   "Parts distribution",
+   "24/7 service"
+  ],
+  "markets": "Commercial and industrial refrigeration",
+  "service_area": "Birmingham and Central Alabama",
+  "people": [
+   "Registered agent: Larry W. Hyde",
+   "Incorporators (1962): R. R. Schwitzer, Alan W. Heldman, Patricia M. Dietlein"
+  ],
+  "sos": {
+   "id": "000-017-209",
+   "type": "Domestic Corporation",
+   "status": "Exists",
+   "formed": "1962-01-24",
+   "county": "Jefferson County",
+   "agent": "Larry W. Hyde, 310 26th Ave W, Birmingham, AL 35204",
+   "nature": "Refrigeration"
+  },
+  "notes": [
+   "Over 60 years old; adds refrigeration capability in Call KS's home market."
+  ],
+  "sources": [
+   "https://downtobid.com/contractors/hvac/birmingham"
+  ]
+ },
+ "hardy": {
+  "legal": "Hardy Services, Inc.",
+  "website": "https://hardyserv.com",
+  "offices": [
+   {
+    "label": "Headquarters",
+    "address": "4749 Cloud Ln, Birmingham, AL 35243",
+    "lat": 33.525,
+    "lon": -86.84,
+    "level": "city"
+   }
+  ],
+  "services": [
+   "Mechanical equipment and plumbing system maintenance, repair and design services"
+  ],
+  "markets": "Commercial mechanical service",
+  "service_area": "Birmingham",
+  "people": [
+   "Director and registered agent: Thomas Cordell"
+  ],
+  "sos": {
+   "id": "000-524-584",
+   "type": "Domestic Corporation",
+   "status": "Exists",
+   "formed": "2018-07-19",
+   "county": "Jefferson County",
+   "agent": "Thomas Cordell, 4749 Cloud Ln, Birmingham, AL 35243",
+   "nature": "Maintain, repair and design mechanical equipment and plumbing systems"
+  },
+  "notes": [
+   "The Hardy brand dates to 1943; the current corporation was formed in 2018. The company describes itself as employee-owned.",
+   "Part of a national network of independent mechanical service companies."
+  ],
+  "sources": [
+   "https://hardyserv.com/?p=37"
+  ]
+ },
+ "rjm": {
+  "legal": "RJ Mechanical, Inc.",
+  "offices": [
+   {
+    "label": "Headquarters",
+    "address": "3153 Bellwood Dr, Vestavia Hills, AL 35243",
+    "lat": 33.46,
+    "lon": -86.745,
+    "level": "street"
+   }
+  ],
+  "services": [
+   "HVAC, plumbing and piping subcontracting, design through installation"
+  ],
+  "markets": "Commercial, government, healthcare, industrial and retail",
+  "service_area": "Alabama and the Southeast",
+  "people": [
+   "Registered agent: Jennifer H. Sandlin",
+   "Incorporator (1998): Glenn E. Estess Jr."
+  ],
+  "sos": {
+   "id": "000-193-814",
+   "type": "Domestic Corporation",
+   "status": "Exists",
+   "formed": "1998-02-20",
+   "county": "Jefferson County",
+   "agent": "Jennifer H. Sandlin, 3153 Bellwood Dr, Birmingham, AL 35243",
+   "nature": "Construction and installation services for heating and ventilation"
+  },
+  "notes": [
+   "About 200 employees per NAICS listing; project-heavy and larger than a tuck-in."
+  ],
+  "sources": [
+   "https://naicslist.com/company-profile/rj-mechanical-inc-vestavia-al-35243"
+  ]
+ },
+ "apex": {
+  "legal": "APEX Mechanical Services, Inc.",
+  "offices": [
+   {
+    "label": "Headquarters",
+    "address": "3977 Valley East Industrial Dr, Birmingham, AL 35217",
+    "lat": 33.689,
+    "lon": -86.683,
+    "level": "city"
+   }
+  ],
+  "services": [
+   "Mechanical services"
+  ],
+  "markets": "Commercial mechanical",
+  "service_area": "Birmingham",
+  "people": [
+   "Registered agent: Jeff Francis",
+   "Incorporator (2005): Steve E. Martin"
+  ],
+  "sos": {
+   "id": "000-240-917",
+   "type": "Domestic Corporation",
+   "status": "Exists",
+   "formed": "2005-04-12",
+   "county": "Jefferson County",
+   "agent": "Jeff Francis, Bldg 3 Gilmer Industrial Park, Birmingham, AL 35215",
+   "nature": "Own, maintain and operate a mechanical services company"
+  },
+  "notes": [
+   "About 25 employees per NAICS listing.",
+   "Not the same company as Apex Mechanical, Inc. of Huntsville (1983)."
+  ],
+  "sources": [
+   "https://naicslist.com/company-profile/apex-mechanical-services-inc-birmingham-al-35217"
+  ]
+ },
+ "alair": {
+  "legal": "Alabama Air Systems, Inc.",
+  "offices": [
+   {
+    "label": "Mailing address",
+    "address": "PO Box 101024, Birmingham, AL 35210",
+    "lat": 33.495,
+    "lon": -86.705,
+    "level": "city"
+   }
+  ],
+  "services": [
+   "HVAC and mechanical installation, mostly permitted small jobs"
+  ],
+  "markets": "Commercial and residential",
+  "service_area": "Birmingham",
+  "people": [
+   "Registered agent: Vicki L. Tinney",
+   "Incorporators (1984): Larry W. Tinney, Vicki L. Tinney"
+  ],
+  "sos": {
+   "id": "000-100-099",
+   "type": "Domestic Corporation",
+   "status": "Exists",
+   "formed": "1984-09-19",
+   "county": "Jefferson County",
+   "agent": "Vicki L. Tinney, 3399 Kelly Creek Rd, Odenville, AL 35120",
+   "nature": "Air conditioning equipment"
+  },
+  "notes": [
+   "Husband-and-wife founders still on file after 40+ years, a classic retirement-sale profile."
+  ],
+  "sources": [
+   "https://www.buildzoom.com/contractor/alabama-air-systems-inc"
+  ]
+ },
+ "patriot": {
+  "legal": "Patriot Mechanical, LLC",
+  "website": "https://patriot-mechanical.us",
+  "phone": "(334) 296-1517",
+  "email": "chris@patriotmechanical.us",
+  "offices": [
+   {
+    "label": "Service base",
+    "address": "Montgomery, AL",
+    "lat": 32.398,
+    "lon": -86.265,
+    "level": "city"
+   },
+   {
+    "label": "Office (per website)",
+    "address": "27475 Highway 5, Suite 1, Woodstock, AL 35188",
+    "lat": 33.207,
+    "lon": -87.15,
+    "level": "city"
+   }
+  ],
+  "services": [
+   "Commercial and industrial HVAC design, installation and service",
+   "Routine and annual maintenance",
+   "Emergency repair, all brands",
+   "Geothermal",
+   "Energy-saving upgrades"
+  ],
+  "markets": "Commercial and industrial",
+  "service_area": "Montgomery metro and Montgomery County",
+  "people": [
+   "Organizer and registered agent: Chris Blake",
+   "Contacts on website: Chris and Gary",
+   "Vice president (ZoomInfo): Brandon Reynolds"
+  ],
+  "sos": {
+   "id": "000-358-458",
+   "type": "Domestic Limited Liability Company",
+   "status": "Exists",
+   "formed": "2016-01-16",
+   "county": "Elmore County",
+   "agent": "Chris Blake, 406 Horseshoe Ln, Montgomery, AL",
+   "nature": "Not stated"
+  },
+  "notes": [
+   "Ties to the Reynolds family's Reynolds Heat & Air, serving the area for 20+ years.",
+   "Pure commercial service model; 50-100 employees per job-site listing.",
+   "Website office is in Woodstock (near Tuscaloosa), not Montgomery; confirm where crews are based."
+  ],
+  "sources": [
+   "https://patriot-mechanical.us/",
+   "https://downtobid.com/contractors/hvac/montgomery/3"
+  ]
+ },
+ "dixie": {
+  "legal": "Dixie Electric Company",
+  "offices": [
+   {
+    "label": "Headquarters",
+    "address": "580 Trade Center St, Montgomery, AL 36108",
+    "lat": 32.34,
+    "lon": -86.245,
+    "level": "city"
+   },
+   {
+    "label": "Auburn / Opelika office",
+    "address": "Auburn-Opelika, AL",
+    "lat": 32.645,
+    "lon": -85.378,
+    "level": "city"
+   }
+  ],
+  "services": [
+   "Residential electrical, plumbing and air conditioning",
+   "Commercial electrical and plumbing service",
+   "Electrical construction",
+   "Industrial electrical",
+   "Commercial HVAC and refrigeration",
+   "Dixie Warehouse Solutions (overhead doors and warehouse supply)"
+  ],
+  "markets": "Residential, commercial and industrial",
+  "service_area": "Montgomery, Auburn and Opelika",
+  "people": [
+   "President: John Yelverton (commercial, construction, industrial)",
+   "Noble Yelverton (residential electrical, plumbing and air)"
+  ],
+  "sos": {
+   "id": "000-005-653",
+   "type": "Domestic Corporation",
+   "status": "Exists",
+   "formed": "1949-06-30",
+   "county": "Montgomery County",
+   "agent": "John Yelverton III, 580 Trade Center St, Montgomery, AL 36108",
+   "nature": "Electrical supplies"
+  },
+  "employees_note": "About 160 (100 Montgomery, 60 Auburn-Opelika)",
+  "notes": [
+   "Founded 1908; fourth-generation family business run by brothers John and Noble Yelverton.",
+   "Revenue has grown 40-fold under the current generation; runs its own technical training school.",
+   "Too large and multi-trade for a tuck-in; a merger or platform partner conversation instead."
+  ],
+  "sources": [
+   "https://www.montgomerychamber.com/blog/montgomery-business-journal-3603/post/powerhouse-q-a-john-yelverton-dixie-electric-plumbing-air-26664"
+  ]
+ },
+ "amco": {
+  "legal": "Associated Mechanical Contractors, Inc.",
+  "offices": [
+   {
+    "label": "Headquarters",
+    "address": "248 S Lewis St, Montgomery, AL 36107",
+    "lat": 32.362,
+    "lon": -86.32,
+    "level": "street"
+   },
+   {
+    "label": "Auburn office",
+    "address": "375 Industry Dr, Auburn, AL 36832",
+    "lat": 32.61,
+    "lon": -85.481,
+    "level": "city"
+   }
+  ],
+  "phone": "(334) 264-2263",
+  "services": [
+   "Plumbing",
+   "HVAC",
+   "Sheet metal",
+   "Mechanical design and engineering"
+  ],
+  "markets": "Commercial, industrial and institutional",
+  "service_area": "Southeastern U.S.",
+  "people": [
+   "Registered agent: Zachary E. Adams",
+   "Incorporators (1956): George E. Bagwell, Louie F. Adams, A. W. Smith"
+  ],
+  "sos": {
+   "id": "000-001-335",
+   "type": "Domestic Corporation",
+   "status": "Exists",
+   "formed": "1956-01-26",
+   "county": "Montgomery County",
+   "agent": "Zachary E. Adams, 248 S Lewis St, Montgomery, AL 36107",
+   "nature": "Air conditioning and heating equipment"
+  },
+  "notes": [
+   "Adams family involved since 1956 (Louie F. Adams incorporator; Zachary E. Adams now agent).",
+   "About 120 employees; a recap or merger partner rather than a tuck-in."
+  ],
+  "sources": [
+   "https://levelset.com/contractors/associated-mechanical-contractors-inc/about",
+   "https://newbizbot.ai/ppp-loans/alabama/industry/23?page=4"
+  ]
+ },
+ "bradley": {
+  "legal": "Bradley Plumbing & Heating, Incorporated",
+  "offices": [
+   {
+    "label": "Headquarters",
+    "address": "Montgomery, AL",
+    "lat": 32.372,
+    "lon": -86.345,
+    "level": "city"
+   }
+  ],
+  "services": [
+   "Plumbing",
+   "Heating and air conditioning"
+  ],
+  "markets": "Commercial",
+  "service_area": "Montgomery",
+  "people": [
+   "Incorporators (1963): B. Theron Bradley, W. M. Glover, Mrs. B. Theron Bradley"
+  ],
+  "sos": {
+   "id": "000-002-931",
+   "type": "Domestic Corporation",
+   "status": "Exists",
+   "formed": "1963-07-01",
+   "county": "Montgomery County",
+   "agent": "Not provided",
+   "nature": "Air conditioning, plumbing"
+  },
+  "notes": [
+   "A separate Bill Bradley Plumbing, Inc. (1973) also exists in Montgomery; confirm which one you call."
+  ],
+  "sources": [
+   "https://levelset.com/subcontractors/alabama/hvac"
+  ]
+ },
+ "woodall": {
+  "legal": "Bob Woodall Air Care Systems, Inc. (and Bob Woodall Commercial Air Systems, Inc.)",
+  "website": "https://callbob.com",
+  "phone": "(334) 851-8617",
+  "offices": [
+   {
+    "label": "Headquarters",
+    "address": "412 N Foster St, Dothan, AL 36303",
+    "lat": 31.232,
+    "lon": -85.395,
+    "level": "street"
+   }
+  ],
+  "services": [
+   "Residential HVAC repair, replacement and new construction",
+   "Commercial HVAC repair, replacement and new construction",
+   "Sheet metal fabrication",
+   "Indoor air quality and spray-foam insulation",
+   "Residential plumbing",
+   "Maintenance plans"
+  ],
+  "markets": "Residential and commercial",
+  "service_area": "The Wiregrass: Dothan, Ozark, Fort Novosel, Enterprise area and about 20 nearby towns",
+  "licenses": [
+   "AL #83996",
+   "GA #CN209553",
+   "FL #CMC057221",
+   "Lennox Premier Dealer",
+   "Carrier Factory Authorized"
+  ],
+  "people": [
+   "Incorporators (1969): Robert Woodall, Frances B. Woodall, Charles Luverne Woodall"
+  ],
+  "sos": {
+   "id": "000-020-283",
+   "type": "Domestic Corporation",
+   "status": "Exists",
+   "formed": "1969-04-15",
+   "county": "Houston County",
+   "agent": "Not provided",
+   "nature": "Heating, cooling and ventilating systems"
+  },
+  "employees_note": "About 52",
+  "notes": [
+   "Serving the Wiregrass since 1967; family-operated.",
+   "Separate commercial company (Bob Woodall Commercial Air Systems) on the same lot, with its own Carrier listing; its registry record did not load.",
+   "About 1,800 reviews at 4.9 stars; the strongest brand in Dothan.",
+   "Licensed in Alabama, Georgia and Florida; covers Enterprise."
+  ],
+  "sources": [
+   "https://callbob.com/",
+   "https://naicslist.com/company-profile/bob-woodall-air-care-systems-inc-dothan-al-36303",
+   "https://www.experience.com/reviews/bob-22261412"
+  ]
+ },
+ "samsvc": {
+  "legal": "SAM Service Inc. (registry record not retrieved)",
+  "offices": [
+   {
+    "label": "Headquarters",
+    "address": "Dothan, AL",
+    "lat": 31.248,
+    "lon": -85.415,
+    "level": "city"
+   }
+  ],
+  "services": [
+   "Commercial food-service equipment repair",
+   "Commercial refrigeration",
+   "HVAC"
+  ],
+  "markets": "Restaurants and hospitality",
+  "service_area": "Dothan and the Wiregrass",
+  "notes": [
+   "Registry search found SAM Service Inc. and SAM Service LLC; details did not load. Confirm the right entity."
+  ],
+  "sources": [
+   "https://downtobid.com/contractors/hvac/dothan/4"
+  ]
+ },
+ "aca": {
+  "legal": "Air Conditioning Associates, Incorporated",
+  "phone": "(334) 483-0067",
+  "offices": [
+   {
+    "label": "Headquarters",
+    "address": "1346 Ross Clark Cir, Dothan, AL 36301",
+    "lat": 31.212,
+    "lon": -85.37,
+    "level": "street"
+   }
+  ],
+  "services": [
+   "HVAC",
+   "Carrier dealer"
+  ],
+  "markets": "Residential and commercial",
+  "service_area": "Dothan",
+  "people": [
+   "Registered agent: Jeff Metcalf",
+   "Incorporators (1975): Bascom C. Metcalf, Myra C. Metcalf, Leslie E. Seigle"
+  ],
+  "sos": {
+   "id": "000-037-313",
+   "type": "Domestic Corporation",
+   "status": "Exists",
+   "formed": "1975-04-10",
+   "county": "Houston County",
+   "agent": "Jeff Metcalf, 1346 Ross Clark Cir, Dothan, AL 36301",
+   "nature": "Construction"
+  },
+  "notes": [
+   "Founded by the Metcalf family in 1975; Jeff Metcalf is now the registered agent."
+  ],
+  "sources": [
+   "https://www.carrier.com/us/en/residential/dealers/al/dothan",
+   "https://levelset.com/subcontractors/alabama/hvac"
+  ]
+ },
+ "secool": {
+  "legal": "Southeastern Cooling, Inc.",
+  "offices": [
+   {
+    "label": "Service area",
+    "address": "Dothan, AL",
+    "lat": 31.198,
+    "lon": -85.41,
+    "level": "city"
+   },
+   {
+    "label": "Registered office",
+    "address": "1054 County Road 20, Headland, AL 36345",
+    "lat": 31.351,
+    "lon": -85.342,
+    "level": "city"
+   }
+  ],
+  "services": [
+   "All aspects of HVAC systems"
+  ],
+  "markets": "Residential and commercial",
+  "service_area": "Dothan and Henry County",
+  "people": [
+   "Directors: Phillip Todd Friedman (registered agent), Jason Harris, Matthew Tyler Bartlett"
+  ],
+  "sos": {
+   "id": "000-381-142",
+   "type": "Domestic Corporation",
+   "status": "Exists",
+   "formed": "2017-01-19",
+   "county": "Henry County",
+   "agent": "Todd Friedman, 1054 County Road 20, Headland, AL 36345",
+   "nature": "All aspects of HVAC system business"
+  },
+  "notes": [
+   "Younger company (2017) with three directors; less likely to be a succession sale."
+  ],
+  "sources": [
+   "https://www.levelset.com/subcontractors/alabama/hvac/?page=3"
+  ]
+ },
+ "hagler": {
+  "legal": "Hagler Heating & Cooling Inc.",
+  "offices": [
+   {
+    "label": "Headquarters",
+    "address": "186 Union Ave, Ozark, AL 36360",
+    "lat": 31.459,
+    "lon": -85.64,
+    "level": "city"
+   }
+  ],
+  "services": [
+   "Residential and commercial HVAC",
+   "Carrier dealer"
+  ],
+  "markets": "Mostly residential",
+  "service_area": "Ozark, Enterprise and Fort Novosel area",
+  "people": [
+   "Founder and registered agent: Clay (Clayton) Hagler"
+  ],
+  "sos": {
+   "id": "000-250-716",
+   "type": "Domestic Corporation",
+   "status": "Exists",
+   "formed": "2007-01-18",
+   "county": "Dale County",
+   "agent": "Clay Hagler, 2374 Co Rd 61, Ozark, AL 36360",
+   "nature": "Any lawful activity"
+  },
+  "employees_note": "About 21",
+  "notes": [
+   "Owner-founded in 2007; one location in Ozark near Enterprise and Fort Novosel."
+  ],
+  "sources": [
+   "https://naicslist.com/company-profile/hagler-heating-and-cooling-inc-ozark-al-36360",
+   "https://www.carrier.com/us/en/residential/dealers/al/ozark/186-north-union-ave-151271-loc"
+  ]
+ },
+ "baycc": {
+  "legal": "Bay Climate Control & Refrigeration, LLC",
+  "website": "https://www.bayclimate.com",
+  "phone": "(800) 683-4676",
+  "email": "info@bayclimate.com",
+  "offices": [
+   {
+    "label": "Mobile office",
+    "address": "4223 St Stephens Rd, Mobile, AL 36612",
+    "lat": 30.705,
+    "lon": -88.085,
+    "level": "street"
+   },
+   {
+    "label": "Foley office",
+    "address": "19477 County Rd 10, Unit F-6, Foley, AL 36535",
+    "lat": 30.407,
+    "lon": -87.684,
+    "level": "city"
+   },
+   {
+    "label": "Niceville office",
+    "address": "Niceville, FL",
+    "lat": 30.517,
+    "lon": -86.482,
+    "level": "city"
+   }
+  ],
+  "services": [
+   "Commercial HVAC sales, installation and repair",
+   "Refrigeration and walk-in coolers and freezers",
+   "Ice machines",
+   "Cooking equipment",
+   "Hood and make-up air systems",
+   "Duct cleaning",
+   "Design and installation",
+   "24/7 emergency service"
+  ],
+  "markets": "Restaurants, commercial and industrial; GC projects averaging about $1.7M on Procore",
+  "service_area": "Gulf Coast: Mobile, Baldwin County and the Florida Panhandle",
+  "licenses": [
+   "AL HVAC #15104",
+   "AL Refrigeration #53102",
+   "FL #CAC1818987",
+   "CFESA member"
+  ],
+  "maintenance": "Monthly service contracts; HVAC, ice-machine and make-up-air preventive maintenance",
+  "people": [
+   "Registered agent: Bethany Martinez",
+   "Predecessor entity (2015, dissolved) director: Chad Bartz, Spanish Fort"
+  ],
+  "sos": {
+   "id": "000-377-348",
+   "type": "Domestic Limited Liability Company",
+   "status": "Exists",
+   "formed": "2016-11-22",
+   "county": "Baldwin County",
+   "agent": "Bethany Martinez, 4223 St Stephens Rd, Mobile, AL 36612",
+   "nature": "Not stated"
+  },
+  "employees_note": "10-50",
+  "notes": [
+   "Three offices across Alabama and Florida, with formal monthly service contracts.",
+   "Restaurant equipment service is a defensible niche with recurring revenue."
+  ],
+  "sources": [
+   "https://www.bayclimate.com",
+   "https://network.procore.com/p/bay-climate-control-and-refrigeration-llc-mobile"
+  ]
+ },
+ "alston": {
+  "legal": "Alston Refrigeration Company, Inc.",
+  "website": "https://www.alstonrefrigeration.com",
+  "phone": "(251) 666-6644",
+  "email": "alstonrefrigeration@hotmail.com",
+  "offices": [
+   {
+    "label": "Headquarters",
+    "address": "845 Lakeside Dr, Mobile, AL 36693",
+    "lat": 30.665,
+    "lon": -88.15,
+    "level": "street"
+   }
+  ],
+  "services": [
+   "Commercial refrigeration",
+   "Commercial kitchen equipment",
+   "Commercial HVAC",
+   "Ice machines",
+   "24-hour emergency service"
+  ],
+  "markets": "Restaurants, hospitals, churches, schools, cold storage, food processing, grocery, pharmacies",
+  "service_area": "Mobile, Spanish Fort, Fairhope, Foley, Orange Beach and Gulf Shores",
+  "licenses": [
+   "AL licenses 83005 and 50210",
+   "Authorized warranty service for Manitowoc, Scotsman, Hoshizaki, True and others"
+  ],
+  "people": [
+   "Incorporators (1978): Larry Alston, Sandra Alston, James H. Archer"
+  ],
+  "sos": {
+   "id": "000-050-357",
+   "type": "Domestic Corporation",
+   "status": "Exists",
+   "formed": "1978-03-02",
+   "county": "Mobile County",
+   "agent": "Not provided",
+   "nature": "Refrigeration equipment"
+  },
+  "notes": [
+   "Founding Alston family on file since 1978.",
+   "Its HVAC/mechanical license showed as expired on Aug 8, 2026 in BuildZoom's check; verify."
+  ],
+  "sources": [
+   "https://www.alstonrefrigeration.com/",
+   "https://www.buildzoom.com/contractor/alston-refrigeration-inc"
+  ]
+ },
+ "lowerAL": {
+  "legal": "Lower Alabama Heating, Cooling & Refrigeration (registry match uncertain)",
+  "offices": [
+   {
+    "label": "Headquarters",
+    "address": "Mobile area (Eight Mile / Saraland listings)",
+    "lat": 30.73,
+    "lon": -88.045,
+    "level": "city"
+   }
+  ],
+  "services": [
+   "HVAC",
+   "Refrigeration",
+   "Duct cleaning"
+  ],
+  "markets": "Residential and light commercial",
+  "service_area": "Mobile County",
+  "sos": {
+   "id": "000-371-656",
+   "type": "Domestic Limited Liability Company",
+   "status": "Exists",
+   "formed": "2016-09-13",
+   "county": "Washington County",
+   "agent": "Mark Davis, 17115 Jordan St, Chatom, AL 36518",
+   "nature": "Not stated"
+  },
+  "notes": [
+   "The closest registry match is in Chatom (Washington County), not Mobile; it may be a different company. Confirm before contact."
+  ],
+  "sources": [
+   "https://bbb.org/us/al/mobile/category/commercial-refrigeration"
+  ]
+ },
+ "conrad": {
+  "legal": "Conrad Watson Air Conditioning Corporation",
+  "offices": [
+   {
+    "label": "Headquarters",
+    "address": "4100 County Road 5, Monroeville, AL 36460",
+    "lat": 31.528,
+    "lon": -87.325,
+    "level": "street"
+   }
+  ],
+  "services": [
+   "Heating and air conditioning",
+   "Duct cleaning"
+  ],
+  "markets": "Residential and commercial",
+  "service_area": "Monroe County and southwest Alabama",
+  "people": [
+   "Registered agent: Nick Tatum",
+   "Incorporators (1973): Douglas Conrad Watson, James F. Watson, Diane C. Watson"
+  ],
+  "sos": {
+   "id": "000-030-154",
+   "type": "Domestic Corporation",
+   "status": "Exists",
+   "formed": "1973-03-28",
+   "county": "Conecuh County",
+   "agent": "Nick Tatum, 4100 County Road 5, Monroeville, AL 36460",
+   "nature": "Heating and air conditioning"
+  },
+  "notes": [
+   "Agent is no longer a Watson family member, which may mean ownership has already passed outside the founding family."
+  ],
+  "sources": [
+   "https://bbb.org/us/al/chatom/category/commercial-refrigeration"
+  ]
+ }
+}

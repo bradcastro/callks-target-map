@@ -183,6 +183,107 @@ table.ops tr.taken td{opacity:.62}
 .tweb{color:var(--op);text-decoration:none;font-family:var(--f-mono);font-size:11px}.tweb:hover{text-decoration:underline}
 .copyfallback{margin:0 16px 12px;width:calc(100% - 32px);height:120px;font-family:var(--f-mono);font-size:11px;background:var(--card);color:var(--ink);border:1px solid var(--line2);border-radius:7px}
 
+
+/* profiles */
+.pv{height:100%;display:flex;gap:10px;min-height:0}
+.plist{width:300px;flex:none;display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;min-height:0}
+.plist .fbar{padding:12px}
+.plist .fbar input{width:100%}
+.pitems{flex:1;overflow:auto}
+.pitem{all:unset;box-sizing:border-box;display:flex;gap:10px;align-items:flex-start;width:100%;padding:10px 14px;border-bottom:1px solid var(--line);cursor:pointer}
+.pitem:hover{background:var(--panel2)}
+.pitem[aria-current="true"]{background:color-mix(in srgb,var(--accent) 10%,transparent);box-shadow:inset 3px 0 0 var(--accent)}
+.pitem:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.pitem .pn{display:block;font-weight:600;font-size:12.5px;color:var(--ink);line-height:1.3}
+.pitem .pm{display:block;font-family:var(--f-mono);font-size:10px;color:var(--ink-faint);margin-top:3px}
+.pitem .dot{width:10px;height:10px;border-radius:50%;flex:none;margin-top:3px}
+.dossier{flex:1;min-width:0;overflow:auto;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:22px 26px 32px}
+.dhead{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:flex-start;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:16px}
+.dname{font-family:var(--f-display);font-weight:600;font-size:26px;line-height:1.1;margin:0;text-wrap:balance}
+.dlegal{font-family:var(--f-mono);font-size:11px;color:var(--ink-faint);margin-top:6px}
+.dactions{display:flex;gap:8px;flex-wrap:wrap}
+.btn{font-family:var(--f-mono);font-size:11.5px;padding:8px 13px;border-radius:8px;border:1px solid var(--line2);background:var(--card);color:var(--ink);cursor:pointer}
+.btn:hover{border-color:var(--accent);color:var(--accent)}
+.btn.primary{background:var(--ink);color:var(--panel);border-color:var(--ink)}
+.btn.primary:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+.facts{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin:16px 0 4px}
+.fact{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:9px 11px}
+.fact span{display:block;font-family:var(--f-mono);font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-faint)}
+.fact b{display:block;font-size:13.5px;font-weight:600;color:var(--ink);margin-top:3px;font-variant-numeric:tabular-nums}
+.dgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 28px}
+.dsec{padding-top:16px}
+.dsec h3{font-family:var(--f-mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-faint);margin:0 0 8px;font-weight:600}
+.dsec p,.dsec li{font-size:13px;line-height:1.55;color:var(--ink-dim);margin:0}
+.dsec ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px}
+.dsec a{color:var(--op);word-break:break-all}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:5px 14px;font-size:12.5px}
+.kv dt{font-family:var(--f-mono);font-size:10.5px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:.04em;padding-top:2px}
+.kv dd{margin:0;color:var(--ink)}
+.offl{display:flex;flex-direction:column;gap:6px}
+.off{display:flex;justify-content:space-between;gap:10px;font-size:12.5px;border-bottom:1px dashed var(--line);padding-bottom:5px}
+.off b{font-weight:600;color:var(--ink)}
+.off span{color:var(--ink-dim)}
+.off em{font-style:normal;font-family:var(--f-mono);font-size:11px;color:var(--ink-faint);white-space:nowrap}
+.note{background:color-mix(in srgb,var(--accent) 9%,transparent);border-left:3px solid var(--accent);padding:10px 12px;border-radius:0 8px 8px 0;font-size:13px;color:var(--ink);line-height:1.5}
+.offmk{width:100%;height:100%;transform:rotate(45deg);border:2px solid var(--ink-dim);background:var(--panel)}
+.actbtn{all:unset;cursor:pointer;font-family:var(--f-mono);font-size:10.5px;color:var(--op);padding:2px 0}
+.actbtn:hover{text-decoration:underline}
+.actbtn:focus-visible{outline:2px solid var(--accent)}
+.popbtns{display:flex;gap:6px;margin-top:10px}
+.popbtns .priobtn{margin-top:0}
+
+/* report */
+.report-wrap{position:fixed;inset:0;z-index:5000;background:color-mix(in srgb,#0b0e13 62%,transparent);overflow:auto;padding:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) 32px max(16px,env(safe-area-inset-left,0px))}
+.report-bar{max-width:8.5in;margin:0 auto 12px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;background:var(--panel);border:1px solid var(--line2);border-radius:10px;padding:10px 12px}
+.report-bar .rb-note{font-size:11px;color:var(--ink-faint);flex:1 1 220px;line-height:1.4}
+.report-bar .rb-status{font-family:var(--f-mono);font-size:11px;color:var(--op)}
+.sheet{max-width:8.5in;margin:0 auto;background:#fff;color:#1b2430;padding:.6in .65in;border-radius:6px;box-shadow:0 10px 40px rgba(0,0,0,.35);font-family:var(--f-body);font-size:10.5pt;line-height:1.45;color-scheme:light}
+.sheet h1{font-family:var(--f-display);font-weight:600;font-size:22pt;line-height:1.1;margin:4px 0 2px;color:#111a24}
+.sheet h2{font-family:var(--f-mono);font-size:8pt;letter-spacing:.18em;text-transform:uppercase;color:#7a6a3a;margin:18px 0 6px;padding-bottom:4px;border-bottom:1px solid #e3e6ea}
+.sheet .kick{font-family:var(--f-mono);font-size:8pt;letter-spacing:.18em;text-transform:uppercase;color:#9a7420;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.sheet .legal{font-family:var(--f-mono);font-size:8.5pt;color:#6b7684}
+.sheet .tags{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0 0}
+.sheet .tag{font-family:var(--f-mono);font-size:8pt;padding:2px 8px;border-radius:99px;border:1px solid #cdd4dc;color:#3b4652}
+.sheet .tag.A{background:#0e8197;border-color:#0e8197;color:#fff}.sheet .tag.B{background:#6a5bd0;border-color:#6a5bd0;color:#fff}.sheet .tag.C{background:#7d8b99;border-color:#7d8b99;color:#fff}
+.sheet .top{display:grid;grid-template-columns:1fr 2.3in;gap:18px;align-items:start}
+.sheet .sfacts{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:12px}
+.sheet .sfact{border:1px solid #e3e6ea;border-radius:6px;padding:6px 8px}
+.sheet .sfact span{display:block;font-family:var(--f-mono);font-size:7pt;letter-spacing:.06em;text-transform:uppercase;color:#7b8794}
+.sheet .sfact b{display:block;font-size:10.5pt;color:#111a24;margin-top:1px}
+.sheet .mini{border:1px solid #e3e6ea;border-radius:6px;padding:4px}
+.sheet .mini svg{display:block;width:100%;height:auto}
+.sheet .mini figcaption{font-family:var(--f-mono);font-size:7pt;color:#7b8794;text-align:center;padding:2px 0 3px}
+.sheet .two{display:grid;grid-template-columns:1fr 1fr;gap:4px 22px}
+.sheet p{margin:0 0 4px}
+.sheet ul{margin:0;padding-left:16px}
+.sheet li{margin:0 0 2px}
+.sheet table{border-collapse:collapse;width:100%;font-size:9.5pt}
+.sheet td{padding:3px 6px 3px 0;vertical-align:top;border-bottom:1px solid #f0f2f4}
+.sheet td:first-child{font-family:var(--f-mono);font-size:8pt;color:#7b8794;white-space:nowrap;width:1%;padding-right:12px;text-transform:uppercase;letter-spacing:.03em}
+.sheet .callout{background:#f7f3e8;border-left:3px solid #b37a16;padding:8px 10px;border-radius:0 6px 6px 0}
+.sheet .fine{font-size:8pt;color:#7b8794;line-height:1.4}
+.sheet .src{font-size:8pt;word-break:break-all;color:#45607a}
+.sheet .checks li{list-style:none;margin-left:-16px}
+.sheet .checks li::before{content:'☐  ';color:#7b8794}
+.sheet .foot{margin-top:18px;padding-top:8px;border-top:1px solid #e3e6ea;display:flex;justify-content:space-between;gap:12px;font-family:var(--f-mono);font-size:7.5pt;color:#9aa4ae}
+@media (max-width:820px){.pv{flex-direction:column;height:auto}.plist{width:100%;max-height:300px}.dossier{padding:18px}.dgrid{grid-template-columns:1fr}.sheet{padding:.35in}.sheet .top,.sheet .two{grid-template-columns:1fr}.sheet .sfacts{grid-template-columns:repeat(2,1fr)}}
+@page{size:letter;margin:.45in}
+@media print{
+  html,body{background:#fff!important;height:auto!important}
+  .shell{display:none!important}
+  .report-wrap{position:static!important;background:#fff!important;padding:0!important;overflow:visible!important}
+  .report-bar{display:none!important}
+  .sheet{box-shadow:none!important;padding:0!important;max-width:none!important;border-radius:0!important}
+  .sheet{font-size:9.5pt!important;line-height:1.38!important}
+  .sheet h1{font-size:19pt!important}
+  .sheet h2{break-after:avoid;margin:12px 0 5px!important}
+  .sheet section{break-inside:avoid}
+  .sheet .top{grid-template-columns:1fr 2.05in!important;gap:16px!important}
+  .sheet .two{grid-template-columns:1fr 1fr!important;gap:2px 20px!important}
+  .sheet .sfacts{grid-template-columns:repeat(3,1fr)!important}
+  .sheet td{padding:2px 6px 2px 0!important}
+}
+
 @media (max-width:820px){
   .shell{height:auto;min-height:100%}
   .app{flex-direction:column;height:auto}
@@ -199,6 +300,9 @@ table.ops tr.taken td{opacity:.62}
   <div class="tabs" role="tablist" aria-label="Views">
     <button class="tab" role="tab" id="tab-map" aria-controls="view-map" aria-selected="true">◰ Map</button>
     <button class="tab" role="tab" id="tab-targets" aria-controls="view-targets" aria-selected="false">▤ Targets</button>
+    <button class="tab" role="tab" id="tab-profiles" aria-controls="view-profiles" aria-selected="false">◉ Profiles</button>
+    <button class="tab" role="tab" id="tab-locations" aria-controls="view-locations" aria-selected="false">⌖ Locations</button>
+    <button class="tab" role="tab" id="tab-registry" aria-controls="view-registry" aria-selected="false">§ Registry</button>
     <span class="tabmeta" id="tabmeta"></span>
     <button class="themebtn" id="themebtn" type="button" title="Switch light / dark" aria-label="Switch light or dark theme">◑</button>
   </div>
@@ -243,6 +347,7 @@ table.ops tr.taken td{opacity:.62}
         <div class="sec">
           <h3>Map layers</h3>
           <button type="button" class="row" data-layer="names" aria-pressed="true"><span class="sw"></span><span class="lab">Target names <small>Tier A, zoom in for all</small></span></button>
+          <button type="button" class="row" data-layer="offices" aria-pressed="true"><span class="sw"></span><span class="lab">Branch offices <small>second locations</small></span></button>
           <button type="button" class="row" data-layer="rings" aria-pressed="true"><span class="sw"></span><span class="lab">Distance rings <small>50 · 100 · 150 mi</small></span></button>
           <button type="button" class="row" data-layer="roads" aria-pressed="true"><span class="sw"></span><span class="lab">Highways <small>Interstate · US · state</small></span></button>
           <button type="button" class="row" data-layer="hwlabels" aria-pressed="true"><span class="sw"></span><span class="lab">Highway shields</span></button>
@@ -261,6 +366,7 @@ table.ops tr.taken td{opacity:.62}
             <div class="li"><i style="width:11px;height:11px;border-radius:50%;border:2.5px solid var(--tierB)"></i>Watch list</div>
             <div class="li"><i style="width:10px;height:10px;border-radius:2px;background:var(--taken)"></i>Taken</div>
             <div class="li"><i style="width:13px;height:13px;background:var(--home);clip-path:polygon(50% 0,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)"></i>Call KS</div>
+            <div class="li"><i style="width:9px;height:9px;transform:rotate(45deg);border:2px solid var(--ink-dim);margin:0 2px"></i>Branch office</div>
             <div class="li"><i style="width:22px;height:3px;border-radius:2px;background:var(--road-i)"></i>Interstate</div>
             <div class="li"><i style="width:22px;height:2px;border-radius:2px;background:var(--road-us);box-shadow:0 0 0 .5px var(--ink-faint)"></i>US highway</div>
           </div>
@@ -291,6 +397,54 @@ table.ops tr.taken td{opacity:.62}
       <div class="tscroll"><table class="ops"><thead><tr id="thead"></tr></thead><tbody id="tbody"></tbody></table></div>
     </div>
   </div>
+  <div class="view" id="view-profiles" role="tabpanel" aria-labelledby="tab-profiles" hidden>
+    <div class="pv">
+      <aside class="plist" aria-label="Companies">
+        <div class="fbar">
+          <div class="fg" style="width:100%"><label for="p_search">Find a company</label><input type="text" id="p_search" placeholder="Name, city, person…" autocomplete="off"></div>
+          <div class="fg" style="width:100%"><label for="p_status">Show</label>
+            <select id="p_status"><option value="open">Targets and watch list</option><option value="A">Tier A only</option><option value="Taken">Owned by consolidators</option><option value="">Everyone</option></select></div>
+        </div>
+        <div class="pitems" id="pitems"></div>
+      </aside>
+      <article class="dossier" id="dossier" aria-live="polite"></article>
+    </div>
+  </div>
+
+  <div class="view" id="view-locations" role="tabpanel" aria-labelledby="tab-locations" hidden>
+    <div class="tv">
+      <div class="fbar">
+        <div class="fg"><label for="l_search">Search</label><input type="text" id="l_search" placeholder="Company, city, address…" autocomplete="off"></div>
+        <div class="fg"><label for="l_market">Market</label><select id="l_market"></select></div>
+        <label class="chk"><input type="checkbox" id="l_multi"> Multi-office companies only</label>
+        <span class="fcount" id="l_count"></span>
+      </div>
+      <div class="tscroll"><table class="ops"><thead><tr><th scope="col">Company</th><th scope="col">Tier</th><th scope="col">Office</th><th scope="col">Address</th><th scope="col">Phone</th><th scope="col" class="num">Miles from Call KS</th><th scope="col">Placed at</th><th scope="col"></th></tr></thead><tbody id="lbody"></tbody></table></div>
+    </div>
+  </div>
+
+  <div class="view" id="view-registry" role="tabpanel" aria-labelledby="tab-registry" hidden>
+    <div class="tv">
+      <div class="fbar">
+        <div class="fg"><label for="r_search">Search</label><input type="text" id="r_search" placeholder="Name, agent, person, county…" autocomplete="off"></div>
+        <span class="cap" style="margin:0;align-self:center;max-width:520px">Alabama Secretary of State business entity records, read Nov 13, 2026. People are incorporators, directors and agents as filed, which may be decades old.</span>
+        <span class="fcount" id="r_count"></span>
+      </div>
+      <div class="tscroll"><table class="ops"><thead><tr><th scope="col">Company</th><th scope="col">Legal name</th><th scope="col">Entity ID</th><th scope="col">Type</th><th scope="col">Status</th><th scope="col">Formed</th><th scope="col" class="num">Years</th><th scope="col">County</th><th scope="col">Registered agent</th><th scope="col">People on file</th><th scope="col">Nature of business</th></tr></thead><tbody id="rbody"></tbody></table></div>
+    </div>
+  </div>
+</div>
+
+<div class="report-wrap" id="report" hidden role="dialog" aria-modal="true" aria-label="Target report">
+  <div class="report-bar">
+    <button type="button" class="btn primary" id="rep_print">Print or save as PDF</button>
+    <button type="button" class="btn" id="rep_email">Email</button>
+    <button type="button" class="btn" id="rep_copy">Copy text</button>
+    <button type="button" class="btn" id="rep_close">Close</button>
+    <span class="rb-status" id="rep_status" aria-live="polite"></span>
+    <span class="rb-note">Print and Email work when the map is opened from GitHub or a downloaded copy. Inside Claude, use Copy text and paste into an email or document.</span>
+  </div>
+  <div class="sheet" id="sheet"></div>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
@@ -306,7 +460,7 @@ let priority=new Set();
 try{const s=JSON.parse(localStorage.getItem(PKEY)||'[]');if(Array.isArray(s))priority=new Set(s);}catch(e){}
 function savePrio(){try{localStorage.setItem(PKEY,JSON.stringify([...priority]));}catch(e){}}
 const f={statuses:new Set(['Target','Watch','Taken']),tier:'',market:'',search:'',prioOnly:false,tStatus:''};
-const layersOn={names:true,rings:true,roads:true,hwlabels:true,cities:true,counties:true,water:true};
+const layersOn={offices:true,names:true,rings:true,roads:true,hwlabels:true,cities:true,counties:true,water:true};
 
 /* ---------- helpers ---------- */
 function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
@@ -339,7 +493,7 @@ panes.forEach((p,i)=>{map.createPane(p);map.getPane(p).style.zIndex=300+i*10;map
 const RENDER={};panes.forEach(p=>{RENDER[p]=L.canvas({pane:p,padding:0.5});});
 
 let landLayer,countyLayer,waterLayer,roadLayer,ringLayer;
-const opLayer=L.layerGroup(), labelLayer=L.layerGroup(), cityDotLayer=L.layerGroup();
+const opLayer=L.layerGroup(), labelLayer=L.layerGroup(), cityDotLayer=L.layerGroup(), officeLayer=L.layerGroup();
 
 function buildBase(){
   [landLayer,countyLayer,waterLayer,roadLayer,ringLayer].forEach(l=>{if(l)map.removeLayer(l);});
@@ -433,7 +587,7 @@ function profileHTML(o,full){
     h+='<div class="oprow"><b>Why it fits</b>'+esc(o.why)+'</div>';
     if(o.est_revenue_m!=null)h+='<div class="oprow"><b>Revenue basis</b>'+esc(o.revenue_basis)+'</div>';
     if(o.source)h+='<a class="opweb" target="_blank" rel="noopener noreferrer" href="'+esc(o.source)+'">Source ↗</a>';
-    if(o.status!=='Home')h+='<button class="priobtn" type="button" data-prio="'+esc(o.id)+'">'+(p?'★ Remove priority':'☆ Mark priority')+'</button>';
+    h+='<div class="popbtns">'+(o.status!=='Home'?'<button class="priobtn" type="button" data-prio="'+esc(o.id)+'">'+(p?'★ Priority':'☆ Priority')+'</button>':'')+'<button class="priobtn" type="button" data-prof="'+esc(o.id)+'">Profile</button><button class="priobtn" type="button" data-rep="'+esc(o.id)+'">Report</button></div>';
   }else h+='<div class="opmore">Click for full profile →</div>';
   return h+'</div>';}
 OPS.forEach(o=>{
@@ -442,28 +596,32 @@ OPS.forEach(o=>{
   m.bindPopup(()=>profileHTML(o,true),{maxWidth:300,autoPanPadding:[24,24]});
   m.on('popupopen',()=>m.closeTooltip());
   m._op=o;opMarkers[o.id]=m;});
-map.on('popupopen',e=>{const btn=e.popup.getElement().querySelector('[data-prio]');if(btn)btn.addEventListener('click',()=>togglePrio(btn.getAttribute('data-prio')));});
+function wirePopup(el){const b=el.querySelector('[data-prio]');if(b)b.addEventListener('click',()=>togglePrio(b.getAttribute('data-prio')));
+  const pf=el.querySelector('[data-prof]');if(pf)pf.addEventListener('click',()=>openProfile(pf.getAttribute('data-prof')));
+  const rp=el.querySelector('[data-rep]');if(rp)rp.addEventListener('click',()=>openReport(rp.getAttribute('data-rep')));}
+map.on('popupopen',e=>wirePopup(e.popup.getElement()));
 
 function applyOps(){
   opLayer.clearLayers();let n=0;
   OPS.forEach(o=>{if(matches(o,{useStatusSet:true})){opLayer.addLayer(opMarkers[o.id]);if(o.status!=='Home')n++;}});
   document.getElementById('shown').textContent=n+' on map';
-  scheduleLayout();renderTable();updateMeta();}
+  drawOffices();scheduleLayout();renderTable();updateMeta();
+  if(!document.getElementById('view-profiles').hidden)renderProfiles();}
 function restyleOps(){OPS.forEach(o=>opMarkers[o.id].setIcon(iconFor(o)));}
 function togglePrio(id){
   if(priority.has(id))priority.delete(id);else priority.add(id);savePrio();
   const m=opMarkers[id];m.setIcon(iconFor(m._op));
-  if(m.isPopupOpen()){m.setPopupContent(profileHTML(m._op,true));const btn=m.getPopup().getElement().querySelector('[data-prio]');if(btn)btn.addEventListener('click',()=>togglePrio(id));}
+  if(m.isPopupOpen()){m.setPopupContent(profileHTML(m._op,true));wirePopup(m.getPopup().getElement());}
   applyOps();}
 function updateMeta(){document.getElementById('tabmeta').innerHTML=priority.size?'<b>★ '+priority.size+'</b> priority':'';}
 
 /* ---------- table ---------- */
-const COLS=[['','prio'],['Company','company'],['Tier','tier'],['Status','status'],['Market','market'],['City','city'],['Miles','miles',1],['Est. rev','est_revenue_m',1],['Employees','employees'],['Focus','focus'],['Ownership','ownership'],['Why it fits','why'],['Source','source']];
+const COLS=[['','prio'],['Company','company'],['Tier','tier'],['Status','status'],['Market','market'],['City','city'],['Miles','miles',1],['Est. rev','est_revenue_m',1],['Employees','employees'],['Focus','focus'],['Ownership','ownership'],['Why it fits','why'],['Source','source'],['','actions']];
 let sortKey='miles',sortDir=1;
 function buildHead(){
   const tr=document.getElementById('thead');tr.replaceChildren();
   COLS.forEach(([lab,k,num])=>{const th=document.createElement('th');if(num)th.className='num';
-    if(k==='prio'||k==='source'){th.textContent=lab;th.setAttribute('scope','col');tr.appendChild(th);return;}
+    if(k==='prio'||k==='source'||k==='actions'){th.textContent=lab;th.setAttribute('scope','col');tr.appendChild(th);return;}
     const b=document.createElement('button');b.type='button';b.textContent=lab;b.dataset.k=k;
     if(sortKey===k){const ar=document.createElement('span');ar.className='ar';ar.textContent=sortDir>0?'▲':'▼';b.appendChild(ar);th.setAttribute('aria-sort',sortDir>0?'ascending':'descending');}
     th.appendChild(b);th.setAttribute('scope','col');tr.appendChild(th);});}
@@ -489,12 +647,15 @@ function renderTable(){
     td(o.employees&&o.employees!=='Not found'?o.employees:'—');
     td(o.focus,'long');td(o.ownership);td(o.why,'long');
     const w=td('');if(o.source){const a=document.createElement('a');a.className='tweb';a.href=o.source;a.target='_blank';a.rel='noopener noreferrer';a.textContent='source ↗';w.appendChild(a);}
+    const ac=td('');ac.style.whiteSpace='nowrap';[['Profile','data-prof'],['Report','data-rep']].forEach(([lab,attr],i)=>{const b=document.createElement('button');b.type='button';b.className='actbtn';b.textContent=lab;b.setAttribute(attr,o.id);if(i)b.style.marginLeft='10px';ac.appendChild(b);});
     tb.appendChild(tr);});
   document.getElementById('t_count').innerHTML='<b>'+list.length+'</b> of '+(OPS.length-1)+' companies';}
 document.getElementById('thead').addEventListener('click',e=>{const b=e.target.closest('button[data-k]');if(!b)return;const k=b.dataset.k;
   if(sortKey===k)sortDir*=-1;else{sortKey=k;sortDir=['miles','tier','status','company','market','city'].includes(k)?1:-1;}buildHead();renderTable();});
 document.getElementById('tbody').addEventListener('click',e=>{
   if(e.target.closest('a'))return;
+  const pf=e.target.closest('[data-prof]');if(pf){openProfile(pf.getAttribute('data-prof'));return;}
+  const rp=e.target.closest('[data-rep]');if(rp){openReport(rp.getAttribute('data-rep'));return;}
   const s=e.target.closest('[data-star]');if(s){togglePrio(s.dataset.star);return;}
   const tr=e.target.closest('tr[data-id]');if(!tr)return;showOnMap(tr.dataset.id);});
 function showOnMap(id){
@@ -531,21 +692,224 @@ document.getElementById('t_prio').addEventListener('change',e=>{f.prioOnly=e.tar
 document.getElementById('t_clear').addEventListener('click',()=>{f.tier='';f.market='';f.search='';f.prioOnly=false;f.tStatus='';f.statuses=new Set(['Target','Watch','Taken']);syncChips();syncInputs();applyOps();});
 document.querySelectorAll('.row[data-layer]').forEach(r=>r.addEventListener('click',()=>{
   const k=r.dataset.layer,on=r.getAttribute('aria-pressed')!=='true';r.setAttribute('aria-pressed',on?'true':'false');layersOn[k]=on;
-  const lay={rings:ringLayer,roads:roadLayer,counties:countyLayer,water:waterLayer}[k];
+  const lay={rings:ringLayer,roads:roadLayer,counties:countyLayer,water:waterLayer,offices:officeLayer}[k];
   if(lay){on?lay.addTo(map):map.removeLayer(lay);}
   scheduleLayout();}));
 
+/* ---------- profiles, locations, registry, reports ---------- */
+const PROF=o=>o.profile||{};
+const STATUS_RANK={Target:0,Watch:1,Home:2,Taken:3},TIER_RANK={A:0,B:1,C:2,'':3};
+function tierColor(o){return o.status==='Taken'?'var(--taken)':o.status==='Home'?'var(--home)':o.tier==='A'?'var(--tierA)':o.tier==='B'?'var(--tierB)':'var(--tierC)';}
+function yearsSince(d){if(!d)return null;const y=Number(String(d).slice(0,4));return y?new Date().getFullYear()-y:null;}
+function fmtDate(d){if(!d)return '—';const [y,m,dd]=d.split('-');return ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][Number(m)-1]+' '+Number(dd)+', '+y;}
+function foundedYear(o){const f=String(o.founded||'');const m=f.match(/(18|19|20)\d\d/);return m?Number(m[0]):(PROF(o).sos&&PROF(o).sos.formed?Number(PROF(o).sos.formed.slice(0,4)):null);}
+function employeesText(o){return PROF(o).employees_note||(o.employees&&o.employees!=='Not found'?o.employees:'—');}
+function mainOffice(o){const offs=PROF(o).offices||[];return offs[0]||{address:o.city,lat:o.lat,lon:o.lon,miles:o.miles};}
+function secondaryOffices(o){return (PROF(o).offices||[]).filter(f=>Math.abs(f.lat-o.lat)+Math.abs(f.lon-o.lon)>0.03);}
+function el(tag,attrs,...kids){const e=document.createElement(tag);if(attrs)for(const [k,v] of Object.entries(attrs)){if(k==='class')e.className=v;else if(k==='text')e.textContent=v;else if(k==='style')e.style.cssText=v;else e.setAttribute(k,v);}kids.flat().forEach(k=>{if(k==null)return;e.appendChild(typeof k==='string'?document.createTextNode(k):k);});return e;}
+
+/* branch-office markers */
+function drawOffices(){
+  officeLayer.clearLayers();
+  OPS.forEach(o=>{if(!opLayer.hasLayer(opMarkers[o.id]))return;secondaryOffices(o).forEach(f=>{
+    const m=L.marker([f.lat,f.lon],{icon:L.divIcon({className:'',html:'<div class="offmk"></div>',iconSize:[9,9],iconAnchor:[4.5,4.5]}),keyboard:false,zIndexOffset:-100});
+    m.bindTooltip('<div class="opcard" style="width:auto;padding:8px 10px"><div class="opnm" style="font-size:13px">'+esc(o.company)+'</div><div class="oploc">'+esc(f.label)+' · '+esc(f.address)+'</div></div>',{className:'optip',direction:'top',offset:[0,-6],opacity:1});
+    m.on('click',()=>opMarkers[o.id].openPopup());
+    officeLayer.addLayer(m);});});
+}
+
+/* profiles tab */
+let currentProfile=null;
+function profileList(){
+  const q=(document.getElementById('p_search').value||'').toLowerCase(),s=document.getElementById('p_status').value;
+  return OPS.filter(o=>{
+    if(s==='open'&&!(o.status==='Target'||o.status==='Watch'||o.status==='Home'))return false;
+    if(s==='A'&&!(o.tier==='A'))return false;
+    if(s==='Taken'&&o.status!=='Taken')return false;
+    if(q){const P=PROF(o);const hay=[o.company,o.city,o.market,P.legal,(P.people||[]).join(' '),(P.offices||[]).map(f=>f.address).join(' ')].join(' ').toLowerCase();if(!hay.includes(q))return false;}
+    return true;}).sort((a,b)=>(STATUS_RANK[a.status]-STATUS_RANK[b.status])||(TIER_RANK[a.tier||'']-TIER_RANK[b.tier||''])||a.company.localeCompare(b.company));}
+function renderProfiles(){
+  const box=document.getElementById('pitems');box.replaceChildren();
+  const list=profileList();
+  if(!currentProfile||!list.some(o=>o.id===currentProfile))currentProfile=(list.find(o=>o.status!=='Home')||list[0]||{}).id;
+  list.forEach(o=>{
+    const b=el('button',{type:'button',class:'pitem','data-id':o.id,'aria-current':o.id===currentProfile?'true':'false'},
+      el('span',{class:'dot',style:'background:'+tierColor(o)}),
+      el('span',null,el('span',{class:'pn',text:o.company}),el('span',{class:'pm',text:(o.status==='Home'?'Home base':o.status==='Taken'?'Owned':(o.status==='Watch'?'Watch · Tier ':'Tier ')+o.tier)+' · '+o.city+(o.status==='Home'?'':' · '+o.miles+' mi')})));
+    b.addEventListener('click',()=>{currentProfile=o.id;renderProfiles();});
+    box.appendChild(b);});
+  renderDossier(OPS.find(o=>o.id===currentProfile));}
+function openProfile(id){currentProfile=id;map.closePopup();const s=document.getElementById('p_status');const o=OPS.find(x=>x.id===id);if(o&&o.status==='Taken')s.value='Taken';else if(s.value==='Taken'||(s.value==='A'&&o&&o.tier!=='A'))s.value='open';document.getElementById('p_search').value='';selectTab('profiles');
+  const it=document.querySelector('.pitem[data-id="'+CSS.escape(id)+'"]');if(it)it.scrollIntoView({block:'nearest'});}
+function section(title,...kids){return el('section',{class:'dsec'},el('h3',{text:title}),...kids);}
+function list(items){return el('ul',null,items.map(x=>el('li',{text:x})));}
+function renderDossier(o){
+  const d=document.getElementById('dossier');d.replaceChildren();
+  if(!o){d.appendChild(el('p',{class:'cap',text:'No companies match. Clear the search to see them all.'}));return;}
+  const P=PROF(o),S=P.sos||{},fy=foundedYear(o);
+  const tags=el('div',{class:'badges'});
+  if(o.status==='Home')tags.appendChild(el('span',{class:'bdg',text:'Home base'}));
+  else if(o.status==='Taken')tags.appendChild(el('span',{class:'bdg taken',text:'Owned by consolidator'}));
+  else{tags.appendChild(el('span',{class:'bdg tier t'+o.tier,text:'Tier '+o.tier}));tags.appendChild(el('span',{class:'bdg',text:o.status==='Watch'?'Watch list':'Target'}));}
+  if(priority.has(o.id))tags.appendChild(el('span',{class:'bdg',style:'color:var(--prio);border-color:var(--prio)',text:'★ Priority'}));
+  const acts=el('div',{class:'dactions'});
+  const bRep=el('button',{type:'button',class:'btn primary',text:'Target report'});bRep.addEventListener('click',()=>openReport(o.id));
+  const bMap=el('button',{type:'button',class:'btn',text:'Show on map'});bMap.addEventListener('click',()=>showOnMap(o.id));
+  acts.append(bRep,bMap);
+  if(o.status!=='Home'){const bP=el('button',{type:'button',class:'btn',text:priority.has(o.id)?'★ Remove priority':'☆ Mark priority'});bP.addEventListener('click',()=>{togglePrio(o.id);renderProfiles();});acts.appendChild(bP);}
+  d.appendChild(el('div',{class:'dhead'},el('div',null,el('h2',{class:'dname',text:o.company}),el('div',{class:'dlegal',text:(P.legal||'')+(S.id?' · AL entity '+S.id:'')}),tags),acts));
+  const facts=[['Market',o.market],['Distance from Call KS',o.status==='Home'?'—':o.miles+' miles'],['In business since',fy?String(fy)+' ('+(new Date().getFullYear()-fy)+' yrs)':'—'],['Employees',employeesText(o)],['Est. revenue',revText(o)],['Offices',String((P.offices||[]).length||1)]];
+  d.appendChild(el('div',{class:'facts'},facts.map(([k,v])=>el('div',{class:'fact'},el('span',{text:k}),el('b',{text:v})))));
+  if(o.why)d.appendChild(el('div',{class:'dsec'},el('div',{class:'note',text:o.why})));
+  const left=el('div'),right=el('div');
+  const contact=el('dl',{class:'kv'});
+  const addKV=(k,v,href)=>{if(!v)return;contact.appendChild(el('dt',{text:k}));const dd=el('dd');if(href){dd.appendChild(el('a',{href,target:'_blank',rel:'noopener noreferrer',text:v}));}else dd.textContent=v;contact.appendChild(dd);};
+  addKV('Address',mainOffice(o).address);addKV('Phone',P.phone);addKV('Email',P.email);addKV('Website',P.website?P.website.replace(/^https?:\/\//,''):'',P.website);addKV('Ownership',o.ownership);
+  left.appendChild(section('Contact',contact));
+  const offs=P.offices||[];
+  if(offs.length)left.appendChild(section('Locations',el('div',{class:'offl'},offs.map(f=>el('div',{class:'off'},el('div',null,el('b',{text:f.label}),el('br'),el('span',{text:f.address})),el('em',{text:(f.miles!=null?f.miles+' mi':'')+(f.level==='city'?' · town-level':'')}))))));
+  if(P.services&&P.services.length)left.appendChild(section('Services',list(P.services)));
+  const mk=el('dl',{class:'kv'});[['Markets',P.markets||o.focus],['Service area',P.service_area],['Maintenance',P.maintenance]].forEach(([k,v])=>{if(v){mk.appendChild(el('dt',{text:k}));mk.appendChild(el('dd',{text:v}));}});
+  right.appendChild(section('Markets',mk));
+  if(P.licenses&&P.licenses.length)right.appendChild(section('Licenses and affiliations',list(P.licenses)));
+  if(S.id){const r=el('dl',{class:'kv'});[['Legal name',P.legal],['Entity ID',S.id],['Type',S.type],['Status',S.status],['Formed',fmtDate(S.formed)+(S.county?' · '+S.county:'')],['Registered agent',S.agent],['Nature of business',S.nature]].forEach(([k,v])=>{if(v){r.appendChild(el('dt',{text:k}));r.appendChild(el('dd',{text:v}));}});right.appendChild(section('Alabama registry',r));}
+  if(P.people&&P.people.length)right.appendChild(section('People on file',list(P.people)));
+  if(P.notes&&P.notes.length)right.appendChild(section('Observations',list(P.notes)));
+  d.appendChild(el('div',{class:'dgrid'},left,right));
+  const srcs=[...(P.sources||[]),o.source].filter((v,i,a)=>v&&a.indexOf(v)===i);
+  if(srcs.length)d.appendChild(section('Sources',el('ul',null,srcs.map(u=>el('li',null,el('a',{href:u,target:'_blank',rel:'noopener noreferrer',text:u}))))));
+  d.scrollTop=0;}
+document.getElementById('p_search').addEventListener('input',renderProfiles);
+document.getElementById('p_status').addEventListener('change',renderProfiles);
+
+/* locations tab */
+document.getElementById('l_market').replaceChildren(new Option('All markets',''),...MARKETS.map(m=>new Option(m,m)));
+function renderLocations(){
+  const q=(document.getElementById('l_search').value||'').toLowerCase(),mk=document.getElementById('l_market').value,multi=document.getElementById('l_multi').checked;
+  const rows=[];
+  OPS.forEach(o=>{const offs=PROF(o).offices&&PROF(o).offices.length?PROF(o).offices:[{label:'Headquarters',address:o.city,lat:o.lat,lon:o.lon,miles:o.miles,level:'city'}];
+    if(multi&&offs.length<2)return;if(mk&&o.market!==mk)return;
+    offs.forEach(f=>{if(q&&!(o.company+' '+f.label+' '+f.address+' '+o.city).toLowerCase().includes(q))return;rows.push([o,f]);});});
+  rows.sort((a,b)=>(STATUS_RANK[a[0].status]-STATUS_RANK[b[0].status])||(TIER_RANK[a[0].tier||'']-TIER_RANK[b[0].tier||''])||a[0].company.localeCompare(b[0].company));
+  const tb=document.getElementById('lbody');tb.replaceChildren();
+  rows.forEach(([o,f])=>{const tr=el('tr',{'data-id':o.id,class:o.status==='Taken'?'taken':''});
+    tr.append(el('td',{class:'co',text:o.company}),el('td',null,o.tier?el('span',{class:'bdg tier t'+o.tier,text:o.tier}):'—'),el('td',{text:f.label}),el('td',{text:f.address}),el('td',{text:PROF(o).phone||'—'}),el('td',{class:'num',text:o.status==='Home'?'0':String(f.miles!=null?f.miles:o.miles)}),el('td',{text:f.level==='street'?'Street':'Town'}));
+    const ac=el('td');const b=el('button',{type:'button',class:'actbtn',text:'Profile','data-prof':o.id});ac.appendChild(b);tr.appendChild(ac);tb.appendChild(tr);});
+  document.getElementById('l_count').innerHTML='<b>'+rows.length+'</b> offices';}
+['l_search','l_market','l_multi'].forEach(id=>document.getElementById(id).addEventListener(id==='l_search'?'input':'change',renderLocations));
+document.getElementById('lbody').addEventListener('click',e=>{const b=e.target.closest('[data-prof]');if(b){openProfile(b.getAttribute('data-prof'));return;}const tr=e.target.closest('tr[data-id]');if(tr)showOnMap(tr.dataset.id);});
+
+/* registry tab */
+function renderRegistry(){
+  const q=(document.getElementById('r_search').value||'').toLowerCase();
+  const tb=document.getElementById('rbody');tb.replaceChildren();let n=0;
+  OPS.filter(o=>o.status!=='Taken').sort((a,b)=>(STATUS_RANK[a.status]-STATUS_RANK[b.status])||(TIER_RANK[a.tier||'']-TIER_RANK[b.tier||''])||a.company.localeCompare(b.company)).forEach(o=>{
+    const P=PROF(o),S=P.sos||{};
+    const hay=[o.company,P.legal,S.agent,S.county,S.nature,(P.people||[]).join(' ')].join(' ').toLowerCase();if(q&&!hay.includes(q))return;
+    const yrs=yearsSince(S.formed);n++;
+    const tr=el('tr',{'data-id':o.id});
+    tr.append(el('td',{class:'co',text:o.company}),el('td',{style:'min-width:190px',text:P.legal||'—'}),el('td',{class:'num',style:'text-align:left',text:S.id||'not retrieved'}),el('td',{text:S.type||'—'}),el('td',{text:S.status||'—'}),el('td',{style:'white-space:nowrap',text:fmtDate(S.formed)}),el('td',{class:'num',text:yrs!=null?String(yrs):'—'}),el('td',{text:S.county||'—'}),el('td',{class:'long',text:S.agent||'—'}),el('td',{class:'long',text:(P.people||[]).join('; ')||'—'}),el('td',{class:'long',text:S.nature||'—'}));
+    tb.appendChild(tr);});
+  document.getElementById('r_count').innerHTML='<b>'+n+'</b> companies';}
+document.getElementById('r_search').addEventListener('input',renderRegistry);
+document.getElementById('rbody').addEventListener('click',e=>{const tr=e.target.closest('tr[data-id]');if(tr)openProfile(tr.dataset.id);});
+
+/* ---------- target report ---------- */
+let reportFor=null;
+function miniMapSVG(o){
+  const al=GEO.states.features.find(f=>f.properties.al);if(!al)return '';
+  const W=220,H=300,b=[-88.55,30.15,-84.85,35.05],k=Math.cos(32.5*Math.PI/180);
+  const sx=(W-16)/((b[2]-b[0])*k),sy=(H-16)/(b[3]-b[1]),s=Math.min(sx,sy);
+  const X=lon=>8+(lon-b[0])*k*s,Y=lat=>8+(b[3]-lat)*s;
+  const polys=al.geometry.type==='Polygon'?[al.geometry.coordinates]:al.geometry.coordinates;
+  const path=polys.map(poly=>poly.map(ring=>'M'+ring.map(([x,y])=>X(x).toFixed(1)+' '+Y(y).toFixed(1)).join('L')+'Z').join('')).join('');
+  const hx=X(HOME.lon),hy=Y(HOME.lat),tx=X(o.lon),ty=Y(o.lat);
+  const offs=secondaryOffices(o).map(f=>'<rect x="'+(X(f.lon)-3.5).toFixed(1)+'" y="'+(Y(f.lat)-3.5).toFixed(1)+'" width="7" height="7" transform="rotate(45 '+X(f.lon).toFixed(1)+' '+Y(f.lat).toFixed(1)+')" fill="#fff" stroke="#0e8197" stroke-width="1.5"/>').join('');
+  const roads=GEO.roads.features.filter(f=>f.properties.c==='i').map(f=>{const ls=f.geometry.type==='LineString'?[f.geometry.coordinates]:f.geometry.coordinates;return ls.map(l=>'M'+l.map(([x,y])=>X(x).toFixed(1)+' '+Y(y).toFixed(1)).join('L')).join('');}).join('');
+  const star='M0,-7L1.6,-2.2L6.7,-2.2L2.6,0.9L4.1,5.7L0,2.8L-4.1,5.7L-2.6,0.9L-6.7,-2.2L-1.6,-2.2Z';
+  const same=o.status==='Home';
+  return '<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Location of '+esc(o.company)+' in Alabama"><defs><clipPath id="alclip"><path d="'+path+'"/></clipPath></defs><path d="'+path+'" fill="#f4f6f9" stroke="#97a6b6" stroke-width="1.2"/><path d="'+roads+'" fill="none" stroke="#e8b27a" stroke-width="1.1" clip-path="url(#alclip)"/>'+
+    (same?'':'<line x1="'+hx.toFixed(1)+'" y1="'+hy.toFixed(1)+'" x2="'+tx.toFixed(1)+'" y2="'+ty.toFixed(1)+'" stroke="#1b2430" stroke-width="1" stroke-dasharray="3 3"/>')+offs+
+    '<path d="'+star+'" transform="translate('+hx.toFixed(1)+' '+hy.toFixed(1)+')" fill="#1b2430"/>'+
+    (same?'':'<circle cx="'+tx.toFixed(1)+'" cy="'+ty.toFixed(1)+'" r="6" fill="'+(o.status==='Taken'?'#c2412b':o.tier==='A'?'#0e8197':o.tier==='B'?'#6a5bd0':'#7d8b99')+'" stroke="#fff" stroke-width="1.5"/>')+'</svg>';}
+function valuationLines(o){
+  if(o.est_revenue_m==null)return null;
+  const r=o.est_revenue_m,lo=r*0.08*4,hi=r*0.12*5.5;
+  return 'At $'+r.toFixed(1)+'M revenue, an 8-12% EBITDA margin and the 4-5.5x range for shops this size implies roughly $'+lo.toFixed(1)+'M to $'+hi.toFixed(1)+'M of enterprise value. Illustrative only; replace with real financials.';}
+function reportModel(o){
+  const P=PROF(o),S=P.sos||{},fy=foundedYear(o);
+  return {o,P,S,fy,
+    facts:[['Status',o.status==='Taken'?'Owned by consolidator':o.status==='Home'?'Home base':(o.status==='Watch'?'Watch list':'Target')+(o.tier?' · Tier '+o.tier:'')],['Market',o.market],['Distance',o.status==='Home'?'—':o.miles+' mi from Call KS'],['In business',fy?String(fy)+' ('+(new Date().getFullYear()-fy)+' yrs)':'—'],['Employees',employeesText(o)],['Est. revenue',revText(o)]],
+    contact:[['Address',mainOffice(o).address],['Phone',P.phone],['Email',P.email],['Website',P.website],['Ownership',o.ownership]].filter(x=>x[1]),
+    registry:S.id?[['Legal name',P.legal],['Entity ID',S.id],['Type',S.type],['Status',S.status],['Formed',fmtDate(S.formed)+(S.county?', '+S.county:'')],['Registered agent',S.agent],['Nature of business',S.nature]].filter(x=>x[1]):[],
+    sources:[...(P.sources||[]),o.source].filter((v,i,a)=>v&&a.indexOf(v)===i)};}
+const NEXT_STEPS=['Confirm current ownership and whether the company has been approached by a consolidator','Confirm the Alabama HVAC qualifier on the license and whether that person stays after a sale','Ask for three years of financials and the split of service, replacement and new-construction revenue','Count active maintenance agreements and the top ten customers\' share of revenue','Check fleet, real estate (owned or leased) and open warranty or job obligations'];
+function openReport(id){
+  const o=OPS.find(x=>x.id===id);if(!o)return;reportFor=o;map.closePopup();
+  const m=reportModel(o),P=m.P;const today=new Date().toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'});
+  const rows=a=>'<table>'+a.map(([k,v])=>'<tr><td>'+esc(k)+'</td><td>'+(k==='Website'?'<a href="'+esc(v)+'">'+esc(v.replace(/^https?:\/\//,''))+'</a>':esc(v))+'</td></tr>').join('')+'</table>';
+  const ul=a=>'<ul>'+a.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul>';
+  const offs=(P.offices||[]);
+  let h='<div class="kick"><span>Call KS Services · Acquisition target report</span><span>'+esc(today)+'</span></div>';
+  h+='<div class="top"><div><h1>'+esc(o.company)+'</h1><div class="legal">'+esc(P.legal||'')+(m.S.id?' · AL entity '+esc(m.S.id):'')+'</div><div class="tags">'+(o.tier?'<span class="tag '+esc(o.tier)+'">Tier '+esc(o.tier)+'</span>':'')+'<span class="tag">'+esc(o.status==='Taken'?'Owned by consolidator':o.status==='Home'?'Home base':o.status==='Watch'?'Watch list':'Target')+'</span>'+(priority.has(o.id)?'<span class="tag">★ Priority</span>':'')+'</div>';
+  h+='<div class="sfacts">'+m.facts.slice(1).map(([k,v])=>'<div class="sfact"><span>'+esc(k)+'</span><b>'+esc(v)+'</b></div>').join('')+'<div class="sfact"><span>Offices</span><b>'+(offs.length||1)+'</b></div></div></div>';
+  h+='<figure class="mini" style="margin:0">'+miniMapSVG(o)+'<figcaption>★ Call KS, Pelham · ● '+esc(o.city)+(o.status==='Home'?'':' · '+o.miles+' mi straight-line')+'</figcaption></figure></div>';
+  if(o.why)h+='<section><h2>Why it fits</h2><div class="callout">'+esc(o.why)+'</div></section>';
+  h+='<section class="two"><div><h2>Contact</h2>'+rows(m.contact)+'</div><div><h2>Locations</h2>'+(offs.length?'<table>'+offs.map(f=>'<tr><td>'+esc(f.label)+'</td><td>'+esc(f.address)+(f.miles!=null?' · '+f.miles+' mi':'')+'</td></tr>').join('')+'</table>':'<p>'+esc(o.city)+'</p>')+'</div></section>';
+  h+='<section class="two"><div><h2>Services</h2>'+(P.services&&P.services.length?ul(P.services):'<p>'+esc(o.focus||'—')+'</p>')+'</div><div><h2>Markets</h2><table>'+[['Customers',P.markets||o.focus],['Service area',P.service_area],['Maintenance',P.maintenance]].filter(x=>x[1]).map(([k,v])=>'<tr><td>'+esc(k)+'</td><td>'+esc(v)+'</td></tr>').join('')+'</table>'+(P.licenses&&P.licenses.length?'<h2>Licenses and affiliations</h2>'+ul(P.licenses):'')+'</div></section>';
+  h+='<section class="two"><div><h2>Alabama registry</h2>'+(m.registry.length?rows(m.registry):'<p>Record not retrieved.</p>')+'</div><div><h2>People on file</h2>'+(P.people&&P.people.length?ul(P.people):'<p>None found.</p>')+(P.notes&&P.notes.length?'<h2>Observations</h2>'+ul(P.notes):'')+'</div></section>';
+  const val=valuationLines(o);
+  if(o.status!=='Home'&&o.status!=='Taken')h+='<section><h2>Valuation context</h2><p>'+(val?esc(val):'No revenue figure is public. Shops with $1-6M revenue typically sell for 4-5.5x adjusted EBITDA; service-heavy commercial shops sit at the top of that range.')+'</p></section><section><h2>Next steps</h2><ul class="checks">'+NEXT_STEPS.map(s=>'<li>'+esc(s)+'</li>').join('')+'</ul></section>';
+  if(m.sources.length)h+='<section><h2>Sources</h2><ul>'+m.sources.map(u=>'<li class="src">'+esc(u)+'</li>').join('')+'</ul></section>';
+  h+='<p class="fine" style="margin-top:12px">Compiled from public sources and the Alabama Secretary of State on Nov 12-13, 2026. Revenue and employee figures are third-party estimates. Tiers are a judgment of fit, not verified financials. Confidential: prepared for Call KS Services ownership.</p>';
+  h+='<div class="foot"><span>Call KS Services · Acquisition program</span><span>'+esc(o.company)+'</span></div>';
+  document.getElementById('sheet').innerHTML=h;
+  document.getElementById('rep_status').textContent='';
+  const r=document.getElementById('report');r.hidden=false;r.scrollTop=0;document.getElementById('rep_print').focus();
+  document.title=o.company+' · Target report';}
+function closeReport(){document.getElementById('report').hidden=true;document.title='Alabama HVAC Target Map';reportFor=null;}
+function reportText(o){
+  const m=reportModel(o),P=m.P,L=[];
+  L.push('ACQUISITION TARGET REPORT: '+o.company.toUpperCase());
+  L.push((P.legal||'')+(m.S.id?' (AL entity '+m.S.id+')':''));L.push('');
+  m.facts.forEach(([k,v])=>L.push(k+': '+v));
+  if(o.why){L.push('');L.push('WHY IT FITS');L.push(o.why);}
+  L.push('');L.push('CONTACT');m.contact.forEach(([k,v])=>L.push(k+': '+v));
+  if((P.offices||[]).length){L.push('');L.push('LOCATIONS');P.offices.forEach(f=>L.push('- '+f.label+': '+f.address+(f.miles!=null?' ('+f.miles+' mi)':'')));}
+  if(P.services&&P.services.length){L.push('');L.push('SERVICES');P.services.forEach(s=>L.push('- '+s));}
+  if(P.markets||P.service_area){L.push('');L.push('MARKETS');if(P.markets)L.push('Customers: '+P.markets);if(P.service_area)L.push('Service area: '+P.service_area);if(P.maintenance)L.push('Maintenance: '+P.maintenance);}
+  if(P.licenses&&P.licenses.length){L.push('');L.push('LICENSES AND AFFILIATIONS');P.licenses.forEach(s=>L.push('- '+s));}
+  if(m.registry.length){L.push('');L.push('ALABAMA REGISTRY');m.registry.forEach(([k,v])=>L.push(k+': '+v));}
+  if(P.people&&P.people.length){L.push('');L.push('PEOPLE ON FILE');P.people.forEach(s=>L.push('- '+s));}
+  if(P.notes&&P.notes.length){L.push('');L.push('OBSERVATIONS');P.notes.forEach(s=>L.push('- '+s));}
+  const val=valuationLines(o);if(val&&o.status!=='Taken'){L.push('');L.push('VALUATION CONTEXT');L.push(val);}
+  if(o.status!=='Home'&&o.status!=='Taken'){L.push('');L.push('NEXT STEPS');NEXT_STEPS.forEach(s=>L.push('[ ] '+s));}
+  if(m.sources.length){L.push('');L.push('SOURCES');m.sources.forEach(u=>L.push(u));}
+  L.push('');L.push('Compiled from public sources and the Alabama Secretary of State, Nov 2026. Estimates are third-party; tiers are a judgment of fit. Confidential.');
+  return L.join('\n');}
+document.getElementById('rep_close').addEventListener('click',closeReport);
+document.getElementById('report').addEventListener('click',e=>{if(e.target.id==='report')closeReport();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!document.getElementById('report').hidden)closeReport();});
+document.getElementById('rep_print').addEventListener('click',()=>{try{window.print();}catch(e){}document.getElementById('rep_status').textContent='If no print dialog opened, use Copy text or open the GitHub copy.';});
+document.getElementById('rep_copy').addEventListener('click',()=>{if(!reportFor)return;const txt=reportText(reportFor),st=document.getElementById('rep_status');
+  try{navigator.clipboard.writeText(txt).then(()=>{st.textContent='Report copied. Paste it into an email or document.';},()=>{st.textContent='Copy was blocked. Select the report and copy it by hand.';});}catch(e){st.textContent='Copy was blocked. Select the report and copy it by hand.';}});
+document.getElementById('rep_email').addEventListener('click',()=>{if(!reportFor)return;let body=reportText(reportFor);if(body.length>1800)body=body.slice(0,1800)+'\n\n[Shortened for email. Print or save the full report as a PDF and attach it.]';
+  const url='mailto:?subject='+encodeURIComponent('Target report: '+reportFor.company)+'&body='+encodeURIComponent(body);
+  const a=document.createElement('a');a.href=url;a.rel='noopener';document.body.appendChild(a);a.click();a.remove();
+  document.getElementById('rep_status').textContent='Opening your email app. If nothing happens, use Copy text.';});
+
 /* tabs */
+const TABS=['map','targets','profiles','locations','registry'];
 function selectTab(t){
-  const m=t==='map';
-  document.getElementById('tab-map').setAttribute('aria-selected',m?'true':'false');
-  document.getElementById('tab-targets').setAttribute('aria-selected',m?'false':'true');
-  document.getElementById('view-map').hidden=!m;document.getElementById('view-targets').hidden=m;
-  if(m)setTimeout(()=>map.invalidateSize(),40);
-  try{history.replaceState(null,'',m?'#map':'#targets');}catch(e){}}
-document.getElementById('tab-map').addEventListener('click',()=>selectTab('map'));
-document.getElementById('tab-targets').addEventListener('click',()=>selectTab('targets'));
-window.addEventListener('hashchange',()=>selectTab(location.hash==='#targets'?'targets':'map'));
+  if(!TABS.includes(t))t='map';
+  TABS.forEach(k=>{document.getElementById('tab-'+k).setAttribute('aria-selected',k===t?'true':'false');document.getElementById('view-'+k).hidden=k!==t;});
+  if(t==='map')setTimeout(()=>map.invalidateSize(),40);
+  if(t==='profiles')renderProfiles();
+  if(t==='locations')renderLocations();
+  if(t==='registry')renderRegistry();
+  try{history.replaceState(null,'','#'+t);}catch(e){}}
+TABS.forEach(k=>document.getElementById('tab-'+k).addEventListener('click',()=>selectTab(k)));
+window.addEventListener('hashchange',()=>selectTab((location.hash||'#map').slice(1)));
 
 /* theme */
 function effectiveDark(){const t=document.documentElement.getAttribute('data-theme');if(t)return t==='dark';return matchMedia('(prefers-color-scheme: dark)').matches;}
@@ -555,9 +919,9 @@ try{matchMedia('(prefers-color-scheme: dark)').addEventListener('change',retheme
 new MutationObserver(retheme).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
 
 /* boot */
-buildBase();cityDotLayer.addTo(map);labelLayer.addTo(map);opLayer.addTo(map);
+buildBase();cityDotLayer.addTo(map);labelLayer.addTo(map);officeLayer.addTo(map);opLayer.addTo(map);
 map.on('zoomend',scheduleLayout);map.on('resize',scheduleLayout);
 buildHead();syncChips();syncInputs();applyOps();
 if(document.fonts&&document.fonts.ready)document.fonts.ready.then(scheduleLayout);
-if(location.hash==='#targets')selectTab('targets');
+if(location.hash&&location.hash!=='#map')selectTab(location.hash.slice(1));
 </script>
