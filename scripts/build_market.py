@@ -68,8 +68,12 @@ CHECKED = {
     "Wheat Electric": False,              # matched "heat" inside a surname
     "Bailey Mechanical": False,           # Secretary of State: Mississippi company, Madison MS
 }
-OWNED = {  # consolidator-owned, matched on name
+OWNED = {  # consolidator-owned or out-of-state operators, matched on name
     "comfort systems usa": "Comfort Systems USA",
+    "service experts": "Service Experts (national company)",
+    "lee company": "Lee Company (Nashville-based)",
+    "jake marshall": "Jake Marshall Service (Chattanooga-based)",
+    "hiller plumbing": "Hiller (Nashville-based)",
     
 }
 HVAC_RE = re.compile(r"heat|htg|\bair\b|a/c|cool|clng|hvac|refrig|comfort|climate|mechanical", re.I)
@@ -194,6 +198,52 @@ def main():
             trades.append("plumb")
         add(company, town, county, since, int(lic or 1), trades, "AECB")
 
+    # Web: Better Business Bureau listings and profiles for Heating and Air Conditioning businesses.
+    zips = json.loads((RAW / "al_zips.json").read_text()) if (RAW / "al_zips.json").exists() else {}
+    per_zip = {}
+    bbb_files = sorted(glob.glob(str(RAW / "bbb_hvac_*.json")))
+    bbb_n = 0
+    bbb_date = None
+    if bbb_files:
+        bbb_date = Path(bbb_files[-1]).stem.split("_")[-1]
+        for rec in json.loads(Path(bbb_files[-1]).read_text()):
+            town, ll = place(rec["city"])
+            z = zips.get(str(rec.get("zip") or "")[:5])
+            if not ll and z:
+                town, ll = z[2].upper(), [z[0], z[1]]
+                places.setdefault(town, ll)
+            if not ll:
+                continue
+            key = norm_key(rec["n"]) + "|" + town
+            # same business already on file under a slightly different name in the same town
+            if key not in shops:
+                k0 = norm_key(rec["n"])[:10]
+                hit = next((k for k in shops if k.endswith("|" + town) and k0 and k.startswith(k0)), None)
+                if hit:
+                    key = hit
+            cats = rec.get("cats") or ""
+            trades = ["hvac"] + (["plumb"] if re.search(r"Plumb", cats) else []) + (["elec"] if re.search(r"Electric", cats) else [])
+            if key in shops:
+                s = shops[key]
+                for t in trades:
+                    s[t] = True
+                if "BBB" not in s["src"]:
+                    s["src"].append("BBB")
+            else:
+                s = add(rec["n"], town, None, None, 0, trades, "BBB")
+                if not s:
+                    continue
+                if z:  # place at the ZIP center, fanned out, instead of the town center
+                    i = per_zip.get(rec["zip"][:5], 0)
+                    per_zip[rec["zip"][:5]] = i + 1
+                    s["lat"], s["lon"] = spread(z[0], z[1], i)
+            s["bbb"] = {k: v for k, v in rec.items() if k not in ("n", "city") and v not in (None, "", [], False)}
+            if rec.get("addr"):
+                s["bbb"]["addr"] = f'{rec["addr"]}, {rec["city"]}, AL {rec["zip"]}'
+            if len(rec.get("shared_phone", [])) >= 2 and not s.get("owner"):
+                s["owner"] = "Likely one owner: shares a call-center number with " + ", ".join(rec["shared_phone"])
+            bbb_n += 1
+
     for board, trade in (("hacr", "hvac"), ("pgfb", "plumb")):
         f = RAW / f"{board}.csv"
         if not f.exists():
@@ -206,11 +256,15 @@ def main():
         s["county"] = county_of(counties, s["lat"], s["lon"])
         s["mi"] = round(miles(HOME, (s["lat"], s["lon"])))
         k = norm_key(s["n"].split(" dba ")[-1].split(" DBA ")[-1])
-        s["target"] = next((t["id"] for tk, t in tkeys if tk and (tk in norm_key(s["n"]) or k.startswith(tk[:12]))), None)
+        nk = norm_key(s["n"].split(" dba ")[-1].split(" DBA ")[-1])
+        cands = [(len(tk), t["id"]) for tk, t in tkeys if tk and len(tk) >= 6
+                 and (tk in nk or (nk in tk and len(nk) >= 0.75 * len(tk)) or (len(tk) >= 18 and nk[:18] == tk[:18]))
+                 and miles((s["lat"], s["lon"]), (t["lat"], t["lon"])) <= 40]
+        s["target"] = max(cands)[1] if cands else None
         if s["n"].startswith("Call KS"):
             s["target"] = "callks"
         t = next((t for t in targets if t["id"] == s["target"]), None)
-        s["owner"] = next((v for nk, v in OWNED.items() if s["n"].lower().startswith(nk)), None)
+        s["owner"] = next((v for nk, v in OWNED.items() if s["n"].lower().startswith(nk)), None) or s.get("owner")
         if t and t["status"] == "Taken" and not s["owner"]:
             s["owner"] = t.get("ownership") or "Consolidator-owned"
         s["all3"] = s["hvac"] and s["plumb"] and s["elec"]
@@ -237,6 +291,9 @@ def main():
     out = {
         "built": datetime.date.today().isoformat(),
         "sources": {
+            "BBB": {"name": "Better Business Bureau, Heating and Air Conditioning listings and business profiles", "read": bbb_date,
+                    "url": "https://www.bbb.org/us/al/birmingham/category/heating-and-air-conditioning",
+                    "note": f"{bbb_n} Alabama businesses from BBB listings around 10 hub cities, with each business profile."} if bbb_date else None,
             "AECB": {"name": "Alabama Electrical Contractors Board licensee search", "read": aecb_date,
                      "url": "https://alecb-search.kalmservices.net/",
                      "note": "Active Electrical Contractor licenses with an Alabama business address."},

@@ -505,7 +505,7 @@ table.ops.cty td.co{color:var(--ink);font-weight:600}
         <div class="fbar">
           <div class="fg" style="width:100%"><label for="p_search">Find a company</label><input type="text" id="p_search" placeholder="Name, city, person…" autocomplete="off"></div>
           <div class="fg" style="width:100%"><label for="p_status">Show</label>
-            <select id="p_status"><option value="open">Targets and watch list</option><option value="A">Tier A only</option><option value="Taken">Owned by consolidators</option><option value="leads">New leads (state license list)</option><option value="">Everyone</option></select></div>
+            <select id="p_status"><option value="open">Targets and watch list</option><option value="A">Tier A only</option><option value="Taken">Owned by consolidators</option><option value="leads">New leads (license list and BBB)</option><option value="">Everyone</option></select></div>
         </div>
         <div class="pitems" id="pitems"></div>
       </aside>
@@ -545,12 +545,13 @@ table.ops.cty td.co{color:var(--ink);font-weight:600}
           <div class="fg"><label for="k_lead">Show</label>
             <select id="k_lead"><option value="new">New leads (not on the target list)</option><option value="">Everyone</option><option value="known">Already tracked</option></select></div>
           <div class="fg"><label for="k_county">County</label><select id="k_county"></select></div>
+          <div class="fg"><label for="k_src">Found on</label><select id="k_src"><option value="">Any source</option><option value="BBB">BBB</option><option value="AECB">License list</option><option value="both">Both</option><option value="com">BBB, commercial work</option></select></div>
           <div class="fg"><label for="k_search">Search</label><input type="text" id="k_search" placeholder="Company, town…" autocomplete="off"></div>
           <button type="button" class="fbtn" id="k_copy">Copy list as CSV</button>
           <span class="copynote" id="k_copynote" aria-live="polite"></span>
           <span class="fcount" id="k_count"></span>
         </div>
-        <div class="tscroll"><table class="ops"><thead><tr><th scope="col">Company</th><th scope="col">Trades</th><th scope="col">Town</th><th scope="col">County</th><th scope="col" class="num">Miles</th><th scope="col" class="num">Licensed since</th><th scope="col" class="num">Licenses</th><th scope="col">On our list?</th><th scope="col"></th></tr></thead><tbody id="kbody"></tbody></table></div>
+        <div class="tscroll"><table class="ops"><thead><tr><th scope="col">Company</th><th scope="col">Trades</th><th scope="col">Town</th><th scope="col">County</th><th scope="col" class="num">Miles</th><th scope="col" class="num">Since</th><th scope="col">Found on</th><th scope="col">On our list?</th><th scope="col"></th></tr></thead><tbody id="kbody"></tbody></table></div>
       </div>
       <aside class="side" aria-label="County saturation">
         <h2>Saturation by county</h2>
@@ -939,7 +940,7 @@ function renderDossier(o){
   acts.append(bRep,bMap);
   if(o.status!=='Home'){const bP=el('button',{type:'button',class:'btn',text:priority.has(o.id)?'★ Remove priority':'☆ Mark priority'});bP.addEventListener('click',()=>{togglePrio(o.id);renderProfiles();});acts.appendChild(bP);}
   d.appendChild(el('div',{class:'dhead'},el('div',null,el('h2',{class:'dname',text:o.company}),el('div',{class:'dlegal',text:(P.legal||'')+(S.id?' · AL entity '+S.id:'')}),tags),acts));
-  const facts=[[o.status==='Lead'?'County':'Market',o.market],['Distance from Call KS',o.status==='Home'?'—':o.miles+' miles'],[o.status==='Lead'&&!(PROF(o).sos||{}).id?'Licensed since':'In business since',fy?String(fy)+' ('+(new Date().getFullYear()-fy)+' yrs)':'—'],['Employees',employeesText(o)],['Revenue',revText(o)],['Offices',String((P.offices||[]).length||1)]];
+  const facts=[[o.status==='Lead'?'County':'Market',o.market],['Distance from Call KS',o.status==='Home'?'—':o.miles+' miles'],[o.status==='Lead'&&!(PROF(o).sos||{}).id&&!(o.shop&&o.shop.bbb&&o.shop.bbb.started)?'Licensed since':'In business since',fy?String(fy)+' ('+(new Date().getFullYear()-fy)+' yrs)':'—'],['Employees',employeesText(o)],['Revenue',revText(o)],['Offices',String((P.offices||[]).length||1)]];
   d.appendChild(el('div',{class:'facts'},facts.map(([k,v])=>el('div',{class:'fact'},el('span',{text:k}),el('b',{text:v})))));
   if(o.why)d.appendChild(el('div',{class:'dsec'},el('div',{class:'note',text:o.why})));
   const left=el('div'),right=el('div');
@@ -1022,7 +1023,7 @@ function valuationLines(o){
 function reportModel(o){
   const P=PROF(o),S=P.sos||{},fy=foundedYear(o);
   return {o,P,S,fy,
-    facts:[['Status',statusText(o)+(o.tier?' · Tier '+o.tier:'')],[o.status==='Lead'?'County':'Market',o.market],['Distance',o.status==='Home'?'—':o.miles+' mi from Call KS'],[o.status==='Lead'&&!(PROF(o).sos||{}).id?'Licensed since':'In business',fy?String(fy)+' ('+(new Date().getFullYear()-fy)+' yrs)':'—'],['Employees',employeesText(o)],['Revenue',revText(o)]],
+    facts:[['Status',statusText(o)+(o.tier?' · Tier '+o.tier:'')],[o.status==='Lead'?'County':'Market',o.market],['Distance',o.status==='Home'?'—':o.miles+' mi from Call KS'],[o.status==='Lead'&&!(PROF(o).sos||{}).id&&!(o.shop&&o.shop.bbb&&o.shop.bbb.started)?'Licensed since':'In business',fy?String(fy)+' ('+(new Date().getFullYear()-fy)+' yrs)':'—'],['Employees',employeesText(o)],['Revenue',revText(o)]],
     contact:[['Address',mainOffice(o).address],['Phone',P.phone],['Email',P.email],['Website',P.website],['Ownership',o.ownership]].filter(x=>x[1]),
     registry:S.id?[['Legal name',P.legal],['Entity ID',S.id],['Type',S.type],['Status',S.status],['Formed',fmtDate(S.formed)+(S.county?', '+S.county:'')],['Registered agent',S.agent],['Nature of business',S.nature]].filter(x=>x[1]):[],
     sources:[...(P.sources||[]),o.source].filter((v,i,a)=>v&&a.indexOf(v)===i)};}
@@ -1113,7 +1114,7 @@ function drawMarket(){
     m.options.bubblingMouseEvents=false;m.bindTooltip('<div class="opcard" style="width:auto;padding:8px 10px"><b>'+esc(t)+'</b> · '+c+' electrical contractor'+(c>1?'s':'')+'<br><span style="color:var(--ink-faint)">'+esc(cty)+' County</span></div>',{direction:'auto',className:'optip'});mktLayer.addLayer(m);});}
   MKT.shops.forEach(s=>{if(!shopVisible(s)||s.target==='callks')return;n++;
     const col=shopColor(s);
-    const m=L.circleMarker([s.lat,s.lon],{pane:'market',renderer:RENDER.market,bubblingMouseEvents:false,radius:s.all3?6:5,color:s.all3?css('--panel'):col,weight:s.all3?1.5:1,fillColor:col,fillOpacity:s.owner||s.target?.45:.95});
+    const m=L.circleMarker([s.lat,s.lon],{pane:'market',renderer:RENDER.market,bubblingMouseEvents:false,radius:s.all3?6:(s.bbb&&/Commercial/.test(s.bbb.cats||''))?6:4.5,color:s.all3?css('--panel'):col,weight:s.all3?1.5:1,fillColor:col,fillOpacity:s.owner||s.target?.45:.95});
     m.bindTooltip(()=>'<div class="opcard" style="width:auto;max-width:240px;padding:8px 10px"><div class="opnm" style="font-size:13px">'+esc(s.n)+'</div><div class="oploc">'+esc(s.town)+' · '+esc(shopStatus(s))+' · click for details</div></div>',{direction:'auto',className:'optip',offset:[0,0],opacity:1});
     if(s.target&&opMarkers[s.target])m.on('click',()=>opMarkers[s.target].openPopup());
     else if(s.lead){m.bindPopup(()=>profileHTML(byId(s.lead),true),{maxWidth:300,autoPanPadding:[24,24]});m.on('popupopen',()=>m.closeTooltip());shopMarkers[s.lead]=m;}
@@ -1124,9 +1125,9 @@ function mktCounts(){const c={hvac:0,plumb:0,all3:0};MKT.shops.forEach(s=>{if(s.
   c.elec=MKT.elec_towns.reduce((a,t)=>a+t[3],0);
   Object.entries(c).forEach(([k,v])=>{document.getElementById('mc-'+k).textContent=k==='elec'?v.toLocaleString()+' by town':v+' on file';});}
 function mktNote(){const S=MKT.sources,pend=['HACR','PGFB'].filter(k=>!S[k].read);
-  document.getElementById('mktnote').innerHTML='<b>What’s here:</b> shops licensed by the state electrical board on '+esc(fmtDate(S.AECB.read))+' whose names say HVAC or plumbing work, so each also does electrical. '
-   +(pend.length?'<b>Not loaded yet:</b> the '+pend.map(k=>k==='HACR'?'HVAC':'plumbing').join(' and ')+' board roster'+(pend.length>1?'s, which sit':', which sits')+' behind a CAPTCHA and need a public records request. HVAC-only and plumbing-only shops appear once '+(pend.length>1?'they’re':'it’s')+' added. ':'')
-   +'Dots sit at the town center.';}
+  document.getElementById('mktnote').innerHTML='<b>What’s here:</b> '+(S.BBB?'HVAC businesses listed with the Better Business Bureau ('+MKT.shops.filter(x=>x.src.includes('BBB')).length+', read '+esc(fmtDate(S.BBB.read))+'), plus ':'')+'shops licensed by the state electrical board whose names say HVAC or plumbing work. Bigger dots do commercial work. '
+   +(pend.length?'<b>Not loaded yet:</b> the '+pend.map(k=>k==='HACR'?'HVAC':'plumbing').join(' and ')+' board roster'+(pend.length>1?'s, which sit':', which sits')+' behind a CAPTCHA and need a public records request. Licensed shops that aren’t on BBB will appear once '+(pend.length>1?'they’re':'it’s')+' added. ':'')
+   +'Dots sit at the ZIP or town center.';}
 document.querySelectorAll('.row[data-mkt]').forEach(r=>r.addEventListener('click',()=>{const k=r.dataset.mkt,on=r.getAttribute('aria-pressed')!=='true';
   r.setAttribute('aria-pressed',on?'true':'false');mktOn[k]=on;drawMarket();}));
 
@@ -1138,11 +1139,12 @@ function marketRows(){
     if(tr&&!s[tr])return false;
     const known=!!(s.target||s.owner);if(ld==='new'&&known)return false;if(ld==='known'&&!known)return false;
     if(cty&&s.county!==cty)return false;
+    const sr=document.getElementById('k_src').value;if(sr==='both'&&s.src.length<2)return false;if(sr&&sr!=='both'&&sr!=='com'&&!s.src.includes(sr))return false;if(sr==='com'&&!(s.bbb&&/Commercial/.test(s.bbb.cats||'')))return false;
     if(q&&!(s.n+' '+s.town+' '+s.county).toLowerCase().includes(q))return false;return true;}).sort((a,b)=>a.mi-b.mi);}
 function renderMarket(){
   const rows=marketRows(),tb=document.getElementById('kbody');tb.replaceChildren();
   rows.forEach(s=>{const st=shopStatus(s);
-    const r=el('tr',null,el('td',{style:'color:var(--ink);font-weight:600'},s.n),el('td'),el('td',{text:s.town}),el('td',{text:s.county}),el('td',{class:'num',text:String(s.mi)}),el('td',{class:'num',text:s.since||'—'}),el('td',{class:'num',text:String(s.lic)}),el('td'),el('td'));
+    const r=el('tr',null,el('td',{style:'color:var(--ink);font-weight:600'},s.n),el('td'),el('td',{text:s.town}),el('td',{text:s.county}),el('td',{class:'num',text:String(s.mi)}),el('td',{class:'num',text:(s.bbb&&s.bbb.started?String(s.bbb.started).slice(-4):s.since)||'—'}),el('td',{text:s.src.map(k=>k==='AECB'?'License list':k).join(' + ')}),el('td'),el('td'));
     r.children[1].innerHTML=tradeTags(s);
     r.children[7].innerHTML=st==='New lead'?'<span class="lead">New lead</span>':esc(st);
     const b=el('button',{type:'button',class:'fbtn',style:'padding:4px 8px'},'Map');r.children[8].appendChild(b);
@@ -1157,11 +1159,11 @@ function renderMarket(){
     r.addEventListener('click',()=>{const s=document.getElementById('k_county');s.value=s.value===c.name?'':c.name;renderMarket();});sb.appendChild(r);});
   const S=MKT.sources;document.getElementById('ksrc').innerHTML='Electrical: '+esc(S.AECB.name)+', read '+esc(fmtDate(S.AECB.read))+'. Town names shared with bigger places out of state (Houston, Jackson, Jacksonville and others) are left out, since the board lists no state. HVAC: '+esc(S.HACR.read?'loaded '+fmtDate(S.HACR.read):'board roster not loaded yet (CAPTCHA; needs a records request)')+'. Plumbing: '+esc(S.PGFB.read?'loaded '+fmtDate(S.PGFB.read):'board roster not loaded yet (CAPTCHA; needs a records request)')+'.';}
 (function(){const s=document.getElementById('k_county');s.replaceChildren(new Option('All counties',''),...Object.keys(MKT.counties).sort().map(c=>new Option(c,c)));})();
-['k_trade','k_lead','k_county'].forEach(id=>document.getElementById(id).addEventListener('change',renderMarket));
+['k_trade','k_lead','k_county','k_src'].forEach(id=>document.getElementById(id).addEventListener('change',renderMarket));
 document.getElementById('k_search').addEventListener('input',renderMarket);
 document.querySelectorAll('.ksort').forEach(b=>b.addEventListener('click',e=>{e.stopPropagation();const k=b.dataset.k;kSort=kSort.k===k?{k,d:-kSort.d}:{k,d:k==='name'?1:-1};renderMarket();}));
 document.getElementById('k_copy').addEventListener('click',()=>{const rows=marketRows(),q=v=>'"'+String(v==null?'':v).replace(/"/g,'""')+'"';
-  const txt=['Company,Trades,Town,County,Miles from Call KS,Licensed since,Active electrical licenses,On our list'].concat(rows.map(s=>[s.n,shopTrades(s).map(k=>TRADE_LAB[k]).join(' + '),s.town,s.county,s.mi,s.since,s.lic,shopStatus(s)].map(q).join(','))).join('\n');
+  const txt=['Company,Trades,Town,County,Miles from Call KS,In business since,Active electrical licenses,Found on,Phone,Website,Owner (BBB),BBB rating,On our list'].concat(rows.map(s=>{const b=s.bbb||{};return [s.n,shopTrades(s).map(k=>TRADE_LAB[k]).join(' + '),s.town,s.county,s.mi,b.started?String(b.started).slice(-4):s.since,s.lic,s.src.join('+'),b.phone,b.web,b.mgmt,b.rating,shopStatus(s)];}).map(r=>r.map(q).join(','))).join('\n');
   const n=document.getElementById('k_copynote');try{navigator.clipboard.writeText(txt).then(()=>{n.textContent=rows.length+' rows copied';},()=>{n.textContent='Copy was blocked';});}catch(e){n.textContent='Copy was blocked';}});
 mktCounts();mktNote();
 
@@ -1176,21 +1178,25 @@ const LEADS=MKT.shops.filter(s=>!s.target).map(s=>{
     if(/Foreign/.test(so.type||'')&&so.county)flags.push('Registered as an out-of-state ('+so.county+') company. In this trade that often means outside or private-equity ownership; check before pursuing.');
     if(so.last_report&&Number(so.last_report)<2021)flags.push('Last annual report on file is from '+so.last_report+'; the registry record may be stale.');
     const ld=so.last_doc&&iso(so.last_doc);if(ld&&ld>='2024-11'&&/Amendment|Conversion|Merger/.test(so.last_doc))flags.push('Recent filing: '+so.last_doc.replace(/ \d+ pgs?\.$/,'')+'. Amendments and conversions can signal an ownership or structure change.');}
-  const addr=so&&[so.principal,so.agent_addr].find(a=>a&&/\d/.test(a)&&new RegExp(s.town,'i').test(a));
+  const bb=s.bbb||{},byear=bb.started?String(bb.started).slice(-4):null,site=bb.web&&!/facebook|instagram|yelp|linkedin|google/.test(bb.web)?'https://'+bb.web:null;
+  if(bb.other_offices)flags.push('BBB lists other locations in '+bb.other_offices.join(', ')+'.');
+  if(/^(Aire ?Serv|One Hour|Mr\.? Rooter|Benjamin Franklin)/i.test(s.n))flags.push('Franchise location: a sale needs the franchisor’s approval and the brand may not transfer.');
+  if(Number(bb.complaints)>0)flags.push('BBB shows '+bb.complaints+' complaint'+(bb.complaints==='1'?'':'s')+' in the last three years.');
+  const addr=bb.addr||(so&&[so.principal,so.agent_addr].find(a=>a&&/\d/.test(a)&&new RegExp(s.town,'i').test(a)));
   return {id,company:s.n,city:s.town,market:s.county+' County',status:s.owner?'Taken':'Lead',tier:'',lat:s.lat,lon:s.lon,miles:s.mi,
-    focus:so&&so.nature&&so.nature.length>3&&!/LAWFUL|BUSINESS OPERATIONS|FOR PROFIT/.test(so.nature)?cap(so.nature):tr+' (from the business name)',
-    ownership:s.owner||(so&&so.people&&so.people.length?so.people.map(p=>cap(p.split(': ')[1])).filter((v,i,a)=>v&&!/Not Provided|Legalzoom/i.test(v)&&a.indexOf(v)===i).slice(0,3).join(', ')||'Unknown; confirm on first contact':'Unknown; confirm on first contact'),
-    founded:fyear||(s.since?'Licensed '+s.since:null),employees:'Not found',
+    focus:bb.cats?bb.cats.split(', ').slice(0,5).join(', '):so&&so.nature&&so.nature.length>3&&!/LAWFUL|BUSINESS OPERATIONS|FOR PROFIT/.test(so.nature)?cap(so.nature):tr+' (from the business name)',
+    ownership:s.owner||(bb.mgmt?bb.mgmt.replace(/^(Mr|Mrs|Ms|Dr)\.? /,''):null)||(so&&so.people&&so.people.length?so.people.map(p=>cap(p.split(': ')[1])).filter((v,i,a)=>v&&!/Not Provided|Legalzoom/i.test(v)&&a.indexOf(v)===i).slice(0,3).join(', ')||'Unknown; confirm on first contact':'Unknown; confirm on first contact'),
+    founded:byear||fyear||(s.since?'Licensed '+s.since:null),employees:bb.emp?String(bb.emp):'Not found',
     est_revenue_m:null,revenue_basis:null,revenue_date:null,source:MKT.sources.AECB.url,shop:s,
-    why:tr+' shop in '+s.town+' ('+s.county+' County), '+s.mi+' miles from Call KS.'+(fyear?' Registered with the state in '+fyear+'.':'')+' On the state electrical contractor list'+(s.since?' since '+s.since:'')+' with '+s.lic+' active license'+(s.lic>1?'s':'')+'.'+(flags.length?' See the flags under Observations.':' Not researched beyond public records yet.'),
+    why:tr+' shop in '+s.town+' ('+s.county+' County), '+s.mi+' miles from Call KS.'+(fyear?' Registered with the state in '+fyear+'.':'')+(byear?' In business since '+byear+' (BBB).':'')+(s.lic?' On the state electrical contractor list'+(s.since?' since '+s.since:'')+' with '+s.lic+' active license'+(s.lic>1?'s':'')+'.':'')+(bb.rating?' BBB rating '+bb.rating+(bb.acc?', accredited.':'.'):'')+(flags.length?' See the flags under Observations.':' Not researched beyond public records yet.'),
     profile:{
-      legal:so?so.legal:'',
+      legal:so?so.legal:'',website:site,phone:bb.phone||null,
       sos:so?{id:so.id,type:so.type,status:so.status,formed:iso(so.formed),county:so.county,agent:so.agent?cap(so.agent)+(so.agent_addr?', '+so.agent_addr:''):null,nature:so.nature&&so.nature.length>3?cap(so.nature):null}:{},
-      people:so&&so.people?so.people.map(p=>{const [r,n]=p.split(': ');return cap(n)+' ('+r.toLowerCase()+')';}).filter(x=>!/Not Provided|Legalzoom/i.test(x)):[],
-      licenses:['Alabama electrical contractor: '+s.lic+' active license'+(s.lic>1?'s':'')+(s.since?', first issued '+s.since:'')+' (Alabama Electrical Contractors Board)'],
+      people:(bb.mgmt?[bb.mgmt.replace(/^(Mr|Mrs|Ms|Dr)\.? /,'')+' (BBB)']:[]).concat(so&&so.people?so.people.map(p=>{const [r,n]=p.split(': ');return cap(n)+' ('+r.toLowerCase()+')';}).filter(x=>!/Not Provided|Legalzoom/i.test(x)):[]),
+      licenses:(s.lic?['Alabama electrical contractor: '+s.lic+' active license'+(s.lic>1?'s':'')+(s.since?', first issued '+s.since:'')+' (Alabama Electrical Contractors Board)']:[]).concat((bb.lic||[]).map(l=>{const [n,b]=l.split(' ');return ({HACR:'HVAC board',PGFB:'Plumbing board',AECB:'Electrical board'}[b]||b)+' license '+n+' (per BBB)';})).concat(bb.rating?['BBB rating '+bb.rating+(bb.acc?', accredited':', not accredited')+(bb.entity?' · '+bb.entity:'')]:[]),
       offices:[{label:addr?'Address on state record (map shows town center)':'Town (approximate)',address:addr||(s.town+', AL · '+s.county+' County'),lat:s.lat,lon:s.lon,level:'city',miles:s.mi}],
-      notes:flags.concat(so&&so.last_report?['Last annual report filed: '+so.last_report+'.']:[]).concat(['Placed at the center of '+s.town+'; the map does not geocode street addresses.',so&&so.nature&&so.nature.length>3?'Trades come from the business name and the nature of business filed with the state; confirm on first contact.':'Trades come from the business name. Confirm what it actually does on first contact.']).concat(so?[]:['No Secretary of State record matched by name; it may be a sole proprietorship or registered under another name.']),
-      sources:[MKT.sources.AECB.url],
+      notes:flags.concat(bb.web&&!site?['No company website on BBB; its listed web presence is '+bb.web+'.']:[]).concat(!bb.web&&s.bbb?['No website listed on BBB.']:[]).concat(so&&so.last_report?['Last annual report filed: '+so.last_report+'.']:[]).concat([s.bbb&&s.bbb.zip?'Placed at the center of ZIP '+s.bbb.zip+'; the map does not pinpoint street addresses.':'Placed at the center of '+s.town+'; the map does not pinpoint street addresses.',s.bbb&&s.bbb.cats?'Services come from its BBB categories; confirm on first contact.':so&&so.nature&&so.nature.length>3?'Trades come from the business name and the nature of business filed with the state; confirm on first contact.':'Trades come from the business name. Confirm what it actually does on first contact.']).concat(so?[]:s.src.includes('AECB')?['No Secretary of State record matched by name; it may be a sole proprietorship or registered under another name.']:['Not yet checked against the Alabama Secretary of State registry.']),
+      sources:(s.src.includes('AECB')?[MKT.sources.AECB.url]:[]).concat(s.bbb?['https://www.bbb.org/search?find_text='+encodeURIComponent(s.n)+'&find_loc='+encodeURIComponent(s.town+', AL')]:[]).concat(bb.web&&!site?['https://'+bb.web]:[]),
       lookups:[['Google: '+s.n,'https://www.google.com/search?q='+q],['Better Business Bureau','https://www.bbb.org/search?find_text='+encodeURIComponent(s.n)+'&find_loc='+encodeURIComponent(s.town+', AL')],['Alabama Secretary of State business search','https://www.sos.alabama.gov/government-records/business-entity-records'],['Electrical board license lookup','https://alecb-search.kalmservices.net/']]}};});
 function showLeadOnMap(o){
   const s=o.shop;selectTab('map');

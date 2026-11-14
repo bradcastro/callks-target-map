@@ -1,0 +1,6168 @@
+[
+{
+"n": "Jeffcoat Mechanical Services, Inc.",
+"addr": "2628 3rd Ave S",
+"city": "Birmingham",
+"zip": "35233",
+"phone": "(205) 322-2332",
+"rating": "A+",
+"acc": true,
+"started": "1981",
+"mgmt": "Sandy Englebert, Bookkeeper",
+"entity": "Corporation",
+"cats": "Commercial, Residential",
+"complaints": "0",
+"web": "jeffcoat.us",
+"lic": [
+"2021018 HACR"
+]
+},
+{
+"n": "Stegall Mechanical, LLC",
+"addr": "2800 5th Ave S",
+"city": "Birmingham",
+"zip": "35233",
+"phone": "(205) 251-0330",
+"rating": "A+",
+"acc": true,
+"started": "1957",
+"mgmt": "Daphne Trammell, Controller",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Plumbing, Electrical, Residential",
+"complaints": "0",
+"web": "callstegall.com",
+"lic": [
+"14116 HACR",
+"05358 AECB",
+"EMP-3415 PGFB",
+"41493 Alabama Licensing Board for Ge"
+]
+},
+{
+"n": "Standard Heating & Air Conditioning Company",
+"addr": "520 8th St S",
+"city": "Birmingham",
+"zip": "35233",
+"phone": "(205) 627-2593",
+"rating": "A+",
+"acc": true,
+"started": "1939",
+"mgmt": "Tyler Kime, President",
+"entity": "Corporation",
+"cats": "Plumbing, Residential",
+"complaints": "0",
+"web": "standardheatingandairconditioning.com",
+"lic": [
+"14134 HACR",
+"MPG-0102 PGFB"
+]
+},
+{
+"n": "Certified Heating & Cooling",
+"city": "Homewood",
+"zip": "35259",
+"phone": "(205) 870-3405",
+"rating": "A+",
+"acc": true,
+"started": "1981",
+"mgmt": "Keith Fricke, Owner",
+"entity": "Sole Proprietorship",
+"cats": "Commercial, Residential",
+"complaints": "0",
+"lic": [
+"84183 HACR"
+]
+},
+{
+"n": "DCJ Heating and Cooling, LLC",
+"city": "Birmingham",
+"zip": "35217",
+"phone": "(205) 901-3870",
+"rating": "A+",
+"acc": true,
+"started": "2007",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"lic": [
+"2022150 HACR"
+]
+},
+{
+"n": "Grissom Brother Service Company, LLC",
+"addr": "4907 Powell Ave S",
+"city": "Birmingham",
+"zip": "35222",
+"phone": "(205) 591-7787",
+"rating": "A+",
+"acc": true,
+"started": "1976",
+"mgmt": "Anthony Crowe, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "1",
+"web": "grissomservice.com",
+"lic": [
+"2006137 HACR"
+]
+},
+{
+"n": "Hiller Plumbing, Heating, Cooling & Electrical",
+"addr": "441 University Blvd",
+"city": "Birmingham",
+"zip": "35205",
+"phone": "(205) 797-2740",
+"rating": "A+",
+"acc": true,
+"started": "1990",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Plumbing, Electrical",
+"web": "happyhiller.com"
+},
+{
+"n": "IronSouth Mechanical LLC",
+"city": "Birmingham",
+"zip": "35213",
+"phone": "(256) 521-6363",
+"rating": "A-",
+"acc": true,
+"started": "2026",
+"mgmt": "Daniel R French, Owner",
+"entity": "Limited Liability Company (LLC)",
+"complaints": "0",
+"web": "ironsouthmech.com",
+"lic": [
+"2022235 HACR"
+]
+},
+{
+"n": "Real Thorough Contracting Company",
+"addr": "6730 1st Ave N",
+"city": "Birmingham",
+"zip": "35206",
+"phone": "(205) 616-5903",
+"rating": "A+",
+"acc": true,
+"started": "1999",
+"mgmt": "Ralph Thomas, Owner",
+"entity": "Sole Proprietorship",
+"cats": "Plumbing",
+"complaints": "0",
+"lic": [
+"1990122 HACR",
+"MPG-2276 PGFB"
+]
+},
+{
+"n": "Jake Marshall Service, Inc.",
+"addr": "178 W Valley Ave",
+"city": "Birmingham",
+"zip": "35209",
+"phone": "(205) 941-1051",
+"rating": "A+",
+"acc": true,
+"started": "1984",
+"mgmt": "Danny Daniel, President",
+"entity": "Corporation",
+"emp": 111,
+"cats": "Commercial",
+"web": "jmservice.com"
+},
+{
+"n": "RJ Mechanical, Inc.",
+"addr": "3153 Bellwood Dr",
+"city": "Vestavia",
+"zip": "35243",
+"phone": "(205) 968-0991",
+"rating": "A+",
+"acc": true,
+"started": "1998",
+"mgmt": "Russell Sandlin, President",
+"entity": "Corporation",
+"cats": "Plumbing, Residential",
+"complaints": "0",
+"web": "rjmechanical.com",
+"lic": [
+"98121 HACR",
+"MPG-3264 PGFB",
+"23895 Alabama Licensing Board for Ge",
+"15288 Alabama State Board of Licensu",
+"50664 HACR",
+"MED-0662 PGFB"
+]
+},
+{
+"n": "Plus One Heating and Air",
+"addr": "234 Oxmoor Cir Ste 209",
+"city": "Birmingham",
+"zip": "35209",
+"phone": "(659) 212-6148",
+"rating": "A+",
+"acc": true,
+"started": "2019",
+"mgmt": "Shawn Troughton, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "1",
+"web": "plusoneheatingandair.com",
+"lic": [
+"20151 HACR"
+]
+},
+{
+"n": "Sentry Heating, Air, Plumbing, Electrical & Generators",
+"addr": "2490 Rocky Ridge Rd",
+"city": "Vestavia",
+"zip": "35243",
+"phone": "(205) 235-8793",
+"rating": "A+",
+"acc": true,
+"started": "1987",
+"mgmt": "Charles Conklin, President",
+"entity": "Corporation",
+"cats": "Plumbing, Electrical",
+"complaints": "0",
+"web": "sentryheating.com",
+"lic": [
+"1984793 HACR",
+"05539 AECB",
+"MPG-4131 PGFB",
+"18017 Alabama Licensing Board for Ge"
+]
+},
+{
+"n": "Cool City Heating and Air LLC",
+"city": "Birmingham",
+"zip": "35211",
+"phone": "(205) 718-1601",
+"rating": "A-",
+"acc": true,
+"started": "2025",
+"mgmt": "Joel L Lanier, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "coolcityheatingandairllc.net",
+"lic": [
+"2025236 HACR"
+]
+},
+{
+"n": "Brown's Heating and Cooling",
+"addr": "120 Citation Court, STE A",
+"city": "Birmingham",
+"zip": "35209",
+"phone": "(225) 267-9637",
+"rating": "A+",
+"acc": true,
+"started": "1994",
+"mgmt": "Sonny Warbington, General Manager",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"web": "brownheatingandcooling.com",
+"shared_phone": [
+"Baldwin Cooling, Heating, Plumbing & Electrical",
+"Roberts Cooling, Heating, Plumbing & Electrical",
+"Skelton's Heating, Cooling & Plumbing"
+]
+},
+{
+"n": "Cool Breeze, Inc.",
+"addr": "2165 Rocky Ridge Rd",
+"city": "Vestavia Hills",
+"zip": "35216",
+"phone": "(205) 444-3155",
+"rating": "A+",
+"acc": true,
+"started": "2009",
+"mgmt": "Court VanScyoc, President",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "0",
+"web": "coolbreezeinc.com",
+"lic": [
+"2010030 HACR"
+],
+"other_offices": [
+"Birmingham"
+]
+},
+{
+"n": "TQ HVAC Contractor, LLC",
+"addr": "1678 Montgomery Hwy Ste 104",
+"city": "Hoover",
+"zip": "35216",
+"phone": "(205) 985-4422",
+"rating": "A+",
+"acc": true,
+"started": "2006",
+"mgmt": "Michael W. Callens, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"lic": [
+"2004021 HACR"
+]
+},
+{
+"n": "Adams Heating & Cooling, Inc",
+"addr": "3415 Hargrove Rd E",
+"city": "Tuscaloosa",
+"zip": "35405",
+"phone": "(205) 764-0582",
+"rating": "A+",
+"acc": true,
+"started": "2008",
+"mgmt": "Richard Adams, Owner",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "0",
+"web": "adamsheatingandcoolinginc.com",
+"other_offices": [
+"Birmingham"
+]
+},
+{
+"n": "Comfort Dynamics",
+"addr": "240 A Lyon Lane",
+"city": "Birmingham",
+"zip": "35211",
+"phone": "(205) 286-2431",
+"rating": "A-",
+"acc": true,
+"started": "1962",
+"mgmt": "Mason Dennis, Operations Manager",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Electrical, Residential",
+"web": "callcomfortdynamics.com",
+"lic": [
+"2019152 HACR",
+"MPG-4645 PGFB"
+]
+},
+{
+"n": "Guin Service, LLC",
+"addr": "2880 Crestwood Blvd",
+"city": "Irondale",
+"zip": "35210",
+"phone": "(205) 595-4846",
+"rating": "A+",
+"acc": true,
+"started": "1958",
+"mgmt": "Joseph Braswell, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Plumbing, Residential",
+"complaints": "0",
+"web": "guinservice.com",
+"lic": [
+"2012175 HACR",
+"MPG-1556 PGFB",
+"48149 Alabama Licensing Board for Ge"
+]
+},
+{
+"n": "Hemphill Services, Inc",
+"addr": "2242 Alton Rd",
+"city": "Birmingham",
+"zip": "35210",
+"phone": "(205) 229-2090",
+"rating": "A+",
+"acc": true,
+"started": "2000",
+"mgmt": "Adam Trammell, President",
+"entity": "Corporation",
+"cats": "Plumbing, Residential",
+"complaints": "1",
+"web": "hemphillservices.com",
+"lic": [
+"2015073 HACR",
+"MPG-2969 PGFB"
+],
+"other_offices": [
+"Trussville"
+]
+},
+{
+"n": "Wilbur's Air Conditioning, Heating & Plumbing",
+"addr": "2551 Balco Rd",
+"city": "Birmingham",
+"zip": "35210",
+"phone": "(205) 235-6174",
+"rating": "A+",
+"acc": true,
+"started": "1979",
+"mgmt": "Wilbur Doonan, President",
+"entity": "Corporation",
+"cats": "Plumbing, Residential",
+"complaints": "0",
+"web": "wilbur1.com",
+"other_offices": [
+"Trussville"
+]
+},
+{
+"n": "Parker & Sons Heating & Cooling, Inc.",
+"addr": "2010 1st Ave N",
+"city": "Irondale",
+"zip": "35210",
+"phone": "(205) 956-9418",
+"rating": "A+",
+"acc": true,
+"started": "1988",
+"mgmt": "Alicia Parker, President",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "0",
+"web": "parkerandsonshvac.net",
+"lic": [
+"1999149 HACR",
+"1984945 HACR"
+]
+},
+{
+"n": "Capital Comfort Services",
+"addr": "2750 Old Rocky Ridge Rd",
+"city": "Birmingham",
+"zip": "35216",
+"phone": "(205) 444-0704",
+"rating": "A+",
+"acc": true,
+"started": "1995",
+"entity": "Corporation",
+"cats": "Residential",
+"web": "capitalcomfort.com",
+"lic": [
+"95114 HACR"
+]
+},
+{
+"n": "Alatec Heating & Cooling LLC",
+"addr": "1012 Decatur Hwy",
+"city": "Fultondale",
+"zip": "35068",
+"phone": "(205) 841-7271",
+"rating": "A+",
+"acc": true,
+"started": "2004",
+"mgmt": "Mike Scarvey, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "alatecheatingandcooling.com",
+"lic": [
+"18008 HACR"
+]
+},
+{
+"n": "OnTime Service",
+"addr": "2668 Old Rocky Ridge Rd",
+"city": "Hoover",
+"zip": "35216",
+"phone": "(205) 942-1406",
+"rating": "A+",
+"acc": true,
+"started": "1975",
+"mgmt": "Kerry Adkins, President",
+"entity": "Corporation",
+"cats": "Plumbing, Electrical",
+"complaints": "2",
+"web": "ontime59.com",
+"lic": [
+"2001236 HACR",
+"03627 AECB",
+"MPG-4310 PGFB"
+]
+},
+{
+"n": "Mr. P’s Heat or Freeze LLC",
+"city": "Birmingham",
+"zip": "35228",
+"phone": "(205) 586-1171",
+"rating": "A",
+"acc": true,
+"started": "2024",
+"mgmt": "Paul A Morris, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"lic": [
+"2025292 HACR"
+]
+},
+{
+"n": "Home & Commercial Services, LLC",
+"addr": "1709 Forestdale Blvd",
+"city": "Birmingham",
+"zip": "35214",
+"phone": "(205) 798-0635",
+"rating": "A+",
+"acc": true,
+"started": "2012",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Commercial, Residential",
+"complaints": "0",
+"web": "hollandhcs.com"
+},
+{
+"n": "CloudNine Contractors",
+"city": "Birmingham",
+"zip": "35214",
+"phone": "(205) 601-1413",
+"rating": "A+",
+"acc": true,
+"started": "2015",
+"mgmt": "Shawn Owens, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Plumbing",
+"complaints": "0",
+"lic": [
+"2026072 HACR"
+]
+},
+{
+"n": "Expert Air Systems, LLC",
+"city": "Birmingham",
+"zip": "35214",
+"phone": "(205) 837-4971",
+"rating": "A+",
+"acc": true,
+"started": "2009",
+"mgmt": "Chris Butler, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"lic": [
+"09035 HACR"
+]
+},
+{
+"n": "Aireserv Birmingham",
+"addr": "7354 Cahaba Valley Rd Ste A",
+"city": "Birmingham",
+"zip": "35242",
+"phone": "(659) 600-8859",
+"rating": "A+",
+"acc": true,
+"started": "2007",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "4",
+"web": "aireserv.com",
+"lic": [
+"17188 HACR",
+"E2017188 HACR"
+]
+},
+{
+"n": "Air Experts",
+"addr": "7154 Cahaba Valley Rd",
+"city": "Birmingham",
+"zip": "35242",
+"phone": "(205) 754-0361",
+"rating": "A+",
+"acc": true,
+"started": "2002",
+"mgmt": "Steve Etress, Office Operations Manager",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Commercial",
+"complaints": "0",
+"web": "theairexperts.net",
+"lic": [
+"02054 HACR",
+"50484 HACR"
+]
+},
+{
+"n": "Engle Services Heating & Air – Electrical – Plumbing",
+"addr": "40300 US Highway 280",
+"city": "Sylacauga",
+"zip": "35150",
+"phone": "(855) 438-3645",
+"rating": "A+",
+"acc": true,
+"started": "2001",
+"mgmt": "Lewis Engle, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Plumbing, Electrical",
+"complaints": "2",
+"web": "engleservicesheatingandair.com",
+"lic": [
+"2000145 HACR",
+"MPG-4545 PGFB",
+"06050 AECB"
+],
+"other_offices": [
+"Alabaster",
+"Birmingham"
+]
+},
+{
+"n": "Dwim's Heating & Air, LLC",
+"city": "Birmingham",
+"zip": "35215",
+"phone": "(205) 602-1174",
+"rating": "A+",
+"acc": true,
+"started": "2018",
+"mgmt": "Danny Wimbley, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Electrical, Residential",
+"complaints": "0",
+"lic": [
+"41470 Alabama Home Builders Licensur",
+"09312 AECB",
+"2018095 HACR"
+]
+},
+{
+"n": "Copelin's Comfort Cooling, LLC",
+"city": "Birmingham",
+"zip": "35235",
+"phone": "(659) 292-2822",
+"rating": "A+",
+"acc": true,
+"started": "2022",
+"mgmt": "Brandon Copelin, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Commercial",
+"complaints": "0",
+"web": "sites.google.com",
+"lic": [
+"2022198 HACR"
+]
+},
+{
+"n": "Infinity Air Solutions, Inc.",
+"addr": "1740 Russet Hill Cir",
+"city": "Hoover",
+"zip": "35244",
+"phone": "(205) 243-4775",
+"rating": "A+",
+"acc": true,
+"started": "2012",
+"mgmt": "Douglas Shrewsbury, Owner",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "0",
+"web": "infinityairsolutions.com",
+"lic": [
+"2008122 HACR",
+"53254 HACR"
+]
+},
+{
+"n": "Progressive Heating & Cooling, LLC",
+"city": "Hoover",
+"zip": "35244",
+"phone": "(205) 937-3393",
+"rating": "A+",
+"acc": true,
+"started": "2005",
+"mgmt": "Laron Houston, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "facebook.com",
+"lic": [
+"05196 HACR"
+]
+},
+{
+"n": "Dunn's HVAC, Plumbing & Electrical",
+"addr": "1535 Deltacom Dr",
+"city": "Anniston",
+"zip": "36207",
+"phone": "(256) 380-4274",
+"rating": "A+",
+"acc": true,
+"started": "2014",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Plumbing, Electrical",
+"complaints": "4",
+"web": "calldunns.com",
+"lic": [
+"2014115 HACR",
+"MPG-4602 PGFB",
+"07676 AECB"
+],
+"other_offices": [
+"Pelham"
+]
+},
+{
+"n": "Skelton's Heating, Cooling & Plumbing",
+"addr": "4219 Mountain Top Rd",
+"city": "Birmingham",
+"zip": "35242",
+"phone": "(225) 267-9637",
+"rating": "A+",
+"acc": true,
+"started": "1994",
+"mgmt": "Jonathan Cross, General Manager",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"web": "skeltonsair.com",
+"shared_phone": [
+"Baldwin Cooling, Heating, Plumbing & Electrical",
+"Brown's Heating and Cooling",
+"Roberts Cooling, Heating, Plumbing & Electrical"
+]
+},
+{
+"n": "Prantl Heating & Air",
+"addr": "914 Allison Bonnett Memorial Dr",
+"city": "Hueytown",
+"zip": "35023",
+"phone": "(205) 744-5183",
+"rating": "A+",
+"acc": true,
+"started": "1975",
+"mgmt": "Thomas Wagner, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "callprantl.com",
+"lic": [
+"24293 HACR"
+]
+},
+{
+"n": "One Source Heating, Cooling, Electrical & Plumbing",
+"addr": "4400 Pinson Valley Pkwy",
+"city": "Birmingham",
+"zip": "35215",
+"phone": "(205) 509-1929",
+"rating": "A+",
+"acc": true,
+"started": "1996",
+"mgmt": "Asha Hanley",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Electrical, Residential",
+"complaints": "3",
+"web": "onesourceair.com"
+},
+{
+"n": "Victor's Heating And Cooling",
+"city": "Pleasant Grove",
+"zip": "35127",
+"phone": "(205) 616-4872",
+"rating": "A+",
+"acc": true,
+"started": "2009",
+"mgmt": "Victor Coar, Owner",
+"entity": "Sole Proprietorship",
+"cats": "Commercial",
+"complaints": "0",
+"web": "victorsheatingandcooling.com",
+"lic": [
+"2014041 HACR"
+]
+},
+{
+"n": "P & M Mechanical, Inc.",
+"addr": "325 Carson Rd N",
+"city": "Birmingham",
+"zip": "35215",
+"phone": "(205) 925-9486",
+"rating": "A+",
+"acc": true,
+"started": "1981",
+"mgmt": "Terry Wideman, President",
+"entity": "Corporation",
+"cats": "Commercial, Plumbing",
+"complaints": "0",
+"web": "pmmechanical.com",
+"lic": [
+"2000228 HACR",
+"MPG-0662 PGFB",
+"19067 Alabama Licensing Board for Ge"
+]
+},
+{
+"n": "Lockett Home Improvement LLC",
+"city": "Birmingham",
+"zip": "35220",
+"phone": "(205) 335-9549",
+"rating": "A+",
+"acc": true,
+"started": "2019",
+"mgmt": "John Lockett Jr., Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Electrical",
+"complaints": "0",
+"lic": [
+"07426 AECB",
+"2019117 HACR"
+]
+},
+{
+"n": "John's Plumbing, Inc.",
+"addr": "5851 Service Rd",
+"city": "Birmingham",
+"zip": "35235",
+"phone": "(205) 655-5646",
+"rating": "A+",
+"acc": true,
+"started": "1984",
+"mgmt": "Brad Vines, Owner",
+"entity": "Corporation",
+"cats": "Plumbing",
+"complaints": "1",
+"web": "johnsplumbingbham.com",
+"lic": [
+"MPG-3221 PGFB",
+"38813 Alabama Licensing Board for Ge"
+]
+},
+{
+"n": "STP Heating and Cooling LLC",
+"city": "Trussville",
+"zip": "35173",
+"phone": "(205) 914-4171",
+"rating": "A+",
+"acc": true,
+"started": "2023",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "stpheatingandcooling.com",
+"lic": [
+"2023214 HACR"
+]
+},
+{
+"n": "W.C. Wright & Son, Inc.",
+"addr": "9079 US Highway 78",
+"city": "Leeds",
+"zip": "35094",
+"phone": "(205) 252-2408",
+"rating": "A+",
+"acc": true,
+"started": "1946",
+"mgmt": "Kenny Burke, Owner/Director",
+"entity": "Corporation",
+"cats": "Plumbing, Residential",
+"complaints": "0",
+"web": "wcwright.com",
+"lic": [
+"12174 HACR",
+"MG-0370 PGFB"
+]
+},
+{
+"n": "Myers Comfort Specialists of Birmingham, LLC",
+"addr": "150 Commerce Dr",
+"city": "Pelham",
+"zip": "35124",
+"phone": "(205) 206-7735",
+"rating": "A+",
+"acc": true,
+"started": "2014",
+"mgmt": "Brandon Myers, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "12",
+"web": "myerscomfort.com",
+"lic": [
+"89257 HACR"
+]
+},
+{
+"n": "One Hour Air Conditioning & Heating",
+"addr": "1110 Greenwood Crossings Ct",
+"city": "Bessemer",
+"zip": "35022",
+"phone": "(659) 215-5377",
+"rating": "A+",
+"acc": true,
+"started": "1987",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"web": "bradentononehour.com"
+},
+{
+"n": "Herring Heating & Air Conditioning",
+"addr": "8700 Highway 31 N",
+"city": "Kimberly",
+"zip": "35091",
+"phone": "(205) 631-6258",
+"rating": "A+",
+"acc": true,
+"started": "1964",
+"mgmt": "Robert Herring, Owner",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "0",
+"web": "herringac.com",
+"lic": [
+"1983086 HACR"
+],
+"other_offices": [
+"Gardendale"
+]
+},
+{
+"n": "One Source Heating, Cooling, Electrical & Plumbing",
+"city": "Gardendale",
+"zip": "35071",
+"phone": "(205) 647-6233",
+"rating": "A+",
+"acc": true,
+"started": "1996",
+"mgmt": "Asha Hanley",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Electrical, Residential",
+"web": "onesourceair.com"
+},
+{
+"n": "Access Heating & Air Conditioning, LLC",
+"city": "Gardendale",
+"zip": "35071",
+"phone": "(205) 675-8361",
+"rating": "A+",
+"acc": true,
+"started": "2010",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"lic": [
+"2005066 HACR"
+]
+},
+{
+"n": "Preferred Heating and Air, LLC",
+"addr": "9360 Old Hwy 280",
+"city": "Chelsea",
+"zip": "35043",
+"phone": "(205) 775-7910",
+"rating": "A+",
+"acc": true,
+"started": "2017",
+"mgmt": "David Womack, Owner",
+"entity": "Limited Liability Company (LLC)",
+"emp": 1,
+"cats": "Residential",
+"complaints": "0",
+"web": "preferredheatingandairllc.com"
+},
+{
+"n": "Jeffcoat & Associates, LLC",
+"addr": "5610 Shirley Park Dr",
+"city": "Bessemer",
+"zip": "35022",
+"phone": "(205) 481-1100",
+"rating": "A+",
+"acc": true,
+"started": "1958",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Commercial, Electrical",
+"complaints": "0",
+"web": "jeffcoatassoc.com",
+"lic": [
+"04082 HACR",
+"04772 AECB",
+"MPG-1685 PGFB",
+"S-51484 Alabama Licensing Board for Ge",
+"02765 AECB"
+]
+},
+{
+"n": "Elite Air Solutions, LLC",
+"addr": "92 Hinds St",
+"city": "Pelham",
+"zip": "35124",
+"phone": "(205) 277-6911",
+"rating": "A+",
+"acc": true,
+"started": "2019",
+"mgmt": "Shane Wheeler, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "eliteairsolutionsllc-al.com",
+"lic": [
+"20075 HACR",
+"53378 HACR"
+]
+},
+{
+"n": "On Call Heating & Air, LLC",
+"city": "Trussville",
+"zip": "35173",
+"phone": "(205) 386-4385",
+"rating": "A+",
+"acc": true,
+"started": "2003",
+"mgmt": "Steven Brannon, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "oncallhvac.net",
+"lic": [
+"1988106 HACR"
+]
+},
+{
+"n": "Hastings Heating & Air Conditioning Co., Inc.",
+"addr": "7542 Old Springville Rd",
+"city": "Trussville",
+"zip": "35173",
+"phone": "(205) 681-5211",
+"rating": "A+",
+"acc": true,
+"started": "1979",
+"mgmt": "David B. Hastings, President",
+"entity": "Corporation",
+"cats": "Commercial, Residential",
+"complaints": "0",
+"lic": [
+"1992280 HACR"
+],
+"other_offices": [
+"Clay"
+]
+},
+{
+"n": "Trinity Contractors",
+"addr": "561 Simmons Dr",
+"city": "Trussville",
+"zip": "35173",
+"phone": "(205) 655-5099",
+"rating": "A+",
+"acc": true,
+"started": "1981",
+"mgmt": "Aimee Jones, Administrative Manager",
+"entity": "Partnership",
+"cats": "Plumbing, Electrical",
+"complaints": "1",
+"web": "trin.com",
+"lic": [
+"89168 HACR",
+"03780 AECB",
+"MG-0129 PGFB",
+"52299 Alabama Licensing Board for Ge"
+]
+},
+{
+"n": "Perfect Service Heating & Air",
+"addr": "6540 Trussville Clay Rd",
+"city": "Trussville",
+"zip": "35173",
+"phone": "(205) 537-2970",
+"rating": "A+",
+"acc": true,
+"started": "2002",
+"mgmt": "Landon Axt, Director of Marketing",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "4",
+"web": "perfecthvac.com",
+"lic": [
+"2018088 HACR"
+]
+},
+{
+"n": "Gipson Heating & Air Conditioning, LLC",
+"addr": "26 Hunter Dr",
+"city": "Trussville",
+"zip": "35173",
+"phone": "(205) 494-7366",
+"rating": "A+",
+"acc": true,
+"started": "2018",
+"mgmt": "Jonathan Shane Gipson, Owner",
+"entity": "Limited Liability Company (LLC)",
+"complaints": "0",
+"web": "gipsonheatingandair.com",
+"lic": [
+"2015128 HACR"
+]
+},
+{
+"n": "Total Property Solutions",
+"city": "Helena",
+"zip": "35080",
+"phone": "(205) 709-6841",
+"rating": "A+",
+"acc": true,
+"started": "2019",
+"mgmt": "Kim Willis, Co-Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Commercial",
+"complaints": "0",
+"web": "totalpropertysolutionsalabama.com",
+"lic": [
+"2019092 HACR"
+]
+},
+{
+"n": "Duct Doctor USA of Birmingham",
+"addr": "400 Hillwood Park S",
+"city": "Alabaster",
+"zip": "35007",
+"phone": "(205) 980-0800",
+"rating": "A+",
+"acc": true,
+"started": "1989",
+"mgmt": "Rickey L. Graves, Vice President",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "0",
+"web": "mainlineheating.com",
+"lic": [
+"87011 HACR"
+]
+},
+{
+"n": "Air Repair, LLC",
+"city": "Hueytown",
+"zip": "35023",
+"phone": "(205) 428-9411",
+"rating": "A+",
+"acc": true,
+"started": "2007",
+"mgmt": "Darrell Dempsey, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"lic": [
+"06125 HACR"
+]
+},
+{
+"n": "Wade Heating & Air Conditioning, Inc.",
+"addr": "3375 Davey Allison Blvd",
+"city": "Hueytown",
+"zip": "35023",
+"phone": "(205) 744-5351",
+"rating": "A+",
+"acc": true,
+"started": "1986",
+"mgmt": "Earnest L. (Jimmy) Wade, President",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "0",
+"web": "wadehvac.com",
+"lic": [
+"1983954 HACR",
+"S-44166 Alabama Licensing Board for Ge",
+"2002149 HACR"
+]
+},
+{
+"n": "Fresh Air HVAC, LLC",
+"addr": "1800 Hill Ave",
+"city": "Hueytown",
+"zip": "35023",
+"phone": "(205) 552-8542",
+"rating": "A+",
+"acc": true,
+"started": "2012",
+"mgmt": "Taylor Hudson, Owner/Manager",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "freshairhvac.co",
+"lic": [
+"2011111 HACR"
+]
+},
+{
+"n": "Aux Home Services",
+"addr": "5925 Johns Rd",
+"city": "Bessemer",
+"zip": "35023",
+"phone": "(205) 979-0946",
+"rating": "A+",
+"acc": true,
+"started": "1989",
+"mgmt": "P J Smitherman, Vice President of Operations",
+"entity": "Corporation",
+"cats": "Plumbing, Electrical",
+"complaints": "1",
+"web": "auxmechanical.com",
+"lic": [
+"91128 HACR",
+"01728 AECB",
+"MPG-1135 PGFB"
+]
+},
+{
+"n": "Irwin HVAC Services, LLC",
+"addr": "2345 Moody Pkwy STE 103",
+"city": "Moody",
+"zip": "35004",
+"phone": "(205) 702-6103",
+"rating": "A+",
+"acc": true,
+"started": "2013",
+"mgmt": "Jeremy Irwin, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "facebook.com",
+"lic": [
+"2003204 HACR"
+],
+"other_offices": [
+"Riverside"
+]
+},
+{
+"n": "Campbell Air Conditioning, LLC",
+"addr": "118 Lowland Ln Unit D",
+"city": "Trussville",
+"zip": "35173",
+"phone": "(205) 427-7390",
+"rating": "A+",
+"acc": true,
+"started": "2019",
+"mgmt": "Bryan Campbell, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "campbell-hvac.com",
+"lic": [
+"2019157 HACR"
+],
+"other_offices": [
+"Moody"
+]
+},
+{
+"n": "Childers Heating & Cooling",
+"city": "Alabaster",
+"zip": "35007",
+"phone": "(205) 663-5287",
+"rating": "A+",
+"acc": true,
+"started": "1996",
+"mgmt": "Laurie Duncan, Owner",
+"entity": "Sole Proprietorship",
+"cats": "Residential",
+"complaints": "0",
+"web": "childersheatingandcooling.com",
+"lic": [
+"201606 HACR"
+]
+},
+{
+"n": "COMPLETE SERVICE HEATING & COOLING, LLC",
+"city": "Odenville",
+"zip": "35120",
+"phone": "(205) 276-6113",
+"rating": "A-",
+"acc": true,
+"started": "2024",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "1",
+"web": "facebook.com",
+"lic": [
+"2025019 HACR"
+]
+},
+{
+"n": "B Kool Heating & Air, LLC",
+"addr": "105 3rd St E",
+"city": "Warrior",
+"zip": "35180",
+"phone": "(205) 446-5354",
+"rating": "A-",
+"acc": true,
+"started": "2026",
+"mgmt": "Blake Ryan Knight, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "facebook.com",
+"lic": [
+"2026171 HACR"
+]
+},
+{
+"n": "Setpoint Heating and Cooling, Inc.",
+"addr": "888 Chaley Springs Rd",
+"city": "Warrior",
+"zip": "35180",
+"phone": "(205) 601-2158",
+"rating": "A+",
+"acc": true,
+"started": "2015",
+"mgmt": "Nathan Ellison, Owner",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "0",
+"web": "setpointair.com",
+"lic": [
+"15113 HACR"
+]
+},
+{
+"n": "Carden Heating & Cooling, Inc.",
+"addr": "1152 Highway 31",
+"city": "Calera",
+"zip": "35040",
+"phone": "(205) 669-2459",
+"rating": "A+",
+"acc": true,
+"started": "2005",
+"mgmt": "Simon Carden, Owner",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "1",
+"web": "cardenhvac.com",
+"lic": [
+"2000216 HACR"
+],
+"other_offices": [
+"Columbiana"
+]
+},
+{
+"n": "Argo Air Inc. Heating & Cooling",
+"addr": "2160 Levine Rd",
+"city": "Odenville",
+"zip": "35120",
+"phone": "(205) 629-7180",
+"rating": "A+",
+"acc": true,
+"started": "1992",
+"mgmt": "Tiffany Albani, Office Manager",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "0",
+"web": "argoairinc.com",
+"lic": [
+"93104 HACR",
+"MPG-3128 PGFB"
+]
+},
+{
+"n": "L & M Heating & Air Conditioning, Inc.",
+"addr": "22337 Diesel Dr",
+"city": "Mc Calla",
+"zip": "35111",
+"phone": "(205) 477-2121",
+"rating": "A+",
+"acc": true,
+"started": "1977",
+"mgmt": "Chris Horton, President",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "0",
+"web": "landmhvac.com",
+"lic": [
+"92271 HACR",
+"MG-1141 PGFB"
+]
+},
+{
+"n": "Pro Services, LLC",
+"addr": "22311 Diesel Dr",
+"city": "McCalla",
+"zip": "35111",
+"phone": "(205) 424-4664",
+"rating": "A+",
+"acc": true,
+"started": "2007",
+"mgmt": "Brandon Bice, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Plumbing",
+"complaints": "0",
+"web": "proservicesplumbingandair.com",
+"lic": [
+"1999160 HACR",
+"MPG-0604 PGFB",
+"07077 AECB"
+]
+},
+{
+"n": "Watts HVAC Services LLC",
+"city": "Empire",
+"zip": "35063",
+"phone": "(205) 514-2010",
+"rating": "A+",
+"acc": true,
+"started": "2019",
+"mgmt": "Shane Watts, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Commercial, Residential",
+"complaints": "0",
+"web": "wattshvacservices.com",
+"lic": [
+"2016159 HACR"
+]
+},
+{
+"n": "Blankenship Heating & Cooling, LLC",
+"city": "Columbiana",
+"zip": "35051",
+"phone": "(205) 864-3041",
+"rating": "A+"
+},
+{
+"n": "Oasis Air, LLC",
+"city": "Cordova",
+"zip": "35550",
+"phone": "(205) 704-5169",
+"rating": "A+",
+"acc": true,
+"started": "2021",
+"mgmt": "Chris Romine, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"lic": [
+"2021109 HACR"
+]
+},
+{
+"n": "Parker Brothers Heating & Air, LLC",
+"city": "Montevallo",
+"zip": "35115",
+"phone": "(205) 283-9104",
+"rating": "A+",
+"acc": true,
+"started": "2011",
+"mgmt": "Jon Parker, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "facebook.com",
+"lic": [
+"2002104 HACR"
+]
+},
+{
+"n": "Flowtech",
+"addr": "387 Wild Life Ln",
+"city": "Cordova",
+"zip": "35550",
+"phone": "(205) 542-5255",
+"rating": "A+",
+"acc": true,
+"started": "2009",
+"mgmt": "Tim Perkins, Owner",
+"entity": "Sole Proprietorship",
+"cats": "Commercial, Plumbing",
+"complaints": "0",
+"web": "facebook.com",
+"lic": [
+"99236 HACR",
+"MP-1037 PGFB"
+]
+},
+{
+"n": "Renewed Solutions HVAC",
+"city": "Calera",
+"zip": "35040",
+"phone": "(205) 382-6865",
+"rating": "A",
+"acc": true,
+"started": "2024",
+"mgmt": "Joseph A Alcala, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Commercial, Residential",
+"complaints": "0",
+"web": "renewedsolutionshvac.com",
+"lic": [
+"2022217 HACR"
+]
+},
+{
+"n": "Active Air, Inc.",
+"addr": "1060 10th St",
+"city": "Calera",
+"zip": "35040",
+"phone": "(205) 668-6220",
+"rating": "A+",
+"acc": true,
+"started": "1999",
+"mgmt": "Brian Paschal, President",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "0",
+"web": "activeaircalera.com",
+"lic": [
+"97194 HACR",
+"S-43625 Alabama Licensing Board for Ge"
+]
+},
+{
+"n": "Pro Call, LLC",
+"city": "Calera",
+"zip": "35040",
+"phone": "(205) 365-2058",
+"rating": "A+",
+"acc": true,
+"started": "2002",
+"mgmt": "Michael Cornett, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Electrical, Residential",
+"lic": [
+"01129 HACR",
+"03469 AECB"
+]
+},
+{
+"n": "Pro Call, LLC",
+"addr": "3824 Highway 86",
+"city": "Calera",
+"zip": "35040",
+"phone": "(205) 944-0111",
+"rating": "A+",
+"acc": true,
+"started": "2002",
+"mgmt": "Michael Cornett, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Electrical, Residential",
+"complaints": "0",
+"lic": [
+"01129 HACR",
+"03469 AECB"
+]
+},
+{
+"n": "R & D Heating & Air LLC",
+"city": "Pell City",
+"zip": "35125",
+"phone": "(205) 999-5877",
+"rating": "A+",
+"acc": true,
+"started": "2020",
+"mgmt": "Ron Dollar, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "rdheatingandair.com",
+"lic": [
+"2020001 HACR"
+]
+},
+{
+"n": "Allen Service Company, Inc",
+"addr": "1711 1st Ave S",
+"city": "Pell City",
+"zip": "35125",
+"phone": "(205) 338-2311",
+"rating": "A+",
+"acc": true,
+"started": "1979",
+"mgmt": "Brian Allen, Vice President",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "0",
+"web": "allenservicecompany.com",
+"lic": [
+"2005036 HACR"
+]
+},
+{
+"n": "Sleeping Giant Heating & Cooling Inc",
+"addr": "60 Faye S Perry Dr",
+"city": "Childersburg",
+"zip": "35044",
+"phone": "(256) 378-6556",
+"rating": "A+",
+"acc": true,
+"started": "1963",
+"mgmt": "Danny Butler, Owner",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "0",
+"web": "sleepinggiantmech.com",
+"lic": [
+"01346 HACR",
+"2020048 HACR"
+]
+},
+{
+"n": "Nelson Heating and Air Conditioning, Inc.",
+"addr": "26601 Highway 5",
+"city": "Woodstock",
+"zip": "35188",
+"phone": "(205) 938-9555",
+"rating": "A+",
+"acc": true,
+"started": "1986",
+"mgmt": "Melvin Nelson, President/Owner",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "0",
+"lic": [
+"83578 HACR",
+"MG-0614 PGFB"
+]
+},
+{
+"n": "Jordan Services, LLC",
+"city": "Brookwood",
+"zip": "35444",
+"phone": "(205) 242-9432",
+"rating": "A+",
+"acc": true,
+"started": "2016",
+"mgmt": "Michael Shane Jordan, Owner",
+"entity": "Limited Liability Company (LLC)",
+"complaints": "0",
+"web": "jordanserviceshvac.com",
+"lic": [
+"2016086 HACR"
+]
+},
+{
+"n": "Weekend Warrior Heating & Air, Inc.",
+"addr": "197 Arkadelphia Rd",
+"city": "Jasper",
+"zip": "35504",
+"phone": "(205) 436-4444",
+"rating": "A+",
+"acc": true,
+"started": "2004",
+"mgmt": "Leslie Boyd, President",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "0",
+"lic": [
+"2009086 HACR",
+"2001342 HACR",
+"MG-1713 PGFB"
+]
+},
+{
+"n": "HVAC Outfitters LLC",
+"city": "Brookwood",
+"zip": "35444",
+"phone": "(205) 344-0178",
+"rating": "A+",
+"acc": true,
+"started": "2022",
+"mgmt": "Terry Jarvis, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "hvacoutfitters.com",
+"lic": [
+"22303 HACR"
+]
+},
+{
+"n": "Moss Heating And Cooling, LLC",
+"city": "Ashville",
+"zip": "35953",
+"phone": "(205) 362-6574",
+"rating": "A+",
+"acc": true,
+"started": "2021",
+"mgmt": "EJ Moss, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "mossheatingandcoolingllc.com",
+"lic": [
+"2021229 HACR"
+]
+},
+{
+"n": "AMJ Mechanical, LLC",
+"addr": "5007 County Road 33",
+"city": "Ashville",
+"zip": "35953",
+"phone": "(205) 702-6115",
+"rating": "A+",
+"acc": true,
+"started": "2021",
+"mgmt": "Martin Jones, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "amjmech.com",
+"lic": [
+"11025 HACR"
+]
+},
+{
+"n": "Essential Heating and Cooling, LLC",
+"city": "Talladega",
+"zip": "35160",
+"phone": "(205) 276-4191",
+"rating": "A+",
+"acc": true,
+"started": "2021",
+"mgmt": "Austin Sellers, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "essentialhvacllc.com",
+"lic": [
+"22103 HACR"
+]
+},
+{
+"n": "Freeman Service Company, Inc.",
+"addr": "30 Champion Ln",
+"city": "Lincoln",
+"zip": "35096",
+"phone": "(205) 763-8110",
+"rating": "A+",
+"acc": true,
+"started": "1998",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "0",
+"lic": [
+"99020 HACR",
+"02520 AECB"
+]
+},
+{
+"n": "St. Clair HVAC Services, LLC",
+"addr": "70 Christopher St",
+"city": "Steele",
+"zip": "35987",
+"phone": "(205) 903-2879",
+"rating": "A+",
+"acc": true,
+"started": "2018",
+"mgmt": "Jonathan Walker, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "stclairhvacservices.com",
+"lic": [
+"04038 HACR"
+]
+},
+{
+"n": "Thomas Service Company",
+"addr": "8210 Stephanie Dr SW Ste J",
+"city": "Huntsville",
+"zip": "35802",
+"phone": "(256) 858-4822",
+"rating": "A+",
+"acc": true,
+"started": "2007",
+"mgmt": "Billy Thomas, Owner",
+"entity": "Corporation",
+"emp": 32,
+"cats": "Residential",
+"complaints": "1",
+"web": "wearethomas.com",
+"other_offices": [
+"Hanceville",
+"Meridianville"
+]
+},
+{
+"n": "Alabama Cooling And Heating",
+"city": "Talladega",
+"zip": "35160",
+"phone": "(256) 268-4328",
+"rating": "A+",
+"acc": true,
+"started": "1992",
+"mgmt": "Teri Hall, Office Manager",
+"entity": "Corporation",
+"emp": 4,
+"cats": "Residential",
+"complaints": "1",
+"web": "alabamacoolingandheating.com"
+},
+{
+"n": "Superior Heating & Cooling",
+"addr": "127 Montevallo Rd",
+"city": "Centreville",
+"zip": "35042",
+"phone": "(205) 926-5037",
+"rating": "A+",
+"acc": true,
+"started": "2006",
+"mgmt": "John Miller, Owner",
+"entity": "Sole Proprietorship",
+"complaints": "0",
+"web": "superiorheatingandcooling.net",
+"lic": [
+"1994162 HACR"
+]
+},
+{
+"n": "Dye Service",
+"addr": "2149 2nd Ave SW",
+"city": "Cullman",
+"zip": "35055",
+"phone": "(256) 338-9744",
+"rating": "A+",
+"acc": true,
+"started": "2004",
+"mgmt": "Barton Dye, Co-Owner",
+"entity": "Partnership",
+"cats": "Residential",
+"complaints": "0",
+"web": "dyehvac.com",
+"lic": [
+"MG-0082 PGFB"
+]
+},
+{
+"n": "Bob's Heating & Cooling, Inc.",
+"addr": "19306 Highway 18 E",
+"city": "Berry",
+"zip": "35546",
+"phone": "(205) 689-4772",
+"rating": "A+",
+"acc": true,
+"started": "1985",
+"mgmt": "Rebecca K. Parker, Owner",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "0",
+"lic": [
+"2007027 HACR"
+]
+},
+{
+"n": "Christian and Son LLC Heating and Cooling",
+"addr": "789 County Road 437",
+"city": "Cullman",
+"zip": "35055",
+"phone": "(256) 262-3078",
+"rating": "A+",
+"acc": true,
+"started": "2010",
+"mgmt": "Joshua Christian, General Partner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "1",
+"web": "christianandsonllc.com"
+},
+{
+"n": "Bama Air Systems Mechanical Contractors, Inc.",
+"addr": "78 Lindsey Rd",
+"city": "Cullman",
+"zip": "35055",
+"phone": "(256) 734-4181",
+"rating": "A+",
+"acc": true,
+"started": "1989",
+"mgmt": "Alan Cofer, Owner",
+"entity": "Corporation",
+"complaints": "0",
+"web": "bamaairsystems.com",
+"lic": [
+"MG-0391 PGFB",
+"S-22856 Alabama Licensing Board for Ge"
+]
+},
+{
+"n": "Blocher Company, Inc.",
+"addr": "800 23rd St SW",
+"city": "Cullman",
+"zip": "35055",
+"phone": "(256) 734-8686",
+"rating": "A+",
+"acc": true,
+"started": "1959",
+"mgmt": "Lee Gregory, Vice President",
+"entity": "Corporation",
+"cats": "Plumbing",
+"complaints": "0",
+"web": "facebook.com",
+"lic": [
+"2015090 HACR",
+"3749 Alabama Licensing Board for Ge",
+"MPG-3851 PGFB"
+]
+},
+{
+"n": "G and H Heating & Cooling",
+"addr": "1629 23rd Ave E",
+"city": "Tuscaloosa",
+"zip": "35404",
+"phone": "(205) 553-0353",
+"rating": "A+",
+"acc": true,
+"started": "1997",
+"mgmt": "Patricia Hallman, Office Manager",
+"entity": "Sole Proprietorship",
+"complaints": "0",
+"web": "facebook.com",
+"lic": [
+"95029 HACR"
+]
+},
+{
+"n": "Cullman Heating & Air",
+"addr": "1761 US Highway 278 W",
+"city": "Cullman",
+"zip": "35057",
+"phone": "(256) 747-6050",
+"rating": "A+",
+"acc": true,
+"started": "2021",
+"mgmt": "Lisa Farnsworth, Co Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Commercial, Residential",
+"complaints": "0",
+"web": "cullmanheatingandair.com",
+"lic": [
+"21158 HACR"
+]
+},
+{
+"n": "Cool Temp Services",
+"city": "Cullman",
+"zip": "35057",
+"phone": "(205) 425-2665",
+"rating": "A+",
+"acc": true,
+"started": "1994",
+"mgmt": "Charles W. Langley, Owner",
+"entity": "Sole Proprietorship",
+"cats": "Residential",
+"complaints": "0",
+"web": "cooltempair.com",
+"lic": [
+"1990030 HACR"
+]
+},
+{
+"n": "B&M Mechanical",
+"addr": "2380 County Road 447",
+"city": "Cullman",
+"zip": "35057",
+"phone": "(256) 338-9501",
+"rating": "A+",
+"acc": true,
+"started": "2001",
+"mgmt": "Barry Camper, President",
+"entity": "Sole Proprietorship",
+"cats": "Commercial, Refrigeration",
+"complaints": "0",
+"web": "bmmechanical.com"
+},
+{
+"n": "KDM Service Corporation",
+"addr": "3721 11th Ave",
+"city": "Tuscaloosa",
+"zip": "35401",
+"phone": "(205) 758-2703",
+"rating": "A+",
+"acc": true,
+"started": "1982",
+"mgmt": "Alvan Durrett, President",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "0",
+"web": "kdmhvac.com",
+"lic": [
+"1999203 HACR",
+"MG-1227 PGFB"
+]
+},
+{
+"n": "Giles Cooling and Heating, Inc.",
+"addr": "603 4th Ave N",
+"city": "Clanton",
+"zip": "35045",
+"phone": "(205) 755-3369",
+"rating": "A+",
+"acc": true,
+"started": "1984",
+"mgmt": "Phillip Giles, President",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "0",
+"web": "gilescoolingandheating.com",
+"lic": [
+"2004067 HACR"
+]
+},
+{
+"n": "High Caliber Mechanical LLC",
+"addr": "1430 AL Highway 157",
+"city": "Cullman",
+"zip": "35058",
+"phone": "(256) 595-2006",
+"rating": "A+",
+"acc": true,
+"started": "2020",
+"mgmt": "Chris Dover, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Refrigeration",
+"complaints": "0",
+"web": "highcalibermechanical.com"
+},
+{
+"n": "Larkin Smith Heating, Cooling & Refrigeration",
+"addr": "2221 2nd Ave NW",
+"city": "Cullman",
+"zip": "35058",
+"phone": "(256) 737-5150",
+"rating": "A+",
+"acc": true,
+"started": "2007",
+"mgmt": "Destry Heath Smith, Owner",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "0",
+"web": "facebook.com",
+"lic": [
+"Refrigeration-51772 HACR",
+"APP-42823 PGFB"
+]
+},
+{
+"n": "Southern Heating & Cooling, LLC",
+"addr": "24680 Highway 82",
+"city": "Gordo",
+"zip": "35466",
+"phone": "(205) 364-6113",
+"rating": "A+",
+"acc": true,
+"started": "1985",
+"mgmt": "Timothy Skinner, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "southernheatingllc.com",
+"lic": [
+"2011158 HACR"
+],
+"other_offices": [
+"Northport"
+]
+},
+{
+"n": "Davis Service Company",
+"addr": "422 Sandbrook Ln",
+"city": "Tuscaloosa",
+"zip": "35405",
+"phone": "(205) 454-1321",
+"rating": "A+",
+"acc": true,
+"started": "2019",
+"mgmt": "Stanley Davis, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "facebook.com",
+"lic": [
+"2015201 Alabama Home Builders Licensur"
+]
+},
+{
+"n": "All American HVAC Services, LLC",
+"addr": "102 Royal Troon Dr",
+"city": "Rainbow City",
+"zip": "35906",
+"phone": "(256) 364-9231",
+"rating": "A+",
+"acc": true,
+"started": "2020",
+"mgmt": "Michael Whitley, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "allamericanhvacs.com",
+"lic": [
+"2020105 HACR",
+"53463 HACR"
+]
+},
+{
+"n": "Graf's Tin Shop, Inc.",
+"addr": "1500 Al Highway 157",
+"city": "Cullman",
+"zip": "35058",
+"phone": "(256) 734-3672",
+"rating": "A+",
+"acc": true,
+"started": "1986",
+"mgmt": "April Ray, President/Secretary",
+"entity": "Corporation",
+"complaints": "0",
+"web": "grafstinshop.com",
+"lic": [
+"APP-8428 PGFB"
+]
+},
+{
+"n": "Richard Electric Company, Inc.",
+"addr": "4138 Al Highway 157",
+"city": "Cullman",
+"zip": "35058",
+"phone": "(256) 600-0616",
+"rating": "A+",
+"acc": true,
+"started": "1949",
+"mgmt": "Barrett Richard, Owner/Manager",
+"entity": "Corporation",
+"cats": "Electrical, Residential",
+"complaints": "1",
+"web": "richardelectric.net",
+"lic": [
+"HVAC2007061 HACR",
+"05256 AECB"
+]
+},
+{
+"n": "Temp Doc Cooling + Heating Solutions, LLC",
+"addr": "4200 McFarland Blvd # 1284",
+"city": "Northport",
+"zip": "35476",
+"phone": "(205) 792-0514",
+"rating": "A+",
+"acc": true,
+"started": "2017",
+"mgmt": "Matthew Summerford, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "tempdocsolution.com",
+"lic": [
+"16015 HACR",
+"53176 HACR"
+]
+},
+{
+"n": "Turner & Schoel, Inc.",
+"addr": "1700 Harper Rd",
+"city": "Northport",
+"zip": "35476",
+"phone": "(205) 409-3255",
+"rating": "A+",
+"acc": true,
+"started": "1915",
+"mgmt": "Jarett Hall, Vice President of Administration",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "1",
+"web": "turnerandschoel.com",
+"lic": [
+"1994027 HACR",
+"51688 HACR"
+]
+},
+{
+"n": "Gregg Service Co., Inc.",
+"city": "Northport",
+"zip": "35476",
+"phone": "(205) 758-6042",
+"rating": "A+",
+"acc": true,
+"started": "1971",
+"mgmt": "Mary Gregg, President/Owner",
+"entity": "Corporation",
+"complaints": "0",
+"lic": [
+"1991089 HACR",
+"MG-0138 PGFB"
+]
+},
+{
+"n": "Just Right Heating And Cooling LLC",
+"addr": "2195 9th Ave",
+"city": "Northport",
+"zip": "35476",
+"phone": "(205) 469-9747",
+"rating": "A+",
+"acc": true,
+"started": "2013",
+"mgmt": "Suresh Singh, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "2",
+"lic": [
+"2013103 HACR"
+]
+},
+{
+"n": "Budget Heating And Cooling",
+"addr": "2178 Jolley Dr",
+"city": "Horton",
+"zip": "35980",
+"phone": "(256) 840-5015",
+"rating": "A+",
+"acc": true,
+"started": "2005",
+"mgmt": "Lamar Jackson, Owner",
+"entity": "Sole Proprietorship",
+"complaints": "0",
+"lic": [
+"MG-0801 PGFB"
+]
+},
+{
+"n": "Advance Mobile Home Heating & Air Conditioning, Inc.",
+"addr": "1469 Lakemont Dr S",
+"city": "Southside",
+"zip": "35907",
+"phone": "(256) 413-0749",
+"rating": "A+",
+"acc": true,
+"started": "1997",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "0",
+"lic": [
+"98062 HACR"
+]
+},
+{
+"n": "Bolton Service Company, Inc.",
+"city": "Anniston",
+"zip": "36201",
+"phone": "(256) 236-8330",
+"rating": "A+",
+"acc": true,
+"started": "1973",
+"mgmt": "Gayla Holman, Secretary/Treasurer",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "0",
+"web": "facebook.com",
+"lic": [
+"2001020 HACR"
+],
+"other_offices": [
+"Oxford"
+]
+},
+{
+"n": "Air Medic, LLC",
+"addr": "201 S Noble St",
+"city": "Anniston",
+"zip": "36201",
+"phone": "(256) 365-1526",
+"rating": "A+",
+"acc": true,
+"started": "2005",
+"mgmt": "Shawn Movitz, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "facebook.com",
+"lic": [
+"05125 HACR"
+]
+},
+{
+"n": "Banks Quarles Plumbing, Heating, Cooling & Electrical",
+"addr": "2501 17th St",
+"city": "Tuscaloosa",
+"zip": "35401",
+"phone": "(205) 758-2627",
+"rating": "A+",
+"acc": true,
+"started": "1920",
+"mgmt": "Phil Smitherman, Owner",
+"entity": "Corporation",
+"cats": "Plumbing, Electrical, Residential",
+"complaints": "3",
+"web": "banksquarles.com",
+"lic": [
+"2008318 HACR",
+"02168 AECB",
+"MP-0648 PGFB"
+]
+},
+{
+"n": "A Better Service Company, LLC",
+"addr": "9020 Sanders Ferry Rd",
+"city": "Tuscaloosa",
+"zip": "35401",
+"phone": "(205) 366-9377",
+"rating": "A+",
+"acc": true,
+"started": "2000",
+"mgmt": "Linda Crowder, Partner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "abetterserviceco.com",
+"lic": [
+"2009149 HACR"
+]
+},
+{
+"n": "Valley Heating & Cooling",
+"addr": "521 Post Oak Rd",
+"city": "Alexandria",
+"zip": "36250",
+"phone": "(256) 820-3369",
+"rating": "A+",
+"acc": true,
+"started": "1977",
+"mgmt": "Christopher Davenport, President",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "valleyhtgandcool.com",
+"lic": [
+"08213 HACR"
+]
+},
+{
+"n": "A & M Heating & Cooling",
+"city": "Vinemont",
+"zip": "35179",
+"phone": "(256) 595-3493",
+"rating": "A+",
+"acc": true,
+"started": "2017",
+"mgmt": "Adam Farr, Owner",
+"entity": "Sole Proprietorship",
+"complaints": "0",
+"web": "facebook.com",
+"lic": [
+"2017031 HACR"
+]
+},
+{
+"n": "Honesty Heating And Cooling",
+"city": "Oxford",
+"zip": "36203",
+"phone": "(256) 201-1955",
+"rating": "A",
+"acc": true,
+"started": "2025",
+"mgmt": "Reid Rollins, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"lic": [
+"2025089 HACR"
+]
+},
+{
+"n": "Silas Heating & Cooling LLC",
+"city": "Horton",
+"zip": "35980",
+"phone": "(256) 572-9630",
+"rating": "A+",
+"acc": true,
+"started": "2022",
+"mgmt": "Steven Silas, Owner",
+"entity": "Limited Liability Company (LLC)",
+"emp": 1,
+"cats": "Electrical",
+"complaints": "0",
+"web": "silashvac.com"
+},
+{
+"n": "M & M Air Conditioning & Refrigeration",
+"addr": "7423 US Highway 431",
+"city": "Boaz",
+"zip": "35957",
+"phone": "(256) 281-6700",
+"rating": "A+",
+"acc": true,
+"started": "2011",
+"mgmt": "Eric McGee, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Commercial, Residential",
+"complaints": "0",
+"web": "mmacr.com"
+},
+{
+"n": "Slusmeyer Service Company, LLC",
+"addr": "403 Quarry Rd",
+"city": "Glencoe",
+"zip": "35905",
+"phone": "(256) 490-7552",
+"rating": "A+",
+"acc": true,
+"started": "2000",
+"mgmt": "Jimmy Slusmeyer, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Commercial, Residential",
+"complaints": "0",
+"web": "slusmeyerservicecompany.com",
+"lic": [
+"2009175 HACR"
+]
+},
+{
+"n": "Hadley Quality Heating & Air",
+"city": "Joppa",
+"zip": "35087",
+"phone": "(256) 796-6912",
+"rating": "A+",
+"acc": true,
+"started": "2023",
+"mgmt": "Scott Hadley, Co-Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"lic": [
+"2018038 HACR"
+]
+},
+{
+"n": "Arab Sheet Metal Heating & Cooling",
+"addr": "692 S Brindlee Mountain Pkwy",
+"city": "Arab",
+"zip": "35016",
+"phone": "(256) 586-4000",
+"rating": "A+",
+"acc": true,
+"started": "1968",
+"mgmt": "James Todd Isom, President",
+"entity": "Limited Liability Company (LLC)",
+"emp": 5,
+"complaints": "0",
+"web": "arabsheetmetal.com"
+},
+{
+"n": "One Team Heating and Cooling LLC",
+"city": "Guntersville",
+"zip": "35976",
+"phone": "(256) 660-0950",
+"rating": "A+",
+"acc": true,
+"started": "2023",
+"mgmt": "Donald Abbott, Owner",
+"entity": "Limited Liability Company (LLC)",
+"complaints": "0",
+"web": "oneteamhvac.com",
+"lic": [
+"2023098 HACR"
+],
+"other_offices": [
+"Albertville"
+]
+},
+{
+"n": "Prestige Home Solutions, LLC",
+"city": "Gadsden",
+"zip": "35903",
+"phone": "(256) 478-4167",
+"rating": "A",
+"acc": true,
+"started": "2024",
+"mgmt": "Timothy M Black, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"lic": [
+"2024181 HACR"
+]
+},
+{
+"n": "Mr. Refrigeration, Inc.",
+"addr": "1410 Pelham Rd S",
+"city": "Jacksonville",
+"zip": "36265",
+"phone": "(256) 435-1904",
+"rating": "A+",
+"acc": true,
+"started": "1983",
+"mgmt": "Mandy Brittain, Owner",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "0",
+"web": "mrrefrigerationinc.com",
+"lic": [
+"01192 HACR",
+"98179 HACR",
+"52379 HACR"
+]
+},
+{
+"n": "Toad's Heating & Air",
+"addr": "11382 US Highway 411",
+"city": "Gadsden",
+"zip": "35901",
+"phone": "(256) 547-5622",
+"rating": "A+",
+"acc": true,
+"started": "2006",
+"mgmt": "Todd Leigh Ozment, Owner",
+"entity": "Sole Proprietorship",
+"cats": "Residential",
+"complaints": "0",
+"lic": [
+"2006007 HACR"
+]
+},
+{
+"n": "Dependable Air",
+"city": "Alexander City",
+"zip": "35010",
+"phone": "(256) 794-9313",
+"rating": "A",
+"acc": true,
+"started": "2024",
+"mgmt": "Adrian Swanger, Owner",
+"entity": "Limited Liability Company (LLC)",
+"emp": 1,
+"cats": "Residential",
+"complaints": "0",
+"web": "dependableairllc.com"
+},
+{
+"n": "Cranford Jr. HVAC, LLC",
+"addr": "2016 McCluney St",
+"city": "Gadsden",
+"zip": "35903",
+"phone": "(256) 504-8794",
+"rating": "A+",
+"acc": true,
+"started": "1993",
+"mgmt": "Eric Cranford Jr., Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "facebook.com",
+"lic": [
+"12035 HACR"
+]
+},
+{
+"n": "Jenkins Service LLC",
+"city": "Hartselle",
+"zip": "35640",
+"phone": "(256) 345-0669",
+"rating": "A+",
+"acc": true,
+"started": "2009",
+"mgmt": "Eddie Jenkins, Owner",
+"entity": "Sole Proprietorship",
+"complaints": "0",
+"web": "hvaccontractordecatural.com"
+},
+{
+"n": "Essential Comfort",
+"city": "Hartselle",
+"zip": "35640",
+"phone": "(256) 522-8205",
+"rating": "A+",
+"acc": true,
+"started": "2023",
+"mgmt": "Richard Hollis Chandler, Owner/Tech",
+"entity": "Limited Liability Company (LLC)",
+"complaints": "0",
+"web": "essentialcomfortal.com",
+"lic": [
+"2018108 HACR"
+]
+},
+{
+"n": "Tolbert's Heating & Cooling, LLC",
+"city": "Hartselle",
+"zip": "35640",
+"phone": "(256) 606-5779",
+"rating": "A+",
+"acc": true,
+"started": "2001",
+"mgmt": "Ricky Tolbert, Owner",
+"entity": "Limited Liability Company (LLC)",
+"complaints": "0",
+"web": "tolbertsheatingandcooling.com"
+},
+{
+"n": "Champion Air Systems, LLC",
+"city": "Hartselle",
+"zip": "35640",
+"phone": "(256) 309-7683",
+"rating": "A+",
+"acc": true,
+"started": "2013",
+"mgmt": "David Champion, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "facebook.com",
+"lic": [
+"HVAC-2013136 HACR"
+]
+},
+{
+"n": "4 Seasons Heating & Cooling LLC",
+"addr": "1765 Highway 67 S",
+"city": "Somerville",
+"zip": "35670",
+"phone": "(256) 221-3048",
+"rating": "A+",
+"acc": true,
+"started": "1997",
+"mgmt": "Johnny Childers, Owner",
+"entity": "Sole Proprietorship",
+"cats": "Commercial",
+"complaints": "0",
+"web": "yahoo.com",
+"lic": [
+"1997108 HACR"
+]
+},
+{
+"n": "Rossair Heating & Cooling",
+"city": "Somerville",
+"zip": "35670",
+"phone": "(256) 880-9552",
+"rating": "A+",
+"acc": true,
+"started": "1994",
+"mgmt": "Robert Ross, Owner",
+"entity": "Sole Proprietorship",
+"complaints": "0",
+"web": "rossair-hvac.com"
+},
+{
+"n": "Legacy Heating and Cooling, Inc.",
+"addr": "122 Industrial Park Blvd",
+"city": "Gordo",
+"zip": "35466",
+"phone": "(205) 364-1044",
+"rating": "A+",
+"acc": true,
+"started": "2008",
+"mgmt": "Patrick Phillips, Co-Owner",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "0",
+"web": "legacyhvac.net",
+"lic": [
+"08062 HACR"
+]
+},
+{
+"n": "Corbin's Air, Water, & Power Solutions, Inc",
+"addr": "21800 Us Highway 431",
+"city": "Guntersville",
+"zip": "35976",
+"phone": "(256) 582-1000",
+"rating": "A+",
+"acc": true,
+"started": "1945",
+"mgmt": "Brad Corbin, Owner",
+"entity": "Corporation",
+"complaints": "0",
+"web": "corbinshvac.com",
+"lic": [
+"MPG-0847 PGFB",
+"01046 AECB"
+],
+"other_offices": [
+"Huntsville"
+]
+},
+{
+"n": "HIT Air, LLC",
+"addr": "6301 Holtville Rd",
+"city": "Wetumpka",
+"zip": "36092",
+"phone": "(334) 301-2570",
+"rating": "A",
+"acc": true,
+"started": "2024",
+"mgmt": "Ryan Searcy, CEO/Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "hitairal.com",
+"lic": [
+"2024254 HACR"
+]
+},
+{
+"n": "Smith Heating & Air Conditioning, LLC",
+"addr": "2059 County Road 57",
+"city": "Prattville",
+"zip": "36067",
+"phone": "(334) 365-9226",
+"rating": "A+",
+"acc": true,
+"started": "1993",
+"mgmt": "Richard W. Smith, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "smithheatac.net",
+"lic": [
+"93178 HACR"
+]
+},
+{
+"n": "Precision Air Conditioning & Heating, Inc.",
+"addr": "1849 Highway 31 N",
+"city": "Prattville",
+"zip": "36067",
+"phone": "(334) 361-6550",
+"rating": "A+",
+"acc": true,
+"started": "1993",
+"mgmt": "David Chatman, President",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "0",
+"web": "precisionacandheat.com",
+"lic": [
+"87168 HACR",
+"MG-1761 PGFB"
+]
+},
+{
+"n": "Allen's Heating & Cooling",
+"addr": "7421 US 231",
+"city": "Wetumpka",
+"zip": "36092",
+"phone": "(334) 301-0432",
+"rating": "A+",
+"acc": true,
+"started": "2006",
+"mgmt": "Heath Allen, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"web": "allensheatingandcoolingal.com",
+"lic": [
+"2005089 HACR"
+]
+},
+{
+"n": "Comfort Control, Inc.",
+"addr": "1071 Highway 231",
+"city": "Laceys Spring",
+"zip": "35754",
+"phone": "(256) 881-2848",
+"rating": "A+",
+"acc": true,
+"started": "1993",
+"mgmt": "Kristen Bryan, Administrative Manager",
+"entity": "Corporation",
+"cats": "Commercial, Residential",
+"complaints": "0",
+"web": "comfortcontrolal.com",
+"lic": [
+"HVAC-1995158 HACR",
+"MPG-3972 PGFB"
+]
+},
+{
+"n": "Bain Heating & Air Conditioning, Inc.",
+"addr": "1084 County Road 204",
+"city": "Heflin",
+"zip": "36264",
+"phone": "(256) 363-2448",
+"rating": "A+",
+"acc": true,
+"started": "1974",
+"mgmt": "James R. Bain, President",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "0",
+"web": "bainheatingandac.com",
+"lic": [
+"2012072 HACR"
+]
+},
+{
+"n": "Fancher Fabrications, Inc.",
+"city": "Valley Grande",
+"zip": "36701",
+"phone": "(334) 874-6969",
+"rating": "A+",
+"acc": true,
+"started": "1999",
+"mgmt": "Melinda Fancher, President",
+"entity": "Corporation",
+"complaints": "0",
+"lic": [
+"2014102 HACR",
+"S-44929 Alabama Licensing Board for Ge"
+]
+},
+{
+"n": "Brewer's Heating & Air Conditioning",
+"addr": "671 Main St",
+"city": "Moulton",
+"zip": "35650",
+"phone": "(256) 974-9204",
+"rating": "A+",
+"acc": true,
+"started": "1977",
+"mgmt": "Norman Brewer, President",
+"entity": "Corporation",
+"complaints": "0",
+"lic": [
+"MPG-1440 PGFB"
+]
+},
+{
+"n": "Jackson Plumbing, Heating & Cooling, Electrical & Septic",
+"addr": "4504 Us Highway 31 S",
+"city": "Decatur",
+"zip": "35603",
+"phone": "(256) 973-9042",
+"rating": "A+",
+"acc": true,
+"started": "1987",
+"mgmt": "Kristy Sharp, Operations Manager",
+"entity": "Corporation",
+"emp": 43,
+"cats": "Plumbing, Electrical",
+"complaints": "0",
+"web": "jacksonplumbingheatingandcooling.com"
+},
+{
+"n": "Complete Care HVAC Service, Inc.",
+"addr": "133 Mill Rd SW",
+"city": "Decatur",
+"zip": "35603",
+"phone": "(256) 350-2332",
+"rating": "A+",
+"acc": true,
+"started": "2007",
+"mgmt": "James E Norsworthy , Jr, Owner",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "0",
+"web": "completecarehvacservices.com",
+"lic": [
+"2003071 HACR",
+"S-45777 Alabama Licensing Board for Ge",
+"23229 Alabama Home Builders Licensur",
+"50203 HACR"
+]
+},
+{
+"n": "Billy Don's Air",
+"addr": "5077 Rives Rd",
+"city": "Elmore",
+"zip": "36025",
+"phone": "(334) 391-1522",
+"rating": "A+",
+"acc": true,
+"started": "2011",
+"mgmt": "Don Armstrong, Owner",
+"entity": "Sole Proprietorship",
+"cats": "Residential",
+"complaints": "0",
+"web": "billydonsair.com"
+},
+{
+"n": "Barrett Heating and Cooling, LLC",
+"addr": "5406 Coosada Parkway",
+"city": "Elmore",
+"zip": "36025",
+"phone": "(334) 365-2011",
+"rating": "A+",
+"acc": true,
+"started": "1978",
+"mgmt": "Jeanette McDonald, Office Manager",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "barrettcooling.com",
+"lic": [
+"1983660 HACR",
+"2015221 HACR"
+]
+},
+{
+"n": "Valley Heating & Cooling",
+"addr": "3422 Hooper Ln SE",
+"city": "Decatur",
+"zip": "35603",
+"phone": "(256) 353-2004",
+"rating": "A+",
+"acc": true,
+"started": "1991",
+"mgmt": "Aaron Umoh, Operations Manager",
+"entity": "Corporation",
+"emp": 47,
+"web": "valleyheatingandcooling.com"
+},
+{
+"n": "Southeastern Mechanical Services, LLC",
+"city": "Decatur",
+"zip": "35602",
+"phone": "(256) 686-3444",
+"rating": "A+",
+"acc": true,
+"started": "2013",
+"mgmt": "Benjamin \"Shane\" Taylor, President",
+"entity": "Limited Liability Company (LLC)",
+"complaints": "0",
+"web": "smshvacr.com"
+},
+{
+"n": "Mid-South HVAC & Refrigeration, LLC",
+"addr": "141 County Road 807",
+"city": "Wedowee",
+"zip": "36274",
+"phone": "(256) 376-1830",
+"rating": "A+",
+"acc": true,
+"started": "2017",
+"mgmt": "Aaron Ford, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "mid-southair.com",
+"lic": [
+"2017056 HACR",
+"53148 HACR"
+]
+},
+{
+"n": "McKinley Co. Heating & Cooling, LLC",
+"city": "Wetumpka",
+"zip": "36092",
+"phone": "(334) 782-0347",
+"rating": "A-",
+"acc": true,
+"started": "2025",
+"mgmt": "Dylan Hammonds, Owner",
+"entity": "Limited Liability Company (LLC)",
+"complaints": "0",
+"lic": [
+"2025301 HACR"
+]
+},
+{
+"n": "Barnes Heating & Cooling, Inc.",
+"city": "Grant",
+"zip": "35747",
+"phone": "(256) 728-4870",
+"rating": "A+",
+"acc": true,
+"started": "1996",
+"mgmt": "Jamie L Barnes, Owner",
+"entity": "Corporation",
+"complaints": "0",
+"web": "facebook.com",
+"lic": [
+"HVAC-1996143 HACR",
+"MG-1720 PGFB"
+]
+},
+{
+"n": "Rocket City Air",
+"city": "New Hope",
+"zip": "35760",
+"phone": "(256) 698-2956",
+"rating": "A+",
+"acc": true,
+"started": "2022",
+"mgmt": "Jacob Williams, Owner",
+"entity": "Limited Liability Company (LLC)",
+"complaints": "1",
+"web": "rocketcityair.net",
+"lic": [
+"2023027 HACR"
+]
+},
+{
+"n": "Good Air Heating and Cooling LLC",
+"city": "Prattville",
+"zip": "36066",
+"phone": "(334) 300-6120",
+"rating": "A",
+"acc": true,
+"started": "2024",
+"mgmt": "Brandon Goodwin, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "facebook.com",
+"lic": [
+"24136 HACR"
+]
+},
+{
+"n": "Prattville Heating and Air LLC",
+"city": "Prattville",
+"zip": "36066",
+"phone": "(334) 546-7170",
+"rating": "A+",
+"acc": true,
+"started": "2016",
+"mgmt": "Shane Cason, Owner",
+"entity": "Limited Liability Company (LLC)",
+"complaints": "0",
+"web": "facebook.com",
+"lic": [
+"2016103 HACR"
+]
+},
+{
+"n": "AirNow Home Services",
+"addr": "3481 Main St",
+"city": "Millbrook",
+"zip": "36054",
+"phone": "(334) 384-6050",
+"rating": "A+",
+"acc": true,
+"started": "1993",
+"mgmt": "Bryna Richter, Brand & Communications Manager",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "3",
+"web": "airnowhvac.com"
+},
+{
+"n": "Lincoln Air",
+"city": "Decatur",
+"zip": "35603",
+"phone": "(256) 466-0978",
+"rating": "A+",
+"acc": true,
+"started": "2014",
+"mgmt": "Jacqueline Hitt, office manager",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"lic": [
+"2011140 HACR"
+]
+},
+{
+"n": "Williams Air Conditioning",
+"addr": "1314 Oak Grove Rd",
+"city": "New Hope",
+"zip": "35760",
+"phone": "(256) 426-9779",
+"rating": "A+",
+"acc": true,
+"started": "2007",
+"mgmt": "Marty Williams, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Commercial, Residential",
+"complaints": "0",
+"web": "williamsair1.com",
+"lic": [
+"HVAC-2007118 HACR",
+"Refrigeration-52457 HACR"
+]
+},
+{
+"n": "Southern Services Heating & Air Conditioning",
+"addr": "1409 Kathy Ln SW Unit 10",
+"city": "Decatur",
+"zip": "35601",
+"phone": "(256) 355-9579",
+"rating": "A+",
+"acc": true,
+"started": "2001",
+"mgmt": "Mike Jetton, Owner",
+"entity": "Sole Proprietorship",
+"complaints": "0",
+"web": "southernservicesheatingandairconditioning.com",
+"lic": [
+"HVAC-2001344 HACR"
+]
+},
+{
+"n": "R & R Refrigeration, Inc.",
+"city": "Dadeville",
+"zip": "36853",
+"phone": "(256) 496-2802",
+"rating": "A+",
+"acc": true,
+"started": "1987",
+"mgmt": "Richard Ray, Owner",
+"entity": "Corporation",
+"cats": "Residential",
+"web": "facebook.com",
+"lic": [
+"92120 HACR",
+"51037 HACR"
+]
+},
+{
+"n": "R & R Refrigeration, Inc.",
+"addr": "644 Way Back Rd",
+"city": "Dadeville",
+"zip": "36853",
+"phone": "(256) 825-4161",
+"rating": "A+",
+"acc": true,
+"started": "1987",
+"mgmt": "Richard Ray, Owner",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "0",
+"web": "facebook.com",
+"lic": [
+"92120 HACR",
+"51037 HACR"
+]
+},
+{
+"n": "W S Electrical & Air Conditioning, Inc.",
+"addr": "1302 Central Pkwy SW",
+"city": "Decatur",
+"zip": "35601",
+"phone": "(256) 355-4792",
+"rating": "A+",
+"acc": true,
+"started": "1975",
+"mgmt": "Jeff P Black, Owner",
+"entity": "Corporation",
+"complaints": "1",
+"web": "wshvac.com",
+"lic": [
+"HVAC-1995194 HACR",
+"19212 Alabama Licensing Board for Ge",
+"MG-1769 PGFB"
+]
+},
+{
+"n": "Cathcart Services, Inc.",
+"addr": "2113 Veterans Dr SE",
+"city": "Decatur",
+"zip": "35601",
+"phone": "(256) 355-9062",
+"rating": "A+",
+"acc": true,
+"started": "1978",
+"mgmt": "Eric Cathcart, Owner",
+"entity": "Corporation",
+"complaints": "0",
+"web": "cathcartserviceinc.com"
+},
+{
+"n": "Chad's AC Direct",
+"addr": "2546 Bell Rd",
+"city": "Montgomery",
+"zip": "36117",
+"phone": "(334) 264-6464",
+"rating": "A+",
+"acc": true,
+"started": "1993",
+"mgmt": "Chad Wiswall, President",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "0",
+"web": "chadsacdirect.com",
+"lic": [
+"92244 HACR"
+],
+"other_offices": [
+"Dadeville"
+]
+},
+{
+"n": "Smirnoff Heating & Cooling LLC",
+"addr": "2426 US Highway 231",
+"city": "Wetumpka",
+"zip": "36093",
+"phone": "(334) 531-0728",
+"rating": "A+",
+"acc": true,
+"started": "2022",
+"mgmt": "Brandan Smirnoff, Owner",
+"entity": "Limited Liability Company (LLC)",
+"emp": 4,
+"complaints": "0",
+"web": "smirnoffhvac.com"
+},
+{
+"n": "Higdon Service Heating, Cooling, Plumbing",
+"addr": "1915 Highway 20",
+"city": "Decatur",
+"zip": "35601",
+"phone": "(256) 351-0904",
+"rating": "A+",
+"acc": true,
+"started": "1988",
+"mgmt": "William \"Kyle\" Gothard, Owner",
+"entity": "Corporation",
+"cats": "Commercial",
+"web": "higdonservice.com",
+"lic": [
+"MPG-4888 PGFB"
+]
+},
+{
+"n": "Standard Air Conditioning",
+"addr": "40 Cabin Rd",
+"city": "Wetumpka",
+"zip": "36093",
+"phone": "(334) 472-5000",
+"rating": "A+",
+"acc": true,
+"started": "2022",
+"mgmt": "John Wesley Burgans, Owner/Partner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Commercial, Residential",
+"complaints": "0",
+"web": "callstandardair.com",
+"lic": [
+"2021186 HACR"
+],
+"other_offices": [
+"Tallassee"
+]
+},
+{
+"n": "Lee Company",
+"addr": "15050 State Hwy 20",
+"city": "Madison",
+"zip": "35756",
+"phone": "(615) 567-1000",
+"rating": "A+",
+"acc": true,
+"started": "1944",
+"mgmt": "Karol Hernandez, Director of Marketing",
+"entity": "Corporation",
+"emp": 1800,
+"cats": "Plumbing, Electrical",
+"web": "leecompany.com"
+},
+{
+"n": "Durham Service Company, Inc.",
+"addr": "160 Christian Rd",
+"city": "Owens X Rds",
+"zip": "35763",
+"phone": "(256) 533-2462",
+"rating": "A+",
+"acc": true,
+"started": "1992",
+"mgmt": "Larry Durham, President",
+"entity": "Corporation",
+"emp": 20,
+"complaints": "0",
+"web": "durhamservice.com"
+},
+{
+"n": "Big Cove Heating & Air Conditioning",
+"addr": "182 L And A Dr SE",
+"city": "Owens X Rds",
+"zip": "35763",
+"phone": "(256) 518-9863",
+"rating": "A+",
+"acc": true,
+"started": "1990",
+"mgmt": "Ronnie Gentle, Owner",
+"entity": "Sole Proprietorship",
+"complaints": "0",
+"web": "bigcovehvac.com",
+"lic": [
+"90057 HACR",
+"MG-0286 PGFB"
+]
+},
+{
+"n": "McCormack Heating & Cooling, Inc.",
+"addr": "3410 8th Ave SW",
+"city": "Huntsville",
+"zip": "35805",
+"phone": "(256) 533-2678",
+"rating": "A+",
+"acc": true,
+"started": "1972",
+"mgmt": "Bobby G. McCormack, President",
+"entity": "Corporation",
+"complaints": "0",
+"web": "mccormackheatingandcooling.com",
+"lic": [
+"HVAC-1983267 HACR",
+"MG-0301 PGFB"
+]
+},
+{
+"n": "Maximum Comfort Heating & Air LLC",
+"addr": "3306 7th Ave SW",
+"city": "Huntsville",
+"zip": "35805",
+"phone": "(256) 539-5222",
+"rating": "A+",
+"acc": true,
+"started": "2006",
+"mgmt": "William J Corum, President",
+"entity": "Limited Liability Company (LLC)",
+"emp": 10,
+"cats": "Residential",
+"complaints": "0",
+"web": "maximumcomfort1.com"
+},
+{
+"n": "ACR Service, Inc.",
+"addr": "3007 10th Ave SW STE B",
+"city": "Huntsville",
+"zip": "35805",
+"phone": "(256) 288-3346",
+"rating": "A+",
+"acc": true,
+"started": "2012",
+"mgmt": "Cindy Goodrum, Co-Owner",
+"entity": "Corporation",
+"cats": "Commercial, Refrigeration, Residential",
+"complaints": "0",
+"web": "acr-service.com"
+},
+{
+"n": "Air Degree",
+"addr": "214 Stokes St NW",
+"city": "Huntsville",
+"zip": "35805",
+"phone": "(256) 479-9777",
+"rating": "A+",
+"acc": true,
+"started": "2018",
+"mgmt": "Lonnie Law, Owner",
+"entity": "Limited Liability Company (LLC)",
+"complaints": "0",
+"web": "airdegreehvac.com",
+"lic": [
+"HVAC-2018080 HACR"
+]
+},
+{
+"n": "North Alabama Heating & A/C",
+"city": "Huntsville",
+"zip": "35805",
+"phone": "(256) 534-2941",
+"rating": "A+",
+"acc": true,
+"started": "1977",
+"mgmt": "Steven Watwood, Owner",
+"entity": "Corporation",
+"cats": "Plumbing",
+"complaints": "0",
+"web": "northalabamahvac.com",
+"lic": [
+"JG-3606 PGFB",
+"2024010 HACR"
+]
+},
+{
+"n": "White and Son Refrigeration",
+"addr": "1797 Sportsman Ln NW",
+"city": "Huntsville",
+"zip": "35816",
+"phone": "(256) 519-6510",
+"rating": "A+",
+"acc": true,
+"started": "2019",
+"mgmt": "Brian White, Owner",
+"entity": "Sole Proprietorship",
+"cats": "Commercial, Refrigeration",
+"complaints": "0",
+"web": "huntsvillealhvaccontractor.com"
+},
+{
+"n": "Jake Marshall Service, Inc.",
+"addr": "700 Washington St NW Ste 6",
+"city": "Huntsville",
+"zip": "35801",
+"phone": "(423) 266-7200",
+"rating": "A+",
+"acc": true,
+"started": "1984",
+"mgmt": "Patrick Curtis",
+"entity": "Corporation",
+"emp": 111,
+"cats": "Commercial",
+"web": "jmservice.com"
+},
+{
+"n": "Alabama Pure Energy Water & Air",
+"addr": "4725 Commercial Dr NW",
+"city": "Huntsville",
+"zip": "35816",
+"phone": "(800) 382-7638",
+"rating": "A+",
+"acc": true,
+"started": "1990",
+"mgmt": "Josh Lightfoot, Chief Operating Officer",
+"entity": "Corporation",
+"emp": 30,
+"cats": "Residential",
+"web": "fla-ewa.com"
+},
+{
+"n": "Air Care Systems",
+"addr": "1316 Putman Dr NW",
+"city": "Huntsville",
+"zip": "35816",
+"phone": "(256) 371-4670",
+"rating": "A+",
+"acc": true,
+"cats": "Residential",
+"web": "aircaresystemsal.com"
+},
+{
+"n": "Annette Hale's Indoor Comfort Systems, Inc.",
+"addr": "1201 Church St NW",
+"city": "Huntsville",
+"zip": "35801",
+"phone": "(256) 885-0430",
+"rating": "A+",
+"acc": true,
+"started": "1998",
+"mgmt": "April Goode, Controller",
+"entity": "Corporation",
+"emp": 53,
+"complaints": "0",
+"web": "indoorcomforthsv.com"
+},
+{
+"n": "Climate WorX Heating & Cooling, LLC",
+"city": "Huntsville",
+"zip": "35811",
+"phone": "(256) 533-3656",
+"rating": "A-",
+"acc": true,
+"started": "2026",
+"mgmt": "Brannon King, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "climateworxhvac.com",
+"lic": [
+"2018157 HACR"
+]
+},
+{
+"n": "A-Plus Comfort, LLC",
+"addr": "8512 Whitesburg Dr SW",
+"city": "Huntsville",
+"zip": "35802",
+"phone": "(256) 585-2550",
+"rating": "A+",
+"acc": true,
+"started": "2014",
+"mgmt": "Kenneth Allred Jr., Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "apluscomfortllc.com"
+},
+{
+"n": "Aire Serv of Huntsville",
+"addr": "3900 Cypressbrook Dr NW, Suite A",
+"city": "Huntsville",
+"zip": "35806",
+"phone": "(256) 836-7925",
+"rating": "A+",
+"acc": true,
+"started": "2012",
+"entity": "Limited Liability Company (LLC)",
+"emp": 40,
+"complaints": "8",
+"web": "aireserv.com"
+},
+{
+"n": "Air Essentials, a division of Conditioned Air Solutions",
+"addr": "200 Dan Tibbs Rd NW",
+"city": "Huntsville",
+"zip": "35806",
+"phone": "(256) 217-2273",
+"rating": "A+",
+"acc": true,
+"started": "2001",
+"mgmt": "Emily Sanchez, Marketing Director",
+"entity": "Corporation",
+"emp": 5,
+"cats": "Residential",
+"complaints": "0",
+"web": "airessentials.com"
+},
+{
+"n": "Conditioned Air Solutions",
+"addr": "200 Dan Tibbs Rd NW",
+"city": "Huntsville",
+"zip": "35806",
+"phone": "(256) 428-1983",
+"rating": "A+",
+"acc": true,
+"started": "2004",
+"mgmt": "Paul Snowden, President",
+"entity": "Limited Liability Company (LLC)",
+"emp": 35,
+"complaints": "0",
+"web": "conditionedairsolutions.com"
+},
+{
+"n": "Comfort Air Quality & Efficiency by Design",
+"city": "Huntsville",
+"zip": "35810",
+"phone": "(256) 337-1584",
+"rating": "A+",
+"acc": true,
+"started": "2007",
+"mgmt": "Malcolm Porter, Owner",
+"entity": "Sole Proprietorship",
+"cats": "Commercial",
+"complaints": "0",
+"web": "comfortairquality.com",
+"lic": [
+"1999204-HVAC HACR",
+"MG-1435 PGFB"
+]
+},
+{
+"n": "Joe East One Hour Heating and Air Conditioning",
+"addr": "2011 Poole Dr NW",
+"city": "Huntsville",
+"zip": "35810",
+"phone": "(256) 851-6510",
+"rating": "A+",
+"acc": true,
+"started": "1969",
+"mgmt": "Judy Sexton, Vice President",
+"entity": "Corporation",
+"complaints": "4",
+"web": "onehourhuntsville.com",
+"lic": [
+"HVAC-2005007 HACR"
+]
+},
+{
+"n": "Blake Brothers Service Corp",
+"addr": "2007 Memorial Pkwy NW Ste B",
+"city": "Huntsville",
+"zip": "35810",
+"phone": "(256) 459-8981",
+"rating": "A+",
+"acc": true,
+"started": "1887",
+"mgmt": "Jeff Watts, General Manager",
+"entity": "Corporation",
+"emp": 90,
+"cats": "Plumbing, Electrical, Residential",
+"complaints": "5",
+"web": "blakebrothers.com"
+},
+{
+"n": "Craig Comfort Control",
+"addr": "1025 Baltimore Hill Rd NE",
+"city": "Huntsville",
+"zip": "35810",
+"phone": "(256) 777-0480",
+"rating": "A+",
+"acc": true,
+"started": "2015",
+"mgmt": "Justin Craig, Owner",
+"entity": "Sole Proprietorship",
+"cats": "Commercial, Residential",
+"complaints": "0",
+"web": "craigcomfort.com",
+"lic": [
+"2015170 HACR",
+"S-55287 Alabama Licensing Board for Ge",
+"MG-2040 PGFB"
+]
+},
+{
+"n": "Hiller Plumbing, Heating, Cooling & Electrical",
+"addr": "1891 Slaughter Rd",
+"city": "Madison",
+"zip": "35758",
+"phone": "(256) 990-7155",
+"rating": "A+",
+"acc": true,
+"started": "1990",
+"mgmt": "Jimmy Hiller, President",
+"entity": "Limited Liability Company (LLC)",
+"emp": 24,
+"cats": "Plumbing, Electrical",
+"web": "happyhiller.com"
+},
+{
+"n": "Air Outlook Inc",
+"addr": "106 St Louis St Ste D",
+"city": "Madison",
+"zip": "35758",
+"phone": "(256) 733-6294",
+"rating": "A+",
+"acc": true,
+"started": "2018",
+"mgmt": "Jeffrey Ranshaw, Owner/Partner",
+"entity": "Corporation",
+"complaints": "1",
+"web": "airoutlookinc.com"
+},
+{
+"n": "MPE Services - Madison",
+"addr": "9582 Madison Blvd",
+"city": "Madison",
+"zip": "35758",
+"phone": "(256) 230-0402",
+"rating": "A+",
+"acc": true,
+"started": "1976",
+"mgmt": "Geoffrey Jones, District Manager",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Plumbing, Electrical",
+"complaints": "0",
+"web": "callmpe.com",
+"lic": [
+"07413 AECB",
+"APP-39107 PGFB",
+"MPG-4533 PGFB",
+"2022283 HACR"
+]
+},
+{
+"n": "Integrity Services Heating, Cooling and Air Quality",
+"addr": "240 Westchester Rd",
+"city": "Madison",
+"zip": "35758",
+"phone": "(256) 319-9402",
+"rating": "A+",
+"acc": true,
+"started": "2009",
+"mgmt": "Nathan J Bonner, President",
+"entity": "Corporation",
+"complaints": "0",
+"web": "integrityacservice.com",
+"lic": [
+"HVAC-2014130 HACR"
+]
+},
+{
+"n": "ACS Air Conditioning Systems, Inc.",
+"addr": "8840 Madison Blvd Ste 200R",
+"city": "Madison",
+"zip": "35758",
+"phone": "(256) 464-5551",
+"rating": "A+",
+"acc": true,
+"started": "2003",
+"mgmt": "Robert Akins, President",
+"entity": "Corporation",
+"emp": 6,
+"cats": "Residential",
+"complaints": "0",
+"web": "acsinc.org"
+},
+{
+"n": "Best Care Home Services",
+"city": "Madison",
+"zip": "35758",
+"phone": "(256) 937-7889",
+"rating": "A+",
+"acc": true,
+"started": "2009",
+"mgmt": "Randal Fuller, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Plumbing",
+"complaints": "10",
+"web": "bestcarealabama.com",
+"lic": [
+"2019018 HACR",
+"MPG-4484 PGFB"
+],
+"other_offices": [
+"Muscle Shoals"
+]
+},
+{
+"n": "Garrison & Garrison, Inc.",
+"addr": "4922 Moores Mill Road",
+"city": "Huntsville",
+"zip": "35811",
+"phone": "(256) 859-8500",
+"rating": "A+",
+"acc": true,
+"started": "1972",
+"mgmt": "David Garrison, Owner",
+"entity": "Corporation",
+"complaints": "0",
+"web": "garrisonandgarrison.com"
+},
+{
+"n": "Alabama Climate Control, Inc.",
+"addr": "104 Wholesale Ave NE",
+"city": "Huntsville",
+"zip": "35811",
+"phone": "(256) 536-8305",
+"rating": "A+",
+"acc": true,
+"started": "1977",
+"mgmt": "Chris Carter, General Manager",
+"entity": "Corporation",
+"complaints": "0",
+"web": "alabamaclimatecontrol.com",
+"lic": [
+"2023069 HACR"
+]
+},
+{
+"n": "AC Controls, LLC",
+"addr": "140 Clear Creek Dr",
+"city": "New Market",
+"zip": "35761",
+"phone": "(256) 541-4055",
+"rating": "A+",
+"acc": true,
+"started": "2017",
+"mgmt": "Ralph Braswell, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "facebook.com"
+},
+{
+"n": "Superior Heating & Air, Inc.",
+"addr": "28731 Capshaw Rd",
+"city": "Harvest",
+"zip": "35749",
+"phone": "(256) 837-2525",
+"rating": "A+",
+"acc": true,
+"started": "2003",
+"mgmt": "Joey Usery, Owner",
+"entity": "Corporation",
+"complaints": "0",
+"web": "superiorhvac.net",
+"lic": [
+"MG-1266 PGFB"
+]
+},
+{
+"n": "Conlon Heating & Cooling",
+"addr": "11685 Burgreen Rd",
+"city": "Madison",
+"zip": "35756",
+"phone": "(256) 559-5982",
+"rating": "A-",
+"acc": true,
+"started": "2025",
+"mgmt": "Noah Conlon, Owner",
+"entity": "Corporation",
+"cats": "Commercial",
+"complaints": "0",
+"web": "conlonheatingandcooling.com",
+"lic": [
+"2026174 HACR"
+]
+},
+{
+"n": "J.R.'s Heating and Cooling, LLC",
+"addr": "26370 US Highway 72",
+"city": "Athens",
+"zip": "35613",
+"phone": "(256) 497-2840",
+"rating": "A+",
+"acc": true,
+"started": "2022",
+"mgmt": "Jemeca Townsend, Owner",
+"entity": "Limited Liability Company (LLC)",
+"complaints": "0",
+"web": "facebook.com",
+"lic": [
+"2022302 HACR"
+]
+},
+{
+"n": "Air Pro Heating and Cooling, LLC",
+"addr": "336 Travis Dr",
+"city": "Hazel Green",
+"zip": "35750",
+"phone": "(256) 529-1311",
+"rating": "A+",
+"acc": true,
+"started": "2012",
+"mgmt": "Troy Shumate, President/Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "airprollc.biz",
+"lic": [
+"2012015 HACR",
+"MG-0910 PGFB"
+]
+},
+{
+"n": "Don Carter Heating & Cooling",
+"addr": "24185 US Highway 72",
+"city": "Athens",
+"zip": "35613",
+"phone": "(256) 230-6699",
+"rating": "A+",
+"acc": true,
+"started": "1984",
+"mgmt": "Donald W Carter, Owner",
+"entity": "Limited Liability Company (LLC)",
+"complaints": "1",
+"web": "doncarterhvac.com",
+"lic": [
+"25459 Alabama Licensing Board for Ge",
+"MPG-2759 PGFB"
+]
+},
+{
+"n": "Chad Simmons Heating & Cooling, LLC",
+"city": "Athens",
+"zip": "35613",
+"phone": "(256) 683-1048",
+"rating": "A+",
+"acc": true,
+"started": "2011",
+"mgmt": "Chad Simmons, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "facebook.com",
+"lic": [
+"HVAC-2005136 HACR"
+]
+},
+{
+"n": "Comfort Masters of North Alabama",
+"addr": "25900 Pepper Rd",
+"city": "Athens",
+"zip": "35613",
+"phone": "(256) 701-7123",
+"rating": "A+",
+"acc": true,
+"started": "2022",
+"mgmt": "Jason Sanders, Owner",
+"entity": "Sole Proprietorship",
+"emp": 1,
+"complaints": "0",
+"web": "comfortmastersal.com"
+},
+{
+"n": "Childress Air Conditioning & Heating, LLC",
+"addr": "2746 Winchester Rd",
+"city": "New Market",
+"zip": "35761",
+"phone": "(256) 651-5997",
+"rating": "A+",
+"acc": true,
+"started": "1985",
+"mgmt": "Eddy Childress, Owner",
+"entity": "Sole Proprietorship",
+"complaints": "0"
+},
+{
+"n": "R & S Heating & Cooling",
+"city": "Ardmore",
+"zip": "35739",
+"phone": "(256) 423-7166",
+"rating": "A+",
+"acc": true,
+"started": "2001",
+"mgmt": "Ray Lewis, Owner",
+"entity": "Corporation",
+"emp": 2,
+"cats": "Residential",
+"complaints": "0",
+"web": "facebook.com"
+},
+{
+"n": "Worthey HVAC Services",
+"city": "Ardmore",
+"zip": "35739",
+"phone": "(256) 797-3725",
+"rating": "A+",
+"acc": true,
+"started": "2023",
+"mgmt": "Charlie Worthey, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Commercial, Plumbing, Electrical, Residential",
+"complaints": "0",
+"web": "wortheyhvacservices.com"
+},
+{
+"n": "Chad's Climate Control Heating & Air",
+"city": "Athens",
+"zip": "35614",
+"phone": "(256) 289-3836",
+"rating": "A",
+"acc": true,
+"started": "2024",
+"mgmt": "Katrina Smith, Office Manager",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Commercial",
+"complaints": "0",
+"web": "hvachsv.com",
+"lic": [
+"APP-43165 PGFB"
+]
+},
+{
+"n": "David Martin Heating & Cooling, Inc.",
+"addr": "23623 E Clearmont Dr",
+"city": "Elkmont",
+"zip": "35620",
+"phone": "(256) 777-4023",
+"rating": "A+",
+"acc": true,
+"started": "2001",
+"mgmt": "David & Nancy Martin, Owner",
+"entity": "Corporation",
+"complaints": "0",
+"web": "rheem.com",
+"lic": [
+"MG-1433 PGFB"
+]
+},
+{
+"n": "3:16 HVAC Services, LLC",
+"addr": "23349 Pepper Farm Ln",
+"city": "Elkmont",
+"zip": "35620",
+"phone": "(256) 431-2119",
+"rating": "A+",
+"acc": true,
+"started": "2005",
+"mgmt": "Mandy Nelms, Office Manager",
+"entity": "Limited Liability Company (LLC)",
+"complaints": "0",
+"web": "316hvac.com",
+"lic": [
+"2005135 HACR"
+]
+},
+{
+"n": "Quality HVAC Services LLC",
+"city": "Elkmont",
+"zip": "35620",
+"phone": "(256) 513-9775",
+"rating": "A+",
+"acc": true,
+"started": "2020",
+"mgmt": "Jaron Roberts, Owner",
+"entity": "Limited Liability Company (LLC)",
+"emp": 1,
+"cats": "Residential",
+"complaints": "0",
+"web": "qualityhvacservices.net"
+},
+{
+"n": "Professional Heating & Cooling",
+"addr": "9188 Snake Rd",
+"city": "Athens",
+"zip": "35611",
+"phone": "(256) 998-0446",
+"rating": "A+",
+"acc": true,
+"started": "2001",
+"mgmt": "Charles F Black, Owner",
+"entity": "Sole Proprietorship",
+"cats": "Residential",
+"complaints": "0",
+"lic": [
+"HVAC-2000234 HACR"
+]
+},
+{
+"n": "Allen Brown Heating & Cooling, LLC",
+"addr": "1613 L Gray Blvd",
+"city": "Athens",
+"zip": "35611",
+"phone": "(256) 233-4844",
+"rating": "A+",
+"acc": true,
+"started": "1997",
+"mgmt": "Allen & Gayla Brown, Owner",
+"entity": "Limited Liability Company (LLC)",
+"complaints": "0",
+"web": "allenbrownheatingcoolingal.com",
+"lic": [
+"1997151 HACR"
+]
+},
+{
+"n": "Bobby Terry Company, Inc.",
+"addr": "110 Robyn St",
+"city": "Athens",
+"zip": "35611",
+"phone": "(256) 232-3138",
+"rating": "A+",
+"acc": true,
+"started": "1972",
+"mgmt": "Robyn Abernathy, President",
+"entity": "Corporation",
+"cats": "Plumbing, Electrical",
+"complaints": "0",
+"web": "bobbyterry.com",
+"lic": [
+"MPG-0484 PGFB",
+"19195 Alabama Home Builders Licensur",
+"04263 AECB"
+]
+},
+{
+"n": "Tim Cottles Heating & Cooling",
+"addr": "13205 New Cut Rd",
+"city": "Athens",
+"zip": "35611",
+"phone": "(256) 614-1456",
+"rating": "A+",
+"acc": true,
+"started": "1999",
+"mgmt": "Cheyanne A Cottles, Owner/Manager",
+"entity": "Sole Proprietorship",
+"cats": "Plumbing",
+"complaints": "0",
+"web": "timcottleshvac.com"
+},
+{
+"n": "David Boston Heating & Cooling",
+"addr": "9081 Mary Davis Hollow Rd",
+"city": "Athens",
+"zip": "35614",
+"phone": "(256) 729-5665",
+"rating": "A+",
+"acc": true,
+"started": "2009",
+"mgmt": "David G Boston, Owner",
+"entity": "Sole Proprietorship",
+"cats": "Commercial, Residential",
+"complaints": "0",
+"web": "facebook.com"
+},
+{
+"n": "Southern Heating & Cooling, Inc.",
+"addr": "2413 E Willow St",
+"city": "Scottsboro",
+"zip": "35768",
+"phone": "(256) 574-1300",
+"rating": "A+",
+"acc": true,
+"started": "1984",
+"mgmt": "Erica Estes, Owner",
+"entity": "Corporation",
+"complaints": "0",
+"web": "southernheating.com"
+},
+{
+"n": "Central Air Conditioning Service",
+"addr": "707 E Willow St",
+"city": "Scottsboro",
+"zip": "35768",
+"phone": "(256) 259-1896",
+"rating": "A+",
+"acc": true,
+"started": "1963",
+"mgmt": "Jesse Petriske, Owner",
+"entity": "Corporation",
+"complaints": "0",
+"web": "centralacservice.com",
+"lic": [
+"45009 Alabama Licensing Board for Ge",
+"MG-0102 PGFB"
+]
+},
+{
+"n": "Johnson Heating & Cooling",
+"addr": "2908 S Broad St",
+"city": "Scottsboro",
+"zip": "35769",
+"phone": "(800) 523-5816",
+"rating": "A+",
+"acc": true,
+"started": "1978",
+"mgmt": "David W. Johnson, President/Owner",
+"entity": "Corporation",
+"complaints": "0",
+"web": "johnsonheatingcooling.com",
+"lic": [
+"HVAC-1989464 HACR",
+"MG-2167 PGFB"
+]
+},
+{
+"n": "Owens Comfort Solutions",
+"addr": "10675 6th St",
+"city": "Leighton",
+"zip": "35646",
+"phone": "(256) 810-6771",
+"rating": "A+",
+"acc": true,
+"started": "2022",
+"mgmt": "Jon Owens, Owner",
+"entity": "Limited Liability Company (LLC)",
+"complaints": "0",
+"web": "owens-comfort.com",
+"lic": [
+"2022185 HACR"
+]
+},
+{
+"n": "Comfort 1st LLC",
+"addr": "200 Pioneer Dr",
+"city": "Killen",
+"zip": "35645",
+"phone": "(256) 247-7170",
+"rating": "A+",
+"acc": true,
+"started": "2011",
+"mgmt": "Billy Walton, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Commercial, Refrigeration",
+"complaints": "0",
+"web": "comfort1sthvac.com",
+"lic": [
+"MG-0231 PGFB"
+]
+},
+{
+"n": "Country Mile Heating & Cooling",
+"city": "Killen",
+"zip": "35645",
+"phone": "(256) 443-0000",
+"rating": "A+",
+"acc": true,
+"started": "2019",
+"mgmt": "Travis Hensley, Owner",
+"entity": "Sole Proprietorship",
+"complaints": "0",
+"web": "callcountrymile.com"
+},
+{
+"n": "Blevins A/C & Electric",
+"addr": "1120 Gault Ave N",
+"city": "Fort Payne",
+"zip": "35967",
+"phone": "(256) 996-7832",
+"rating": "A+",
+"acc": true,
+"started": "2019",
+"mgmt": "Anthony Blevins, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Commercial, Electrical",
+"complaints": "0",
+"web": "blevinsacandelectric.com",
+"lic": [
+"06412 AECB"
+]
+},
+{
+"n": "Fuller Heating, Air Conditioning, Plumbing & Electrical",
+"addr": "509 Woodward Ave",
+"city": "Muscle Shoals",
+"zip": "35661",
+"phone": "(256) 381-7195",
+"rating": "A+",
+"acc": true,
+"started": "1991",
+"mgmt": "Randal Fuller, Owner",
+"entity": "Corporation",
+"emp": 41,
+"cats": "Plumbing",
+"complaints": "2",
+"web": "fullerhvac.com"
+},
+{
+"n": "Bryant's Heating & Cooling, Inc.",
+"addr": "300 8th St SE",
+"city": "Fort Payne",
+"zip": "35967",
+"phone": "(256) 293-4472",
+"rating": "A+",
+"acc": true,
+"started": "1981",
+"mgmt": "Howard Bryant, President",
+"entity": "Corporation",
+"complaints": "0",
+"web": "bryantsheating.com",
+"lic": [
+"MPG-1446 PGFB"
+]
+},
+{
+"n": "JC Hamm and Sons",
+"addr": "2536 Florence Blvd",
+"city": "Florence",
+"zip": "35630",
+"phone": "(256) 764-7386",
+"rating": "A+",
+"acc": true,
+"started": "1952",
+"mgmt": "Richard Hamm, President",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "0",
+"web": "jchamm.com",
+"lic": [
+"MG-0473 PGFB",
+"2012179 HACR"
+]
+},
+{
+"n": "R&B Mechanical Services",
+"addr": "1512 2nd St",
+"city": "Muscle Shoals",
+"zip": "35661",
+"phone": "(256) 386-8622",
+"rating": "A+",
+"acc": true,
+"started": "2021",
+"mgmt": "Kendra Holt, Office Manager",
+"entity": "Limited Liability Company (LLC)",
+"emp": 18,
+"complaints": "0",
+"web": "rbservicesal.com"
+},
+{
+"n": "Shoals MPE, LLC",
+"addr": "3311 County Road 47",
+"city": "Florence",
+"zip": "35630",
+"phone": "(256) 766-9439",
+"rating": "A+",
+"acc": true,
+"started": "1986",
+"mgmt": "Todd Scarborough, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Plumbing, Electrical, Residential",
+"complaints": "0",
+"web": "shoalsmpe.com",
+"lic": [
+"11647 Alabama Licensing Board for Ge",
+"MPG-4729 PGFB",
+"07413 AECB",
+"2022283 HACR"
+]
+},
+{
+"n": "Maintenance Plus",
+"addr": "201 Eugenia St",
+"city": "Florence",
+"zip": "35630",
+"phone": "(256) 764-4511",
+"rating": "A+",
+"acc": true,
+"started": "2008",
+"mgmt": "Craig Brown, Owner",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "0",
+"lic": [
+"2007035 HACR"
+]
+},
+{
+"n": "Nichols Heating & Air Conditioning",
+"addr": "2909 Huntsville Rd",
+"city": "Florence",
+"zip": "35630",
+"phone": "(256) 766-4000",
+"rating": "A+",
+"acc": true,
+"started": "1992",
+"mgmt": "Tommy Nichols, President",
+"entity": "Sole Proprietorship",
+"complaints": "0",
+"web": "nicholsac.com",
+"lic": [
+"MG-1160 PGFB"
+]
+},
+{
+"n": "C & H Cooling & Heating, Inc.",
+"addr": "205 W 20th Ave",
+"city": "Sheffield",
+"zip": "35660",
+"phone": "(256) 248-4886",
+"rating": "A+",
+"acc": true,
+"started": "1956",
+"mgmt": "Alvin Lynch, President",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "0",
+"web": "chcooling.com"
+},
+{
+"n": "Elite Services Heating Air Conditioning & Refrigeration",
+"addr": "5276 Wilson Dam Rd",
+"city": "Tuscumbia",
+"zip": "35674",
+"phone": "(256) 415-3889",
+"rating": "A+",
+"acc": true,
+"started": "2023",
+"mgmt": "Jean Proctor, Co-Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Commercial, Refrigeration, Residential",
+"complaints": "0",
+"web": "eliteserviceshvacrefrigeration.com"
+},
+{
+"n": "Moore's Heating & Air Inc",
+"addr": "785 Reid Ave",
+"city": "Tuscumbia",
+"zip": "35674",
+"phone": "(256) 381-9004",
+"rating": "A+",
+"acc": true,
+"started": "1997",
+"mgmt": "Don R Moore, Owner",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "0",
+"web": "mooreshvac.com",
+"lic": [
+"HVAC-1995130 HACR",
+"MPG-0520 PGFB"
+]
+},
+{
+"n": "Allen's Air Conditioning Inc.",
+"addr": "187 River Dr",
+"city": "Tuscumbia",
+"zip": "35674",
+"phone": "(256) 381-6392",
+"rating": "A+",
+"acc": true,
+"started": "1982",
+"mgmt": "David Allen, President",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "0",
+"web": "allensair.com",
+"lic": [
+"1983205 HACR",
+"600158 HACR",
+"MG-0309 PGFB"
+]
+},
+{
+"n": "Langston Service Group LLC",
+"addr": "1205 County Road 12",
+"city": "Florence",
+"zip": "35633",
+"phone": "(256) 810-8131",
+"rating": "A+",
+"acc": true,
+"started": "2015",
+"mgmt": "Jason Langston, Owner",
+"entity": "Limited Liability Company (LLC)",
+"emp": 5,
+"cats": "Residential",
+"complaints": "0",
+"web": "langstonservice.com"
+},
+{
+"n": "Rickard's Air Conditioning & Heating Service",
+"addr": "1847 County Road 7",
+"city": "Florence",
+"zip": "35633",
+"phone": "(256) 764-2671",
+"rating": "A+",
+"acc": true,
+"started": "1978",
+"mgmt": "Thomas (Scott) Rickard, Owner",
+"entity": "Corporation",
+"cats": "Commercial, Residential",
+"complaints": "0",
+"web": "rickardsair.com",
+"lic": [
+"MG-0208 PGFB"
+]
+},
+{
+"n": "Hans Heating & Air",
+"addr": "2015 E 2nd St",
+"city": "Montgomery",
+"zip": "36106",
+"phone": "(334) 310-9073",
+"rating": "A+",
+"acc": true,
+"started": "2003",
+"mgmt": "Hans Luquire, Owner",
+"entity": "Sole Proprietorship",
+"cats": "Residential",
+"complaints": "0",
+"web": "834hans.com",
+"lic": [
+"84415 HACR"
+]
+},
+{
+"n": "Bill Bradley Services",
+"city": "Montgomery",
+"zip": "36106",
+"phone": "(334) 262-8368",
+"rating": "A+",
+"acc": true,
+"started": "1969",
+"mgmt": "Brenda Bradley, President/Owner",
+"entity": "Corporation",
+"cats": "Plumbing, Residential",
+"web": "billbradleyservices.com",
+"lic": [
+"84449 HACR",
+"MPG-1427 PGFB",
+"S-23076 Alabama Licensing Board for Ge"
+]
+},
+{
+"n": "Bill Bradley Services",
+"addr": "1507 Lake St",
+"city": "Montgomery",
+"zip": "36106",
+"phone": "(334) 203-0495",
+"rating": "A+",
+"acc": true,
+"started": "1969",
+"mgmt": "Brenda Bradley, President/Owner",
+"entity": "Corporation",
+"cats": "Plumbing, Residential",
+"complaints": "0",
+"web": "billbradleyservices.com",
+"lic": [
+"84449 HACR",
+"MPG-1427 PGFB",
+"S-23076 Alabama Licensing Board for Ge"
+]
+},
+{
+"n": "Talbot Heating and Cooling",
+"city": "Montgomery",
+"zip": "36106",
+"phone": "(334) 300-8910",
+"rating": "A",
+"acc": true,
+"started": "2024",
+"mgmt": "Bill Talbot, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Commercial, Residential",
+"complaints": "0",
+"web": "talbotheatingandcooling.com",
+"lic": [
+"2020116 HACR"
+]
+},
+{
+"n": "Chastain Heating And Air, Inc.",
+"city": "Montgomery",
+"zip": "36109",
+"phone": "(334) 265-6239",
+"rating": "A+",
+"acc": true,
+"started": "1991",
+"mgmt": "Wayne Chastain, Owner",
+"entity": "Sole Proprietorship",
+"cats": "Residential",
+"complaints": "0",
+"web": "chastainhvac.com",
+"lic": [
+"1989032 HACR"
+]
+},
+{
+"n": "Aire Serv of Mongtomery",
+"addr": "1110 Emory Folmar Blvd Ste B",
+"city": "Montgomery",
+"zip": "36110",
+"phone": "(334) 209-7350",
+"rating": "A+",
+"acc": true,
+"started": "2001",
+"mgmt": "Jade Bennett, Marketing Coordinator",
+"complaints": "0",
+"web": "aireserv.com"
+},
+{
+"n": "Air Conditioning by Luquire",
+"addr": "1155 N Eastern Blvd",
+"city": "Montgomery",
+"zip": "36117",
+"phone": "(334) 230-5870",
+"rating": "A+",
+"acc": true,
+"started": "1983",
+"mgmt": "David Grant, Controller",
+"entity": "Corporation",
+"cats": "Plumbing, Residential",
+"complaints": "0",
+"web": "acbyluquire.com",
+"lic": [
+"MPG-3583 PGFB",
+"2022154 HACR"
+]
+},
+{
+"n": "Climate Service, Inc.",
+"addr": "602 Oliver Rd",
+"city": "Montgomery",
+"zip": "36117",
+"phone": "(334) 279-6933",
+"rating": "A+",
+"acc": true,
+"started": "1980",
+"mgmt": "Kim Johnson, Office Manager/Service Coordinator",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "0",
+"web": "bradleyph.com",
+"lic": [
+"2010183 HACR"
+]
+},
+{
+"n": "Dixie Electric, Plumbing & Air",
+"addr": "580 Trade Center St",
+"city": "Montgomery",
+"zip": "36108",
+"phone": "(334) 328-3570",
+"rating": "A+",
+"acc": true,
+"started": "1908",
+"mgmt": "John Yelverton, President",
+"entity": "Corporation",
+"cats": "Plumbing, Electrical",
+"complaints": "1",
+"web": "calldixie.com",
+"lic": [
+"15033 HACR",
+"00046 AECB",
+"MPG-0655 PGFB"
+]
+},
+{
+"n": "United Heating and Air Conditioning Inc",
+"addr": "3045 Mobile Hwy",
+"city": "Montgomery",
+"zip": "36108",
+"phone": "(334) 262-0247",
+"rating": "A+",
+"acc": true,
+"started": "1984",
+"mgmt": "Terry Brooks, President",
+"entity": "Corporation",
+"cats": "Electrical",
+"complaints": "0",
+"web": "unitedheating.net",
+"lic": [
+"05728 AECB",
+"S-22790 Alabama Licensing Board for Ge",
+"84560 HACR"
+]
+},
+{
+"n": "Neill Gas Inc.",
+"addr": "4285 Norman Bridge Rd",
+"city": "Montgomery",
+"zip": "36105",
+"phone": "(800) 600-0765",
+"rating": "A+",
+"acc": true,
+"started": "1971",
+"mgmt": "Craig Watkins",
+"entity": "Corporation",
+"cats": "Residential",
+"web": "acmegas.com",
+"lic": [
+"92191 HACR",
+"MPG-2631 PGFB",
+"51348 HACR"
+]
+},
+{
+"n": "Comfort Air, Inc.",
+"addr": "394 W Pleasant Grove Rd",
+"city": "Montgomery",
+"zip": "36105",
+"phone": "(334) 288-0990",
+"rating": "A+",
+"acc": true,
+"started": "1982",
+"mgmt": "Rick Young, President",
+"entity": "Corporation",
+"cats": "Commercial, Residential",
+"complaints": "0",
+"web": "comfortairac.com",
+"lic": [
+"84245 HACR",
+"2017025 HACR"
+]
+},
+{
+"n": "All Pro Heating, Air & Electrical LLC",
+"addr": "3495 Friendship Rd",
+"city": "Tallassee",
+"zip": "36078",
+"phone": "(334) 301-1961",
+"rating": "A+",
+"acc": true,
+"started": "2019",
+"mgmt": "Zach Kelley, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Electrical, Residential",
+"complaints": "0",
+"web": "allproheatingair.com",
+"lic": [
+"2019171 HACR",
+"08821 AECB"
+]
+},
+{
+"n": "S & S Services LLC",
+"addr": "2198 Kent Rd",
+"city": "Tallassee",
+"zip": "36078",
+"phone": "(334) 780-1090",
+"rating": "A+",
+"acc": true,
+"started": "2008",
+"mgmt": "Kevin Henderson, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "keepyoucomfy.com",
+"lic": [
+"07069 HACR",
+"52411 HACR"
+]
+},
+{
+"n": "Hall's Heating and Cooling LLC",
+"city": "Tallassee",
+"zip": "36078",
+"phone": "(334) 640-1369",
+"rating": "A+",
+"acc": true,
+"started": "2023",
+"mgmt": "Scott Hall, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "halls-hvac.org",
+"lic": [
+"23109 HACR"
+]
+},
+{
+"n": "Neill Gas Inc.",
+"city": "Highland Home",
+"zip": "36041",
+"phone": "(800) 824-0396",
+"rating": "A+",
+"acc": true,
+"started": "1971",
+"mgmt": "Craig Watkins",
+"entity": "Corporation",
+"cats": "Residential",
+"web": "acmegas.com",
+"lic": [
+"92191 HACR",
+"MPG-2631 PGFB",
+"51348 HACR"
+]
+},
+{
+"n": "Extreme Heating & Air, LLC",
+"addr": "14097 Montgomery Hwy",
+"city": "Highland Home",
+"zip": "36041",
+"phone": "(334) 537-9308",
+"rating": "A+",
+"acc": true,
+"started": "2007",
+"mgmt": "Daryl McGough, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Commercial",
+"complaints": "0",
+"web": "facebook.com",
+"lic": [
+"05099 HACR"
+]
+},
+{
+"n": "Needmore Heating & Cooling LLC",
+"addr": "690 County Road 7752",
+"city": "Troy",
+"zip": "36081",
+"phone": "(334) 672-8982",
+"rating": "A-",
+"acc": true,
+"started": "2026",
+"mgmt": "Edward Solis, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "needmorehvac.com",
+"lic": [
+"2026120 HACR"
+]
+},
+{
+"n": "Stone Cold Heating & Cooling, LLC",
+"addr": "103 Ring Oak Dr",
+"city": "Troy",
+"zip": "36081",
+"phone": "(334) 268-0917",
+"rating": "A+",
+"acc": true,
+"started": "2011",
+"mgmt": "Matthew Tyler Johnson, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "facebook.com",
+"lic": [
+"2010176 HACR"
+]
+},
+{
+"n": "Lee's Refrigeration Service",
+"city": "Troy",
+"zip": "36081",
+"phone": "(334) 547-2979",
+"rating": "A+",
+"acc": true,
+"started": "2016",
+"mgmt": "Aubrey Lee Walden, Owner",
+"entity": "Sole Proprietorship",
+"cats": "Commercial",
+"complaints": "0",
+"lic": [
+"2016156 HACR",
+"53090 HACR"
+]
+},
+{
+"n": "Wingman Heating + Cooling",
+"addr": "1667 Lee Road 10",
+"city": "Auburn",
+"zip": "36832",
+"phone": "(334) 740-3048",
+"rating": "A+",
+"acc": true,
+"started": "2021",
+"mgmt": "Conner LeCroy, Owner",
+"entity": "Limited Liability Company (LLC)",
+"complaints": "0",
+"web": "wingmanac.com"
+},
+{
+"n": "Harrell's Heating and Cooling, LLC",
+"city": "Troy",
+"zip": "36079",
+"phone": "(334) 465-5967",
+"rating": "A+",
+"acc": true,
+"started": "2006",
+"mgmt": "James W Harrell, Managing Owner",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "0",
+"web": "harrellsheatingandcooling.us",
+"lic": [
+"2007096 HACR"
+]
+},
+{
+"n": "Hamm's HVAC Services, LLC",
+"addr": "584 County Road 1126",
+"city": "Troy",
+"zip": "36079",
+"phone": "(334) 372-7620",
+"rating": "A+",
+"acc": true,
+"started": "2020",
+"mgmt": "Jeffery Hamm, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "hammshvac.com",
+"lic": [
+"20149 HACR"
+]
+},
+{
+"n": "K&W Heating & Air Conditioning Co.",
+"addr": "2214 Enterprise Dr",
+"city": "Opelika",
+"zip": "36801",
+"phone": "(334) 742-0500",
+"rating": "A+",
+"acc": true,
+"started": "1990",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "0",
+"other_offices": [
+"Auburn"
+]
+},
+{
+"n": "Farnell Mechanical Inc",
+"addr": "2105 Airport Rd Ste 3",
+"city": "Opelika",
+"zip": "36801",
+"phone": "(334) 524-2458",
+"rating": "A+",
+"acc": true,
+"started": "2015",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "0",
+"web": "farnellac.net"
+},
+{
+"n": "Jackson Services",
+"addr": "401 Columbus Pkwy",
+"city": "Opelika",
+"zip": "36801",
+"phone": "(706) 884-3351",
+"rating": "A+",
+"acc": true,
+"started": "1973",
+"entity": "Corporation",
+"emp": 4,
+"cats": "Commercial, Plumbing, Residential",
+"web": "jacksonservicesco.com"
+},
+{
+"n": "Sensigreen Heating, Cooling & Insulation",
+"addr": "400 Clanton St",
+"city": "Opelika",
+"zip": "36801",
+"phone": "(334) 597-5050",
+"rating": "A+",
+"acc": true,
+"started": "2007",
+"entity": "Limited Liability Company (LLC)",
+"complaints": "0",
+"web": "sensigreen.com"
+},
+{
+"n": "Hugh's Heating & Air",
+"addr": "3617 US Highway 80 W",
+"city": "Phenix City",
+"zip": "36870",
+"phone": "(334) 291-7746",
+"rating": "A+",
+"acc": true,
+"started": "1986",
+"entity": "Corporation",
+"complaints": "1",
+"web": "hughsheatingandair.com"
+},
+{
+"n": "B&W Heating & Air, Inc.",
+"addr": "7100 Fairfax Byp",
+"city": "Valley",
+"zip": "36854",
+"phone": "(334) 756-5821",
+"rating": "A+",
+"acc": true,
+"started": "1996",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "0"
+},
+{
+"n": "Livingston Heating & Air, LLC.",
+"city": "Smiths Station",
+"zip": "36877",
+"phone": "(334) 297-7863",
+"rating": "A+",
+"acc": true,
+"started": "1996",
+"mgmt": "Jacob M. Livingston, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Commercial",
+"complaints": "0",
+"web": "livingston-air.com"
+},
+{
+"n": "Riley Heating & Air Conditioning",
+"addr": "1019 Knowles Rd",
+"city": "Phenix City",
+"zip": "36869",
+"phone": "(334) 298-1278",
+"rating": "A+",
+"acc": true,
+"started": "1971",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "0",
+"web": "rileycomfort.com"
+},
+{
+"n": "Robbins Electric",
+"city": "Opp",
+"zip": "36467",
+"phone": "(334) 493-4020",
+"rating": "A+",
+"acc": true,
+"started": "1986",
+"mgmt": "Mickey Robbins, Owner",
+"entity": "Sole Proprietorship",
+"cats": "Residential",
+"complaints": "0",
+"lic": [
+"50495 HACR",
+"1987004 HACR"
+]
+},
+{
+"n": "RayHVAC LLC",
+"city": "Daleville",
+"zip": "36322",
+"rating": "A-",
+"acc": true,
+"started": "2026",
+"mgmt": "Dylan Ferrell, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "rayhvacllc.com",
+"lic": [
+"2026153 HACR"
+]
+},
+{
+"n": "Snellgrove and Caylor Heating & Cooling, Inc.",
+"addr": "3790 Highway 84",
+"city": "Daleville",
+"zip": "36322",
+"phone": "(334) 393-6101",
+"rating": "A+",
+"acc": true,
+"started": "1996",
+"mgmt": "David Caylor, Owner",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "0",
+"web": "snellgroveandcaylorhvac.com",
+"lic": [
+"96165 HACR",
+"23029 Alabama Licensing Board for Ge"
+]
+},
+{
+"n": "P/C Comfort Heating & Air",
+"addr": "17103 County Road 59",
+"city": "Woodland",
+"zip": "36280",
+"phone": "(404) 210-7737",
+"rating": "A+",
+"acc": true,
+"started": "2011",
+"mgmt": "Simon Riley, Owner",
+"cats": "Residential",
+"complaints": "0",
+"web": "facebook.com",
+"lic": [
+"11131 HACR"
+]
+},
+{
+"n": "Fire & Ice HVAC Services, LLC",
+"city": "Headland",
+"zip": "36345",
+"phone": "(334) 714-5937",
+"rating": "A+",
+"acc": true,
+"started": "2020",
+"mgmt": "Alesha Cook, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "fandiair.com",
+"lic": [
+"20119 HACR"
+]
+},
+{
+"n": "Gaddy Electric & Plumbing, Heating & Cooling, LLC",
+"city": "Linden",
+"zip": "36748",
+"phone": "(334) 289-2822",
+"rating": "A+",
+"acc": true,
+"started": "1958",
+"mgmt": "Sharon Gaddy, President/Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Plumbing, Electrical",
+"web": "gaddyelectricandplumbing.com",
+"lic": [
+"1983774 HACR",
+"09076 AECB",
+"MPG-1641 PGFB",
+"50756 HACR"
+]
+},
+{
+"n": "Keith Air Conditioning, Inc.",
+"addr": "1201 Sledge Dr",
+"city": "Mobile",
+"zip": "36606",
+"phone": "(251) 476-3687",
+"rating": "A+",
+"acc": true,
+"started": "1955",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "1",
+"web": "keithair.com",
+"lic": [
+"1983731 HACR"
+]
+},
+{
+"n": "Captain Cool Cooling & Heating, LLC",
+"addr": "1111 E Interstate 65 Service Rd S",
+"city": "Mobile",
+"zip": "36606",
+"phone": "(251) 202-2726",
+"rating": "A+",
+"acc": true,
+"started": "2000",
+"entity": "Limited Liability Company (LLC)",
+"emp": 12,
+"cats": "Residential",
+"web": "captaincool.com",
+"other_offices": [
+"Foley"
+]
+},
+{
+"n": "Goram Air Conditioning Company, Inc.",
+"addr": "1252 Houston St",
+"city": "Mobile",
+"zip": "36606",
+"phone": "(251) 476-5003",
+"rating": "A+",
+"acc": true,
+"started": "1975",
+"mgmt": "Paula Williams, Manager",
+"entity": "Corporation",
+"cats": "Commercial, Residential",
+"complaints": "0",
+"web": "facebook.com",
+"lic": [
+"MG-0451 PGFB",
+"13689 Alabama Licensing Board for Ge",
+"2016079 HACR"
+]
+},
+{
+"n": "Professional Systems",
+"addr": "216 E I65 Service Rd N",
+"city": "Mobile",
+"zip": "36607",
+"phone": "(251) 680-7500",
+"rating": "A+",
+"acc": true,
+"started": "2022",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Electrical",
+"complaints": "0",
+"web": "prosystems.org",
+"lic": [
+"25184 Alabama Home Builders Licensur",
+"08264 AECB",
+"2023046 HACR",
+"MG-2475 PGFB",
+"JP-5107 PGFB",
+"MPG-4855 PGFB"
+]
+},
+{
+"n": "Batchelor's Service",
+"addr": "110 Durant St",
+"city": "Mobile",
+"zip": "36607",
+"phone": "(251) 479-7743",
+"rating": "A+",
+"acc": true,
+"started": "1967",
+"mgmt": "Rick True, General Manager",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Plumbing, Residential",
+"complaints": "0",
+"web": "batchelorsservice.com",
+"lic": [
+"2017070 HACR",
+"MPG-2294 PGFB"
+]
+},
+{
+"n": "Easy Heating & Cooling, Inc.",
+"addr": "1600 Industrial Park Dr",
+"city": "Mobile",
+"zip": "36693",
+"phone": "(251) 298-7287",
+"rating": "A+",
+"acc": true,
+"started": "2005",
+"mgmt": "Enoch Smith, Owner",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "0",
+"web": "easyheatingcooling.com",
+"lic": [
+"05179 HACR",
+"MPG-4751 PGFB"
+]
+},
+{
+"n": "Gulf States Air, LLC",
+"addr": "1243 Herrin Lake Cir",
+"city": "Mobile",
+"zip": "36693",
+"phone": "(251) 404-8454",
+"rating": "A+",
+"acc": true,
+"started": "2011",
+"mgmt": "Leland Cook, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "gulfstatesair.net",
+"lic": [
+"11133 HACR"
+]
+},
+{
+"n": "Davies Air Design",
+"addr": "3746 Halls Mill Rd",
+"city": "Mobile",
+"zip": "36693",
+"phone": "(251) 443-9323",
+"rating": "A+",
+"acc": true,
+"started": "1993",
+"mgmt": "Stephen Davies, President",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "0",
+"web": "call-dad.com",
+"lic": [
+"93208 HACR",
+"51892 HACR"
+]
+},
+{
+"n": "Deno's Commercial Services",
+"addr": "7131 Airport Blvd",
+"city": "Mobile",
+"zip": "36608",
+"phone": "(251) 689-7845",
+"rating": "A+",
+"acc": true,
+"started": "2020",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Commercial",
+"complaints": "0",
+"web": "denoscommercialservice.com",
+"lic": [
+"2011102 HACR"
+],
+"other_offices": [
+"Dothan"
+]
+},
+{
+"n": "Veteran Air, LLC",
+"city": "Mobile",
+"zip": "36605",
+"phone": "(251) 370-8164",
+"rating": "A+",
+"acc": true,
+"started": "2006",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Commercial, Residential",
+"complaints": "0",
+"web": "veteranair.net",
+"lic": [
+"2006046 HACR"
+]
+},
+{
+"n": "Service Experts Mobile",
+"addr": "7291 Cottage Hill Rd",
+"city": "Mobile",
+"zip": "36695",
+"phone": "(251) 633-3356",
+"rating": "A+",
+"acc": true,
+"started": "1996",
+"mgmt": "Travis Arnesen, Vice President of Marketing",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Plumbing, Residential",
+"web": "serviceexperts.com"
+},
+{
+"n": "Don's Heating and Cooling",
+"addr": "4588 Hermitage Ave",
+"city": "Mobile",
+"zip": "36619",
+"phone": "(251) 639-0740",
+"rating": "A+",
+"acc": true,
+"started": "1980",
+"mgmt": "Jeffrey S Wolford, Owner",
+"entity": "Sole Proprietorship",
+"cats": "Residential",
+"complaints": "0",
+"web": "facebook.com",
+"lic": [
+"84639 HACR",
+"01136 AECB"
+]
+},
+{
+"n": "Abundant Air Solutions, LLC",
+"addr": "358 Saint Louis St",
+"city": "Mobile",
+"zip": "36602",
+"phone": "(251) 319-2891",
+"rating": "A+",
+"acc": true,
+"started": "2018",
+"entity": "Limited Liability Company (LLC)",
+"emp": 2,
+"complaints": "0",
+"web": "facebook.com"
+},
+{
+"n": "Estes Heating & Air Conditioning",
+"addr": "4944 Tufts Rd",
+"city": "Mobile",
+"zip": "36619",
+"phone": "(251) 443-7837",
+"rating": "A+",
+"acc": true,
+"started": "1982",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "estes-ac.com",
+"lic": [
+"1984064 HACR",
+"2022057 HACR"
+]
+},
+{
+"n": "Budget Heating and Air LLC",
+"city": "Mobile",
+"zip": "36695",
+"phone": "(251) 300-1664",
+"rating": "A+",
+"acc": true,
+"started": "2023",
+"mgmt": "Joshua Hall, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "budgetheatingandair.com",
+"lic": [
+"2024104 HACR"
+]
+},
+{
+"n": "Grayson Air Conditioning, Inc",
+"addr": "7200 Cottage Hill Rd",
+"city": "Mobile",
+"zip": "36695",
+"phone": "(251) 202-5477",
+"rating": "A+",
+"acc": true,
+"started": "1977",
+"mgmt": "Peter Grayson, Owner",
+"entity": "Corporation",
+"complaints": "0",
+"web": "graysonairconditioning.com",
+"lic": [
+"13118 HACR",
+"MG-0134 PGFB"
+]
+},
+{
+"n": "Hembree Heating & Air Conditioning",
+"addr": "8380 Tanner Williams Rd",
+"city": "Mobile",
+"zip": "36608",
+"phone": "(251) 649-5525",
+"rating": "A+",
+"acc": true,
+"started": "1970",
+"mgmt": "Joshua Hembree, President",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "2",
+"web": "hembreeac.com",
+"lic": [
+"92060 HACR"
+]
+},
+{
+"n": "Brunson Air Conditioning & Heating, Inc.",
+"addr": "3099 Dawes Rd",
+"city": "Mobile",
+"zip": "36695",
+"phone": "(251) 633-2949",
+"rating": "A+",
+"acc": true,
+"started": "1994",
+"mgmt": "David Brunson, President",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "0",
+"web": "brunsonair.com"
+},
+{
+"n": "Air Specialty",
+"addr": "4440 McCrary Rd",
+"city": "Semmes",
+"zip": "36575",
+"phone": "(251) 415-4559",
+"rating": "A+",
+"acc": true,
+"started": "1993",
+"mgmt": "Larry Ezell, Co-Owner",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "0",
+"web": "air-specialty.com",
+"lic": [
+"84408 HACR",
+"26644 Alabama Licensing Board for Ge"
+]
+},
+{
+"n": "Netherland Air Conditioning, LLC",
+"city": "Semmes",
+"zip": "36575",
+"phone": "(251) 753-0302",
+"rating": "A+",
+"acc": true,
+"started": "1998",
+"mgmt": "Paul Netherland, Owner",
+"entity": "Limited Liability Company (LLC)",
+"emp": 4,
+"cats": "Residential",
+"complaints": "0",
+"web": "netherlandairconditioning.com"
+},
+{
+"n": "Air of Excellence, Inc",
+"addr": "7780 Tara Dr",
+"city": "Semmes",
+"zip": "36575",
+"phone": "(251) 476-4271",
+"rating": "A+",
+"acc": true,
+"started": "2002",
+"mgmt": "Jimmy Deitz, Owner",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "0",
+"web": "airofexcellence.com",
+"lic": [
+"2000177 HACR",
+"S-51995 Alabama Licensing Board for Ge"
+]
+},
+{
+"n": "Head's Heating & Air Conditioning Services, Inc.",
+"addr": "6947 Nan Gray Davis Rd",
+"city": "Theodore",
+"zip": "36582",
+"phone": "(251) 206-5996",
+"rating": "A+",
+"acc": true,
+"mgmt": "Ronnie Head, Owner",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "0",
+"web": "headshvac.com",
+"lic": [
+"1985027 HACR",
+"S-24087 Alabama Licensing Board for Ge"
+]
+},
+{
+"n": "Rescom HVAC LLC",
+"city": "Irvington",
+"zip": "36544",
+"phone": "(251) 293-6159",
+"rating": "A+",
+"acc": true,
+"started": "2022",
+"mgmt": "Arthur Muntz, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"lic": [
+"2021246 HACR"
+]
+},
+{
+"n": "Climate Masters Inc",
+"addr": "30850 Jay Dr",
+"city": "Spanish Fort",
+"zip": "36527",
+"phone": "(251) 626-9231",
+"rating": "A+",
+"acc": true,
+"started": "1966",
+"mgmt": "Jack C. Morrison, President",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "0",
+"web": "climate-mastersinc.com",
+"lic": [
+"1997026 HACR"
+]
+},
+{
+"n": "A&L Heating & Air, LLC",
+"addr": "5505 Stratford Ln",
+"city": "Satsuma",
+"zip": "36572",
+"phone": "(251) 604-0233",
+"rating": "A+",
+"acc": true,
+"started": "2017",
+"mgmt": "Al Flott, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "satsumahvaccompany.com",
+"lic": [
+"2016112 HACR"
+]
+},
+{
+"n": "Integrity First Heating and Air, LLC",
+"city": "Spanish Fort",
+"zip": "36527",
+"phone": "(251) 373-9600",
+"rating": "A-",
+"acc": true,
+"started": "2026",
+"mgmt": "Marshall Thomas, Co-Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "integrityfirstheatingandair.com",
+"lic": [
+"2026204 HACR"
+]
+},
+{
+"n": "Mallard Air, LLC",
+"addr": "7688 Spanish Fort Blvd",
+"city": "Spanish Fort",
+"zip": "36527",
+"phone": "(251) 225-4035",
+"rating": "A+",
+"acc": true,
+"started": "2023",
+"mgmt": "Michael Ethan Duncan, Owner",
+"entity": "Limited Liability Company (LLC)",
+"web": "callmallardair.com",
+"lic": [
+"2023131 HACR"
+],
+"other_offices": [
+"Daphne"
+]
+},
+{
+"n": "Merriam Elite Solutions, LLC",
+"city": "Satsuma",
+"zip": "36572",
+"phone": "(251) 289-1399",
+"rating": "A",
+"acc": true,
+"started": "2024",
+"mgmt": "Raymond Merriam, Co-Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "merriamelitesolutions.com",
+"lic": [
+"2025230 HACR"
+]
+},
+{
+"n": "Air Solutions Heating and Cooling LLC",
+"addr": "1410 US Highway 98",
+"city": "Daphne",
+"zip": "36526",
+"phone": "(251) 300-9817",
+"rating": "A+",
+"acc": true,
+"started": "2023",
+"mgmt": "Reaves Nelson, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "airsolutionspros.com",
+"lic": [
+"2023194 HACR"
+]
+},
+{
+"n": "OnTime Service",
+"addr": "25764 Friendship Rd Ste E",
+"city": "Daphne",
+"zip": "36526",
+"phone": "(251) 272-3595",
+"rating": "A+",
+"acc": true,
+"started": "1975",
+"mgmt": "Kerry Adkins, President",
+"entity": "Corporation",
+"cats": "Plumbing, Electrical",
+"web": "ontime59.com",
+"lic": [
+"2001236 HACR",
+"03627 AECB",
+"MPG-4310 PGFB"
+]
+},
+{
+"n": "L&S Air Inc.",
+"addr": "10975 Diffee Rd",
+"city": "Grand Bay",
+"zip": "36541",
+"phone": "(251) 865-5174",
+"rating": "A+",
+"acc": true,
+"started": "1980",
+"mgmt": "Larry Skoda, President",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "0",
+"web": "facebook.com",
+"lic": [
+"83104 HACR"
+]
+},
+{
+"n": "Danco Services, Inc.",
+"addr": "7451 Jim McNeil Loop Road Ext",
+"city": "Grand Bay",
+"zip": "36541",
+"phone": "(251) 234-1071",
+"rating": "A+",
+"acc": true,
+"started": "2019",
+"mgmt": "Dan Eubanks, Owner",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "0",
+"web": "dancoservicesal.com",
+"lic": [
+"1997038 HACR",
+"03853 AECB"
+]
+},
+{
+"n": "Lee Innovations LLC",
+"city": "Daphne",
+"zip": "36527",
+"phone": "(251) 481-7655",
+"rating": "A",
+"acc": true,
+"started": "2024",
+"mgmt": "Brittani Lee, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "leeinnovationshvac.com",
+"lic": [
+"2025176 HACR"
+]
+},
+{
+"n": "Baldwin Cooling, Heating, Plumbing & Electrical",
+"addr": "10554 County Road 64",
+"city": "Daphne",
+"zip": "36526",
+"phone": "(225) 267-9637",
+"rating": "A+",
+"acc": true,
+"started": "1994",
+"mgmt": "Ryan Key, General Manager",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"web": "baldwinhvac.com",
+"shared_phone": [
+"Brown's Heating and Cooling",
+"Roberts Cooling, Heating, Plumbing & Electrical",
+"Skelton's Heating, Cooling & Plumbing"
+]
+},
+{
+"n": "The Southern Standard LLC",
+"addr": "11141 US Highway 31 Ste K",
+"city": "Spanish Fort",
+"zip": "36527",
+"phone": "(251) 599-2501",
+"rating": "A+",
+"acc": true,
+"started": "2021",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "thesouthernstandardhvac.com",
+"lic": [
+"2021047 HACR"
+]
+},
+{
+"n": "Southern Heating & A/C L.L.C.",
+"city": "Chunchula",
+"zip": "36521",
+"phone": "(251) 497-8859",
+"rating": "A",
+"acc": true,
+"started": "2025",
+"mgmt": "Kevin Hamm, CEO/Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "facebook.com",
+"lic": [
+"2025180 HACR"
+]
+},
+{
+"n": "Captain Cool Cooling & Heating, LLC",
+"addr": "19786 State Highway 181 Ste A",
+"city": "Fairhope",
+"zip": "36532",
+"phone": "(251) 260-8270",
+"rating": "A+",
+"acc": true,
+"started": "2000",
+"entity": "Limited Liability Company (LLC)",
+"emp": 12,
+"cats": "Residential",
+"complaints": "0",
+"web": "captaincool.com"
+},
+{
+"n": "Affordable Plumbing, Heating & Air",
+"addr": "18729 State Highway 181",
+"city": "Fairhope",
+"zip": "36532",
+"phone": "(251) 990-5248",
+"rating": "A+",
+"acc": true,
+"started": "1996",
+"mgmt": "Randy Lee, Co-Owner",
+"entity": "Corporation",
+"cats": "Plumbing",
+"complaints": "0",
+"web": "affplumbing.com",
+"lic": [
+"MP-2660 PGFB",
+"MP-4943 PGFB",
+"2000136 HACR"
+]
+},
+{
+"n": "Sweat Cool Air Conditioning and Heating, LLC",
+"addr": "8178B Nichols Avenue Ext",
+"city": "Fairhope",
+"zip": "36532",
+"phone": "(251) 210-8792",
+"rating": "A+",
+"acc": true,
+"started": "2017",
+"mgmt": "Ward Sweat, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "sweatcool.com",
+"lic": [
+"2017192 HACR"
+]
+},
+{
+"n": "Ingersoll's Refrigeration Air Conditioning and Heating, Inc.",
+"addr": "762 Nichols Ave",
+"city": "Fairhope",
+"zip": "36532",
+"phone": "(251) 928-9392",
+"rating": "A+",
+"acc": true,
+"started": "1968",
+"mgmt": "Clyde Ingersoll, President",
+"emp": 5,
+"cats": "Residential",
+"complaints": "0",
+"web": "ingersollac.com"
+},
+{
+"n": "Bama Breeze Heating and Air, LLC",
+"city": "Silverhill",
+"zip": "36576",
+"phone": "(251) 952-2915",
+"rating": "A+",
+"acc": true,
+"started": "2009",
+"mgmt": "Wesley Wing, President/Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "bamabreezeac.com",
+"lic": [
+"09126 HACR",
+"53245 HACR"
+]
+},
+{
+"n": "Craddock Heating And Air, LLC",
+"city": "Magnolia Springs",
+"zip": "36555",
+"phone": "(251) 517-7103",
+"rating": "A+",
+"acc": true,
+"started": "2020",
+"mgmt": "Dennie Craddock, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "craddockhvac.com",
+"lic": [
+"2020022 HACR"
+]
+},
+{
+"n": "Climatemp Cooling & Heating, Inc.",
+"addr": "103 Highway 59 S Bldg E",
+"city": "Summerdale",
+"zip": "36580",
+"phone": "(251) 968-6006",
+"rating": "A+",
+"acc": true,
+"started": "1985",
+"mgmt": "Randy Englebert, President",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "2",
+"web": "myclimatemp.com",
+"lic": [
+"20001229 HACR",
+"16062 HACR",
+"52602 HACR"
+],
+"other_offices": [
+"Gulf Shores"
+]
+},
+{
+"n": "Call Mr. Cool LLC",
+"city": "Dauphin Island",
+"zip": "36528",
+"phone": "(251) 293-3737",
+"rating": "A",
+"acc": true,
+"started": "2025",
+"mgmt": "Charles Lynn, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "callmrcool.net",
+"lic": [
+"2025167 HACR"
+]
+},
+{
+"n": "Sun Coast Energy, LLC",
+"addr": "20309 Highway 59",
+"city": "Summerdale",
+"zip": "36580",
+"phone": "(251) 970-0007",
+"rating": "A+",
+"acc": true,
+"started": "2015",
+"mgmt": "James Linton, Co-Owner",
+"entity": "Limited Liability Company (LLC)",
+"complaints": "0",
+"web": "suncoastenergy.net",
+"lic": [
+"97180 HACR"
+]
+},
+{
+"n": "Air One Heating & Cooling LLC",
+"addr": "1905 S McKenzie St",
+"city": "Foley",
+"zip": "36535",
+"phone": "(251) 967-1665",
+"rating": "A+",
+"acc": true,
+"started": "1996",
+"mgmt": "Lonnie Stowe, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "aironehc.com",
+"lic": [
+"2012186 HACR"
+]
+},
+{
+"n": "Fields Cooling, Heating & Refrigeration, LLC",
+"addr": "13280 US Highway 98",
+"city": "Foley",
+"zip": "36535",
+"phone": "(251) 943-2535",
+"rating": "A+",
+"acc": true,
+"started": "2001",
+"mgmt": "Jerry Fields, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "fieldsairconditioningandheating.com",
+"lic": [
+"01081 HACR",
+"50658 HACR"
+]
+},
+{
+"n": "Tidwell Air Systems",
+"addr": "14553 Abacus Dr",
+"city": "Foley",
+"zip": "36535",
+"phone": "(251) 942-4231",
+"rating": "A+",
+"acc": true,
+"started": "2001",
+"mgmt": "Kathy Tidwell, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Commercial",
+"complaints": "0",
+"web": "tidwellairsystems.com",
+"lic": [
+"2023250 HACR"
+]
+},
+{
+"n": "Gulf Coast HVAC, LLC",
+"addr": "6789 Magnolia Springs Hwy",
+"city": "Foley",
+"zip": "36535",
+"phone": "(251) 955-1054",
+"rating": "A+",
+"acc": true,
+"started": "2007",
+"mgmt": "Pattie Akridge, Office Manager",
+"entity": "Limited Liability Company (LLC)",
+"emp": 12,
+"cats": "Residential",
+"complaints": "0",
+"web": "gulfcoasthvacllc.com"
+},
+{
+"n": "Pride HVAC, LLC",
+"addr": "7353 County Road 19",
+"city": "Foley",
+"zip": "36535",
+"phone": "(251) 422-2439",
+"rating": "A+",
+"acc": true,
+"started": "2021",
+"mgmt": "Chaz Schweiger, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "pridehvacllc.com",
+"lic": [
+"2021061 HACR"
+]
+},
+{
+"n": "Air Medix LLC",
+"city": "Foley",
+"zip": "36535",
+"phone": "(251) 261-9891",
+"rating": "A",
+"acc": true,
+"started": "2024",
+"mgmt": "Jonathan Bray, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "facebook.com",
+"lic": [
+"2024255 HACR"
+]
+},
+{
+"n": "Be Cool HVAC",
+"addr": "8952 Sherman Rd",
+"city": "Foley",
+"zip": "36535",
+"phone": "(251) 200-8780",
+"rating": "A",
+"acc": true,
+"started": "2024",
+"mgmt": "Jennifer Medeiros, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"web": "becoolhvac.com",
+"lic": [
+"2024220 HACR"
+]
+},
+{
+"n": "Peaden Air Conditioning, Plumbing & Electrical",
+"city": "Foley",
+"zip": "36535",
+"phone": "(850) 215-3604",
+"rating": "A+",
+"acc": true,
+"started": "1955",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Plumbing, Electrical",
+"complaints": "0",
+"web": "peaden.com",
+"lic": [
+"09852 AECB",
+"MPG-4690 PGFB",
+"2023063 HACR"
+]
+},
+{
+"n": "Eden Air, LLC",
+"addr": "372 W 23rd Ave",
+"city": "Gulf Shores",
+"zip": "36542",
+"phone": "(251) 747-7870",
+"rating": "A+",
+"acc": true,
+"started": "2004",
+"mgmt": "Eden Sherrill, Owner",
+"entity": "Sole Proprietorship",
+"cats": "Residential",
+"complaints": "0",
+"lic": [
+"04146 HACR"
+]
+},
+{
+"n": "Bowman Heating & Air Conditioning, LLC",
+"city": "Gulf Shores",
+"zip": "36542",
+"phone": "(251) 437-8152",
+"rating": "A",
+"acc": true,
+"started": "2024",
+"mgmt": "Steven L Bowman, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Commercial",
+"complaints": "0",
+"web": "callbowman.com",
+"lic": [
+"223093 HACR"
+]
+},
+{
+"n": "Kool Air Services, LLC",
+"city": "Elberta",
+"zip": "36530",
+"phone": "(251) 200-1650",
+"rating": "A+",
+"acc": true,
+"started": "2022",
+"mgmt": "Sammy Lovoy, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Commercial, Residential",
+"complaints": "0",
+"web": "koolairservicesllc.com",
+"lic": [
+"2022080 HACR"
+]
+},
+{
+"n": "Roberts Cooling, Heating, Plumbing & Electrical",
+"addr": "780 Commerce Dr",
+"city": "Gulf Shores",
+"zip": "36542",
+"phone": "(225) 267-9637",
+"rating": "A+",
+"acc": true,
+"started": "1994",
+"mgmt": "Rick Sykes, General Manager",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"web": "robertsac.com",
+"shared_phone": [
+"Baldwin Cooling, Heating, Plumbing & Electrical",
+"Brown's Heating and Cooling",
+"Skelton's Heating, Cooling & Plumbing"
+]
+},
+{
+"n": "Superior Contracting Services",
+"city": "Lillian",
+"zip": "36549",
+"phone": "(251) 961-1592",
+"rating": "A+",
+"acc": true,
+"started": "1997",
+"mgmt": "Tim D. Tutton, Owner",
+"entity": "Sole Proprietorship",
+"cats": "Residential",
+"complaints": "0",
+"web": "superiorcontractingservicesal.com",
+"lic": [
+"97130 HACR"
+]
+},
+{
+"n": "Air Techs LLC",
+"city": "Atmore",
+"zip": "36502",
+"phone": "(251) 428-8041",
+"rating": "A",
+"acc": true,
+"started": "2024",
+"mgmt": "Justin Leatherwood, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "0",
+"web": "airtechsllc.com",
+"lic": [
+"2020172 HACR"
+]
+},
+{
+"n": "Southern Comfort Heating & Air Conditioning LLC",
+"city": "Atmore",
+"zip": "36502",
+"phone": "(251) 363-4368",
+"rating": "A",
+"acc": true,
+"started": "2025",
+"mgmt": "Johnny L Haynes, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Commercial",
+"complaints": "0",
+"web": "facebook.com",
+"lic": [
+"2025118 HACR"
+]
+},
+{
+"n": "Escambia Air LLC",
+"city": "Brewton",
+"zip": "36426",
+"phone": "(251) 363-2344",
+"rating": "A",
+"acc": true,
+"started": "2024",
+"mgmt": "Jeffrey DeRidder, CEO/Owner",
+"entity": "Limited Liability Company (LLC)",
+"emp": 2,
+"cats": "Residential",
+"complaints": "0",
+"web": "escambiaair.com"
+},
+{
+"n": "Clarke Air Company LLC",
+"addr": "161 N Jackson St",
+"city": "Grove Hill",
+"zip": "36451",
+"phone": "(251) 275-3072",
+"rating": "A+",
+"acc": true,
+"started": "1981",
+"mgmt": "Jesse Wiggins, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Residential",
+"complaints": "1",
+"web": "clarkeairco.com",
+"lic": [
+"2021131 HACR",
+"53427 HACR"
+]
+},
+{
+"n": "Long Heating, Air, and Plumbing",
+"addr": "578 W Carroll St Ste 5",
+"city": "Dothan",
+"zip": "36301",
+"phone": "(334) 790-0977",
+"rating": "A+",
+"acc": true,
+"started": "2016",
+"mgmt": "Kevin Long, Owner",
+"entity": "Limited Liability Company (LLC)",
+"cats": "Plumbing, Residential",
+"web": "longtotalcomfort.com",
+"lic": [
+"15210 HACR"
+]
+},
+{
+"n": "Cosby's Heating & Cooling - Appliance Services, Inc",
+"addr": "2966 Lucy Grade Rd",
+"city": "Ashford",
+"zip": "36312",
+"phone": "(334) 792-6774",
+"rating": "A+",
+"acc": true,
+"started": "1986",
+"mgmt": "Krystal Cosby, Vice President",
+"entity": "Corporation",
+"cats": "Residential",
+"complaints": "0",
+"web": "cosbyheatingcooling.com",
+"lic": [
+"96098 HACR",
+"09091 HACR",
+"S-48865 Alabama Licensing Board for Ge"
+],
+"other_offices": [
+"Dothan"
+]
+},
+{
+"n": "Paulk's Service Company",
+"addr": "1281 S Saint Andrews St",
+"city": "Dothan",
+"zip": "36301",
+"phone": "(334) 793-9700",
+"rating": "A+",
+"acc": true,
+"started": "1981",
+"mgmt": "Mike Earnhardt, Owner",
+"entity": "Corporation",
+"cats": "Commercial, Refrigeration",
+"complaints": "0",
+"web": "facebook.com",
+"lic": [
+"53392 HACR",
+"2020035 HACR"
+]
+},
+{
+"n": "Southeastern Cooling, Heating, & Plumbing",
+"addr": "3935 Reeves St Ste 4",
+"city": "Dothan",
+"zip": "36303",
+"phone": "(334) 452-3494",
+"rating": "A+",
+"acc": true,
+"started": "2017",
+"mgmt": "Tyler Bartlett, Vice President",
+"entity": "Corporation",
+"cats": "Plumbing, Residential",
+"complaints": "1",
+"web": "southeasterncooling.com"
+},
+{
+"n": "A-O'K Heating and Cooling",
+"addr": "4350 Highway 157",
+"city": "Florence",
+"zip": "35633",
+"phone": "(256) 766-0715",
+"rating": "A+",
+"acc": true,
+"started": "1979",
+"mgmt": "Michael O'Kelley, Owner",
+"entity": "Sole Proprietorship",
+"complaints": "0",
+"web": "aokcooling.com",
+"lic": [
+"1989352 HACR"
+]
+}
+]
