@@ -329,6 +329,23 @@ table.ops tr.taken td{opacity:.62}
 .cinfo .ci-b button{flex:1}
 .cinfo .ci-hint{color:var(--ink-faint);font-size:11px}
 .up{color:var(--grow)}.down{color:var(--decline)}
+.sitemk{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font:700 11px/1 var(--f-mono);color:#fff;border:2px solid var(--panel);box-shadow:0 1px 4px rgba(0,0,0,.35);box-sizing:border-box}
+.sitemk.build{background:var(--grow)}.sitemk.buy{background:var(--accent)}.sitemk.watch{background:var(--nodata)}
+.sitemk.sm{width:18px;height:18px;font-size:9px;border-width:1.5px;display:inline-grid;flex:none;font-style:normal;margin-right:8px;box-shadow:none}
+.row .sitemk.sm{margin:0 0 0 -4px}
+.wrow{display:grid;grid-template-columns:1fr 92px 22px;align-items:center;gap:8px;font-size:12px;color:var(--ink-dim);padding:2px 0}
+.wrow input{width:100%;accent-color:var(--accent)}.wrow b{font-family:var(--f-mono);font-size:11px;color:var(--ink);text-align:right}
+.sitetop{list-style:none;margin:8px 0 0;padding:0}
+.sitelink{all:unset;box-sizing:border-box;cursor:pointer;display:flex;align-items:center;width:100%;padding:4px 2px;font-size:12.5px;color:var(--ink);border-radius:6px}
+.sitelink:hover,.sitelink:focus-visible{background:var(--panel2)}.sitelink em{margin-left:auto;font-style:normal;font-family:var(--f-mono);font-size:11px;color:var(--ink-faint)}
+td .bdg{white-space:nowrap}
+.sitemk.watch:not(.sm){width:18px;height:18px;font-size:8.5px;opacity:.85}
+.bdg.call-build{background:var(--grow);border-color:var(--grow);color:#fff}.bdg.call-buy{background:var(--accent);border-color:var(--accent);color:#fff}.bdg.call-watch,.bdg.call-home{color:var(--ink-dim)}
+.pbar{display:grid;grid-template-columns:150px 1fr 26px;align-items:center;gap:6px;font-size:11px;color:var(--ink-dim);margin:2px 0}
+.pbar i{height:6px;border-radius:3px;background:var(--line2);overflow:hidden}.pbar i b{display:block;height:100%;background:var(--accent)}
+.pbar em{font-style:normal;font-family:var(--f-mono);font-size:10.5px;text-align:right;color:var(--ink)}
+.sitekv{width:100%;border-collapse:collapse;margin-top:8px;font-size:11.5px}.sitekv td{padding:3px 0;border-top:1px solid var(--line);color:var(--ink-dim)}.sitekv td:last-child{text-align:right;color:var(--ink)}
+.opwhy{margin:6px 0 8px;font-size:12px;color:var(--ink)}
 table.ops.cty{min-width:1300px}
 table.ops.cty td.num,table.ops.cty th.num{text-align:right;font-variant-numeric:tabular-nums}
 table.ops.cty td.co{color:var(--ink);font-weight:600}
@@ -357,6 +374,7 @@ table.ops.cty td.co{color:var(--ink);font-weight:600}
     <button class="tab" role="tab" id="tab-registry" aria-controls="view-registry" aria-selected="false">§ Registry</button>
     <button class="tab" role="tab" id="tab-market" aria-controls="view-market" aria-selected="false">▦ Market</button>
     <button class="tab" role="tab" id="tab-counties" aria-controls="view-counties" aria-selected="false">◫ Counties</button>
+    <button class="tab" role="tab" id="tab-sites" aria-controls="view-sites" aria-selected="false">⊕ Sites</button>
     <span class="tabmeta" id="tabmeta"></span>
     <button class="themebtn" id="themebtn" type="button" title="Switch light / dark" aria-label="Switch light or dark theme">◑</button>
   </div>
@@ -411,6 +429,15 @@ table.ops.cty td.co{color:var(--ink);font-weight:600}
           <button type="button" class="row" data-layer="counties" aria-pressed="true"><span class="sw"></span><span class="lab">County lines <small>67</small></span></button>
           <button type="button" class="row" data-layer="water" aria-pressed="true"><span class="sw"></span><span class="lab">Rivers and lakes</span></button>
           <p class="cap">Rings are straight-line miles from Call KS, not drive time. Add roughly 20 to 30 percent for road miles.</p>
+        </div>
+
+        <div class="sec">
+          <h3>Start-up sites <span class="ct" id="site-ct"></span></h3>
+          <button type="button" class="row" data-sites aria-pressed="false"><span class="sw"></span><i class="sitemk build sm" aria-hidden="true">1</i><span class="lab">Show ranked towns <small>where to open from scratch</small></span></button>
+          <p class="cap" style="margin:6px 0 4px">Each town is scored on its 25-mile service area. Weight what matters:</p>
+          <div id="sitew"></div>
+          <ol class="sitetop" id="sitetop"></ol>
+          <p class="cap"><b style="color:var(--grow)">Green</b> = start-up candidate, <b style="color:var(--accent)">gold</b> = a Tier A/B target is nearby, buy first, grey = watch.</p>
         </div>
 
         <div class="sec">
@@ -577,6 +604,19 @@ table.ops.cty td.co{color:var(--ink);font-weight:600}
       <p class="cap" id="c_src" style="margin:0;padding:10px 14px;border-top:1px solid var(--line)"></p>
     </div>
   </div>
+  <div class="view" id="view-sites" role="tabpanel" aria-labelledby="tab-sites" hidden>
+    <div class="tv">
+      <div class="fbar">
+        <div class="fg"><label for="s_call">Show</label>
+          <select id="s_call"><option value="">All markets</option><option value="build">Start-up candidates</option><option value="buy">Buy first</option><option value="watch">Watch</option></select></div>
+        <button type="button" class="fbtn" id="s_copy">Copy table as CSV</button>
+        <span class="copynote" id="s_copynote" aria-live="polite"></span>
+        <span class="fcount" id="s_count"></span>
+      </div>
+      <div class="tscroll"><table class="ops cty"><thead><tr id="s_head"></tr></thead><tbody id="s_body"></tbody></table></div>
+      <p class="cap" id="s_note" style="margin:0;padding:10px 14px;border-top:1px solid var(--line)"></p>
+    </div>
+  </div>
 </div>
 
 <div class="report-wrap" id="report" hidden role="dialog" aria-modal="true" aria-label="Target report">
@@ -597,6 +637,7 @@ const GEO=__GEO__;
 const OPS=__TARGETS__;
 const MKT=__MARKET__;
 const CTY=__COUNTIES__;
+const SITES=__SITES__;
 const HOME=OPS.find(o=>o.status==='Home');
 const MARKETS=[...new Set(OPS.filter(o=>o.status!=='Home').map(o=>o.market))].sort();
 
@@ -1324,8 +1365,89 @@ document.getElementById('c_copy').addEventListener('click',()=>{const rows=count
    .concat(rows.map(c=>[c.name,c.pop,c.pop_chg,c.pop_chg_1y,c.net_mig_1y,Math.round(c.density),c.biz_chg,c.jobs_chg,c.con_jobs_chg,c.pay,c.hvac_est,c.per_hvac,c.lic,c.tg,c.leads,c.mi,c.opp].map(q).join(','))).join('\n');
   const n=document.getElementById('c_copynote');try{navigator.clipboard.writeText(txt).then(()=>{n.textContent=rows.length+' rows copied';},()=>{n.textContent='Copy was blocked';});}catch(e){n.textContent='Copy was blocked';}});
 
+/* ---------- start-up sites: where to open a Call KS location from scratch ---------- */
+const SITE_LAB={growth:'Population growth',room:'Room (people per contractor)',momentum:'Commercial momentum',size:'Service-area size',reach:'Reach from Pelham'};
+const CALL_LAB={build:'Start-up candidate',buy:'Buy first',watch:'Watch',home:'Home territory'};
+let siteOn=false,siteW=Object.assign({},SITES.weights),SEL=[],siteSel=null;
+try{const sv=JSON.parse(localStorage.getItem('callks-site-weights')||'null');if(sv)Object.assign(siteW,sv);}catch(e){}
+const siteLayer=L.layerGroup(),siteRing=L.layerGroup();
+function siteCall(r,score){
+  if(r.mi<30)return ['home','Already inside the Pelham service area.'];
+  const buy=r.targets.filter(t=>t.status==='Target'&&(t.tier==='A'||t.tier==='B')&&t.mi<=25);
+  if(buy.length)return ['buy','Buy before building: '+buy.slice(0,2).map(t=>t.company+' (Tier '+t.tier+', '+t.mi+' mi)').join(', ')+'.'];
+  if(score>=60)return ['build','Growing, under-served and no Tier A/B target nearby.'];
+  return ['watch','Weaker on growth, room or size at these weights.'];}
+function scoreSites(){
+  const tw=Object.values(siteW).reduce((a,b)=>a+b,0)||1;
+  SITES.sites.forEach(r=>{let s=Object.keys(SITE_LAB).reduce((a,k)=>a+siteW[k]*r.parts[k],0)/tw;if(r.pop<SITES.small_pop)s*=0.7;r._s=Math.round(s);[r._c,r._why]=siteCall(r,r._s);});
+  const sorted=SITES.sites.slice().sort((a,b)=>b._s-a._s);SEL=[];
+  const far=(a,b)=>{const la1=a.lat*Math.PI/180,la2=b.lat*Math.PI/180,dl=(b.lon-a.lon)*Math.PI/180,dp=la2-la1;return 2*3958.8*Math.asin(Math.sqrt(Math.sin(dp/2)**2+Math.cos(la1)*Math.cos(la2)*Math.sin(dl/2)**2));};
+  sorted.forEach(r=>{if(SEL.every(k=>far(r,k)>SITES.spacing))SEL.push(r);});
+  let n=0;SEL.forEach(r=>{r._rank=r._c==='home'?null:++n;});}
+function siteName(r){return r.town+(r.area?' ('+r.area+')':'');}
+function partBars(r){return Object.keys(SITE_LAB).map(k=>'<div class="pbar"><span>'+esc(SITE_LAB[k])+'</span><i><b style="width:'+r.parts[k]+'%"></b></i><em>'+r.parts[k]+'</em></div>').join('');}
+function siteHTML(r){
+  let h='<div class="opcard" style="width:300px"><div class="opnm" style="font-size:15px">'+(r._rank?'#'+r._rank+' · ':'')+esc(siteName(r))+'</div>';
+  h+='<div class="oploc">'+esc(r.county)+' County · '+r.mi+' mi from Call KS · '+SITES.radius+'-mile service area</div>';
+  h+='<div class="badges"><span class="bdg call-'+r._c+'">'+esc(CALL_LAB[r._c])+'</span><span class="bdg">Score '+r._s+' / 100</span></div>';
+  h+='<div class="opwhy">'+esc(r._why)+'</div>'+partBars(r);
+  const kv=[['People within '+SITES.radius+' mi',fmtN(r.pop)],['Growth since 2020',fmtP(r.pop_chg)],['Net migration, last year',(r.mig>0?'+':'')+fmtN(r.mig)+' ('+(r.mig_per_1k>0?'+':'')+r.mig_per_1k+' per 1,000)'],
+    ['People per HVAC/plumbing contractor',r.per_hvac?fmtN(r.per_hvac):'—'],['Shops on our map',r.shops+' ('+r.com_shops+' commercial)'],['Private jobs since 2020',fmtP(r.jobs_chg)],
+    ['Businesses since 2020',fmtP(r.biz_chg)],['Construction jobs since 2020',fmtP(r.con_jobs_chg)],['Average private pay',r.pay?'$'+fmtN(Math.round(r.pay)):'—']];
+  h+='<table class="sitekv">'+kv.map(([k,v])=>'<tr><td>'+esc(k)+'</td><td>'+esc(v)+'</td></tr>').join('')+'</table>';
+  if(r.targets.length)h+='<div class="oprow" style="margin-top:6px"><b>Targets nearby</b>'+r.targets.slice(0,4).map(t=>'<a href="#" data-prof="'+t.id+'">'+esc(t.company)+'</a> ('+(t.tier?'Tier '+t.tier+', ':'')+t.mi+' mi)').join('; ')+'</div>';
+  return h+'</div>';}
+function showRing(r){siteRing.clearLayers();if(!r)return;siteRing.addLayer(L.circle([r.lat,r.lon],{radius:SITES.radius*1609.34,pane:'rings',renderer:RENDER.rings,color:css(r._c==='build'?'--grow':r._c==='buy'?'--accent':'--ink-dim'),weight:1.6,dashArray:'5 5',fill:true,fillOpacity:.05,interactive:false}));}
+function drawSites(){
+  siteLayer.clearLayers();siteRing.clearLayers();
+  const ct=document.getElementById('site-ct');
+  if(!siteOn){ct.textContent='';return;}
+  SEL.filter(r=>r._rank).forEach(r=>{
+    const m=L.marker([r.lat,r.lon],{icon:L.divIcon({className:'',html:'<div class="sitemk '+r._c+'">'+r._rank+'</div>',iconSize:r._c==='watch'?[18,18]:[24,24],iconAnchor:r._c==='watch'?[9,9]:[12,12]}),zIndexOffset:500,keyboard:true,title:'#'+r._rank+' '+siteName(r)});
+    m.bindTooltip('<div class="opcard" style="width:auto;min-width:200px;padding:8px 10px"><div class="opnm" style="font-size:13px">#'+r._rank+' '+esc(siteName(r))+'</div><div class="oploc">'+esc(CALL_LAB[r._c])+' · score '+r._s+' · click for details</div></div>',{direction:'auto',className:'optip'});
+    m.bindPopup(()=>siteHTML(r),{maxWidth:320,autoPanPadding:[24,24]});
+    m.on('popupopen',e=>{siteSel=r;showRing(r);m.closeTooltip();wirePopup(e.popup.getElement());});
+    m.on('popupclose',()=>{if(siteSel===r){siteSel=null;siteRing.clearLayers();}});
+    r._m=m;siteLayer.addLayer(m);});
+  ct.textContent=SEL.filter(r=>r._c==='build').length+' start-up · '+SEL.filter(r=>r._c==='buy').length+' buy first';}
+function renderSiteTop(){
+  const ol=document.getElementById('sitetop');ol.replaceChildren();
+  SEL.filter(r=>r._rank).slice(0,6).forEach(r=>{const li=el('li');const b=el('button',{type:'button',class:'sitelink'});b.innerHTML='<i class="sitemk '+r._c+' sm">'+r._rank+'</i>'+esc(siteName(r))+' <em>'+r._s+'</em>';
+    b.addEventListener('click',()=>focusSite(r));li.appendChild(b);ol.appendChild(li);});}
+function focusSite(r){selectTab('map');if(!siteOn){siteOn=true;document.querySelector('.row[data-sites]').setAttribute('aria-pressed','true');drawSites();}
+  setTimeout(()=>{map.invalidateSize();map.flyTo([r.lat,r.lon],9,{duration:.6});setTimeout(()=>{if(r._m)r._m.openPopup();},700);},60);}
+function refreshSites(){scoreSites();drawSites();renderSiteTop();if(!document.getElementById('view-sites').hidden)renderSitesTab();}
+document.querySelector('.row[data-sites]').addEventListener('click',e=>{siteOn=e.currentTarget.getAttribute('aria-pressed')!=='true';e.currentTarget.setAttribute('aria-pressed',siteOn?'true':'false');drawSites();});
+(function(){const box=document.getElementById('sitew');Object.keys(SITE_LAB).forEach(k=>{const lab=el('label',{class:'wrow'});const sp=el('span',{text:SITE_LAB[k]});
+  const inp=el('input',{type:'range',min:'0',max:'50',step:'5',value:String(siteW[k]),'aria-label':SITE_LAB[k]+' weight'});const out=el('b',{text:String(siteW[k])});
+  inp.addEventListener('input',()=>{siteW[k]=+inp.value;out.textContent=inp.value;try{localStorage.setItem('callks-site-weights',JSON.stringify(siteW));}catch(e){}refreshSites();});
+  lab.append(sp,inp,out);box.appendChild(lab);});
+  const rs=el('button',{type:'button',class:'fbtn',style:'margin-top:6px'},'Reset weights');rs.addEventListener('click',()=>{siteW=Object.assign({},SITES.weights);try{localStorage.removeItem('callks-site-weights');}catch(e){}box.querySelectorAll('input').forEach((i,ix)=>{const k=Object.keys(SITE_LAB)[ix];i.value=siteW[k];i.nextSibling.textContent=siteW[k];});refreshSites();});box.appendChild(rs);})();
+
+/* sites tab */
+let sSort={k:'_s',d:-1};
+const SCOLS=[['#','_rank',1],['Town','town'],['Call','_c'],['Score','_s',1],['People in '+SITES.radius+' mi','pop',1],['Growth since 2020','pop_chg',1],['Net migration / 1k','mig_per_1k',1],['People per contractor','per_hvac',1],['Shops (commercial)','shops',1],['Jobs Δ','jobs_chg',1],['Construction jobs Δ','con_jobs_chg',1],['Avg pay','pay',1],['Miles','mi',1],['Targets nearby','tn',1]];
+function sitesRows(){const f=document.getElementById('s_call').value;return SEL.filter(r=>r._rank&&(!f||r._c===f)).map(r=>Object.assign(r,{tn:r.targets.length})).sort((a,b)=>{const k=sSort.k;const x=a[k],y=b[k];if(typeof x==='string')return x.localeCompare(y)*sSort.d;if(x==null)return 1;if(y==null)return -1;return (x-y)*sSort.d;});}
+function renderSitesTab(){
+  const tr=document.getElementById('s_head');tr.replaceChildren();
+  SCOLS.forEach(([lab,k,num])=>{const th=el('th',{scope:'col',class:num?'num':''});const b=el('button',{type:'button'},lab);if(sSort.k===k)b.appendChild(el('span',{class:'ar',text:sSort.d>0?'▲':'▼'}));
+    b.addEventListener('click',()=>{sSort=sSort.k===k?{k,d:-sSort.d}:{k,d:(k==='town'||k==='_c'||k==='_rank'||k==='mi')?1:-1};renderSitesTab();});th.appendChild(b);tr.appendChild(th);});
+  const rows=sitesRows(),tb=document.getElementById('s_body');tb.replaceChildren();
+  rows.forEach(r=>{const td=(t,c)=>el('td',{class:'num'+(c?' '+c:''),text:t});
+    const call=el('td');call.innerHTML='<span class="bdg call-'+r._c+'">'+esc(CALL_LAB[r._c])+'</span>';
+    const tg=el('td',{class:'num',text:String(r.targets.length)});if(r.targets.length)tg.title=r.targets.map(t=>t.company).join(', ');
+    const row=el('tr',null,td(String(r._rank)),el('td',{class:'co',text:siteName(r)}),call,td(String(r._s)),td(fmtN(r.pop)),td(fmtP(r.pop_chg),cls(r.pop_chg)),td((r.mig_per_1k>0?'+':'')+r.mig_per_1k,cls(r.mig_per_1k)),td(r.per_hvac?fmtN(r.per_hvac):'—'),td(r.shops+' ('+r.com_shops+')'),td(fmtP(r.jobs_chg),cls(r.jobs_chg)),td(fmtP(r.con_jobs_chg),cls(r.con_jobs_chg)),td(r.pay?'$'+fmtN(Math.round(r.pay)):'—'),td(String(r.mi)),tg);
+    row.addEventListener('click',()=>focusSite(r));tb.appendChild(row);});
+  document.getElementById('s_count').innerHTML='<b>'+rows.length+'</b> markets';
+  document.getElementById('s_note').textContent='Weights: '+Object.keys(SITE_LAB).map(k=>SITE_LAB[k]+' '+siteW[k]).join(', ')+'. Change them on the Map tab. Each market is a '+SITES.radius+'-mile service area around the town; towns closer than '+SITES.spacing+' miles to a higher-ranked one are folded into it. County figures are split across each county by ZIP code, so numbers inside big rural counties are approximate.';}
+document.getElementById('s_call').addEventListener('change',renderSitesTab);
+document.getElementById('s_copy').addEventListener('click',()=>{const rows=sitesRows(),q=v=>'"'+String(v==null?'':v).replace(/"/g,'""')+'"';
+  const txt=['Rank,Town,Area,Call,Score,People within '+SITES.radius+' mi,Growth since 2020 %,Net migration per 1k,People per contractor,Shops on map,Commercial shops,Private jobs change %,Construction jobs change %,Avg private pay,Miles from Call KS,Targets nearby,Why'].concat(rows.map(r=>[r._rank,r.town,r.area,CALL_LAB[r._c],r._s,r.pop,r.pop_chg,r.mig_per_1k,r.per_hvac,r.shops,r.com_shops,r.jobs_chg,r.con_jobs_chg,r.pay&&Math.round(r.pay),r.mi,r.targets.map(t=>t.company).join('; '),r._why].map(q).join(','))).join('\n');
+  const n=document.getElementById('s_copynote');try{navigator.clipboard.writeText(txt).then(()=>{n.textContent=rows.length+' rows copied';},()=>{n.textContent='Copy was blocked';});}catch(e){n.textContent='Copy was blocked';}});
+scoreSites();renderSiteTop();
+
 /* tabs */
-const TABS=['map','targets','profiles','locations','registry','market','counties'];
+const TABS=['map','targets','profiles','locations','registry','market','counties','sites'];
 function selectTab(t){
   if(!TABS.includes(t))t='map';
   TABS.forEach(k=>{document.getElementById('tab-'+k).setAttribute('aria-selected',k===t?'true':'false');document.getElementById('view-'+k).hidden=k!==t;});
@@ -1335,19 +1457,20 @@ function selectTab(t){
   if(t==='registry')renderRegistry();
   if(t==='market')renderMarket();
   if(t==='counties')renderCounties();
+  if(t==='sites')renderSitesTab();
   try{history.replaceState(null,'','#'+t);}catch(e){}}
 TABS.forEach(k=>document.getElementById('tab-'+k).addEventListener('click',()=>selectTab(k)));
 window.addEventListener('hashchange',()=>selectTab((location.hash||'#map').slice(1)));
 
 /* theme */
 function effectiveDark(){const t=document.documentElement.getAttribute('data-theme');if(t)return t==='dark';return matchMedia('(prefers-color-scheme: dark)').matches;}
-function retheme(){if(streetMode)makeTiles().addTo(map);buildBase();drawMarket();drawHeat();scheduleLayout();}
+function retheme(){if(streetMode)makeTiles().addTo(map);buildBase();drawMarket();drawHeat();drawSites();scheduleLayout();}
 document.getElementById('themebtn').addEventListener('click',()=>{document.documentElement.setAttribute('data-theme',effectiveDark()?'light':'dark');});
 try{matchMedia('(prefers-color-scheme: dark)').addEventListener('change',retheme);}catch(e){}
 new MutationObserver(retheme).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
 
 /* boot */
-satLayer.addTo(map);hlLayer.addTo(map);mktLayer.addTo(map);applyBasemap();cityDotLayer.addTo(map);labelLayer.addTo(map);officeLayer.addTo(map);opLayer.addTo(map);
+satLayer.addTo(map);hlLayer.addTo(map);mktLayer.addTo(map);siteRing.addTo(map);siteLayer.addTo(map);applyBasemap();cityDotLayer.addTo(map);labelLayer.addTo(map);officeLayer.addTo(map);opLayer.addTo(map);
 map.on('zoomend',()=>{scheduleLayout();if(heatKey)drawHeat();});map.on('resize',scheduleLayout);
 buildHead();syncChips();syncInputs();applyOps();
 if(document.fonts&&document.fonts.ready)document.fonts.ready.then(scheduleLayout);

@@ -82,10 +82,14 @@ def main():
     if not counties_file.exists():
         raise SystemExit("data/counties.json is missing; run python3 scripts/build_counties.py first")
     counties = counties_file.read_text().strip()
-    for token in ("__LEAFLETCSS__", "__GEO__", "__TARGETS__", "__MARKET__", "__COUNTIES__"):
+    sites_file = ROOT / "data" / "sites.json"
+    if not sites_file.exists():
+        raise SystemExit("data/sites.json is missing; run python3 scripts/build_sites.py first")
+    sites = sites_file.read_text().strip()
+    for token in ("__LEAFLETCSS__", "__GEO__", "__TARGETS__", "__MARKET__", "__COUNTIES__", "__SITES__"):
         if token not in template:
             raise SystemExit(f"template is missing {token}")
-    page = template.replace("__LEAFLETCSS__", css).replace("__GEO__", geo).replace("__TARGETS__", targets).replace("__MARKET__", market).replace("__COUNTIES__", counties)
+    page = template.replace("__LEAFLETCSS__", css).replace("__GEO__", geo).replace("__TARGETS__", targets).replace("__MARKET__", market).replace("__COUNTIES__", counties).replace("__SITES__", sites)
     (ROOT / "index.html").write_text(page)
     print(f"index.html written ({len(page) / 1e6:.2f} MB, {len(json.loads(targets))} companies)")
 
